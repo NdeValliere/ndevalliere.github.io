@@ -2,4 +2,5 @@
 //-
 $( function() {
   $('.window').draggable();
+  $('body').draggable();
 } );
