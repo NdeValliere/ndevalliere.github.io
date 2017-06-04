@@ -1,6 +1,5 @@
 //Draggable UI
 //-
 $( function() {
-  $('.window').draggable();
-  $('body').draggable();
+  $('.container__content').draggable();
 } );
