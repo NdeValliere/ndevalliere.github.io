@@ -2,6 +2,7 @@ body,
 p {
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
 .container__content {
@@ -15,4 +16,18 @@ p {
 .container__black,
 .container__white {
   position: absolute;
+  overflow-y: scroll;
+  overflow-x: scroll;
+}
+
+.container__white {
+  left: 50%;
+}
+
+.container__black p {
+  color: white;
+}
+
+.container__white {
+  transform: rotate(180deg);
 }
