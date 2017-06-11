@@ -1,0 +1,18 @@
+body,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.container__content {
+  /*display: none;*/
+}
+
+.container__black {
+  background-color: black;
+}
+
+.container__black,
+.container__white {
+  position: absolute;
+}

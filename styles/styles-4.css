@@ -1,0 +1,54 @@
+.container__vid {
+  border: 1px solid grey;
+  background-color: rgba(255,255,255,1);
+  cursor: pointer;
+  height:476px;
+  margin-top: 32px;
+  position: absolute;
+  transition: 0.5s;
+  width: 268px;
+}
+
+#vid {
+  margin-top: 98px;
+  margin-left: 3px;
+  animation: rotate 5s infinite linear;
+}
+
+@keyframes rotate {
+  0% {transform: rotate(0);}
+  100% {transform: rotate(360deg);}
+}
+
+.container__close {
+  height: 10px;
+  width: 10px;
+}
+
+#close {
+  position: absolute;
+  top: -25px;
+  right: -25px;
+}
+
+.container__vid,
+.container__close,
+#close,
+#vid {
+  z-index: 2;
+}
+
+body,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.container__black {
+  /*background-color: black;*/
+}
+
+.container__black,
+.container__white {
+  position: absolute;
+}

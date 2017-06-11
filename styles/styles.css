@@ -3,3 +3,7 @@
   color: white;
   height: 200px;
 }
+
+.container__content:hover {
+  cursor: pointer;
+}
