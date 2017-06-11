@@ -16,7 +16,7 @@ var guiVars = function() {
 var vars = new guiVars();
 
 window.onload = function() {
-  var gui = new dat.GUI();
+  // var gui = new dat.GUI();
   gui.add(vars, 'showIndicators');
   var controller = gui.add(vars, 'totalPoints', 2, 20).step(1);
   gui.add(vars, 'viscosity', 10, 500);
@@ -194,13 +194,13 @@ function renderCanvas() {
     context.fill();
 
     // Draw controls
-    context.fillStyle = '#fff';
-    context.beginPath();
-    for (var i = 0; i <= vars.totalPoints - 1; i++) {
-      var p = points[i];
-
-      context.rect(p.cx - 1, p.cy - 1, 2, 2);
-    }
+    // context.fillStyle = '#fff';
+    // context.beginPath();
+    // for (var i = 0; i <= vars.totalPoints - 1; i++) {
+    //   var p = points[i];
+    //
+    //   context.rect(p.cx - 1, p.cy - 1, 2, 2);
+    // }
     context.fill();
   }
 }
