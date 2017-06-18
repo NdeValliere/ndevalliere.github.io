@@ -1,6 +1,10 @@
+body {
+  overflow: hidden;
+}
+
 p {
 	font-family: "PT Mono X";
-	letter-spacing: 6px;
+	/*letter-spacing: 6px;*/
 }
 
 p,
@@ -8,8 +12,8 @@ p,
 	position: absolute;
 }
 
-.page__about {
-	right: 0;
+.page__title {
+	right: 10%;
 }
 
 a {
@@ -18,14 +22,15 @@ a {
 }
 
 .container__project-titles {
-	right: 0;
+	left: -10%;
 	top: 75%;
 	transform: rotate(-90deg);
-	transform-origin: 0;
+	transform-origin: top;
 }
 
 .container__project-titles p {
 	position: relative;
+  padding-top: 32.5%;
 	transform: rotate(35deg);
 	transform-origin: left;
 	animation: rotate 15s linear 0s infinite alternate;
@@ -40,11 +45,11 @@ a {
 }
 
 span {
-	transition: 5s;
+	transition: 60s linear;
 }
 
 span:hover {
-	font-size: 150px;
+	font-size: 5000px;
 }
 
 #rotate {
