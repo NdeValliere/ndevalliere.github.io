@@ -31,7 +31,7 @@ a {
 .container__project-titles p {
 	position: relative;
   padding-top: 31.25%;
-	transform: rotate(35deg);
+	transform: rotate(-35deg);
 	transform-origin: left;
 	animation: rotate 15s linear 0s infinite alternate;
 }
@@ -41,7 +41,7 @@ a {
 }
 
 @keyframes rotate {
-	100% {transform: rotate(-35deg);}
+	100% {transform: rotate(35deg);}
 }
 
 span {
