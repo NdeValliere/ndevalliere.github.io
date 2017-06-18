@@ -1,0 +1,52 @@
+p {
+	font-family: "PT Mono X";
+	letter-spacing: 6px;
+}
+
+p,
+.container__project-titles {
+	position: absolute;
+}
+
+.page__about {
+	right: 0;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+.container__project-titles {
+	right: 0;
+	top: 75%;
+	transform: rotate(-90deg);
+	transform-origin: 0;
+}
+
+.container__project-titles p {
+	position: relative;
+	transform: rotate(35deg);
+	transform-origin: left;
+	animation: rotate 15s linear 0s infinite alternate;
+}
+
+.container__project-titles p:last-child {
+/* 	padding-bottom: 0; */
+}
+
+@keyframes rotate {
+	100% {transform: rotate(-35deg);}
+}
+
+span {
+	transition: 5s;
+}
+
+span:hover {
+	font-size: 150px;
+}
+
+#rotate {
+	transform: rotate(60deg);
+}

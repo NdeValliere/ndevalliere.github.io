@@ -15,5 +15,16 @@ canvas {
 }
 
 h1 {
-  color: red;
+  /*color: red;*/
+  font-size: 300px;
+  color: black;
+}
+
+.container__black,
+.container__white {
+  position: absolute;
+}
+
+.container__white {
+  color: white;
 }
