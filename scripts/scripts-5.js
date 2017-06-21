@@ -31,7 +31,7 @@ $(document).ready(function(){
 $('span, .page__title').on('mouseenter',function(){
     $(this).css({
         'background-image': 'url("../assets/gifs/' + getRandomInt(1, 39) + '.gif")',
-        'color': 'rgba('+ getRandomInt(0,255) + ',' + getRandomInt(0,255) + ',' + getRandomInt(0,255) + ','  + '1)'
+        'color': 'rgba('+ getRandomInt(0,255) + ',' + getRandomInt(0,255) + ',' + getRandomInt(0,255) + ','  + '0)'
     });
 });
 
