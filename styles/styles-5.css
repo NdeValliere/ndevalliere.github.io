@@ -5,6 +5,8 @@ body {
 p {
 	font-family: "PT Mono X";
 	/*letter-spacing: 6px;*/
+	font-size: 12px;
+	transition: 60s;
 }
 
 p,
@@ -54,4 +56,20 @@ span:hover {
 
 #rotate {
 	transform: rotate(60deg);
+}
+
+.large {
+	animation: largeText 10s linear 0s infinite alternate;
+}
+
+@keyframes largeText {
+	100% {font-size: 300px;}
+}
+
+.small {
+	animation: smallText 10s linear 0s infinite alternate;
+}
+
+@keyframes smallText {
+	100% {font-size: 8px;}
 }
