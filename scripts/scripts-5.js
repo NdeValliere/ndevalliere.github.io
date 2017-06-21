@@ -18,15 +18,14 @@ $(document).ready(function(){
 });
 
 
-$('span').on('mouseenter',function(){
+$('span, .page__title').on('mouseenter',function(){
     $(this).css({
-        'background-image': 'url("../assets/gifs/' + getRandomInt(0, 39) + '.gif")'
+        'background-image': 'url("../assets/gifs/' + getRandomInt(1, 39) + '.gif")'
     });
 });
 
-$('span').on('mouseleave',function(){
+$('span, .page__title').on('mouseleave',function(){
     $(this).css({
-        'left':getRandomInt(0, 10),
         'background-image': 'none'
     });
 });

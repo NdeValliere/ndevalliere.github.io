@@ -17,6 +17,7 @@ p,
 .page__title {
   top: 10%;
 	right: 10%;
+  height: 100px;
 }
 
 a {
