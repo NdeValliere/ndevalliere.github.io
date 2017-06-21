@@ -46,14 +46,6 @@ a {
 	100% {transform: rotate(35deg);}
 }
 
-span {
-	transition: 60s linear;
-}
-
-span:hover {
-	font-size: 5000px;
-}
-
 #rotate {
 	transform: rotate(60deg);
 }
