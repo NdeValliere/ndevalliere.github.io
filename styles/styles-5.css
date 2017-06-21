@@ -15,7 +15,8 @@ p,
 }
 
 .page__title {
-	right: 5%;
+  top: 10%;
+	right: 10%;
 }
 
 a {
@@ -24,22 +25,18 @@ a {
 }
 
 .container__project-titles {
-	left: -10%;
-	top: 75%;
+	/*left: -10%;*/
+	top: 50%;
 	transform: rotate(-90deg);
 	transform-origin: top;
 }
 
 .container__project-titles p {
 	position: relative;
-  padding-top: 31.25%;
+  /*padding-top: 31.25%;*/
 	transform: rotate(-35deg);
 	transform-origin: left;
 	animation: rotate 15s linear 0s infinite alternate;
-}
-
-.container__project-titles p:last-child {
-/* 	padding-bottom: 0; */
 }
 
 @keyframes rotate {

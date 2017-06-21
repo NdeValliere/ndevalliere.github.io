@@ -16,3 +16,21 @@ $(document).ready(function(){
         }
      }
 });
+
+
+$('span').on('mouseenter',function(){
+    $(this).css({
+        'background-image': 'url("../assets/gifs/' + getRandomInt(0, 39) + '.gif")'
+    });
+});
+
+$('span').on('mouseleave',function(){
+    $(this).css({
+        'left':getRandomInt(0, 10),
+        'background-image': 'none'
+    });
+});
+
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
