@@ -35,7 +35,6 @@ $('span, .page__title').on('mouseenter',function(){
 
     $(this).css({
         'background-image': 'url("../assets/gifs/rainbow.gif")',
-				'background': 'black',
         // 'color': 'rgba('+ getRandomInt(0,255) + ',' + getRandomInt(0,255) + ',' + getRandomInt(0,255) + ','  + '0)'
 				'color': 'black'
     });
