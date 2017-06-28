@@ -11,7 +11,7 @@ $(document).ready(function(){
 
 				randomSpan.setAttribute('class','large');
 
-        if(timesRun === 100){
+        if(timesRun === 200){
             clearInterval(interval);
         }
 
@@ -27,11 +27,19 @@ $(document).ready(function(){
      }
 });
 
+var preview = document.createElement('div');
+preview.className = 'container__preview';
 
 $('span, .page__title').on('mouseenter',function(){
+	this.appendChild(preview);
+
     $(this).css({
         'background-image': 'url("../assets/gifs/' + getRandomInt(1, 32) + '.gif")',
         'color': 'rgba('+ getRandomInt(0,255) + ',' + getRandomInt(0,255) + ',' + getRandomInt(0,255) + ','  + '0)'
+    });
+		$('.container__preview').css({
+        'background-image': 'url("../assets/gifs/A-' + getRandomInt(1,11) + '.gif',
+				'animation': 'rotatePreview-' + getRandomInt(1,5) + ' ' + getRandomInt(1,10) + 's ease 0s infinite alternate'
     });
 });
 

@@ -18,6 +18,7 @@ p,
   top: 10%;
 	right: 10%;
   height: 100px;
+  z-index: 10;
 }
 
 a {
@@ -63,4 +64,128 @@ a {
 
 @keyframes smallText {
 	100% {font-size: 8px;}
+}
+
+.container__preview {
+  display: block;
+  overflow: auto;
+  position: absolute;
+  z-index: -1;
+}
+
+@keyframes rotatePreview-1 {
+  10%{
+    height: 800px;
+    width: 800px;
+  }
+  20%{
+    -webkit-transform: matrix(1, -0.3, 0, 1, 0, 0); /* Safari */
+    transform: matrix(1, -0.3, 0, 1, 0, 0); /* Standard syntax */
+  }
+  40%{
+    transform: rotate(180deg);
+  }
+  50% {
+    width: 50px;
+  }
+  80%{
+    transform: rotate3d(90deg);
+  }
+  100%{
+    -webkit-transform: matrix(1, 0, 0.5, 1, 150, 0); /* Safari */
+    transform: matrix(1, 0, 0.5, 1, 150, 0); /* Standard syntax */
+    height: 1200px;
+  }
+}
+
+@keyframes rotatePreview-2 {
+  10% {
+    height: 100px;
+    width: 900px;
+  }
+  20%{
+    transform: rotate(-180deg);
+  }
+  40%{
+    -webkit-transform: matrix(1, 0, 0.5, 1, 150, 0); /* Safari */
+    transform: matrix(1, 0, 0.5, 1, 150, 0); /* Standard syntax */
+  }
+  80%{
+    -webkit-transform: matrix(1, -0.3, 0, 1, 0, 0); /* Safari */
+    transform: matrix(1, -0.3, 0, 1, 0, 0); /* Standard syntax */
+  }
+  100%{
+    transform: rotate3d(90deg);
+    height: 1900px;
+    width: 600px;
+  }
+}
+
+@keyframes rotatePreview-3 {
+  10%{
+    width: 200px;
+    height: 300px;
+    -webkit-transform: matrix(1, 0, 0.5, 1, 150, 0); /* Safari */
+    transform: matrix(1, 0, 0.5, 1, 150, 0); /* Standard syntax */
+  }
+  30%{
+    -webkit-transform: matrix(1, -0.3, 0, 1, 0, 0); /* Safari */
+    transform: matrix(1, -0.3, 0, 1, 0, 0); /* Standard syntax */
+  }
+  60%{
+    transform: rotate3d(-90deg);
+  }
+  100%{
+    width: 1000px;
+    height: 700px;
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes rotatePreview-4 {
+  10% {
+    height: 900px;
+    width: 300px;
+  }
+  20%{
+    transform: rotate(90deg);
+  }
+  40%{
+    -webkit-transform: matrix(1, 0, 0.5, 1, 150, 0); /* Safari */
+    transform: matrix(1, 0, 0.5, 1, 150, 0); /* Standard syntax */
+  }
+  80%{
+    -webkit-transform: matrix(1, -0.3, 0, 1, 0, 0); /* Safari */
+    transform: matrix(1, -0.3, 0, 1, 0, 0); /* Standard syntax */
+  }
+  100%{
+    transform: rotate3d(-390deg);
+    height: 400px;
+    width: 1200px;
+  }
+}
+
+@keyframes rotatePreview-5 {
+  10%{
+    width: 5px;
+    height: 10px;
+    -webkit-transform: matrix(2, 0, 0.25, 1, 250, 0); /* Safari */
+    transform: matrix(2, 0, 0.25, 1, 250, 0); /* Standard syntax */
+  }
+  15% {
+    width: 500px;
+    height: 1000px;
+  }
+  30%{
+    -webkit-transform: matrix(0.1, -0.3, 10, 1, 0, 0); /* Safari */
+    transform: matrix(0.1, -0.3, 10, 1, 0, 0); /* Standard syntax */
+  }
+  60%{
+    transform: rotate3d(90deg);
+  }
+  100%{
+    width: 500px;
+    height: 700px;
+    transform: rotate(-360deg);
+  }
 }
