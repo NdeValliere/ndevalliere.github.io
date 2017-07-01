@@ -49,6 +49,11 @@ $('span, .page__title').on('mouseenter',function(){
 				'animation': 'rotatePreview-' + getRandomInt(1,5) + ' ' + getRandomInt(1,10) + 's ease 0s infinite alternate'
     });
 
+		$('.c .container__preview').css({
+        'background-image': 'url("../assets/gifs/c-' + getRandomInt(1,3) + '.gif',
+				'animation': 'rotatePreview-' + getRandomInt(1,5) + ' ' + getRandomInt(1,10) + 's ease 0s infinite alternate'
+    });
+
 		$('.d .container__preview').css({
         'background-image': 'url("../assets/gifs/d-' + getRandomInt(1,2) + '.gif',
 				'animation': 'rotatePreview-' + getRandomInt(1,5) + ' ' + getRandomInt(1,10) + 's ease 0s infinite alternate'
