@@ -42,37 +42,44 @@ $('span, .page__title').on('mouseenter',function(){
 
 		$('.a .container__preview').css({
         'background-image': 'url("../assets/gifs/a-' + getRandomInt(1,4) + '.gif',
-				'animation': 'rotatePreview-' + getRandomInt(1,5) + ' ' + getRandomInt(1,10) + 's ease 0s infinite alternate'
+				'animation': 'rotatePreview-' + getRandomInt(1,5) + ' ' + getRandomInt(1,10) + 's ease 0s infinite alternate',
+				'transform':'rotate(90deg)'
     });
 
 		$('.b .container__preview').css({
         'background-image': 'url("../assets/gifs/b-' + getRandomInt(1,4) + '.gif',
-				'animation': 'rotatePreview-' + getRandomInt(1,5) + ' ' + getRandomInt(1,10) + 's ease 0s infinite alternate'
+				'animation': 'rotatePreview-' + getRandomInt(1,5) + ' ' + getRandomInt(1,10) + 's ease 0s infinite alternate',
+				'transform':'rotate(90deg)'
     });
 
 		$('.c .container__preview').css({
         'background-image': 'url("../assets/gifs/c-' + getRandomInt(1,3) + '.gif',
-				'animation': 'rotatePreview-' + getRandomInt(1,5) + ' ' + getRandomInt(1,10) + 's ease 0s infinite alternate'
+				'animation': 'rotatePreview-' + getRandomInt(1,5) + ' ' + getRandomInt(1,10) + 's ease 0s infinite alternate',
+				'transform':'rotate(90deg)'
     });
 
 		$('.d .container__preview').css({
         'background-image': 'url("../assets/gifs/d-' + getRandomInt(1,2) + '.gif',
-				'animation': 'rotatePreview-' + getRandomInt(1,5) + ' ' + getRandomInt(1,10) + 's ease 0s infinite alternate'
+				'animation': 'rotatePreview-' + getRandomInt(1,5) + ' ' + getRandomInt(1,10) + 's ease 0s infinite alternate',
+				'transform':'rotate(90deg)'
     });
 
 		$('.e .container__preview').css({
         'background-image': 'url("../assets/gifs/e-' + getRandomInt(1,7) + '.gif',
-				'animation': 'rotatePreview-' + getRandomInt(1,5) + ' ' + getRandomInt(1,10) + 's ease 0s infinite alternate'
+				'animation': 'rotatePreview-' + getRandomInt(1,5) + ' ' + getRandomInt(1,10) + 's ease 0s infinite alternate',
+				'transform':'rotate(90deg)'
     });
 
 		$('.f .container__preview').css({
         'background-image': 'url("../assets/gifs/f-' + getRandomInt(1,3) + '.gif',
-				'animation': 'rotatePreview-' + getRandomInt(1,5) + ' ' + getRandomInt(1,10) + 's ease 0s infinite alternate'
+				'animation': 'rotatePreview-' + getRandomInt(1,5) + ' ' + getRandomInt(1,10) + 's ease 0s infinite alternate',
+				'transform':'rotate(90deg)'
     });
 
 		$('.g .container__preview').css({
         'background-image': 'url("../assets/gifs/g-' + getRandomInt(1,5) + '.gif',
-				'animation': 'rotatePreview-' + getRandomInt(1,5) + ' ' + getRandomInt(1,10) + 's ease 0s infinite alternate'
+				'animation': 'rotatePreview-' + getRandomInt(1,5) + ' ' + getRandomInt(1,10) + 's ease 0s infinite alternate',
+				'transform':'rotate(90deg)'
     });
 });
 
