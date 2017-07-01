@@ -83,13 +83,13 @@ a {
     transform: matrix(1, -0.3, 0, 1, 0, 0); /* Standard syntax */
   }
   40%{
-    transform: rotate(180deg);
+    transform: rotate(-30deg);
   }
   50% {
     width: 50px;
   }
   80%{
-    transform: rotate3d(90deg);
+    transform: rotate3d(30deg);
   }
   100%{
     -webkit-transform: matrix(1, 0, 0.5, 1, 150, 0); /* Safari */
@@ -104,7 +104,7 @@ a {
     width: 900px;
   }
   20%{
-    transform: rotate(-180deg);
+    transform: rotate(-10deg);
   }
   40%{
     -webkit-transform: matrix(1, 0, 0.5, 1, 150, 0); /* Safari */
@@ -115,7 +115,7 @@ a {
     transform: matrix(1, -0.3, 0, 1, 0, 0); /* Standard syntax */
   }
   100%{
-    transform: rotate3d(90deg);
+    transform: rotate3d(10deg);
     height: 1900px;
     width: 600px;
   }
@@ -138,7 +138,7 @@ a {
   100%{
     width: 1000px;
     height: 700px;
-    transform: rotate(180deg);
+    transform: rotate(45deg);
   }
 }
 
@@ -148,7 +148,7 @@ a {
     width: 300px;
   }
   20%{
-    transform: rotate(90deg);
+    transform: rotate(0deg);
   }
   40%{
     -webkit-transform: matrix(1, 0, 0.5, 1, 150, 0); /* Safari */
@@ -159,7 +159,7 @@ a {
     transform: matrix(1, -0.3, 0, 1, 0, 0); /* Standard syntax */
   }
   100%{
-    transform: rotate3d(-390deg);
+    transform: rotate3d(180deg);
     height: 400px;
     width: 1200px;
   }
@@ -181,11 +181,11 @@ a {
     transform: matrix(0.1, -0.3, 10, 1, 0, 0); /* Standard syntax */
   }
   60%{
-    transform: rotate3d(90deg);
+    transform: rotate3d(10deg);
   }
   100%{
     width: 500px;
     height: 700px;
-    transform: rotate(-360deg);
+    transform: rotate(90);
   }
 }

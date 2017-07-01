@@ -38,8 +38,34 @@ $('span, .page__title').on('mouseenter',function(){
         // 'color': 'rgba('+ getRandomInt(0,255) + ',' + getRandomInt(0,255) + ',' + getRandomInt(0,255) + ','  + '0)'
 				'color': 'black'
     });
-		$('.container__preview').css({
-        'background-image': 'url("../assets/gifs/A-' + getRandomInt(1,11) + '.gif',
+
+		$('.a .container__preview').css({
+        'background-image': 'url("../assets/gifs/a-' + getRandomInt(1,4) + '.gif',
+				'animation': 'rotatePreview-' + getRandomInt(1,5) + ' ' + getRandomInt(1,10) + 's ease 0s infinite alternate'
+    });
+
+		$('.b .container__preview').css({
+        'background-image': 'url("../assets/gifs/b-' + getRandomInt(1,4) + '.gif',
+				'animation': 'rotatePreview-' + getRandomInt(1,5) + ' ' + getRandomInt(1,10) + 's ease 0s infinite alternate'
+    });
+
+		$('.d .container__preview').css({
+        'background-image': 'url("../assets/gifs/d-' + getRandomInt(1,2) + '.gif',
+				'animation': 'rotatePreview-' + getRandomInt(1,5) + ' ' + getRandomInt(1,10) + 's ease 0s infinite alternate'
+    });
+
+		$('.e .container__preview').css({
+        'background-image': 'url("../assets/gifs/e-' + getRandomInt(1,7) + '.gif',
+				'animation': 'rotatePreview-' + getRandomInt(1,5) + ' ' + getRandomInt(1,10) + 's ease 0s infinite alternate'
+    });
+
+		$('.f .container__preview').css({
+        'background-image': 'url("../assets/gifs/f-' + getRandomInt(1,3) + '.gif',
+				'animation': 'rotatePreview-' + getRandomInt(1,5) + ' ' + getRandomInt(1,10) + 's ease 0s infinite alternate'
+    });
+
+		$('.g .container__preview').css({
+        'background-image': 'url("../assets/gifs/g-' + getRandomInt(1,5) + '.gif',
 				'animation': 'rotatePreview-' + getRandomInt(1,5) + ' ' + getRandomInt(1,10) + 's ease 0s infinite alternate'
     });
 });
