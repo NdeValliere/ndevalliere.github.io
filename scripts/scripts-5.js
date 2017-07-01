@@ -35,7 +35,8 @@ $('span, .page__title').on('mouseenter',function(){
 
     $(this).css({
         // 'background-image': 'url("../assets/gifs/rainbow.gif")',
-				'color': 'rgba(0,0,0,0.2)'
+				'font-family': 'PT Mono',
+				'font-weight': '900'
         // 'color': 'rgba('+ getRandomInt(0,255) + ',' + getRandomInt(0,255) + ',' + getRandomInt(0,255) + ','  + '0)'
     });
 
@@ -78,7 +79,8 @@ $('span, .page__title').on('mouseenter',function(){
 $('span, .page__title').on('mouseleave',function(){
     $(this).css({
         // 'background-image': 'none'
-				'color': 'rgba(0,0,0,1)'
+				'font-family': 'PT Mono X',
+				'font-weight': '400'
     });
 });
 
