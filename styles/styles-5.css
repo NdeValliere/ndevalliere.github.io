@@ -75,6 +75,7 @@ a {
 
 @keyframes rotatePreview-1 {
   10%{
+    transform: rotate(90deg);
     height: 800px;
     width: 800px;
   }
@@ -98,6 +99,7 @@ a {
 
 @keyframes rotatePreview-2 {
   10% {
+    transform: rotate(90deg);
     height: 100px;
     width: 900px;
   }
@@ -119,6 +121,7 @@ a {
 
 @keyframes rotatePreview-3 {
   10%{
+    transform: rotate(90deg);
     width: 200px;
     height: 300px;
     -webkit-transform: matrix(1, 0, 0.5, 1, 150, 0); /* Safari */
@@ -138,6 +141,7 @@ a {
 
 @keyframes rotatePreview-4 {
   10% {
+    transform: rotate(90deg);
     height: 900px;
     width: 300px;
   }
@@ -159,6 +163,7 @@ a {
 
 @keyframes rotatePreview-5 {
   10%{
+    transform: rotate(90deg);
     width: 5px;
     height: 10px;
     -webkit-transform: matrix(2, 0, 0.25, 1, 250, 0); /* Safari */
