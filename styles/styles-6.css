@@ -30,14 +30,14 @@ a {
   transition: 10s;
 	/*left: -40%;*/
 	top: 45%;
-	transform: rotate(90deg);
+	transform: rotate(-90deg);
 	transform-origin: top;
 }
 
 .container__project-titles p {
 	position: relative;
   /*padding-top: 31.25%;*/
-	transform: rotate(35deg);
+	transform: rotate(-35deg);
 	transform-origin: left;
 	animation: rotate 15s linear 0s infinite alternate;
 }
