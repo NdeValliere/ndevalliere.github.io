@@ -30,7 +30,7 @@ a {
   transition: 10s;
 	/*left: -40%;*/
 	top: 45%;
-	transform: rotate(90deg);
+	transform: rotate(-90deg);
 	transform-origin: top;
 }
 
