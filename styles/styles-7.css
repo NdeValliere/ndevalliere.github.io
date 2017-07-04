@@ -21,7 +21,9 @@ body {
 
 .grid__rect {
 	background-color: white;
+	cursor: pointer;
 	position: relative;
+	transition: 0.3s;
 }
 
 .grid__link {
