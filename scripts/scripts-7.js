@@ -7,7 +7,7 @@ var resize = (function () {
 		$(".grid__rect").css({"height": IH/6, "width": IW/11});
 
 		$( ".grid__rect" ).mouseover(function() {
-			$(".grid__rect").css({"background-color": "rgba(253,255,253,1)"});
+			$(".grid__rect").css({"background-color": "rgba(255,255,255,0.5)"});
 			$(this).css({"background-color": "rgba(255,255,255,1)",
 									 "box-shadow": "0px 0px 23px 1px rgba(255,234,235,1)",
 									 // "transform": "rotateX(180deg)",
@@ -32,5 +32,5 @@ $( document ).on( "mousemove", function( event ) {
 	var mX = event.pageX,
 			mY = event.pageY;
 
-	$("body").css({"background": "linear-gradient(" + mX/10 + "deg, rgba(255,235,235,1), rgba(255,255,255,0))"});
+	$("body").css({"background": "linear-gradient(" + mX/10 + "deg, rgba(255,235,235,1), rgba(255,255,255,0), rgba(255,255,255,0))"});
 });
