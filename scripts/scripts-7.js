@@ -7,9 +7,9 @@ var resize = (function () {
 		$(".grid__rect").css({"height": IH/6, "width": IW/11});
 
 		$( ".grid__rect" ).mouseover(function() {
-			$(".grid__rect").css({"background-color": "rgba(255,255,255,0.5)"});
+			$(".grid__rect").css({"background-color": "rgba(255,255,255,0.7)"});
 			$(this).css({"background-color": "rgba(255,255,255,1)",
-									 "box-shadow": "0px 0px 23px 1px rgba(255,234,235,1)",
+									 "box-shadow": "0px 0px 25px 1px rgba(255,235,235,0.5)",
 									 // "transform": "rotateX(180deg)",
 									 // "-webkit-transform": "rotateX(180deg)",
 									 "width": IW/2.9});
