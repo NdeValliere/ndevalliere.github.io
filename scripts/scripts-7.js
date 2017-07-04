@@ -2,10 +2,8 @@ var resize = (function () {
 		var IH = window.innerHeight,
 				IW = window.innerWidth;
 
-		// $(".container__grid").css({"height": IH, "width": IW});
-
+		$("body").css({"height": IH, "width": IW});
 		$(".grid__row").css({"margin": IH / 30});
-
 		$(".grid__rect").css({"height": IH/6, "width": IW*0.09});
    });
 

@@ -6,7 +6,7 @@
 body {
 /* 	background: linear-gradient(45deg, rgba(255,235,235,1), rgba(255,255,255,0),rgba(255,255,255,0)); */
 	font-family: "Times New Roman";
-	transition: 10s;
+	transition: 0.3s;
 }
 
 .container__grid {
