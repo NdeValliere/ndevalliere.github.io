@@ -4,15 +4,15 @@ var resize = (function () {
 
 		$("body").css({"height": IH, "width": IW});
 		$(".grid__row").css({"margin": IH / 30});
-		$(".grid__rect").css({"height": IH/6, "width": IW/11});
+		$(".grid__rect").css({"height": IH/9, "width": IW/11});
 
 		$( ".grid__rect" ).mouseover(function() {
-			$(".grid__rect").css({"background-color": "rgba(255,255,255,0.7)"});
+			$(".grid__rect").css({"background-color": "rgba(254,253,252,1)"});
 			$(this).css({"background-color": "rgba(255,255,255,1)",
-									 "box-shadow": "0px 0px 25px 1px rgba(255,235,235,0.5)",
+									 "box-shadow": "0px 0px 23px 1px rgba(255,234,235,1)",
 									 // "transform": "rotateX(180deg)",
 									 // "-webkit-transform": "rotateX(180deg)",
-									 "width": IW/2.9});
+									 "width": IW/3});
 		});
 
 		$( ".grid__rect" ).mouseout(function() {
@@ -32,5 +32,5 @@ $( document ).on( "mousemove", function( event ) {
 	var mX = event.pageX,
 			mY = event.pageY;
 
-	$("body").css({"background": "linear-gradient(" + mX/10 + "deg, rgba(255,235,235,1), rgba(255,255,255,0), rgba(255,255,255,0))"});
+	$("body").css({"background": "linear-gradient(" + mX/10 + "deg, rgba(255,235,235,1), rgba(255,255,255,0))"});
 });
