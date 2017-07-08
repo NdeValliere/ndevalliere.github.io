@@ -29,6 +29,12 @@ var resize = (function () {
 									 // "-webkit-transform": "rotateX(0deg)",
 									 "width": IW/11});
 		});
+		$( ".grid__rect--gif" ).click(function() {
+			$(this).css({"transform": "rotateX(180deg)",
+									 "-webkit-transform": "rotateX(180deg)",
+									 "background-image": "url('../assets/emojis/" + getRandomInt(1,33) + ".gif')",
+								 });
+		});
    });
 
 $(document).ready(resize);
