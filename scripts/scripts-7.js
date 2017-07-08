@@ -1,3 +1,7 @@
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 var resize = (function () {
 		var IH = window.innerHeight,
 				IW = window.innerWidth;
@@ -11,7 +15,7 @@ var resize = (function () {
 																			 "transform": "rotate(2deg)",
 																			 "-webkit-transform": "rotate(2deg)",
 																			});
-			$(".grid__rect").css({"background-color": "rgba(254,253,252,1)"});
+			$(".grid__rect").css({"background-color": "rgba(255,255,255,0.9)"});
 			$(this).css({"background-color": "rgba(255,255,255,1)",
 									 "box-shadow": "0px 0px 23px 1px rgba(255,234,235,1)",
 									 "width": IW/3});
@@ -29,11 +33,13 @@ var resize = (function () {
 									 // "-webkit-transform": "rotateX(0deg)",
 									 "width": IW/11});
 		});
-		$( ".grid__rect--gif" ).click(function() {
+		$( ".grid__rect--blank" ).click(function() {
 			$(this).css({"transform": "rotateX(180deg)",
-									 "-webkit-transform": "rotateX(180deg)",
-									 "background-image": "url('../assets/emojis/" + getRandomInt(1,33) + ".gif')",
+									 "-webkit-transform": "rotateX(180deg)"
 								 });
+		});
+		$( ".grid__rect--gif" ).click(function() {
+			$(this).css({"background-image": "url('../assets/emojis/" + getRandomInt(1,33) + ".gif')"});
 		});
    });
 
