@@ -12,6 +12,7 @@ body {
 
 .container__grid {
 	padding: 500px 150px 250px 150px;
+	overflow: hidden;
 }
 
 .container__credit {
