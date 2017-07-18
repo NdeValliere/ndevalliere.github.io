@@ -8,14 +8,15 @@ var resize = (function () {
 
 		$("body").css({"height": IH, "width": IW,
                    "background-size": IW + "px " + IH * 1.1 + "px"});
-    $(".container__grid").css({"transform": "perspective(" + IW + "px) rotateX( -40deg )"});
+    $(".container__grid").css({"transform": "perspective(" + IW + "px) rotateX( -10deg )"});
 		$(".grid__rect").css({"height": IH/5, "width": IW/7});
-    $(".grid__rect-inner").css({"height": IH/6, "width": IW/7.15,
+    $(".grid__rect-inner").css({"height": IH/6.1, "width": IW/7.15,
                                 "margin-top": IH/30});
    });
 
 $(document).ready(resize);
 $(window).resize(resize);
+
 
 $(document).on( "mousemove", function( event ) {
 	var mX = event.pageX,
@@ -23,6 +24,21 @@ $(document).on( "mousemove", function( event ) {
 
 	// $("body").css({"background": "linear-gradient(" + mX/10 + "deg, rgba(211,211,211,1), rgba(255,255,255,0),rgba(255,255,255,0))"});
 });
+
+
+var timeout, clicker = $(".grid__rect");
+clicker.mousedown(function(){
+    timeout = setInterval(function(){
+      $(".grid__rect").css({"cursor": "-webkit-grabbing"});
+    }, 50);
+    return false;
+});
+$(document).mouseup(function(){
+    clearInterval(timeout);
+    $(".grid__rect").css({"cursor": "pointer"});
+    return false;
+});
+
 
 $( ".grid__rect" ).mouseover(function() {
   //get nth-child info of hovered element
@@ -67,6 +83,7 @@ $( ".grid__rect" ).mouseover(function() {
 
 });
 
+
 $( ".grid__row" ).mouseover(function() {
   var jitter = getRandomInt(1,10);
 
@@ -90,19 +107,6 @@ $( ".grid__rect" ).mouseout(function() {
 $( ".grid__rect--gif").click(function() {
   $(this).find(".grid__rect-inner").css({"background-image": "url('../assets/emojis/" + getRandomInt(1,33) + ".gif')"});
 });
-
-
-// var timeout, clicker = $('.grid__rect');
-// clicker.mousedown(function(){
-//     timeout = setInterval(function(){
-//       $(this).find(".grid__rect").css({"cursor": "url(../assets/crosshair.png), crosshair"});
-//     }, 500);
-//     return false;
-// });
-// $(document).mouseup(function(){
-//     clearInterval(timeout);
-//     return false;
-// });
 
 
 //Draggable UI
