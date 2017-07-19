@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>prototype-10</title>
+  <link rel="stylesheet" href="../styles/styles-10.css">
+  <!-- <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css"/> -->
+  <title>cognate 1.0</title>
+</head>
+<body>
+  <svg id="white" width="800px" height="1024px" viewBox="0 0 800 1024">
+    <polygon id="pathWhite" points="800 0 800 1024 800 0">
+    	<animate id="animateBlack"
+              xlink:href="#pathWhite"
+							 attributeName="points"
+							 dur="3s"
+               values ="800 0 800 1024 800 0;
+												2.27373690e-13 0 800 1024 800 0;"
+               begin="indefinite"
+							 fill="freeze"/>
+    </polygon>
+
+		<mask id="maskWhite" fill="white">
+				<use xlink:href="#pathWhite"></use>
+		</mask>
+
+    <text id="cognateWhite">
+      <tspan class="link__page link__page--logo" x="357.5" y="510">Cognate</tspan>
+    </text>
+
+    <use id="pathWhite--render" fill="#FFFFFF" xlink:href="#pathWhite"></use>
+    <text id="cognateBlack" mask="url(#maskWhite)">
+        <tspan class="link__page link__page--logo" x="357.5" y="510">Cognate</tspan>
+    </text>
+  </svg>
+
+  <section class="container__links">
+    <ul class="ul__links">
+      <li class="link__page link__page--nav">About</li>
+      <li class="link__page link__page--nav">Events</li>
+    </ul>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.1/dat.gui.min.js"></script>
+    <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+  <script src="../scripts/scripts-10.js"></script>
+</body>
+</html>
