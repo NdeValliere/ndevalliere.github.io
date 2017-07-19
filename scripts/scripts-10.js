@@ -9,17 +9,28 @@ $("#cognateBlack").click(function() {
 
 $(".link__page--nav-about").click(function() {
     triggerAbout = false;
-    $(this).css({"padding-right": "100%",
+    $(".link__page--nav-about").css({"padding-right": "1000px",
                  "transform": "rotateY(180deg)",
                  "background-color": "white"});
-    $(".link__page--nav-about").css({"padding-right": 0});
+   if (!triggerEvents) {
+     $(".link__page--nav-events").css({"padding-right": 0,
+                  "transform": "rotateY(0deg)",
+                  "background-color": "rgba(255,255,255,0)"});
+      triggerEvents = true;
+   }
 });
 
 $(".link__page--nav-events").click(function() {
     triggerEvents = false;
-    $(this).css({"padding-right": "100%",
+    $(".link__page--nav-events").css({"padding-right": "1000px",
                  "transform": "rotateY(180deg)",
                  "background-color": "white"});
+   if (!triggerAbout) {
+     $(".link__page--nav-about").css({"padding-right": 0,
+                  "transform": "rotateY(0deg)",
+                  "background-color": "rgba(255,255,255,0)"});
+      triggerAbout = true;
+   }
 });
 
 $(".link__page--nav-about").mouseover(function() {

@@ -32,7 +32,6 @@ svg {
 
 .link__page--nav {
 	/*cursor: url('../assets/png/gasp.png'), pointer;*/
-	margin-bottom: 5px;
 	transition: 1s;
 }
 
@@ -49,4 +48,8 @@ svg {
 	right: 150px;
 	top: 180px;
 	transform: rotateY(180deg);
+}
+
+.container__links--bottom {
+	top: 200px;
 }
