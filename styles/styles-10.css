@@ -53,3 +53,24 @@ svg {
 .container__links--bottom {
 	top: 200px;
 }
+
+.container__details {
+	color: white;
+	right: 600px;
+	margin-top: 240px;
+	position: absolute;
+	transition: 3s;
+}
+
+.container__details--events,
+.container__details--about {
+	opacity: 0;
+}
+
+.details__link {
+	color: white;
+}
+
+.details__table {
+	width: 600px;
+}
