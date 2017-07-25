@@ -72,5 +72,6 @@ svg {
 }
 
 .details__table {
+	color: white;
 	width: 600px;
 }

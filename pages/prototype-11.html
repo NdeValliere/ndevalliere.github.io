@@ -1,0 +1,140 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>prototype-10</title>
+  <link rel="stylesheet" href="../styles/styles-10.css">
+  <!-- <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css"/> -->
+  <title>cognate 1.0</title>
+</head>
+<body>
+  <svg id="white" width="800px" height="1024px" viewBox="0 0 800 1024">
+    <polygon id="pathWhite" points="800 0 800 1024 800 0">
+    	<animate id="animateBlack"
+              xlink:href="#pathWhite"
+							 attributeName="points"
+							 dur="7.5s"
+               values ="800 0 800 1024 800 0;
+												2.27373690e-13 0 800 1024 800 0;"
+               begin="indefinite"
+							 fill="freeze"/>
+    </polygon>
+
+		<mask id="maskWhite" fill="white">
+				<use xlink:href="#pathWhite"></use>
+		</mask>
+
+    <text id="cognateWhite">
+      <tspan class="link__page link__page--logo" x="357.5" y="510">Cognate</tspan>
+    </text>
+
+    <use id="pathWhite--render" fill="#FFFFFF" xlink:href="#pathWhite"></use>
+    <text id="cognateBlack" mask="url(#maskWhite)">
+        <tspan class="link__page link__page--logo" x="357.5" y="510">Cognate</tspan>
+    </text>
+  </svg>
+
+  <section class="container__links">
+    <p class="link__page link__page--nav link__page--nav-about">About</p>
+  </section>
+  <section class="container__links container__links--bottom">
+    <p class="link__page link__page--nav link__page--nav-events">Events</p>
+  </section>
+
+  <section class="container__details container__details--about">
+    <table class="details__table details__table--about">
+      <tr>
+        <td>who are we?</td>
+      </tr>
+      <tr>
+        <td>hooli</td>
+        <td>radar</td>
+      </tr>
+      <tr>
+        <td>colombian</td>
+        <td>dutch</td>
+      </tr>
+      <tr>
+        <td>analog</td>
+        <td>digital</td>
+      </tr>
+      <tr>
+        <td>abstract</td>
+        <td>innovative</td>
+      </tr>
+      <tr>
+        <td>house</td>
+        <td>techno</td>
+      </tr>
+      <tr><td>&nbsp;</td></tr>
+      <tr>
+        <td>what do we do?</td>
+      </tr>
+      <tr>
+        <td>we are djs</td>
+      </tr>
+      <tr>
+        <td>we play sets every day</td>
+      </tr>
+      <tr>
+        <td>we live in amsterdam</td>
+      </tr>
+      <tr><td>&nbsp;</td></tr>
+      <tr><td>&nbsp;</td></tr>
+    </table>
+    <p><a class="details__link details__link--about" href="https://www.facebook.com/cogntae.live?ref=bookmarks">write on our walls</a></p>
+    <p><a class="details__link details__link--about" href="https://soundcloud.com/user-709013729">listen more</a></p>
+    <p><a class="details__link details__link--about" href="mailto:cognate.live@gmail.com">email us</a></p>
+  </section>
+  <section class="container__details container__details--events">
+    <table class="details__table details__table--events">
+      <tr><td>&nbsp;</td></tr>
+      <tr>
+        <td>where?</td>
+        <td>&nbsp;</td>
+        <td>when?</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>amsterdam</td>
+        <td>club</td>
+        <td>01/02/2017</td>
+      </tr>
+      <tr>
+        <td>den haag</td>
+        <td>pip</td>
+        <td>01/02/2017</td>
+      </tr>
+      <tr>
+        <td>delft</td>
+        <td>bar</td>
+        <td>01/02/2017</td>
+      </tr>
+      <tr>
+        <td>amsterdam</td>
+        <td>club</td>
+        <td>01/02/2017</td>
+      </tr>
+      <tr>
+        <td>den haag</td>
+        <td>pip</td>
+        <td>01/02/2017</td>
+      </tr>
+      <tr>
+        <td>delft</td>
+        <td>bar</td>
+        <td>01/02/2017</td>
+      </tr>
+    </table>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.1/dat.gui.min.js"></script>
+    <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+  <script src="../scripts/scripts-10.js"></script>
+</body>
+</html>

@@ -103,6 +103,30 @@ $( ".grid__rect--game").click(function() {
   $(this).find(".grid__rect-inner").css({"background-image": "url('../assets/gifs/game-" + getRandomInt(1,4) + ".gif')"});
 });
 
+$( ".grid__rect--poster").click(function() {
+  $(this).find(".grid__rect-inner").css({"background-image": "url('../assets/gifs/poster-" + getRandomInt(1,2) + ".gif')"});
+});
+
+$( ".grid__rect--tay").click(function() {
+  $(this).find(".grid__rect-inner").css({"background-image": "url('../assets/gifs/tay-" + getRandomInt(1,3) + ".gif')"});
+});
+
+$( ".grid__rect--monogram").click(function() {
+  $(this).find(".grid__rect-inner").css({"background-image": "url('../assets/gifs/monogram-" + getRandomInt(1,5) + ".gif')"});
+});
+
+$( ".grid__rect--python").click(function() {
+  $(this).find(".grid__rect-inner").css({"background-image": "url('../assets/gifs/python-" + getRandomInt(1,7) + ".gif')"});
+});
+
+$( ".grid__rect--portals").click(function() {
+  $(this).find(".grid__rect-inner").css({"background-image": "url('../assets/gifs/portals-" + getRandomInt(1,4) + ".gif')"});
+});
+
+$( ".grid__rect--caslon").click(function() {
+  $(this).find(".grid__rect-inner").css({"background-image": "url('../assets/gifs/caslon-" + getRandomInt(1,3) + ".gif')"});
+});
+
 
 //Draggable UI
 //-
