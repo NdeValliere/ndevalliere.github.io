@@ -3,5 +3,44 @@
 	margin: 0;
 }
 
-path {
+.container__svg {
+	background-color: black;
+	margin: auto;
+}
+
+svg {
+	padding-bottom: 200px;
+}
+
+.container__words path {
+	fill: #636363;
+	transition: 10s;
+}
+
+.container__hills {
+	stroke: #636363;
+	stroke-width: 0.3;
+  stroke-dasharray: 200;
+	transition: 10s;
+}
+
+.container__hills--cognate {
+	animation: pathStroke 60000s ease-out alternate infinite;
+}
+
+.container__hills--about {
+	animation: pathStroke 30000s ease alternate infinite;
+}
+.container__hills--events {
+	animation: pathStroke 10000s ease alternate infinite;
+}
+
+
+@keyframes pathStroke {
+	from {
+		stroke-dashoffset: 1000000;
+	}
+  to {
+    stroke-dashoffset: 0;
+  }
 }
