@@ -13,7 +13,16 @@ body {
 }
 
 svg {
-	padding-bottom: 200px;
+	max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: -50px;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .container__words path {

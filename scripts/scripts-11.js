@@ -13,7 +13,3 @@ $(window).resize(resize);
 $("path").mouseover(function() {
     $(this).css({"fill": "rgba(255,255,255,1)"});
 });
-
-$("path").mouseover(function() {
-    $(this).css({"fill": "rgba(255,255,255,0)"});
-});
