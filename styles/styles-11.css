@@ -3,6 +3,10 @@
 	margin: 0;
 }
 
+body {
+	background-color: black;
+}
+
 .container__svg {
 	background-color: black;
 	margin: auto;
