@@ -5,6 +5,7 @@
 
 body {
 	background-color: black;
+	overflow: hidden;
 }
 
 .container__svg {
@@ -13,13 +14,13 @@ body {
 }
 
 svg {
-	max-height: 100%;
+	max-height: 140%;
   max-width: 100%;
   width: auto;
   height: auto;
   position: absolute;
-  top: -50px;
-  bottom: 50px;
+  top: 50px;
+  bottom: 0;
   left: 0;
   right: 0;
   margin: auto;
@@ -27,18 +28,18 @@ svg {
 
 .container__words path {
 	fill: #636363;
-	transition: 10s;
+	transition: 20s;
 }
 
 .container__hills {
 	stroke: #636363;
 	stroke-width: 0.3;
-  stroke-dasharray: 200;
+  stroke-dasharray: 2.5;
 	transition: 10s;
 }
 
 .container__hills--cognate {
-	animation: pathStroke 60000s ease-out alternate infinite;
+	animation: pathStroke 6000s ease-out alternate infinite;
 }
 
 .container__hills--about {
