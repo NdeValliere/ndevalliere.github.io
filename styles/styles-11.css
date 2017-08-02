@@ -9,12 +9,12 @@ body {
 }
 
 .container__svg {
-	background-color: black;
+	background-color: rgba(255,255,255,0);
 	margin: auto;
 }
 
 svg {
-	max-height: 140%;
+	max-height: 130%;
   max-width: 100%;
   width: auto;
   height: auto;
@@ -29,24 +29,25 @@ svg {
 .container__words path {
 	fill: #636363;
 	transition: 20s;
+	stroke: white;
+	stroke-width: 0.3;
 }
 
-.container__hills {
-	stroke: #636363;
-	stroke-width: 0.3;
-  stroke-dasharray: 2.5;
+.container__coordinates--background .container__hills {
+	stroke: rgba(15,15,15,1);
+	stroke-width: 2;
+}
+
+.container__coordinates--foreground .container__hills {
+	stroke: rgba(255,255,255,1);
+	stroke-width: 0.1;
+  stroke-dasharray: 1000;
 	transition: 10s;
+	animation: pathStroke 5000s ease alternate infinite;
 }
 
 .container__hills--cognate {
-	animation: pathStroke 6000s ease-out alternate infinite;
-}
-
-.container__hills--about {
-	animation: pathStroke 30000s ease alternate infinite;
-}
-.container__hills--events {
-	animation: pathStroke 10000s ease alternate infinite;
+	animation: pathStroke 100000s ease-out alternate infinite;
 }
 
 
