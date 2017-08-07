@@ -24,28 +24,28 @@ $( window ).scroll(function( event ) {
   							});
               }
     if ($(window).scrollTop() > 6000) {
-     $(".title--2").css({"opacity": "+=" + (-0.01)});
+     $(".title--2").css({"display": "none")});
      $(".title--3").css({"letter-spacing": "+=8px",
                          "left": "+=" + (-40) + "px",
                          "opacity": 1
    							});
                }
      if ($(window).scrollTop() > 9000) {
-      $(".title--3").css({"opacity": "+=" + (-0.01)});
+      $(".title--3").css({"display": "none")});
       $(".title--4").css({"letter-spacing": "+=8px",
                           "left": "+=" + (-40) + "px",
                           "opacity": 1
                  });
                 }
     if ($(window).scrollTop() > 12000) {
-     $(".title--4").css({"opacity": "+=" + (-0.01)});
+     $(".title--4").css({"display": "none")});
      $(".title--5").css({"letter-spacing": "+=8px",
                          "left": "+=" + (-40) + "px",
                          "opacity": 1
                  });
                }
    if ($(window).scrollTop() > 18000) {
-    $(".title--5").css({"opacity": "+=" + (-0.01)});
+    $(".title--5").css({"display": "none")});
     $(".title--6").css({"letter-spacing": "+=8px",
                         "left": "+=" + (-40) + "px",
                         "opacity": 1
