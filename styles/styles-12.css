@@ -1,0 +1,29 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	 overflow-x: hidden;
+}
+
+h1 {
+	letter-spacing: 0.1px;
+	position: fixed;
+	white-space: nowrap;
+	font-size: 50px;
+	/*opacity: 1;*/
+}
+
+img {
+	display: block;
+	padding: 800px 500px 800px 500px;
+}
+
+.title {
+	opacity: 0;
+}
+
+.title--1 {
+	opacity: 1;
+}
