@@ -1,0 +1,74 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+	font-family: "Input Sans";
+}
+
+.container__intro {
+	height: 100px;
+	margin: auto;
+	padding-top: 100px;
+	position: relative;
+	width: 270px;
+}
+
+.intro__text {
+	font-family: "Input Sans";
+	font-size: 15px;
+	font-weight: 100;
+	line-height: 1.5;
+	display: inline;
+	white-space: nowrap;
+}
+
+#intro__text--white {
+	opacity: 0;
+}
+
+.container__canvas {
+	margin-bottom: -40px;
+}
+
+.container__work {
+	background-color: black;
+	height: 250px;
+}
+
+
+
+/*.typed-cursor {
+	font-family: "Input Sans";
+	font-size: 15px;
+	font-weight: 100;
+  opacity: 1;
+  animation: typedjsBlink 0.7s infinite;
+  -webkit-animation: typedjsBlink 0.7s infinite;
+          animation: typedjsBlink 0.7s infinite;
+}
+@keyframes typedjsBlink{
+  50% { opacity: 0.0; }
+}
+@-webkit-keyframes typedjsBlink{
+  0% { opacity: 1; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1; }
+}
+
+.typed-fade-out{
+  opacity: 0;
+  transition: opacity .25s;
+  -webkit-animation: 0;
+          animation: 0;
+}*/
+
+.typed-cursor {
+	display: none;
+}
