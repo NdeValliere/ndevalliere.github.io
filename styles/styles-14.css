@@ -65,6 +65,10 @@ p {
 	padding: 2.5px;
 }
 
+.page__link:hover {
+	opacity: 0.8;
+}
+
 .work__text--link .page__link {
 	background: white;
 	color: black;
