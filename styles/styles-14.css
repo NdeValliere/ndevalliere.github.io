@@ -12,11 +12,18 @@ p {
 	font-family: "Input Sans";
 }
 
-.container__about {
+.container__about,
+.container__work,
+.container__play {
 	margin: auto;
 	padding: 125px 0 50px 0;
 	position: relative;
 	width: 490px;
+}
+
+.container__work {
+	padding: 0;
+	margin-top: -150px;
 }
 
 .container__header {
@@ -25,7 +32,9 @@ p {
 }
 
 .about__text,
-.header__text {
+.header__text,
+.work__text,
+.play__text {
 	/*padding: 5px 0;*/
 	font-family: "Input Sans";
 	font-size: 15px;
@@ -33,11 +42,62 @@ p {
 	line-height: 1.75;
 }
 
-.about__text--brow {
+.work__text {
+	color: rgba(255,255,255,0.9);
+}
+
+.work--text--project-title,
+.play--text--project-title {
+	color: rgba(255,255,255,1);
+	font-weight: 400;
+	font-size: 25px;
+	padding-bottom: 5px;
+}
+
+.play--text--project-title {
+	color: black;
+}
+
+.page__link {
+	background: black;
+	color: white;
+	text-decoration: none;
+	padding: 2.5px;
+}
+
+.work__text--link .page__link {
+	background: white;
+	color: black;
+}
+
+.work__text--link {
+	margin-top: 12.5px;
+}
+
+.play__text--link {
+	margin-top: 7.5px;
+}
+
+.work__project,
+.container__play {
+	padding-bottom: 150px;
+}
+
+.play__project {
+	padding-bottom: 15px;
+}
+
+.about__text--brow,
+.work__text--brow,
+.play__text--brow {
 	font-size: 10px;
 	font-weight: 500;
 	text-transform: uppercase;
 	line-height: 3;
+}
+
+.work__text--brow {
+	color: rgba(255,255,255,0.75);
 }
 
 .header__text {
@@ -48,15 +108,16 @@ p {
 	margin-bottom: -40px;
 }
 
-.container__canvas-extension {
+.container__canvas-extension,
+.container__work-background {
 	background-color: black;
 	height: 250px;
 }
 
-.container__work {
-	background-color: black;
-	height: 250px;
+.container__work-background {
+	height: auto;
 }
+
 
 
 
