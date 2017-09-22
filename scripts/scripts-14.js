@@ -1,12 +1,5 @@
-var typed = new Typed('#intro__text--1', {
-  strings: ["Hi there! Lovely to meet you!", "My name is Nathalie de Vallière.", "This is my portfolio of work.", ""],
-  typeSpeed: 40
-});
-
 var canvas = document.getElementById("canvas__wave");
-// var container = document.getElementByClass("container__work");
 canvas.width = window.innerWidth;
-// container.width = window.innerWidth;
 
 // The amount of segment points we want to create:
 var amount = 3;

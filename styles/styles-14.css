@@ -12,46 +12,45 @@ p {
 	font-family: "Input Sans";
 }
 
-.container__intro {
-	height: 100px;
-	margin: auto;
-	padding-top: 100px;
-	position: relative;
-	width: 270px;
-}
-
 .container__about {
 	margin: auto;
+	padding: 125px 0 50px 0;
 	position: relative;
-	width: 510px;
+	width: 490px;
+}
+
+.container__header {
+	padding-top: 25px;
+	padding-left: 25px;
 }
 
 .about__text,
-.intro__text {
+.header__text {
+	/*padding: 5px 0;*/
 	font-family: "Input Sans";
 	font-size: 15px;
 	font-weight: 100;
-	line-height: 1.5;
-}
-
-.intro__text {
-	display: inline;
-	white-space: nowrap;
+	line-height: 1.75;
 }
 
 .about__text--brow {
 	font-size: 10px;
 	font-weight: 500;
 	text-transform: uppercase;
-	line-height: 2;
+	line-height: 3;
 }
 
-#intro__text--white {
-	opacity: 0;
+.header__text {
+	font-size: 12.5px;
 }
 
 .container__canvas {
 	margin-bottom: -40px;
+}
+
+.container__canvas-extension {
+	background-color: black;
+	height: 250px;
 }
 
 .container__work {
