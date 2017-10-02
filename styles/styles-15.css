@@ -9,7 +9,7 @@ h3,
 h4,
 h5,
 p {
-	font-family: "Input Sans";
+	font-family: "Adobe Garamond Pro", sans-serif;
 }
 
 .container__about,
@@ -18,7 +18,7 @@ p {
 	margin: auto;
 	padding: 100px 0 50px 0;
 	position: relative;
-	width: 490px;
+	width: 780px;
 }
 
 .container__work {
@@ -36,8 +36,8 @@ p {
 .work__text,
 .play__text {
 	padding: 2.5px 0;
-	font-family: "Input Sans";
-	font-size: 15px;
+	/*font-family: "Input Sans";*/
+	font-size: 25px;
 	font-weight: 100;
 	line-height: 1.5;
 }
@@ -95,8 +95,9 @@ p {
 .about__text--brow,
 .work__text--brow,
 .play__text--brow {
-	font-size: 10px;
-	font-weight: 900;
+	font-family: "Gotham Pro Regular", sans-serif;
+	font-size: 15px;
+	font-weight: 500;
 	text-transform: uppercase;
 	line-height: 3;
 }
@@ -105,17 +106,17 @@ p {
 	color: rgba(255,255,255,0.75);
 }
 
-.header__text .page__link,
+/*.header__text .page__link,
 .about__text .page__link,
 .play__text .page__link {
 	background: black;
 	color: white;
 	font-weight: 100;
 	padding: 2.5px 2.5px;
-}
+}*/
 
 .header__text .page__link {
-	font-size: 12.5px;
+	/*font-size: 12.5px;*/
 }
 
 .container__canvas {
