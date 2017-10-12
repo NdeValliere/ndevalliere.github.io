@@ -31,12 +31,20 @@ p {
 }
 
 .timeline__movement {
-	margin-top: 15%;
+	margin-top: 205px;
 }
 
 .timeline__row--movement {
 	background: black;
 	color: white;
+	margin-top: 125px;
+	margin-bottom: -75px;
+}
+
+.timeline__row--movement p {
+	font-size: 25px;
+	font-weight: 900;
+	margin-top: -115px;
 }
 
 .timeline__row,

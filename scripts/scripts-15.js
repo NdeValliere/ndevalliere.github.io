@@ -1,5 +1,6 @@
 var canvas = document.getElementById("canvas__wave");
-canvas.width = window.innerWidth;
+canvas.width = window.innerWidth+200;
+// canvas.style.webkitFilter = "blur(10px)";
 
 // The amount of segment points we want to create:
 var amount = 3;
@@ -10,8 +11,8 @@ var height = 30;
 // Create a new path and style it:
 var path = new Path({
 	// 80% black:
-	strokeColor: [0],
-	strokeWidth: 110,
+	strokeColor: [0,0,0],
+	strokeWidth: 150,
 	strokeCap: 'square'
 });
 
