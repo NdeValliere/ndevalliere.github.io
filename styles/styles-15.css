@@ -49,9 +49,13 @@ p {
 .play--text--project-title {
 	color: rgba(255,255,255,1);
 	font-weight: 900;
-	font-size: 30px;
+	font-size: 40px;
 	padding-bottom: 5px;
 }
+
+/*.work--text--project-title {
+	font-size: 40px;
+}*/
 
 .play--text--project-title {
 	color: black;
