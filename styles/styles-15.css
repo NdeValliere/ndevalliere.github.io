@@ -48,8 +48,8 @@ p {
 .work--text--project-title,
 .play--text--project-title {
 	color: rgba(255,255,255,1);
-	font-weight: 900;
-	font-size: 40px;
+	font-weight: 400;
+	font-size: 50px;
 	padding-bottom: 5px;
 }
 
@@ -72,7 +72,7 @@ p {
 	font-size: 20px;
 	padding: 15px;
 	text-decoration: none;
-  line-height: 3.5;
+  line-height: 4.75;
 }
 
 .work__text--link .page__link:hover {
@@ -124,11 +124,11 @@ p {
 
 a:hover {
 	color: blue;
+	transition: 0.5s;
 }
 
 .container__canvas {
 	margin-bottom: -40px;
-	margin-left: -100px;
 }
 
 .container__canvas-extension,
