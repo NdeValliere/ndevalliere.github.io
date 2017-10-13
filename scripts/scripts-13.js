@@ -1,5 +1,5 @@
 var typed = new Typed('#intro__text--1', {
-  strings: ["Hi there! Lovely to meet you!", "My name is Nathalie de Vallière.", "This is my portfolio of work.", ""],
+  strings: ["Hi there! Lovely to meet you!", "My name is Nathalie de Vallière.", "This is what I like to do:", ""],
   typeSpeed: 40
 });
 
@@ -9,7 +9,7 @@ canvas.width = window.innerWidth;
 // container.width = window.innerWidth;
 
 // The amount of segment points we want to create:
-var amount = 3;
+var amount = 5;
 
 // The maximum height of the wave:
 var height = 30;
@@ -37,7 +37,7 @@ function onFrame(event) {
 		var segment = path.segments[i];
 
 		// A cylic value between -1 and 1
-		var sinus = Math.sin(event.time * 0.75 + i);
+		var sinus = Math.sin(event.time * 0.95 + i);
 
 		// Change the y position of the segment point:
 		segment.point.y = sinus * height + 100;

@@ -5,7 +5,7 @@ canvas.width = window.innerWidth;
 var amount = 3;
 
 // The maximum height of the wave:
-var height = 30;
+var height = 20;
 
 // Create a new path and style it:
 var path = new Path({

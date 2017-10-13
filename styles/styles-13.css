@@ -13,17 +13,18 @@ p {
 }
 
 .container__intro {
-	height: 100px;
+	height: 500px;
 	margin: auto;
-	padding-top: 100px;
+	padding-top: 250px;
+	margin-bottom: -250px;
 	position: relative;
-	width: 270px;
+	width: 1390px;
 }
 
 .intro__text {
 	font-family: "Input Sans";
-	font-size: 15px;
-	font-weight: 100;
+	font-size: 65px;
+	font-weight: 900;
 	line-height: 1.5;
 	display: inline;
 	white-space: nowrap;
