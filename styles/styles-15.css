@@ -25,12 +25,36 @@ p {
 	width: 100%;
 }
 
+.grid__col--1 {
+	width: 8.3%;
+}
+
+.grid__col--2 {
+	width: 16.6%;
+}
+
 .grid__col--3 {
 	width: 25%;
 }
 
+.grid__col--4 {
+	width: 33.3%;
+}
+
+.grid__col--5 {
+	width: 41.6%;
+}
+
 .grid__col--6 {
 	width: 50%;
+}
+
+.grid__col--7 {
+	width: 58.3%;
+}
+
+.grid__col--8 {
+	width: 66.6%;
 }
 
 .container__about,
@@ -42,29 +66,35 @@ p {
 
 .container__about,
 .container__work {
-	padding: 175px 0 25px 0;
+	padding: 125px 0 25px 0;
 }
 
 .container__work {
 	padding: 0;
 }
 
-.container__header {
-	padding-top: 25px;
-}
-
 .about__text,
 .header__text,
 .work__text,
 .play__text {
-	/*padding: 2.5px 0;*/
 	font-size: 30px;
 	font-weight: 100;
 	line-height: 1.5;
 }
 
-.work__text {
-	color: rgba(255,255,255,1);
+.play__text--body-small {
+	font-size: 25px;
+	font-weight: 100;
+	line-height: 1.25;
+}
+
+.project__summary {
+	margin: 100px 0 50px 0;
+}
+
+.top__body {
+	font-size: 30px;
+	line-height: 1.45;
 }
 
 .work__project {
@@ -75,38 +105,41 @@ p {
 	padding-bottom: 50px;
 }
 
+.container__play {
+	padding: 50px 0;
+}
+
+.container__canvas {
+	margin-bottom: -50px;
+}
+
 .work--text--project-title,
-.play--text--project-title {
-	color: rgba(255,255,255,1);
+.play--text--project-title,
+.top__header {
 	font-weight: 400;
 	font-size: 50px;
 	padding-bottom: 5px;
 }
 
-.container__play {
-	padding: 50px 0;
+.work__text--brow,
+.work--text--project-title,
+.play--text--project-title,
+.work__text {
+	color: white;
 }
 
-.play--text--project-title {
-	color: black;
-}
-
+.play--text--project-title,
 .page__link {
 	color: black;
-	/*text-decoration: none;*/
 }
 
 .work__text--link .page__link {
 	background: white;
-	color: rgba(0,0,0,0.9);
+	color: black;
 	font-size: 20px;
 	padding: 15px;
 	text-decoration: none;
   line-height: 4.75;
-}
-
-.work__text--link .page__link:hover {
-	color: blue;
 }
 
 .work__text--link {
@@ -119,16 +152,12 @@ p {
 
 .about__text--brow,
 .work__text--brow,
-.play__text--brow {
+.play__text--brow,
+.top__brow {
 	font-size: 20px;
 	font-style: italic;
 	margin-bottom: 10px;
 }
-
-.work__text--brow {
-	color: rgba(255,255,255,1);
-}
-
 
 .work__text--brow,
 .play__text--brow {
@@ -140,15 +169,8 @@ p {
 	font-style: italic;
 }
 
-a:hover {
+a:hover,
+.work__text--link .page__link:hover {
 	color: blue;
 	transition: 0.5s;
-}
-
-.container__canvas {
-	margin-bottom: -50px;
-}
-
-.container__work-background {
-	height: auto;
 }
