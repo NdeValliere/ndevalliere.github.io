@@ -1,5 +1,6 @@
 * {
-	font-family: "Dunbar Text", sans-serif;
+	font-family: "Univers", sans-serif;
+	font-weight: 100;
 	margin: 0;
 	padding: 0;
 }
@@ -7,27 +8,45 @@
 h1,
 h2,
 h3 {
-	font-family: "Dunbar Low";
+	font-family: "Univers-Condensed";
 	font-weight: 400;
 }
 
 p {
-	font-size: 20px;
+	font-size: 17.5px;
+}
+
+.timeline__title {
+	font-size: 90px;
+	margin-top: 12.5%;
 }
 
 .block__title {
-	font-size: 45px;
+	font-size: 70px;
 	line-height: 1;
 }
 
 .block__artist {
-	font-size: 30px;
-	line-height: 2;
+	font-size: 35px;
+	font-weight: 100;
+	margin: 7.5px 0 15px 0;
 }
 
-.tag {
-	font-size: 15px;
+.date__text {
+	font-family: "Univers-Condensed";
+	font-size: 20px;
 	font-weight: 400;
+	margin-bottom: 5px;
+}
+
+.timeline__movement--body,
+.tag  {
+	font-family: "Univers-Condensed";
+	font-weight: 400;
+}
+
+.timeline__movement {
+	width: 95%;
 }
 
 /*.timeline__row--movement  {
@@ -46,16 +65,11 @@ p {
 	position: fixed;
 }
 
-.timeline__title {
-	font-size: 55px;
-	margin-top: 12.5%;
-}
-
 .timeline__mark {
 	background: black;
-	height: 5px;
-	margin: 7.5px 20px;
-	width: 10px;
+	height: 2.5px;
+	margin: 7.5px 1px;
+	width: 75px;
 }
 
 .timeline__dates {
@@ -99,9 +113,10 @@ p {
 }
 
 .timeline__row--movement {
-	background: black;
-	color: white;
-	margin-top: 125px;
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+	margin-top: 115px;
+	padding-top: 10px;
 	margin-bottom: -75px;
 }
 
