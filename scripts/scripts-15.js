@@ -3,6 +3,15 @@ var canvasHeight = 150;
 canvas.width = window.innerWidth;
 canvas.height = canvasHeight;
 
+$(document).ready(function(){
+	$('.container__grid').css({
+			'width': window.innerWidth
+	});
+	$('.grid__divider').css({
+			'max-width': window.innerWidth - 10+'%'
+	})
+});
+
 // The amount of segment points we want to create:
 var amount = 3;
 
