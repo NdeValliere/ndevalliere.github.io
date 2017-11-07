@@ -10,6 +10,12 @@ var resize = (function () {
 	$('.grid__divider').css({
 			'max-width': window.innerWidth - (0.083*window.innerWidth)
 	})
+
+	if (window.innerWidth > 1440) {
+		$('.grid__row').css({
+				'padding': '4.15% 20.74%'
+		});
+	}
 });
 
 $(document).ready(resize);
