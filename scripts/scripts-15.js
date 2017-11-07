@@ -11,7 +11,7 @@ var resize = (function () {
 			'max-width': window.innerWidth - (0.083*window.innerWidth)
 	})
 	$('.page__banner').css({
-			'max-width': window.innerWidth;
+			'max-width': window.innerWidth
 	})
 
 	if (window.innerWidth > 1500) {
