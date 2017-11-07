@@ -13,13 +13,13 @@ p {
 }
 
 .container__grid {
-	padding: 4.15%;
+	/*padding: 4.15%;*/
 }
 
 .grid__divider {
 	border-color: black;
 	margin: 0 auto;
-	max-width: 1300px;
+	/*max-width: 1300px;*/
 }
 
 .grid__divider--white {
@@ -29,12 +29,13 @@ p {
 
 .container__grid--black {
 	background: black;
-	padding: 0;
+	/*padding: 0;*/
 }
 
 .grid__row {
 	display: flex;
 	margin: 0 auto;
+	padding: 4.15%;
 	/*max-width: 1300px;*/
 }
 
@@ -81,7 +82,7 @@ p {
 .grid__col--12,
 .page__banner {
 	width: 100%;
-	max-width: 1300px;
+	/*max-width: 1300px;*/
 	margin: 0 auto;
 }
 
