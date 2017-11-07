@@ -34,42 +34,54 @@ p {
 .grid__row {
 	display: flex;
 	width: 100%;
+	margin: 0 auto;
+	max-width: 1300px;
 }
 
 .grid__col--1 {
 	width: 8.3%;
+	max-width: 108px;
 }
 
 .grid__col--2 {
 	width: 16.6%;
+	max-width: 216px;
 }
 
 .grid__col--3 {
 	width: 25%;
+	max-width: 325px;
 }
 
 .grid__col--4 {
 	width: 33.3%;
+	max-width: 430px;
 }
 
 .grid__col--5 {
 	width: 41.6%;
+	max-width: 540px;
 }
 
 .grid__col--6 {
 	width: 50%;
+	max-width: 650px;
 }
 
 .grid__col--7 {
 	width: 58.3%;
+	max-width: 758px;
 }
 
 .grid__col--8 {
 	width: 66.6%;
+	max-width: 865px;
 }
 
 .grid__col--12 {
 	width: 100%;
+	max-width: 1300px;
+	margin: 0 auto;
 }
 
 .container__about,
