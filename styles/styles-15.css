@@ -12,13 +12,27 @@ p {
 	font-family: "Adobe Garamond Pro", sans-serif;
 }
 
-.container__grid {
+.container__grid,
+.grid__row,
+.grid__divider,
+.grid__col--1,
+.grid__col--2,
+.grid__col--3,
+.grid__col--4,
+.grid__col--5,
+.grid__col--6,
+.grid__col--7,
+.grid__col--8,
+.grid__col--9,
+.grid__col--10,
+.grid__col--11,
+.grid__col--12,
+.page__banner  {
 	margin: 0 auto;
 }
 
 .grid__divider {
 	border-color: black;
-	margin: 0 auto;
 }
 
 .grid__divider--white {
@@ -32,7 +46,6 @@ p {
 
 .grid__row {
 	display: flex;
-	margin: 0 auto;
 	padding: 4.15%;
 }
 
@@ -79,8 +92,6 @@ p {
 .grid__col--12,
 .page__banner {
 	width: 100%;
-	/*max-width: 1300px;*/
-	margin: 0 auto;
 }
 
 .container__about,
