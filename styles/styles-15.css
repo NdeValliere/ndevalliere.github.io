@@ -18,8 +18,8 @@ p {
 
 .grid__divider {
 	border-color: black;
-	/*margin-bottom: -4.15%;
-	margin-top: -4.15%;*/
+	margin: 0 auto;
+	max-width: 1300px;
 }
 
 .grid__divider--white {
