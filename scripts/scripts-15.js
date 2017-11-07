@@ -16,13 +16,13 @@ var resize = (function () {
 
 	if (window.innerWidth > 1500) {
 		$('.grid__row').css({
-				'padding': '4.15% 20.74%'
+				'padding': '4.15% 18%'
 		});
 		$('.page__banner').css({
-				'max-width': (0.5852*window.innerWidth)
+				'max-width': (0.64*window.innerWidth)
 		})
 		$('.grid__divider').css({
-				'max-width': (0.5852*window.innerWidth)
+				'max-width': (0.64*window.innerWidth)
 		})
 	}
 });
