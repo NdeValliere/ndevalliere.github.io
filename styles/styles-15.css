@@ -38,6 +38,7 @@ p {
 .grid__divider--white {
 	border-color: white;
 	background: black;
+	margin-top: -2px;
 }
 
 .container__grid--black {
