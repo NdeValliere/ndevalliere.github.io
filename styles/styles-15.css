@@ -78,7 +78,8 @@ p {
 	max-width: 865px;
 }
 
-.grid__col--12 {
+.grid__col--12,
+.page__banner {
 	width: 100%;
 	max-width: 1300px;
 	margin: 0 auto;
