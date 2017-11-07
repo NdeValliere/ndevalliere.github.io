@@ -11,7 +11,7 @@ var resize = (function () {
 			'max-width': window.innerWidth - (0.083*window.innerWidth)
 	})
 
-	if (window.innerWidth > 1440) {
+	if (window.innerWidth > 1500) {
 		$('.grid__row').css({
 				'padding': '4.15% 20.74%'
 		});
