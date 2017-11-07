@@ -11,12 +11,15 @@ var resize = (function () {
 			'max-width': window.innerWidth - (0.083*window.innerWidth)
 	})
 	$('.page__banner').css({
-			'max-width': window.innerWidth - (0.083*window.innerWidth)
+			'max-width': window.innerWidth
 	})
 
 	if (window.innerWidth > 1500) {
 		$('.grid__row').css({
 				'padding': '4.15% 20.74%'
+		});
+		$('.page__banner').css({
+				'margin': '4.15% 20.74%'
 		});
 	}
 });
