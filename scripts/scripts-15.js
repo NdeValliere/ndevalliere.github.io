@@ -1,9 +1,10 @@
 var canvas = document.getElementById("canvas__wave");
+var canvasWidth = 150;
 canvas.width = window.innerWidth;
-// canvas.height = 150;
+canvas.height = canvasWidth;
 
 // The amount of segment points we want to create:
-var amount = 2;
+var amount = 3;
 
 // The maximum height of the wave:
 var height = 20;
