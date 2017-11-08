@@ -4,7 +4,7 @@ var container; // apppend renderer and cameras to this DOM element
 
 var camera, scene, renderer; // predefine here, ready to assign values later
 
-var ambientLight, light1, light2, light3, dirLight, hemiLight; // ditto
+var ambientLight, light1, light2, light3, dirLight; // ditto
 var shadowMaterial;
 
 var setMaterial, material, loader; //import model from SketchUp
@@ -107,7 +107,7 @@ setMaterial = function(node, material) {
   }
 }
 
-loader.load( 'assets/blocks-8test.dae', function ( collada ) {
+loader.load( 'assets/ual-1.dae', function ( collada ) {
     model = collada.scene;
     // setMaterial( model, new THREE.MeshStandardMaterial({color: 0xffffff, emissive: 0x0, roughness: 0.13, metalness: 0.66, shading: THREE.SmoothShading, vertexColors: THREE.NoColors}));
     scene.add( model );
@@ -119,16 +119,16 @@ loader.load( 'assets/blocks-8test.dae', function ( collada ) {
 //-
 ambientLight = new THREE.AmbientLight( 0xffffff, 1 );
 
-light1 = new THREE.PointLight( 0xffffff, 1 );
-light1.position.set( 25, 50, 25 );
+// light1 = new THREE.PointLight( 0xffffff, 1 );
+// light1.position.set( 25, 50, 25 );
+//
+// light2 = new THREE.PointLight( 0xffffff, 1 );
+// light2.position.set( 12, 25, 12 );
+//
+// light3 = new THREE.PointLight( 0xffffff, 1 );
+// light3.position.set( -15, 5, -15 );
 
-light2 = new THREE.PointLight( 0xffffff, 1 );
-light2.position.set( 12, 25, 12 );
-
-light3 = new THREE.PointLight( 0xffffff, 1 );
-light3.position.set( -15, 5, -15 );
-
-scene.add(ambientLight, light1, light2, light3);
+scene.add(ambientLight);
 
 //Turn on rendering of shadows
 renderer.shadowMap.enabled = true;
