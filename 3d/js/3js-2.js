@@ -39,59 +39,8 @@ function init() {
 
   scene = new THREE.Scene(); //new scene with library source
 
-  scene.fog = new THREE.Fog( 0xffffff, 1, 5000 );
-
-  scene.fog.color.setHSL( 0.6, 0, 1 );
-	// LIGHTS
-	hemiLight = new THREE.HemisphereLight( 0xffffff, 0xffffff, 0.6 );
-	hemiLight.color.setHSL( 0.6, 1, 0.6 );
-	hemiLight.groundColor.setHSL( 0.095, 1, 0.75 );
-	hemiLight.position.set( 0, 500, 0 );
-	scene.add( hemiLight );
-	//
-	dirLight = new THREE.DirectionalLight( 0xffffff, 1 );
-	dirLight.color.setHSL( 0.1, 1, 0.95 );
-	dirLight.position.set( -1, 1.75, 1 );
-	dirLight.position.multiplyScalar( 50 );
-	scene.add( dirLight );
-	dirLight.castShadow = true;
-	dirLight.shadow.mapSize.width = 2048;
-	dirLight.shadow.mapSize.height = 2048;
-	var d = 50;
-	dirLight.shadow.camera.left = -d;
-	dirLight.shadow.camera.right = d;
-	dirLight.shadow.camera.top = d;
-	dirLight.shadow.camera.bottom = -d;
-	dirLight.shadow.camera.far = 3500;
-	dirLight.shadow.bias = -0.0001;
-	// GROUND
-	var groundGeo = new THREE.PlaneBufferGeometry( 10000, 10000 );
-	var groundMat = new THREE.MeshPhongMaterial( { color: 0xffffff, specular: 0x050505 } );
-	groundMat.color.setHSL( 0.095, 1, 0.75 );
-	var ground = new THREE.Mesh( groundGeo, groundMat );
-	ground.rotation.x = -Math.PI/2;
-	ground.position.y = -33;
-	scene.add( ground );
-	ground.receiveShadow = true;
-	// SKYDOME
-	var vertexShader = document.getElementById( 'vertexShader' ).textContent;
-	var fragmentShader = document.getElementById( 'fragmentShader' ).textContent;
-	var uniforms = {
-		topColor:    { value: new THREE.Color( 0x0077ff ) },
-		bottomColor: { value: new THREE.Color( 0xffffff ) },
-		offset:      { value: 33 },
-		exponent:    { value: 0.6 }
-	};
-	uniforms.topColor.value.copy( hemiLight.color );
-	scene.fog.color.copy( uniforms.bottomColor.value );
-	var skyGeo = new THREE.SphereGeometry( 4000, 32, 15 );
-	var skyMat = new THREE.ShaderMaterial( { vertexShader: vertexShader, fragmentShader: fragmentShader, uniforms: uniforms, side: THREE.BackSide } );
-	var sky = new THREE.Mesh( skyGeo, skyMat );
-	scene.add( sky );
-
 
   renderer = new THREE.WebGLRenderer({ antialias: true }); //new renderer with library source
-  renderer.setClearColor( scene.fog.color );
   renderer.setSize( window.innerWidth, window.innerHeight );
   renderer.setClearColor( 0xffffff ); //change default background colour from black
   container.appendChild(renderer.domElement);
@@ -140,8 +89,8 @@ function render() {
 //Import model from SketchUp
 //-
 material = new THREE.MeshStandardMaterial( {
-    color: 0xff0051,
-    shading: THREE.FlatShading, // default is THREE.SmoothShading
+    color: 0xfff,
+    // shading: THREE.FlatShading, // default is THREE.SmoothShading
     metalness: 0,
     roughness: 1
 } );
@@ -158,9 +107,9 @@ setMaterial = function(node, material) {
   }
 }
 
-loader.load( 'assets/blocks-8.dae', function ( collada ) {
+loader.load( 'assets/blocks-8test.dae', function ( collada ) {
     model = collada.scene;
-    setMaterial( model, new THREE.MeshStandardMaterial({color: 0xffffff, emissive: 0x0, roughness: 0.13, metalness: 0.66, shading: THREE.SmoothShading, vertexColors: THREE.NoColors}));
+    // setMaterial( model, new THREE.MeshStandardMaterial({color: 0xffffff, emissive: 0x0, roughness: 0.13, metalness: 0.66, shading: THREE.SmoothShading, vertexColors: THREE.NoColors}));
     scene.add( model );
     console.log('model loaded');
  });
@@ -170,27 +119,27 @@ loader.load( 'assets/blocks-8.dae', function ( collada ) {
 //-
 ambientLight = new THREE.AmbientLight( 0xffffff, 1 );
 
-// light1 = new THREE.PointLight( 0x6FB2FF, 1 );
-// light1.position.set( 25, 50, 25 );
-//
-// light2 = new THREE.PointLight( 0xffffff, 1 );
-// light2.position.set( 12, 25, 12 );
-//
-// light3 = new THREE.PointLight( 0x6FB2FF, 1 );
-// light3.position.set( -15, 5, -15 );
+light1 = new THREE.PointLight( 0xffffff, 1 );
+light1.position.set( 25, 50, 25 );
 
-scene.add( ambientLight );
+light2 = new THREE.PointLight( 0xffffff, 1 );
+light2.position.set( 12, 25, 12 );
+
+light3 = new THREE.PointLight( 0xffffff, 1 );
+light3.position.set( -15, 5, -15 );
+
+scene.add(ambientLight, light1, light2, light3);
 
 //Turn on rendering of shadows
-// renderer.shadowMap.enabled = true;
-// renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-//
-// light1.castShadow = true;
-// light1.shadow.mapSize.width = 1024;
-// light1.shadow.mapSize.height = 1024;
-//
-// loader.castShadow = true;
-// loader.receiveShadow = true;
-//
-// shadowMaterial = new THREE.ShadowMaterial( { color: 0xeeeeee } );
-// shadowMaterial.opacity = 0.1;
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
+light1.castShadow = true;
+light1.shadow.mapSize.width = 1024;
+light1.shadow.mapSize.height = 1024;
+
+loader.castShadow = true;
+loader.receiveShadow = true;
+
+shadowMaterial = new THREE.ShadowMaterial( { color: 0xeeeeee } );
+shadowMaterial.opacity = 0.1;
