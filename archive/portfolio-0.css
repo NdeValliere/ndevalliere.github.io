@@ -12,15 +12,16 @@ p {
 	font-family: "Adobe Garamond Pro", sans-serif;
 }
 
-/*Grids and containers*/
+img {
+	width: 100%;
+}
+
 .container__grid,
 .grid__row,
 .grid__divider,
 .grid__col--1,
 .grid__col--2,
 .grid__col--3,
-.grid__col--3--edge,
-.grid__col--6--edge,
 .grid__col--4,
 .grid__col--5,
 .grid__col--6,
@@ -63,9 +64,7 @@ p {
 	max-width: 216px;
 }
 
-.grid__col--3,
-.grid__col--3--edge {
-	order: initial;
+.grid__col--3 {
 	width: 25%;
 	max-width: 325px;
 }
@@ -80,9 +79,7 @@ p {
 	max-width: 540px;
 }
 
-.grid__col--6,
-.grid__col--6--edge {
-	order: initial;
+.grid__col--6 {
 	width: 50%;
 	max-width: 650px;
 }
@@ -98,8 +95,7 @@ p {
 }
 
 .grid__col--12,
-.page__banner,
-img {
+.page__banner {
 	width: 100%;
 }
 
@@ -110,7 +106,6 @@ img {
 	position: relative;
 }
 
-/*Spacing adjustments*/
 .container__about,
 .container__work {
 	padding: 125px 0 25px 0;
@@ -120,33 +115,6 @@ img {
 	padding: 0;
 }
 
-.project__summary {
-	margin: 100px 0 50px 0;
-}
-
-.container__play {
-	padding: 50px 0;
-}
-
-.container__canvas {
-	margin-bottom: -5px;
-}
-
-.grid__row--logo {
-	margin-bottom: -8.3%;
-}
-
-.work__text--brow,
-.play__text--brow {
-	margin-bottom: 17.5px;
-}
-
-.page__link--logo {
-	float: right;
-	padding-top: 12.5px;
-}
-
-/*Text styles*/
 .about__text,
 .header__text,
 .work__text,
@@ -162,9 +130,29 @@ img {
 	line-height: 1.25;
 }
 
+.project__summary {
+	margin: 100px 0 50px 0;
+}
+
 .top__body {
 	font-size: 30px;
 	line-height: 1.45;
+}
+
+/*.work__project {
+	padding-bottom: 100px;
+}*/
+
+/*.work__project:last-child {
+	padding-bottom: 50px;
+}*/
+
+.container__play {
+	padding: 50px 0;
+}
+
+.container__canvas {
+	margin-bottom: -5px;
 }
 
 .work--text--project-title,
@@ -173,6 +161,49 @@ img {
 	font-weight: 400;
 	font-size: 50px;
 	padding-bottom: 5px;
+}
+
+/*.work__text--brow,
+.work--text--project-title,
+.play--text--project-title,
+.work__text {
+	color: white;
+}*/
+
+.grid__row--hover {
+	color: white;
+	transition: 1s;
+}
+
+.grid__row--hover:hover {
+	background: white;
+	color: black;
+}
+
+.play--text--project-title,
+.page__link {
+	color: black;
+}
+
+.grid__row--logo {
+	margin-bottom: -8.3%;
+}
+
+/*.work__text--link .page__link {
+	background: white;
+	color: black;
+	font-size: 20px;
+	padding: 15px;
+	text-decoration: none;
+  line-height: 4.75;
+}
+
+.work__text--link {
+	margin-top: 12.5px;
+}*/
+
+.play__text--link {
+	margin-top: 7.5px;
 }
 
 .about__text--brow,
@@ -184,28 +215,16 @@ img {
 	margin-bottom: 10px;
 }
 
+.work__text--brow,
+.play__text--brow {
+	margin-bottom: 17.5px;
+}
+
 .header__text .page__link {
 	font-size: 20px;
 	font-style: italic;
 }
 
-.footer__text--white,
-.footer__link--white {
-	color: white;
-}
-
-/*Hover states*/
-.grid__row--hover {
-	color: white;
-	transition: 1s;
-}
-
-.grid__row--hover:hover {
-	background: white;
-	color: black;
-}
-
-/*Link animations*/
 a {
 	color: black;
 	position: relative;
@@ -245,52 +264,64 @@ a.footer__link--white:hover {
 		-webkit-text-stroke: 0px #fff;
 }
 
-.page__link--logo,
-.page__link--logo:before,
-.page__link--logo:hover {
-	background-color: rgba(255,255,255,0);
+/*.link__wrapper:hover {
+	margin-top: -5px;
+}*/
+/*a {
+	position: relative;
+	text-decoration: none;
+	transition: all 0.3s ease-in-out 0s;
+}
+
+a:before {
+	background-color: #000;
+	bottom: 0;
+	content: "";
+	height: 2px;
+	left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+a:hover,
+a:hover:before {
+	animation: underline 1s ease-in-out 0s infinite alternate;
+}
+@keyframes underline {
+	0% {
+		-webkit-transform: scaleX(1);
+		transform: scaleX(1);
+		visibility: visible;
+	}
+	100% {
+		-webkit-transform: scaleX(0);
+		transform: scaleX(0);
+		visibility: hidden;
+	}
+}
+
+
+.work__text--link .page__link:hover,
+.work__text--link .page__link:before,
+.work__text--link .page__link,
+.container__contact .page__link:before,
+.container__contact .page__link:hover,
+.container__contact .page__link {
+	background-color: #fff;
+}*/
+
+.work__text--link .page__link:hover,
+.work__text--link .page__link:before,
+.work__text--link .page__link,
+.container__contact .page__link:before,
+.container__contact .page__link:hover,
+.container__contact .page__link {
+	background-color: #fff;
+}
+
+.footer__text--white,
+.footer__link--white {
+	color: white;
 }
 
 /*mobile styles*/
-@media only screen and (max-width: 1300px)  {
-	/*Grids and containers*/
-	.grid__row {
-		-ms-flex-wrap: wrap;
-		flex-wrap: wrap
-	}
-
-	.grid__col--1,
-	.grid__col--2,
-	.grid__col--3,
-	.grid__col--4,
-	.grid__col--5,
-	.grid__col--6,
-	.grid__col--7,
-	.grid__col--8,
-	.grid__col--9,
-	.grid__col--10,
-	.grid__col--11 {
-		width: 100%;
-		max-width: 650px;
-	}
-
-	.grid__col--6--edge {
-		order: 3;
-	}
-
-	.grid__col--3--edge {
-		order: 2;
-		width: 50%;
-		max-width: 325px;
-	}
-
-	.container__contact {
-		position: relative;
-	}
-
-	.page__link--logo {
-		padding-top: 0;
-		position: absolute;
-		right: 0;
-	}
-}

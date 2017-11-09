@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Nathalie de Vallière</title>
+
+  <link rel="stylesheet" href="../styles/styles-15.css">
+  <!-- <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"> -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <!-- Load the Paper.js library -->
+  <script type="text/javascript" src="../scripts/paper.js"></script>
+  <!-- Load external PaperScript and associate it with myCanvas -->
+  <script type="text/paperscript" src="../scripts/scripts-15.js" canvas="canvas__wave"></script>
+</head>
+<body>
+  <section class="container__grid">
+    <section class="grid__row grid__row--logo">
+      <section class="grid__col--3"></section>
+      <section class="grid__col--6"></section>
+      <section class="grid__col--3">
+        <section class="container__contact">
+          <a class="page__link page__link--logo" href="#" style="float: right; padding-top: 12.5px;">
+            <svg class="header__text header__text--left" width="16px" height="16px" viewBox="0 0 16 16"
+              onmouseover="document.getElementById('square').beginElement();">
+              <path
+                    d="M0,-1.13686838e-13 C8,6.9388939e-18 8,0 16,-1.13686838e-13 C16,2.64723716 16,7.9805705 16,16 L0,16 C0,8 0,2.66666667 0,-1.13686838e-13 Z"
+                    fill="#000000">
+                <animate
+                    attributeName="d"
+                    id="square"
+                    begin ="indefinite"
+                    dur="5s"
+                    repeatCount="1"
+                    values="M0,-1.13686838e-13 C8,6.9388939e-18 8,0 16,-1.13686838e-13 C16,2.64723716 16,7.9805705 16,16 L0,16 C0,8 0,2.66666667 0,-1.13686838e-13 Z;
+                            M0,7 C8,7 8,-1.26217745e-29 16,-1.13686838e-13 C16,2.64723716 16,7.9805705 16,16 L0,16 C0,12.6666667 0,9.66666667 0,7 Z;
+                            M0,-1.13686838e-13 C8,6.9388939e-18 8,7 16,7 C16,9.64723716 16,12.6472372 16,16 L0,16 C0,8 0,2.66666667 0,-1.13686838e-13 Z;
+                            M0,-1.13686838e-13 C8,6.9388939e-18 8,0 16,-1.13686838e-13 C16,2.64723716 16,7.9805705 16,16 L0,16 C0,8 0,2.66666667 0,-1.13686838e-13 Z"/>
+              </path>
+            </svg>
+          </a>
+        </section>
+      </section>
+    </section>
+  </section>
+
+  <section class="page__grid">
+    <main>
+      <section class="container__grid">
+        <header class="grid__row">
+          <section class="grid__col--3"></section>
+          <section class="grid__col--6">
+            <section class="project__summary">
+              <h1 class="play__text play__text--brow">Summary</h1>
+              <h1 class="play__text play--text--project-title" >Work&amp;Co</h1>
+              <p class="top__body top__body--project">Interned for 3 months under mentorship guidance. Worked on mobile design centric projects for Planned Parenthood, Panera Bread and Acorns. Areas of focus include UX and visual design.</p>
+            </section>
+          </section>
+          <section class="grid__col--3"></section>
+        </header>
+      </section>
+
+    </main>
+  </section>
+
+  <section class="container__canvas">
+    <canvas id="canvas__wave"></canvas>
+  </section>
+
+  <section class="container__grid container__grid--black">
+    <a class="page__link" href="ia.html">
+      <section class="grid__row grid__row--hover">
+        <section class="grid__col--3"></section>
+        <section class="grid__col--6">
+          <section class="container__work-background">
+            <section class="container__work">
+              <h1 class="work__text work__text--brow">Next</h1>
+              <section class="work__project work__project--3">
+                <h1 class="work__text work--text--project-title">iA, Information Architects Inc.</h1>
+                <p class="work__text work__text--body">Interned for 4 months. Contributed to restructuring, visual design and implementation of iA Writer product website.</p>
+              </section>
+            </section>
+          </section>
+        </section>
+        <section class="grid__col--3"></section>
+      </section>
+    </a>
+  </section>
+
+  <section class="container__grid container__grid--black">
+    <hr class="grid__divider grid__divider--white">
+  </section>
+
+  <section class="container__grid container__grid--black">
+    <section class="grid__row">
+      <section class="grid__col--3 grid__col--3--edge">
+        <p class="footer__text footer__text--white">Built by <a class="footer__link--white" href="#">Nathalie de Vallière</a>.</p>
+        <p class="footer__text footer__text--white">Previous versions: <a class="footer__link--white" href="#">2016</a> | <a class="footer__link--white" href="#">2015</a> | <a class="footer__link--white" href="#">2014</a></p>
+      </section>
+      <!-- <section class="grid__col--3">
+        <p>Coded with Atom and Github.</p>
+        <p>Designed in Sketch, HTML and CSS.</p>
+      </section> -->
+      <section class="grid__col--6 grid__col--6--edge"></section>
+      <section class="grid__col--3 grid__col--3--edge">
+        <p class="footer__text footer__text--white">Download my <a class="footer__link--white" href="#">resume</a>.</p>
+        <p class="footer__text footer__text--white">Contact me: <a  class="footer__link--white" href="mailto:nathalie.devalliere@gmail.com">nathalie.devalliere@gmail.com</a></p>
+        <!-- <p>Digital <a href="nathaliedevalliere.tumblr.com"> sketchbook</a></p> -->
+      </section>
+    </section>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.1/dat.gui.min.js"></script>
+  <script src="../scripts/scripts-15.js"></script>
+</body>
+</html>

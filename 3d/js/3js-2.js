@@ -107,7 +107,7 @@ setMaterial = function(node, material) {
   }
 }
 
-loader.load( 'assets/ual-1.dae', function ( collada ) {
+loader.load( 'assets/ual-2.dae', function ( collada ) {
     model = collada.scene;
     // setMaterial( model, new THREE.MeshStandardMaterial({color: 0xffffff, emissive: 0x0, roughness: 0.13, metalness: 0.66, shading: THREE.SmoothShading, vertexColors: THREE.NoColors}));
     scene.add( model );
