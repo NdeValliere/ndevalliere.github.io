@@ -88,12 +88,12 @@ function render() {
 
 //Import model from SketchUp
 //-
-material = new THREE.MeshStandardMaterial( {
+material = new THREE.MeshStandardMaterial({
     color: 0xfff,
     // shading: THREE.FlatShading, // default is THREE.SmoothShading
     metalness: 0,
     roughness: 1
-} );
+});
 
 loader = new THREE.ColladaLoader();
 
@@ -107,9 +107,8 @@ setMaterial = function(node, material) {
   }
 }
 
-loader.load( 'https://artslondon-my.sharepoint.com/personal/n_devallire1_arts_ac_uk/_layouts/15/guestaccess.aspx?docid=14845d1ad35364ebf9b71b57a37c516fa&authkey=AfsrY9orVhAn8ex9s3ScJeI&e=d987a7442df2481290124f836e4090b5', function ( collada ) {
+loader.load('assets/sketch-1.dae', function (collada) {
     model = collada.scene;
-    // setMaterial( model, new THREE.MeshStandardMaterial({color: 0xffffff, emissive: 0x0, roughness: 0.13, metalness: 0.66, shading: THREE.SmoothShading, vertexColors: THREE.NoColors}));
     scene.add( model );
     console.log('model loaded');
  });
@@ -130,16 +129,16 @@ ambientLight = new THREE.AmbientLight( 0xffffff, 1 );
 
 scene.add(ambientLight);
 
-//Turn on rendering of shadows
-renderer.shadowMap.enabled = true;
-renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+// //Turn on rendering of shadows
+// renderer.shadowMap.enabled = true;
+// renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+//
+// light1.castShadow = true;
+// light1.shadow.mapSize.width = 1024;
+// light1.shadow.mapSize.height = 1024;
+//
+// loader.castShadow = true;
+// loader.receiveShadow = true;
 
-light1.castShadow = true;
-light1.shadow.mapSize.width = 1024;
-light1.shadow.mapSize.height = 1024;
-
-loader.castShadow = true;
-loader.receiveShadow = true;
-
-shadowMaterial = new THREE.ShadowMaterial( { color: 0xeeeeee } );
-shadowMaterial.opacity = 0.1;
+// shadowMaterial = new THREE.ShadowMaterial( { color: 0xeeeeee } );
+// shadowMaterial.opacity = 0.1;
