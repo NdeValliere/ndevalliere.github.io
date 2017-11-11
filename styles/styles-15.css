@@ -14,6 +14,7 @@ p {
 
 /*Grids and containers*/
 .container__grid,
+.container__video,
 .grid__row,
 .grid__divider,
 .grid__col--1,
@@ -99,8 +100,13 @@ p {
 
 .grid__col--12,
 .page__banner,
-img {
+img,
+.container__video {
 	width: 100%;
+}
+
+.container__video--small {
+	height: auto !important;
 }
 
 .container__about,
@@ -130,6 +136,11 @@ img {
 
 .container__canvas {
 	margin-bottom: -5px;
+}
+
+.container__space {
+	/*background: #2B2B2B;*/
+	padding: 0 4.18%;
 }
 
 .grid__row--logo {
@@ -179,9 +190,14 @@ img {
 .work__text--brow,
 .play__text--brow,
 .top__brow {
-	font-size: 20px;
+	font-size: 22px;
 	font-style: italic;
 	margin-bottom: 10px;
+}
+
+.play__text--brow-bold {
+	font-size: 17px;
+	font-weight: 900;
 }
 
 .header__text .page__link {

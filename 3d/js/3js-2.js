@@ -35,14 +35,14 @@ function init() {
     1000 //far clippine place
   );
 
-  camera.position.z = 200;//postion camera
+  camera.position.z = 1;//postion camera
 
   scene = new THREE.Scene(); //new scene with library source
 
 
   renderer = new THREE.WebGLRenderer({ antialias: true }); //new renderer with library source
   renderer.setSize( window.innerWidth, window.innerHeight );
-  renderer.setClearColor( 0xffffff ); //change default background colour from black
+  renderer.setClearColor( 0x0065FF); //change default background colour from black
   container.appendChild(renderer.domElement);
 
   renderer.gammaInput = true;
@@ -107,7 +107,7 @@ setMaterial = function(node, material) {
   }
 }
 
-loader.load( 'assets/ual-2.dae', function ( collada ) {
+loader.load( 'https://artslondon-my.sharepoint.com/personal/n_devallire1_arts_ac_uk/_layouts/15/guestaccess.aspx?docid=14845d1ad35364ebf9b71b57a37c516fa&authkey=AfsrY9orVhAn8ex9s3ScJeI&e=d987a7442df2481290124f836e4090b5', function ( collada ) {
     model = collada.scene;
     // setMaterial( model, new THREE.MeshStandardMaterial({color: 0xffffff, emissive: 0x0, roughness: 0.13, metalness: 0.66, shading: THREE.SmoothShading, vertexColors: THREE.NoColors}));
     scene.add( model );

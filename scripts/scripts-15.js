@@ -1,8 +1,3 @@
-var canvas = document.getElementById("canvas__wave");
-var canvasHeight = 150;
-canvas.width = window.innerWidth;
-canvas.height = canvasHeight;
-
 var resize = (function () {
 	$('.container__grid').css({
 			'width': window.innerWidth
@@ -12,6 +7,12 @@ var resize = (function () {
 	})
 	$('.page__banner').css({
 			'max-width': window.innerWidth
+	})
+	$('.container__video').css({
+			'height': 0.86*window.innerHeight
+	})
+	$('.container__space').css({
+			'height': window.innerHeight
 	})
 
 	if (window.innerWidth > 1500) {
@@ -29,6 +30,11 @@ var resize = (function () {
 
 $(document).ready(resize);
 $(window).resize(resize);
+
+var canvas = document.getElementById("canvas__wave");
+var canvasHeight = 150;
+canvas.width = window.innerWidth;
+canvas.height = canvasHeight;
 
 // The amount of segment points we want to create:
 var amount = 3;
