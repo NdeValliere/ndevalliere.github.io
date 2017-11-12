@@ -54,64 +54,64 @@ p {
 	padding: 4.15%;
 }
 
-/*Use 1200px as 100%, 3x3grid*/
+/*Use 1320px as 100%, 3x3grid*/
 .grid__col--1 {
 	width: 8.3%;
-	max-width: 99.6px;
+	max-width: 109.56px;
 }
 
 .grid__col--2 {
 	width: 16.6%;
-	max-width: 199.2px;
+	max-width: 219.12px;
 }
 
 .grid__col--3,
 .grid__col--3--edge {
 	order: initial;
 	width: 25%;
-	max-width: 300px;
+	max-width: 330px;
 }
 
 .grid__col--4 {
 	width: 33.3%;
-	max-width: 399.6px;
+	max-width: 439.56px;
 }
 
 .grid__col--5 {
 	width: 41.6%;
-	max-width: 499.2px;
+	max-width: 549.12px;
 }
 
 .grid__col--6,
 .grid__col--6--edge {
 	order: initial;
 	width: 50%;
-	max-width: 600px;
+	max-width: 660px;
 }
 
 .grid__col--7 {
 	width: 58.3%;
-	max-width: 699.6px;
+	max-width: 769.56px;
 }
 
 .grid__col--8 {
 	width: 66.6%;
-	max-width: 799.2px;
+	max-width: 879.12px;
 }
 
 .grid__col--9 {
 	width: 74.7%;
-	max-width: 896.4px;
+	max-width: 986.04px;
 }
 
 .grid__col--10 {
 	width: 83%;
-	max-width: 996px;
+	max-width: 1095.6px;
 }
 
 .grid__col--11 {
 	width: 91.3%;
-	max-width: 1095.6px;
+	max-width: 1205.16px;
 }
 
 .grid__col--12,
