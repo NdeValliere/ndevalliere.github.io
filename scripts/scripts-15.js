@@ -17,7 +17,8 @@ var resize = (function () {
 
 	if (window.innerWidth > 1500) {
 		$('.grid__row').css({
-				'padding': '4.15% 18' + (0.001* window.innerWidth) + '%'
+				// 'padding': '4.15% 18' + (0.001* window.innerWidth) + '%'
+				'padding': '4.15% 20.75%'
 		});
 		$('.page__banner').css({
 				'max-width': (0.64*window.innerWidth)
