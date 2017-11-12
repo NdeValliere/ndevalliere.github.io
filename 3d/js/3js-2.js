@@ -16,12 +16,9 @@ var controls;
 var windowHalfX = window.innerWidth/2; //resize
 var windowHalfY = window.innerHeight/2;
 
-// document.addEventListener( 'mousemove', onDocumentMouseMove, false ); //use for camera controls?
-
 init(); //call function to render content
 animate();
 render();
-
 
 //Define all rendering and control behaviour within function, seeems to be best practice
 function init() {
@@ -51,8 +48,6 @@ function init() {
 	renderer.shadowMap.renderReverseSided = false;
 
   controls = new THREE.OrbitControls( camera, renderer.domElement );// Add additional orbit controls
-  controls.addEventListener('mousemove',onDocumentMouseMove ,true);
-
   window.addEventListener('resize',onWindowResize, false); //call onWindowResize
 
 }
@@ -64,12 +59,6 @@ function onWindowResize() {
 				camera.updateProjectionMatrix();
 				renderer.setSize( window.innerWidth, window.innerHeight );
 			}
-
-function onDocumentMouseMove( event ) {
-	mouseX = ( event.clientX - windowHalfX ) * 1;
-	mouseY = ( event.clientY - windowHalfY ) * 1;
-  console.log('mousemove');
-}
 
 function animate() {
 	requestAnimationFrame( animate );
@@ -128,17 +117,3 @@ ambientLight = new THREE.AmbientLight( 0xffffff, 1 );
 // light3.position.set( -15, 5, -15 );
 
 scene.add(ambientLight);
-
-// //Turn on rendering of shadows
-// renderer.shadowMap.enabled = true;
-// renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-//
-// light1.castShadow = true;
-// light1.shadow.mapSize.width = 1024;
-// light1.shadow.mapSize.height = 1024;
-//
-// loader.castShadow = true;
-// loader.receiveShadow = true;
-
-// shadowMaterial = new THREE.ShadowMaterial( { color: 0xeeeeee } );
-// shadowMaterial.opacity = 0.1;

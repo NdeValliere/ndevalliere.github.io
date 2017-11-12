@@ -267,6 +267,10 @@ a.footer__link--white:hover {
 	background-color: rgba(255,255,255,0);
 }
 
+.page__link--iframe {
+	display: none;
+}
+
 /*mobile styles*/
 @media only screen and (max-width: 1300px)  {
 	/*Grids and containers*/
@@ -308,5 +312,9 @@ a.footer__link--white:hover {
 		padding-top: 0;
 		position: absolute;
 		right: 0;
+	}
+
+	.page__link--iframe {
+		display: initial;
 	}
 }

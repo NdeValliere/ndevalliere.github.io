@@ -107,7 +107,7 @@ setMaterial = function(node, material) {
   }
 }
 
-loader.load( 'https://artslondon-my.sharepoint.com/personal/n_devallire1_arts_ac_uk/_layouts/15/guestaccess.aspx?docid=1a0ecb100c1994c0eba18111951669468&authkey=AVSgJBPCjQPh6tMgerEbXNA&e=1427cc5285fb41718338d26ff52680c3', function ( collada ) {
+loader.load( 'assets/csm-5.dae', function ( collada ) {
     model = collada.scene;
     // setMaterial( model, new THREE.MeshStandardMaterial({color: 0xffffff, emissive: 0x0, roughness: 0.13, metalness: 0.66, shading: THREE.SmoothShading, vertexColors: THREE.NoColors}));
     scene.add( model );
@@ -129,17 +129,3 @@ ambientLight = new THREE.AmbientLight( 0xffffff, 1 );
 // light3.position.set( -15, 5, -15 );
 
 scene.add(ambientLight);
-
-//Turn on rendering of shadows
-renderer.shadowMap.enabled = true;
-renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-
-light1.castShadow = true;
-light1.shadow.mapSize.width = 1024;
-light1.shadow.mapSize.height = 1024;
-
-loader.castShadow = true;
-loader.receiveShadow = true;
-
-shadowMaterial = new THREE.ShadowMaterial( { color: 0xeeeeee } );
-shadowMaterial.opacity = 0.1;
