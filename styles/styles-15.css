@@ -54,48 +54,64 @@ p {
 	padding: 4.15%;
 }
 
+/*Use 1200px as 100%, 3x3grid*/
 .grid__col--1 {
 	width: 8.3%;
-	max-width: 108px;
+	max-width: 99.6px;
 }
 
 .grid__col--2 {
 	width: 16.6%;
-	max-width: 216px;
+	max-width: 199.2px;
 }
 
 .grid__col--3,
 .grid__col--3--edge {
 	order: initial;
 	width: 25%;
-	max-width: 325px;
+	max-width: 300px;
 }
 
 .grid__col--4 {
 	width: 33.3%;
-	max-width: 430px;
+	max-width: 399.6px;
 }
 
 .grid__col--5 {
 	width: 41.6%;
-	max-width: 540px;
+	max-width: 499.2px;
 }
 
 .grid__col--6,
 .grid__col--6--edge {
 	order: initial;
 	width: 50%;
-	max-width: 650px;
+	max-width: 600px;
 }
 
 .grid__col--7 {
 	width: 58.3%;
-	max-width: 758px;
+	max-width: 699.6px;
 }
 
 .grid__col--8 {
 	width: 66.6%;
-	max-width: 865px;
+	max-width: 799.2px;
+}
+
+.grid__col--9 {
+	width: 74.7%;
+	max-width: 896.4px;
+}
+
+.grid__col--10 {
+	width: 83%;
+	max-width: 996px;
+}
+
+.grid__col--11 {
+	width: 91.3%;
+	max-width: 1095.6px;
 }
 
 .grid__col--12,
