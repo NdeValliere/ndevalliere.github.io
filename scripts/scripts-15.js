@@ -17,7 +17,7 @@ var resize = (function () {
 
 	if (window.innerWidth > 1500) {
 		$('.grid__row').css({
-				'padding': '4.15% 18%'
+				'padding': '4.15% 8.3%'
 		});
 		$('.page__banner').css({
 				'max-width': (0.64*window.innerWidth)
