@@ -20,7 +20,6 @@ var resize = (function () {
 				'padding': '4.15% 8.3%'
 		});
 		$('.page__banner').css({
-				'padding': '0 8.3%',
 				'max-width': '100%'
 		})
 		$('.grid__divider').css({
