@@ -7,6 +7,7 @@ var resize = (function () {
 			'max-width': window.innerWidth - (0.083*window.innerWidth)
 	})
 	$('.page__banner').css({
+			'width': '100%'
 			'max-width': window.innerWidth
 	})
 	$('.container__video').css({
