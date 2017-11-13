@@ -25,6 +25,9 @@ var resize = (function () {
 		$('.grid__divider').css({
 				'max-width': (0.64*window.innerWidth)
 		})
+		$('.container__video--small').css({
+				'height': 0.86*window.innerHeight
+		})
 	}
 
 	if (window.innerWidth > 2000) {
