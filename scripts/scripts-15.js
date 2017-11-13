@@ -25,8 +25,8 @@ var resize = (function () {
 				'padding': '4.15% 8.3%'
 		});
 		$('.page__banner').css({
-				'width': 0.834*(gridRow.width()),
-				'max-width': 0.834*(gridRow.width())
+				'width': gridRow.width(),
+				'max-width': gridRow.width()
 		})
 		$('.grid__divider').css({
 				'max-width': 0.834*($('.grid__row').innerWidth)
