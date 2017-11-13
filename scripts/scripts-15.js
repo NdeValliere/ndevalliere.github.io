@@ -20,10 +20,10 @@ var resize = (function () {
 				'padding': '4.15% 8.3%'
 		});
 		$('.page__banner').css({
-				'max-width': (0.64*window.innerWidth)
+				'padding': '0 8.3%'
 		})
 		$('.grid__divider').css({
-				'max-width': (0.64*window.innerWidth)
+				'padding': '0 8.3%'
 		})
 	}
 
