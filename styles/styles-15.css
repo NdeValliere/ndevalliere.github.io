@@ -229,7 +229,7 @@ img,
 /*Hover states*/
 .grid__row--hover {
 	color: white;
-	transition: 1s;
+	/*transition: 1s;*/
 }
 
 .grid__row--hover:hover {
@@ -332,5 +332,22 @@ a.footer__link--white:hover {
 
 	.page__link--iframe {
 		display: initial;
+	}
+
+	/*Replace images*/
+	.replace__img--hide {
+		display: none;
+	}
+
+	.replace__img--diner {
+		content: url("../assets/workco/workco-diner--mobile.png");
+	}
+
+	.replace__img--space {
+		content: url("../assets/workco/workco-space--mobile.png");
+	}
+
+	.replace__img--diner {
+		content: url("../assets/workco/workco-school--mobile.png");
 	}
 }

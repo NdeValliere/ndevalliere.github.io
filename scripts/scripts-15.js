@@ -14,9 +14,6 @@ var resize = (function () {
 	$('.container__space').css({
 			'height': window.innerHeight
 	})
-	$('.grid__row--hover').css({
-			'transition': 'none'
-	})
 
 	if (window.innerWidth > 1500) {
 		$('.grid__row').css({
