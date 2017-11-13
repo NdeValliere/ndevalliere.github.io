@@ -1,8 +1,5 @@
 var resize = (function () {
 
-	var gridRow = window.getComputedStyle(document.getElementsByClassName("grid__row"), null);
-	gridRow.getPropertyValue("width");
-
 	$('.container__grid').css({
 			'width': window.innerWidth
 	});
@@ -24,10 +21,10 @@ var resize = (function () {
 				'padding': '4.15% 8.3%'
 		});
 		$('.page__banner').css({
-				'max-width': gridRow.getPropertyValue("width");
+				'max-width': 0.917*($('.grid__row').innerWidth)
 		})
 		$('.grid__divider').css({
-				'max-width': gridRow.getPropertyValue("width");
+				'max-width': 0.917*($('.grid__row').innerWidth)
 		})
 	}
 
