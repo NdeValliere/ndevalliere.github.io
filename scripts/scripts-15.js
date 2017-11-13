@@ -1,3 +1,6 @@
+var gridRow = $('.grid__row')
+console.log(gridRow.width());
+
 var resize = (function () {
 
 	$('.container__grid').css({
@@ -22,8 +25,8 @@ var resize = (function () {
 				'padding': '4.15% 8.3%'
 		});
 		$('.page__banner').css({
-				'width': 0.834*($('.grid__row').innerWidth),
-				'max-width': 0.834*($('.grid__row').innerWidth)
+				'width': 0.834*(gridRow.width()),
+				'max-width': 0.834*(gridRow.width())
 		})
 		$('.grid__divider').css({
 				'max-width': 0.834*($('.grid__row').innerWidth)
