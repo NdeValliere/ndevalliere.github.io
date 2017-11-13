@@ -1,4 +1,5 @@
 var resize = (function () {
+
 	$('.container__grid').css({
 			'width': window.innerWidth
 	});
@@ -20,11 +21,10 @@ var resize = (function () {
 				'padding': '4.15% 8.3%'
 		});
 		$('.page__banner').css({
-				'max-width': '100%'
+				'max-width': $('.grid__row').innerWidth
 		})
 		$('.grid__divider').css({
-				'padding': '0 8.3%',
-				'max-width': '100%'
+				'max-width': $('.grid__row').innerWidth
 		})
 	}
 
