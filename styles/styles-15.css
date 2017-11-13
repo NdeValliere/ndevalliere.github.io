@@ -122,7 +122,7 @@ img,
 }
 
 .container__video--small {
-	height: auto !important;
+	height: auto;
 }
 
 .container__about,
