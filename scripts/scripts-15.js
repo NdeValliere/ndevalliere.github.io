@@ -39,6 +39,12 @@ var resize = (function () {
 				'width': 'auto'
 		});
 	}
+
+	if (window.innerWidth < 1300) {
+		$('.page__banner--codepen').css({
+				'max-width': 650
+		})
+	}
 });
 
 $(document).ready(resize);
