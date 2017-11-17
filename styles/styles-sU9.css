@@ -103,3 +103,8 @@ img,
 .container__video {
 	width: 100%;
 }
+
+/*Type*/
+.row__name {
+  text-align: center;
+}
