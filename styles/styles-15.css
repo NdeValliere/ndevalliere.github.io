@@ -241,6 +241,7 @@ a {
 	color: black;
 	position: relative;
 	text-decoration: none;
+	/*transition: 0.5s;*/
 }
 
 a:before {
@@ -266,6 +267,7 @@ a:hover:before {
 
 a:hover {
 	-webkit-text-stroke: 0.5px #000;
+	/*letter-spacing: 1.5px;*/
 }
 
 a.footer__link--white:before {
