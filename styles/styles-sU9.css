@@ -12,6 +12,10 @@ p {
 	font-family: "Adobe Garamond Pro", sans-serif;
 }
 
+img {
+	max-width: 100%;
+}
+
 /*Grids and containers*/
 .container__grid,
 .container__video,
@@ -105,6 +109,42 @@ img,
 }
 
 /*Type*/
+.row__header {
+  font-size: 25px;
+}
+
+.row__header--italic {
+  font-style: italic;
+  font-weight: 100;
+}
+
 .row__name {
   text-align: center;
+}
+
+.row__title {
+	font-size: 20px;
+}
+
+.col__title,
+.col__subtitle  {
+	font-size: 15px;
+}
+
+.col__subtitle {
+	font-style: italic;
+	font-weight: 100;
+}
+
+.line__separator {
+	display: inline-block;
+}
+
+.line__title--right {
+	font-style: italic;
+	text-align: right;
+}
+
+hr {
+  width: 100%;
 }
