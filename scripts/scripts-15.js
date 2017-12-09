@@ -13,9 +13,9 @@ var resize = (function () {
 			'width': '100%',
 			'max-width': window.innerWidth
 	})
-	$('.container__video').css({
-			'height': (0.86*window.innerHeight)
-	})
+	// $('.container__video').css({
+	// 		'height': (0.86*window.innerHeight)
+	// })
 	$('.container__space').css({
 			'height': window.innerHeight
 	})
