@@ -39,17 +39,14 @@ var resize = (function () {
 		});
 	}
 
-	if (window.innerWidth < 1500) {
+	if (window.innerWidth < 1300) {
+		$('.page__banner--codepen').css({
+				'max-width': 650
+		});
 		$('.container__video--small').css({
 				'height': (0.86*window.innerHeight),
 				'width': 'auto'
 		});
-	}
-
-	if (window.innerWidth < 1300) {
-		$('.page__banner--codepen').css({
-				'max-width': 650
-		})
 	}
 });
 

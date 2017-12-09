@@ -121,7 +121,7 @@ img,
 }
 
 .container__video--small {
-	height: auto;
+	max-height: 750px;
 }
 
 .container__about,
