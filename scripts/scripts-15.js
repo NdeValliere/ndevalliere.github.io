@@ -40,9 +40,6 @@ var resize = (function () {
 		$('.grid__row--narrowTop').css({
 				'padding-top': '0'
 		});
-		$('.grid__row--narrowBottom').css({
-				'padding-bottom': '0'
-		});
 	}
 
 	if (window.innerWidth < 1300) {
