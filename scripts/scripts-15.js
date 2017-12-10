@@ -43,10 +43,9 @@ var resize = (function () {
 		$('.page__banner--codepen').css({
 				'max-width': 650
 		});
-		$('.container__video--small').css({
-				'height': (0.86*window.innerHeight),
-				'width': 'auto'
-		});
+		// $('.container__video--small').css({
+		// 		'height': (0.86*window.innerHeight);
+		// });
 	}
 });
 
