@@ -9,7 +9,9 @@ h3,
 h4,
 h5,
 p {
-	font-family: "Adobe Garamond Pro", sans-serif;
+	font-family: "Adobe Garamond Pro", serif;
+	font-weight: 400;
+	font-style: normal;
 }
 
 /*Grids and containers*/
