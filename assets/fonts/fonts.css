@@ -1,9 +1,27 @@
 @font-face {
   font-family: "Adobe Garamond Pro";
-  src: url('https://rawgit.com/NdeValliere/ndevalliere.github.io/master/assets/fonts/AGaramondPro-Bold.otf');
-  src: url('https://rawgit.com/NdeValliere/ndevalliere.github.io/master/assets/fonts/AGaramondPro-BoldItalic.otf');
-  src: url('https://rawgit.com/NdeValliere/ndevalliere.github.io/master/assets/fonts/AGaramondPro-Italic.otf');
   src: url('https://rawgit.com/NdeValliere/ndevalliere.github.io/master/assets/fonts/AGaramondPro-Regular.otf');
   font-weight: 400;
   font-style: normal;
+}
+
+@font-face {
+  font-family: "Adobe Garamond Pro";
+  src: url('https://rawgit.com/NdeValliere/ndevalliere.github.io/master/assets/fonts/AGaramondPro-Bold.otf');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Adobe Garamond Pro";
+  src: url('https://rawgit.com/NdeValliere/ndevalliere.github.io/master/assets/fonts/AGaramondPro-Italic.otf');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Adobe Garamond Pro";
+  src: url('https://rawgit.com/NdeValliere/ndevalliere.github.io/master/assets/fonts/AGaramondPro-BoldItalic.otf');
+  font-weight: 900;
+  font-style: italic;
 }
