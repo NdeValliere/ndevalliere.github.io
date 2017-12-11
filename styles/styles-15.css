@@ -388,7 +388,7 @@ a.page__link--iframe:hover {
 }
 
 /*mobile styles*/
-@media only screen and (max-width: 1300px)  {
+@media only screen and (max-width: 600px)  {
 	/*Grids and containers*/
 	/*Text styles*/
 	.about__text,
@@ -415,7 +415,7 @@ a.page__link--iframe:hover {
 	.play--text--project-title,
 	.top__header {
 		font-weight: 400;
-		font-size: 35px;
+		font-size: 25px;
 		padding-bottom: 5px;
 	}
 
@@ -429,12 +429,12 @@ a.page__link--iframe:hover {
 	}
 
 	.play__text--brow-bold {
-		font-size: 17px;
+		font-size: 12px;
 		font-weight: 900;
 	}
 
 	.header__text .page__link {
-		font-size: 10px;
+		font-size: 12px;
 		font-style: italic;
 	}
 }

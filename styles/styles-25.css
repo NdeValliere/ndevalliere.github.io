@@ -1,0 +1,46 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.container__grid {
+	overflow-x: hidden;
+	position: relative;
+}
+
+.container__absolute {
+	position: absolute;
+}
+
+.grid__row {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.grid__rect {
+	/*width: 10px;*/
+	/*background: white;
+	border: 0.1px solid black;
+	width: 5px;*/
+	/*-webkit-box-shadow: 6px 6px 13px 1px rgba(0,0,0,0.75);
+	-moz-box-shadow: 6px 6px 13px 1px rgba(0,0,0,0.75);
+	box-shadow: 6px 6px 13px 1px rgba(0,0,0,0.75);*/
+}
+
+.grid__rect img {
+	/*padding-top: 50px;*/
+	width: 5px;
+	transition: 1s;
+}
+
+.grid__rect img:hover {
+	width: 300px;
+}
+
+.grid__sticker {
+	position: absolute;
+	height: 100px;
+	width: 100px;
+}
