@@ -144,7 +144,7 @@ img,
 }
 
 .project__summary {
-	margin: 100px 0 50px 0;
+	margin: 100px 0 30px 0;
 }
 
 .container__play {
@@ -384,5 +384,57 @@ a.page__link--iframe:hover {
 
 	.replace__img--school {
 		content: url("../assets/workco/workco-school--mobile.png");
+	}
+}
+
+/*mobile styles*/
+@media only screen and (max-width: 1300px)  {
+	/*Grids and containers*/
+	/*Text styles*/
+	.about__text,
+	.header__text,
+	.work__text,
+	.play__text {
+		font-size: 20px;
+		font-weight: 100;
+		/*line-height: 1.5;*/
+	}
+
+	.play__text--body-small {
+		font-size: 15px;
+		font-weight: 100;
+		/*line-height: 1.25;*/
+	}
+
+	.top__body {
+		font-size: 20px;
+		line-height: 1.45;
+	}
+
+	.work--text--project-title,
+	.play--text--project-title,
+	.top__header {
+		font-weight: 400;
+		font-size: 35px;
+		padding-bottom: 5px;
+	}
+
+	.about__text--brow,
+	.work__text--brow,
+	.play__text--brow,
+	.top__brow {
+		font-size: 12px;
+		font-style: italic;
+		margin-bottom: 10px;
+	}
+
+	.play__text--brow-bold {
+		font-size: 17px;
+		font-weight: 900;
+	}
+
+	.header__text .page__link {
+		font-size: 10px;
+		font-style: italic;
 	}
 }
