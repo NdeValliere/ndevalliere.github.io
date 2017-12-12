@@ -54,6 +54,7 @@ var resize = (function () {
 
 $(document).ready(resize);
 $(window).resize(resize);
+resize();
 
 var canvas = document.getElementById("canvas__wave");
 var canvasHeight = 150;

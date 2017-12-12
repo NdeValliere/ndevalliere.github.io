@@ -13,7 +13,10 @@
 }
 
 .grid__row {
+	display: -webkit-flex; /* Safari */
+	-webkit-flex-wrap: wrap; /* Safari 6.1+ */
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 	margin: 0 auto;
 	text-align: center;
@@ -37,23 +40,7 @@
 .grid__rect--6,
 .grid__rect--7,
 .grid__rect--8 {
-	width: 1px;
-	transition: 20s;
-}
-
-.grid__rect--1:hover,
-.grid__rect--2:hover,
-.grid__rect--3:hover,
-.grid__rect--4:hover,
-.grid__rect--5:hover,
-.grid__rect--6:hover,
-.grid__rect--7:hover,
-.grid__rect--8:hover {
-	width: 300px;
-}
-
-.grid__sticker {
-	position: absolute;
-	height: 100px;
-	width: 100px;
+	width: 180px;
+	transition: 2s;
+	height: 827px;
 }
