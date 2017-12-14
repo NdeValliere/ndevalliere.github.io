@@ -1,0 +1,108 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.container__grid {
+	position: absolute;
+}
+
+.grid__row {
+	/*display: -webkit-flex;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;*/
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+	text-align: center;
+	transition: 2s;
+}
+
+.grid__rect--1,
+.grid__rect--2,
+.grid__rect--3,
+.grid__rect--4,
+.grid__rect--5,
+.grid__rect--6,
+.grid__rect--7,
+.grid__rect--8 {
+	height: 827px;
+	transition: 1s;
+	width: 300px;
+}
+
+.grid__rect--1 {
+	background: url("../assets/png/D.png");
+}
+
+.grid__rect--2 {
+	background: url("../assets/png/A.png");
+}
+
+.grid__rect--3 {
+	background: url("../assets/png/N.png");
+}
+
+.grid__rect--4 {
+	background: url("../assets/png/C.png");
+}
+
+.grid__rect--5 {
+	background: url("../assets/png/E.png");
+}
+
+.grid__rect--6 {
+	background: url("../assets/png/L.png");
+}
+
+.grid__rect--7 {
+	background: url("../assets/png/A.png");
+}
+
+.grid__rect--8 {
+	background: url("../assets/png/B.png");
+}
+
+.grid__rect {
+	height: 82.7px;
+}
+
+.grid__row--2 .grid__rect {
+	background-position: 10% 10%;
+}
+
+.grid__row--3 .grid__rect {
+	background-position: 20% 20%;
+}
+
+.grid__row--4 .grid__rect {
+	background-position: 30% 30%;
+}
+
+.grid__row--5 .grid__rect {
+	background-position: 40% 40%;
+}
+
+.grid__row--6 .grid__rect {
+	background-position: 50% 50%;
+}
+
+.grid__row--7 .grid__rect {
+	background-position: 60% 60%;
+}
+
+.grid__row--8 .grid__rect {
+	background-position: 70% 70%;
+}
+
+.grid__row--9 .grid__rect {
+	background-position: 80% 80%;
+}
+
+.grid__row--10 .grid__rect {
+	background-position: 90% 90%;
+}
+
+.grid__row--11 .grid__rect {
+	background-position: 100% 100%;
+}
