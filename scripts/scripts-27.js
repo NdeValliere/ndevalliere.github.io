@@ -3,7 +3,7 @@ function stretch() {
     var id = setInterval(frame, 10);
     var step = 30;
     var stepShrink = -10;
-    var stepExpand = 200;
+    var stepExpand = 50;
     function frame() {
       pos++;
         if (pos == step*8) {
@@ -17,6 +17,7 @@ function stretch() {
             $(".grid__row--" + i + " .grid__rect--6").css({"margin-left": 0 + "px"});
             $(".grid__row--" + i + " .grid__rect--7").css({"margin-left": 0 + "px"});
             $(".grid__row--" + i + " .grid__rect--8").css({"margin-left": 0 + "px"});
+            $(".grid__row--" + i + " .grid__rect--9").css({"margin-left": 0 + "px"});
           }
         }
         else if (pos == 0) {
@@ -65,6 +66,12 @@ function stretch() {
           for(var i = 0; i <=11; i++) {
             $(".grid__row--" + i + " .grid__rect--8").css({"margin-left": stepExpand*i + "px"});
             $(".grid__row--" + i + " .grid__rect--7").css({"margin-left": stepShrink + "px"});
+          }
+        }
+        else if (pos == step*8) {
+          for(var i = 0; i <=11; i++) {
+            $(".grid__row--" + i + " .grid__rect--8").css({"margin-left": stepExpand*i + "px"});
+            $(".grid__row--" + i + " .grid__rect--9").css({"margin-left": stepShrink + "px"});
           }
         }
     }
