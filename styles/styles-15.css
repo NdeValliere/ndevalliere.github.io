@@ -424,25 +424,48 @@ a.page__link--iframe:hover {
 /*mobile styles*/
 @media only screen and (max-width: 600px)  {
 	/*Grids and containers*/
+	.container__canvas {
+		margin-bottom: -60px;
+	}
+
+	.container__about {
+		padding: 60px 0 25px 0;
+	}
+
+	.container__grid--black .grid__row--hover:first-child {
+		padding-top: 75px;
+		padding-bottom: 30px;
+	}
+
+	.container__grid--black .grid__row--hover:nth-child(2) {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+
+	.container__grid--black .grid__row--hover:last-child {
+		padding-top: 30px;
+		padding-bottom: 60px;
+	}
+
 	/*Text styles*/
 	.about__text,
 	.header__text,
 	.work__text,
 	.play__text {
-		font-size: 15px;
+		font-size: 20px;
 		font-weight: 100;
 		/*line-height: 1.5;*/
 	}
 
 	.play__text--body-small,
 	a.page__link--iframe, a.page__link--iframe:before {
-		font-size: 12px;
+		font-size: 15px;
 		font-weight: 100;
 		/*line-height: 1.25;*/
 	}
 
 	.top__body {
-		font-size: 15px;
+		font-size: 20px;
 		line-height: 1.45;
 	}
 
@@ -450,7 +473,7 @@ a.page__link--iframe:hover {
 	.play--text--project-title,
 	.top__header {
 		font-weight: 400;
-		font-size: 20px;
+		font-size: 25px;
 		padding-bottom: 5px;
 	}
 
@@ -458,13 +481,13 @@ a.page__link--iframe:hover {
 	.work__text--brow,
 	.play__text--brow,
 	.top__brow {
-		font-size: 12px;
+		font-size: 15px;
 		font-style: italic;
 		margin-bottom: 10px;
 	}
 
 	.play__text--brow-bold {
-		font-size: 12px;
+		font-size: 15px;
 		font-weight: 900;
 	}
 
