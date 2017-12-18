@@ -325,12 +325,15 @@ a.footer__link--white:hover {
 }
 
 a.page__link--iframe,
-a.page__link--iframe:before {
+a.page__link--iframe:before,
+a.page__link--iframe:hover {
+	background: transparent;
+}
+
+.page__link--iframeHolder {
 	background-color: black;
-	color: white;
-	padding: 25px 0;
-	padding-left: 39.5%;
-	padding-right: 39.5%;
+	padding-top: 30px;
+	padding-bottom: 30px;
 	position: relative;
 	max-width: 650px;
 	text-align: center;
@@ -339,10 +342,8 @@ a.page__link--iframe:before {
 	visibility: hidden;
 }
 
-a.page__link--iframe:hover {
-	background: white;
-	color: black;
-	-webkit-text-stroke: 0px white;
+.page__link--iframeHolder a {
+	color: white;
 }
 
 /*mobile styles*/
@@ -393,9 +394,12 @@ a.page__link--iframe:hover {
 	}
 
 	a.page__link--iframe,
-	a.page__link--iframe:before {
+	a.page__link--iframe:before,
+	.page__link--iframeHolder {
 		visibility: visible;
 	}
+
+
 
 	.page__banner--codepen:first-child p,
 	.page__banner--codepen:first-child script,
@@ -445,6 +449,17 @@ a.page__link--iframe:hover {
 	.container__grid--black .grid__row--hover:last-child {
 		padding-top: 30px;
 		padding-bottom: 60px;
+	}
+
+	.container__grid--blackSmall {
+		margin-bottom: -50px;
+		padding-top: 75px;
+	}
+
+	.container__grid--blackSmallFooter {
+		padding-top: 60px;
+		padding-bottom: 30px;
+		margin-top: -1px;
 	}
 
 	/*Text styles*/

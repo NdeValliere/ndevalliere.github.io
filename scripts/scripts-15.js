@@ -46,6 +46,12 @@ var resize = (function () {
 		$('.page__banner--codepen').css({
 				'max-width': 650
 		});
+		// $('a.page__link--iframe').css({
+		// 		'max-width': window.innerWidth
+		// });
+		// $('a.page__link--iframe:before').css({
+		// 		'max-width': window.innnerWidth
+		// });
 		// $('.container__video--small').css({
 		// 		'height': (0.86*window.innerHeight);
 		// });
@@ -111,6 +117,27 @@ $(document).ready(function() {
 	$('.grid__col--12').css({
 			'background': 'rgba(255,255,255,0)'
 	});
+});
+
+//motherfucking hover states
+$('.page__link--iframeHolder').mouseover(function () {
+    $(this).css({
+				'background': 'white',
+				'cursor': 'pointer'
+    });
+		$(this).find('a').css({
+				'color': 'black',
+				'-webkit-text-stroke': '0.5px #000'
+    });
+});
+$('.page__link--iframeHolder').mouseout(function () {
+    $('.page__link--iframeHolder').css({
+				'background':'black'
+    });
+		$('.page__link--iframeHolder a').css({
+				'color': 'white',
+				'-webkit-text-stroke': '0px #fff'
+    });
 });
 
 
