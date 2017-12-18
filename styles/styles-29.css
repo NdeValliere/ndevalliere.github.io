@@ -3,20 +3,9 @@
 	padding: 0;
 }
 
-.background__color {
-	background: #dedede;
+html {
+	cursor: url('../assets/png/cursorArrow.png'), auto;
 }
-
-/* .foreground__texture {
-	position: fixed;
-	top: 0;
-	z-index: 10;
-	height: 900px;
-	width: 1440px;
-	/* background-blend-mode: difference; */
-	background-image: url("../assets/tile.png");
-	overflow: auto;
-} */
 
 h1,
 h2,
@@ -29,6 +18,18 @@ p {
 
 img {
 	max-width: 100%;
+	height: auto;
+}
+
+body {
+	display: flex;
+}
+
+.container__grid {
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
 }
 
 /*Grids and containers*/
@@ -61,6 +62,14 @@ img {
 
 .grid__row--top {
   padding: 0 4.15%;
+}
+
+.grid__row--flush {
+	padding: 0;
+}
+
+.grid__col--hr {
+	border-left: 1px solid black;
 }
 
 /*Use 1320px as 100%, 3x3grid*/
@@ -127,43 +136,14 @@ img,
 	width: 100%;
 }
 
-/*Type*/
-.row__header {
-  font-size: 25px;
+hr {
+  width: 100%;
 }
 
-.row__header--italic {
-  font-style: italic;
-  font-weight: 100;
-}
-
-.row__name {
-  text-align: center;
-}
-
-.row__title {
-	font-size: 20px;
-}
-
-.col__title,
-.col__subtitle  {
-	font-size: 15px;
-}
-
-.col__subtitle {
-	font-style: italic;
-	font-weight: 100;
-}
-
-.line__separator {
-	display: inline-block;
-}
-
-.line__title--right {
-	font-style: italic;
+.quote--right {
 	text-align: right;
 }
 
-hr {
-  width: 100%;
+.quote--middle {
+	text-align: center;
 }
