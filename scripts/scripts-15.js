@@ -99,3 +99,90 @@ function onFrame(event) {
 	// to smooth the path:
 	path.smooth();
 }
+
+//Loading content placeholder
+$(document).ready(function() {
+	$('.container__video').css({
+			'background': 'rgba(255,255,255,0)'
+	});
+	$('img').css({
+			'background': 'rgba(255,255,255,0)'
+	});
+	$('.grid__col--12').css({
+			'background': 'rgba(255,255,255,0)'
+	});
+});
+
+
+//Navigational elements blocks
+$('#stackmap').click(function () {
+    $('.container__swipe').animate({
+				height: window.innerHeight*2
+    }, 2000,function() {
+      //thing to do when you animation is finished e.g.
+      location.href = 'stackmap.html';
+    });
+});
+
+$('#workco').click(function () {
+    $('.container__swipe').animate({
+				height: window.innerHeight*2
+    }, 2000,function() {
+      //thing to do when you animation is finished e.g.
+      location.href = 'workco.html';
+    });
+});
+
+$('#ia').click(function () {
+    $('.container__swipe').animate({
+				height: window.innerHeight*2
+    }, 2000,function() {
+      //thing to do when you animation is finished e.g.
+      location.href = 'ia.html';
+    });
+});
+
+$('.play__project--1').click(function () {
+    $('.container__swipe').animate({
+				height: window.innerHeight*2
+    }, 2000,function() {
+      //thing to do when you animation is finished e.g.
+      location.href = 'space.html';
+    });
+});
+
+$('.play__project--2').click(function () {
+    $('.container__swipe').animate({
+				height: window.innerHeight*2
+    }, 2000,function() {
+      //thing to do when you animation is finished e.g.
+      location.href = '../3d/3js-1.html';
+    });
+});
+
+$('.play__project--3').click(function () {
+    $('.container__swipe').animate({
+				height: window.innerHeight*2
+    }, 2000,function() {
+      //thing to do when you animation is finished e.g.
+      location.href = 'posters.html';
+    });
+});
+
+$('#index').click(function () {
+    $('.container__swipe--black').animate({
+				height: window.innerHeight*2
+    }, 2000,function() {
+      //thing to do when you animation is finished e.g.
+      location.href = 'index--portfolio.html';
+    });
+});
+
+$('#indexFooter').click(function () {
+    $('.container__swipe--black').animate({
+				height: window.innerHeight*2
+    }, 2000,function() {
+      //thing to do when you animation is finished e.g.
+      location.href = 'index--portfolio.html';
+    });
+});

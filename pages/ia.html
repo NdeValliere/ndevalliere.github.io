@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width">
   <title>Nathalie de Vallière</title>
 
-  <link rel="stylesheet" href="https://rawgit.com/NdeValliere/ndevalliere.github.io/master/assets/fonts/fonts.css">  
+  <link rel="stylesheet" href="https://rawgit.com/NdeValliere/ndevalliere.github.io/master/assets/fonts/fonts.css">
   <link rel="stylesheet" href="../styles/styles-15.css">
   <!-- <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"> -->
   <script type="text/javascript" src="../scripts/jquery.min.js"></script>
@@ -21,7 +21,7 @@
       <section class="grid__col--6"></section>
       <section class="grid__col--3">
         <section class="container__contact">
-          <a class="page__link page__link--logo" href="index--portfolio.html" style="float: right; padding-top: 12.5px;">
+          <a class="page__link page__link--logo" style="float: right; padding-top: 12.5px;" id="index">
             <svg class="header__text header__text--left" width="16px" height="16px" viewBox="0 0 16 16"
               onmouseover="document.getElementById('square').beginElement();">
               <path
@@ -139,8 +139,7 @@
     <canvas id="canvas__wave"></canvas>
   </section>
 
-  <section class="container__grid container__grid--black">
-    <a class="page__link" href="stackmap.html">
+  <section class="container__grid container__grid--black" id="stackmap">
       <section class="grid__row grid__row--hover">
         <section class="grid__col--3"></section>
         <section class="grid__col--6">
@@ -158,7 +157,6 @@
         </section>
         <section class="grid__col--3"></section>
       </section>
-    </a>
   </section>
 
   <section class="container__grid container__grid--black">
@@ -168,7 +166,7 @@
   <section class="container__grid container__grid--black">
     <section class="grid__row">
       <section class="grid__col--3 grid__col--3--edge">
-        <p class="footer__text footer__text--white">Built by <a class="footer__link--white" href="index--portfolio.html">Nathalie de Vallière</a>.</p>
+        <p class="footer__text footer__text--white" id="indexFooter">Built by <a class="footer__link--white">Nathalie de Vallière</a>.</p>
         <p class="footer__text footer__text--white">Previous versions: <a class="footer__link--white" href="#">2016</a> | <a class="footer__link--white" href="#">2015</a> | <a class="footer__link--white" href="#">2014</a></p>
       </section>
       <!-- <section class="grid__col--3">
@@ -178,7 +176,7 @@
       <section class="grid__col--6 grid__col--6--edge"></section>
       <section class="grid__col--3 grid__col--3--edge">
         <p class="footer__text footer__text--white">Download my <a class="footer__link--white" href="#">resume</a>.</p>
-        <p class="footer__text footer__text--white">Contact me: <a  class="footer__link--white" href="mailto:nathalie.devalliere@gmail.com">nathalie.devalliere@gmail.com</a></p>
+        <p class="footer__text footer__text--white">Contact: <a  class="footer__link--white" href="mailto:nathalie.devalliere@gmail.com">nathalie.devalliere@gmail.com</a></p>
         <!-- <p>Digital <a href="nathaliedevalliere.tumblr.com"> sketchbook</a></p> -->
       </section>
     </section>
@@ -188,4 +186,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.1/dat.gui.min.js"></script>
   <script src="../scripts/scripts-15.js"></script>
 </body>
+<section class="container__swipe"></section>
+<section class="container__swipe--black"></section>
 </html>
