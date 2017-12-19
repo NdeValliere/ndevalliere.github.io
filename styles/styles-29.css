@@ -3,7 +3,9 @@
 	padding: 0;
 }
 
-html {
+html,
+body,
+section {
 	cursor: url('../assets/png/cursorArrow.png'), auto;
 }
 
