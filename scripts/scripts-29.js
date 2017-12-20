@@ -22,7 +22,7 @@ $(window).resize(resize);
 
 $(document).ready(function() {
   //hide content before cycling through it onclick
-  for (var i = 2; i < 23; i++) {
+  for (var i = 2; i < 50; i++) {
     $(".container__grid--"+ i).css({"visibility": "hidden"});
   }
 
