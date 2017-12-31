@@ -12,11 +12,11 @@ var resize = (function () {
 		$(".container__grid").css({"width": IW *0.9,
                                "height": IH});
 
-    $(".grid__col").css({"height": IH});
+    // $(".grid__col").css({"height": IH});
     $(".grid__col--12").css({"max-width": IW*0.9});
 
     $(".quote--center").css({"padding-top": IH/2});
-    $("img").css({"height": IH});
+    $(".img__windowHeight").css({"height": IH});
 
 
     // var img = document.getElementById("img__center");
@@ -34,21 +34,24 @@ $(window).resize(resize);
 //-
 $(document).ready(function() {
   //hide content before cycling through it onclick
-  for (var i = 2; i < 50; i++) {
-    $(".container__grid--"+ i).css({"left": IW*0.9,
-                                    "visibility": "hidden"});
-  }
+  // for (var i = 2; i < 50; i++) {
+  //   $(".container__grid--"+ i).css({"left": IW*0.9});
+  // }
 
   var counter = 1;
+
   $( "html" ).click(function() {
       counter++;
-      $(".container__grid--"+ (counter-1) ).css({ "left": -IW*0.9});
-      $(".quote--"+ (counter-1) ).css({"margin-top": -IH});
-      $(".container__grid--"+ counter+1 ).css({"visibility": "visible"});
-      $(".container__grid--"+ counter ).css({"left": 0,
-                                              "visibility": "visible"});
-      // console.log("click" + counter);
-      $("body").css({"cursor": "url('../assets/png/clickHere-" + getRandomInt(1,5) + ".png'), auto"});
+      // console.log("counter: " + counter + "next: " + (counter+1));
+      $(".container__grid--"+ counter).css({"visibility": "visible"});
+      $(".container__grid--"+ counter).css({"left": 0});
+      $(".container__grid--"+ (counter+2)).css({"left": IW*1.8 });
+      $(".container__grid--"+ (counter+1)).css({"visibility": "visible",
+                                                "left": IW*0.9});
+      $(".container__grid--"+ (counter-1) ).css({ "left": -IW*0.9,});
+
+      // $(".quote--"+ (counter-1) ).css({"margin-top": -IH});
+      // $("body").css({"cursor": "url('../assets/png/clickHere-" + getRandomInt(1,5) + ".png'), auto"});
   });
 });
 
