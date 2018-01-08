@@ -7,39 +7,35 @@
   <meta name="author" content="Nathalie de Vallière">
 
   <link rel="stylesheet" href="https://rawgit.com/NdeValliere/ndevalliere.github.io/master/assets/fonts/fonts.css">
-  <link rel="stylesheet" href="../styles/styles-15.css">
+  <link rel="stylesheet" href="../styles/stylesPortfolio03.css">
   <!-- <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"> -->
   <script type="text/javascript" src="../scripts/jquery.min.js"></script>
-  <!-- Load the Paper.js library -->
-  <script type="text/javascript" src="../scripts/paper.js"></script>
-  <!-- Load external PaperScript and associate it with myCanvas -->
-  <script type="text/paperscript" src="../scripts/scripts-15.js" canvas="canvas__wave"></script>
+  <script type="text/javascript" src="../scripts/scriptsPortfolio03.js"></script>
 </head>
 <body>
   <section class="container__grid">
     <section class="grid__row">
-      <section class="grid__col--3 grid__col--3--edge">
+      <section class="grid__col--2">
         <section class="container__header">
           <h1 class="header__text header__text--left"><a class="page__link" href="https://ndevalliere.github.io/">Nathalie de Vallière</a></h1>
         </section>
       </section>
-      <section class="grid__col--6 grid__col--6--edge">
+      <section class="grid__col--8">
         <section class="container__about">
           <h5 class="about__text about__text--brow">About</h5>
-          <h1 class="about__text">Passionate about building and creating things.</h1>
-          <!-- add dribbble / behance link when ready! -->
-          <h1 class="about__text">Most recently interned with <a class="page__link" href="https://work.co">Work<i>&amp;</i>Co</a> in Brooklyn.</h1>
-          <h1 class="about__text">Finishing up final year of graphic and communication design BA at <a class="page__link" href="https://twitter.com/csmgraphics?lang=en" style="white-space: nowrap;">Saint Martins</a> in London.</h1>
+          <h1 class="about__text">Passionate about building and creating things <span class="space__body"> ––––––– </span> Most recently interned with <a class="page__link" href="https://work.co">Work<i>&amp;</i>Co</a> in Brooklyn <span class="space__body"> ––––––– </span> Finishing up final year of graphic and communication design BA at <a class="page__link" href="https://twitter.com/csmgraphics?lang=en" style="white-space: nowrap;">Saint Martins</a> in London.</h1>
         </section>
       </section>
-      <section class="grid__col--3 grid__col--3--edge">
+      <section class="grid__col--2">
         <section class="container__contact">
           <a class="page__link page__link--logo" href="#">
             <svg class="header__text header__text--left" width="16px" height="16px" viewBox="0 0 16 16"
               onmouseover="document.getElementById('square').beginElement();">
             	<path
             				d="M0,-1.13686838e-13 C8,6.9388939e-18 8,0 16,-1.13686838e-13 C16,2.64723716 16,7.9805705 16,16 L0,16 C0,8 0,2.66666667 0,-1.13686838e-13 Z"
-            				fill="#000000">
+            				fill="none"
+                    stroke="#000000"
+                    stroke-width="1.5">
             		<animate
             				attributeName="d"
                     id="square"
@@ -58,15 +54,11 @@
     </section>
   </section>
 
-  <section class="container__canvas">
-    <canvas id="canvas__wave"></canvas>
-  </section>
-
-  <section class="container__grid container__grid--black">
+  <section class="container__grid container__grid--canvas">
 
     <section class="grid__row grid__row--hover" id="workco" >
-      <section class="grid__col--3"></section>
-      <section class="grid__col--6">
+      <section class="grid__col--2"></section>
+      <section class="grid__col--8">
         <section class="container__work-background">
           <section class="container__work">
             <h1 class="work__text work__text--brow">Work</h1>
@@ -77,12 +69,12 @@
           </section>
         </section>
       </section>
-      <section class="grid__col--3"></section>
+      <section class="grid__col--2"></section>
     </section>
 
     <section class="grid__row grid__row--hover" id="ia">
-      <section class="grid__col--3"></section>
-      <section class="grid__col--6">
+      <section class="grid__col--2"></section>
+      <section class="grid__col--8">
         <section class="container__work-background">
           <section class="container__work">
             <section class="work__project work__project--2">
@@ -92,12 +84,12 @@
           </section>
         </section>
       </section>
-      <section class="grid__col--3"></section>
+      <section class="grid__col--2"></section>
     </section>
 
     <section class="grid__row grid__row--hover" id="stackmap">
-      <section class="grid__col--3"></section>
-      <section class="grid__col--6">
+      <section class="grid__col--2"></section>
+      <section class="grid__col--8">
         <section class="container__work-background">
           <section class="container__work">
             <section class="work__project work__project--3">
@@ -107,17 +99,17 @@
           </section>
         </section>
       </section>
-      <section class="grid__col--3"></section>
+      <section class="grid__col--2"></section>
     </section>
   </section>
 
 
   <section class="container__grid">
     <section class="grid__row">
-      <section class="grid__col--3"></section>
-      <section class="grid__col--6">
+      <section class="grid__col--2"></section>
+      <section class="grid__col--8">
         <section class="container__play">
-          <h1 class="play__text play__text--brow">Play</h1>
+          <h1 class="play__text play__text--brow">Sketches</h1>
           <section class="play__project play__project--1">
             <h1 class="play__text play--text--project-title">Design<i>&amp;</i>Kinetics</h1>
             <p class="play__text play__text--body">Created interactive narrative. Scenes triggered with gestures recorded by motion <a class="page__link">sensors</a>.</p>
@@ -130,13 +122,17 @@
           </section>
         </section>
       </section>
-      <section class="grid__col--3"></section>
+      <section class="grid__col--2"></section>
     </section>
   </section>
 
-  <section class="container__grid">
+  <!-- <section class="container__grid">
     <hr class="grid__divider">
-  </section>
+  </section> -->
+
+  <!-- <section class="container__canvas">
+    <canvas id="canvas__wave"></canvas>
+  </section> -->
 
   <section class="container__grid container__grid--blackSmallFooter">
     <!-- <section class="grid__row">
@@ -162,7 +158,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.1/dat.gui.min.js"></script>
-  <script src="../scripts/scripts-15.js"></script>
+  <script type="text/javascript" src="../scripts/scriptsPortfolio03.js"></script>
 </body>
 <section class="container__swipe"></section>
 </html>
