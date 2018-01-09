@@ -8,7 +8,11 @@ var height = 20;
 var speed = 0.1;
 var flip = false;
 
+<<<<<<< HEAD
 // Create a new path and style it:
+=======
+// Create a new path and style it
+>>>>>>> b6878a3adce35293f42794b3a8c445c0584386e2
 var path = new Path({
 	// 80% black:
 	strokeColor: [0,0,0],
