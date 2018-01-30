@@ -8,7 +8,7 @@ var height = 20;
 var speed = 0.1;
 var flip = false;
 
-// Create a new path and style it:
+// Create a new path and style it
 var path = new Path({
 	// 80% black:
 	strokeColor: [0,0,0],
