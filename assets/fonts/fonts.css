@@ -1,6 +1,13 @@
 @font-face {
   font-family: "Adobe Garamond Pro";
   src: url('https://rawgit.com/NdeValliere/ndevalliere.github.io/master/assets/fonts/AGaramondPro-Regular.otf');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Adobe Garamond Pro";
+  src: url('https://rawgit.com/NdeValliere/ndevalliere.github.io/master/assets/fonts/AGaramondPro-Semibold.otf');
   font-weight: 400;
   font-style: normal;
 }
@@ -15,6 +22,13 @@
 @font-face {
   font-family: "Adobe Garamond Pro";
   src: url('https://rawgit.com/NdeValliere/ndevalliere.github.io/master/assets/fonts/AGaramondPro-Italic.otf');
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Adobe Garamond Pro";
+  src: url('https://rawgit.com/NdeValliere/ndevalliere.github.io/master/assets/fonts/AGaramondPro-SemiboldItalic.otf');
   font-weight: 400;
   font-style: italic;
 }
