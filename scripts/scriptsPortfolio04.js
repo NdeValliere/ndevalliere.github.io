@@ -28,12 +28,14 @@ $(document).ready(function() {
   var counter = 0;
 
   $(document).bind('mousewheel', function(e){
-    console.log(counter);
-    if(e.originalEvent.wheelDelta /120 > 0) {
-        // alert('up');
+    if(e.originalEvent.wheelDelta > 300) {
+        alert('up');
+        // console.log(e.originalEvent.wheelDelta);
+        // think about switch
     }
-    else {
-        // alert('down');
+    else if (e.originalEvent.wheelDelta < -300) {
+        alert('down');
+        // console.log(e.originalEvent.wheelDelta);
     }
 });
 
