@@ -25,17 +25,20 @@ function resize() {
 //Click-through code
 //-
 $(document).ready(function() {
-  var counter = 0;
+  var counter = 0,
+      switchScroll = false;
 
   $(document).bind('mousewheel', function(e){
-    if(e.originalEvent.wheelDelta > 300) {
+    console.log(e.originalEvent.wheelDelta + " " + switchScroll);
+
+    if (e.originalEvent.wheelDelta > 1000 && switchScroll) {
         alert('up');
-        // console.log(e.originalEvent.wheelDelta);
-        // think about switch
+        switchScroll = false;
     }
-    else if (e.originalEvent.wheelDelta < -300) {
+
+    if (e.originalEvent.wheelDelta < -1000 && !switchScroll) {
         alert('down');
-        // console.log(e.originalEvent.wheelDelta);
+        switchScroll = true;
     }
 });
 
