@@ -45,10 +45,6 @@ img {
 	padding: 4.15%;
 }
 
-.grid__row--top {
-  padding: 0 4.15%;
-}
-
 /*Use 1320px as 100%, 3x3grid*/
 .grid__col--1 {
 	width: 8.3%;
@@ -156,5 +152,4 @@ img,
 
 hr {
   width: 100%;
-	max-width: 1440px;
 }
