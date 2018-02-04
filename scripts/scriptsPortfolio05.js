@@ -36,7 +36,7 @@ $(document).ready(function() {
   $(document).bind('mousewheel', function(e){
       console.log(counter);
     // console.log(e.originalEvent.wheelDelta + " " + switchScroll);
-      if (e.originalEvent.wheelDelta > 500 && switchScrollUp && (counter>0)) {
+      if (e.originalEvent.wheelDelta > 50 && switchScrollUp && (counter>0)) {
           switchScrollUp = false;
           setTimeout(function(){
             switchScrollUp = true;
@@ -55,7 +55,7 @@ $(document).ready(function() {
                                                     });
       }
 
-      if (e.originalEvent.wheelDelta < -500 && switchScrollDown && (counter<6)) {
+      if (e.originalEvent.wheelDelta < -50 && switchScrollDown && (counter<6)) {
         switchScrollDown = false;
         setTimeout(function(){
           switchScrollDown = true;
