@@ -10,8 +10,7 @@ function resize() {
     $(".container__process").css({"width": IW });
     $(".process__bar").css({"width": IW/6 * 1 });
     $(".td__border").css({"width": 2*(IW/12) + "px"});
-    $(".td__img").css({"height": 2*(IW/16,
-                       "margin-bottom": )});
+    $(".td__img").css({"height": 2*(IW/16) });
 
    for( var i = 0; i < 13; i++) {
       $(".grid__col--"+ i ).css({"width": (IW/12)*i + "px"});
