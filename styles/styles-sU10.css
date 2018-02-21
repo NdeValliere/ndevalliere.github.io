@@ -137,6 +137,10 @@ img,
 	font-weight: 100;
 }
 
+.col__body {
+	font-weight: 100;
+}
+
 .line__separator {
 	display: inline-block;
 }
@@ -148,4 +152,9 @@ img,
 
 hr {
   width: 100%;
+}
+
+.nopadding {
+	padding-top: 0;
+	padding-bottom: 0;
 }
