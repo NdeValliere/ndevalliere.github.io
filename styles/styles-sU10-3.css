@@ -167,7 +167,6 @@ hr {
 	.grid__row {
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
-		/*padding: 4.15% 0;*/
 	}
 
 	.grid__col--1,
