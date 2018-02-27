@@ -95,7 +95,8 @@ function getRandomInt(min, max) {
 //-
 $(".link__out").mouseover(function() {
   $(this).removeClass("backgroundHover");
-  $(this).toggleClass("hover"+ getRandomInt(1,10));
+  $(this).toggleClass("hover"+ getRandomInt(1,3));
+  console.log($(this).toggleClass("hover"+ getRandomInt(1,3)));
   $(this).addClass("hover");
 });
 

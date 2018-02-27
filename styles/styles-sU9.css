@@ -141,6 +141,10 @@ img,
 	font-weight: 100;
 }
 
+.col__body {
+	font-weight: 100;
+}
+
 .line__separator {
 	display: inline-block;
 }
