@@ -331,16 +331,8 @@ a {
 
 .link__out.hover:after {
 	/* background: #000; */
-<<<<<<< HEAD
-<<<<<<< HEAD
 	/*background: url("../assets/gif/linkout_03b.gif");*/
 	/*z-index: 10;*/
-=======
-	background: url("../assets/emojis/1.gif");
->>>>>>> d41e52728d42ee262b718c4024a65ef85a27799c
-=======
-	background: url("../assets/emojis/1.gif");
->>>>>>> d41e52728d42ee262b718c4024a65ef85a27799c
 	border-width: 0.5px;
 	height: 25px;
 	margin-top: -5.75px;

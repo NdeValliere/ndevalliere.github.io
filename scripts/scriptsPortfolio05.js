@@ -12,16 +12,6 @@ function resize() {
     $(".td__img").css({"margin-bottom": -2.1*(IW/16),
                        "padding-top": 2.1*(IW/16)});
     $(".td__border").css({"width": 2*(IW/12) + "px"});
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    $(".td__img").css({"margin-bottom": -2*(IW/16),
-                       "padding-top": 2*(IW/16)});
->>>>>>> d41e52728d42ee262b718c4024a65ef85a27799c
-=======
-    $(".td__img").css({"margin-bottom": -2*(IW/16),
-                       "padding-top": 2*(IW/16)});
->>>>>>> d41e52728d42ee262b718c4024a65ef85a27799c
 
    for( var i = 0; i < 13; i++) {
       $(".grid__col--"+ i ).css({"width": (IW/12)*i + "px"});
@@ -119,38 +109,18 @@ $(".link__out").mouseout(function() {
 //-
 $(".td__border").mouseover(function() {
   // console.log("hovering");
-<<<<<<< HEAD
-<<<<<<< HEAD
   // $(this).find(".td__img").css({"margin-bottom": -1*($(window).innerWidth()/16),
   //                               "padding-top": 1*($(window).innerWidth()/16),
   //                               "cursor": "pointer"});
   $(this).find(".td__img").css({"margin-bottom": -0.1*($(window).innerWidth()/16),
                                 "padding-top": 0,
                                 "transform": "scale(1, 1.1)",
-=======
-  $(this).find(".td__img").css({"margin-bottom": -1*($(window).innerWidth()/16),
-                                "padding-top": 1*($(window).innerWidth()/16),
->>>>>>> d41e52728d42ee262b718c4024a65ef85a27799c
-=======
-  $(this).find(".td__img").css({"margin-bottom": -1*($(window).innerWidth()/16),
-                                "padding-top": 1*($(window).innerWidth()/16),
->>>>>>> d41e52728d42ee262b718c4024a65ef85a27799c
                                 "cursor": "pointer"});
 });
 
 $(".td__border").mouseout(function() {
-<<<<<<< HEAD
-<<<<<<< HEAD
   $(this).find(".td__img").css({"margin-bottom": -2.1*($(window).innerWidth()/16),
                                 "padding-top": 2.1*($(window).innerWidth()/16),
                                 // "transform": "scale(0.1, 0.1)",
-=======
-  $(this).find(".td__img").css({"margin-bottom": -2*($(window).innerWidth()/16),
-                                "padding-top": 2*($(window).innerWidth()/16),
->>>>>>> d41e52728d42ee262b718c4024a65ef85a27799c
-=======
-  $(this).find(".td__img").css({"margin-bottom": -2*($(window).innerWidth()/16),
-                                "padding-top": 2*($(window).innerWidth()/16),
->>>>>>> d41e52728d42ee262b718c4024a65ef85a27799c
                                 "cursor": "default"});
 });
