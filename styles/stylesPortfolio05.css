@@ -85,7 +85,7 @@ p {
 .container__process {
 	/*border: 1px solid black;*/
 	bottom: 0;
-	height: 5px;
+	height: 15px;
 	position: absolute;
 	z-index: 10;
 }
@@ -111,7 +111,7 @@ p {
 } */
 
 .container__down {
-	cursor: s-resize;
+	/* cursor: s-resize; */
 	bottom: 0;
 }
 
@@ -225,22 +225,11 @@ img,
 
 .td__border {
 	border: 1px solid black;
+	overflow: hidden;
 }
 
-.td__img--1 {
-	background: url("../assets/png/td__img--1.png") no-repeat fixed center;
-}
-
-.td__img--2 {
-	background: url("../assets/png/td__img--2.png") no-repeat fixed center;
-}
-
-.td__img--3 {
-	background: url("../assets/png/td__img--3.png") no-repeat fixed center;
-}
-
-.td__img--4 {
-	background: url("../assets/png/td__img--4.png") no-repeat fixed center;
+.td__img {
+	-webkit-transition: all 0.1s ease-in;
 }
 
 .page__link--logo {
@@ -329,26 +318,82 @@ a {
 }
 
 .link__out:after {
+	background: #fff;
 	border: 0.3px solid black;
   content: url("../assets/svg/link__square.svg");
 	height: 10px;
-	margin-left: -0.75px;
+	margin-left: -3.75px;
 	position: absolute;
 	width: 10px;
-	transition: 0.5s;
+	transition: 0.25s;
+	margin-top: 20px;
 }
 
 .link__out.hover:after {
 	/* background: #000; */
+<<<<<<< HEAD
+<<<<<<< HEAD
+	/*background: url("../assets/gif/linkout_03b.gif");*/
+	/*z-index: 10;*/
+=======
+	background: url("../assets/emojis/1.gif");
+>>>>>>> d41e52728d42ee262b718c4024a65ef85a27799c
+=======
+	background: url("../assets/emojis/1.gif");
+>>>>>>> d41e52728d42ee262b718c4024a65ef85a27799c
 	border-width: 0.5px;
-	height: 65px;
-	margin-left: -65.75px;
-	width: 65px;
+	height: 25px;
+	margin-top: -5.75px;
+	width: 25px;
 	z-index: -1;
 }
 
+.link__out.hover1:after {
+	background: url("../assets/emoji/1.gif");
+}
+
+.link__out.hover2:after {
+	background: url("../assets/emojis/2.gif");
+}
+
+.link__out.hover3:after {
+	background: url("../assets/emojis/3.gif");
+}
+
+.link__out.hover4:after {
+	background: url("../assets/emojis/4.gif");
+}
+
+.link__out.hover5:after {
+	background: url("../assets/emojis/5.gif");
+}
+
+.link__out.hover6:after {
+	background: url("../assets/emojis/6.gif");
+}
+
+.link__out.hover7:after {
+	background: url("../assets/emojis/7.gif");
+}
+
+.link__out.hover8:after {
+	background: url("../assets/emojis/8.gif");
+}
+
+.link__out.hover9:after {
+	background: url("../assets/emojis/9.gif");
+}
+
+.link__out.hover10:after {
+	background: url("../assets/emojis/10.gif");
+}
+
+.link__out.backgroundHover:after {
+	background: #fff;
+}
+
 /*mobile styles*/
-@media only screen and (max-width: 1500px)  {
+@media only screen and (max-width: 1600px)  {
 	/*Text styles*/
 	.text__brow,
 	.text__title,

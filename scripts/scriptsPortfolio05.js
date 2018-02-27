@@ -9,13 +9,23 @@ function resize() {
 		$(".container__grid").css({"width": IW });
     $(".container__process").css({"width": IW });
     $(".process__bar").css({"width": IW/6 * 1 });
+    $(".td__img").css({"margin-bottom": -2.1*(IW/16),
+                       "padding-top": 2.1*(IW/16)});
     $(".td__border").css({"width": 2*(IW/12) + "px"});
-    $(".td__img").css({"height": 2*(IW/16) });
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    $(".td__img").css({"margin-bottom": -2*(IW/16),
+                       "padding-top": 2*(IW/16)});
+>>>>>>> d41e52728d42ee262b718c4024a65ef85a27799c
+=======
+    $(".td__img").css({"margin-bottom": -2*(IW/16),
+                       "padding-top": 2*(IW/16)});
+>>>>>>> d41e52728d42ee262b718c4024a65ef85a27799c
 
    for( var i = 0; i < 13; i++) {
       $(".grid__col--"+ i ).css({"width": (IW/12)*i + "px"});
       $(".td__space").css({"width": ($(".container__preview-imgs").innerWidth() - (4 * (IW/12)))/6 });
-      $(".tr__space").css({"height": ($(".container__preview-imgs").innerWidth() - (4 * (IW/12)))/12 });
       $(".container__grid--"+ i ).css({"position" : "absolute",
                                         "margin-top" : (IH - $(".container__grid--"+ i ).innerHeight()) /2,
                                         "margin-bottom" : (IH - $(".container__grid--"+ i ).innerHeight()) /2
@@ -76,27 +86,71 @@ $(document).ready(function() {
                                                   "z-index": 20
                                                 });
       }
-      if (counter==6) {
-        $(".container__down").css({"cursor": "default"});
-      }
-      else {
-        $(".container__down").css({"cursor": "s-resize"});
-      }
+      // if (counter==6) {
+      //   $(".container__down").css({"cursor": "default"});
+      // }
+      // else {
+      //   $(".container__down").css({"cursor": "s-resize"});
+      // }
   });
 });
+
+//Get random number
+//-
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
 //Link hover animations
 //-
 $(".link__out").mouseover(function() {
-  $(this).toggleClass("hover");
+  $(this).removeClass("backgroundHover");
+  $(this).toggleClass("hover"+ getRandomInt(1,10));
+  $(this).addClass("hover");
 });
 
 $(".link__out").mouseout(function() {
-  $(this).toggleClass("hover");
+  $(this).removeClass("hover");
+  $(this).addClass("backgroundHover");
 });
+
 
 //Image link hover animations
 //-
-$(".td__img").mouseover(function() {
-  // $(this).css({"padding-top": ($(this).innerHeight())/2});
+$(".td__border").mouseover(function() {
+  // console.log("hovering");
+<<<<<<< HEAD
+<<<<<<< HEAD
+  // $(this).find(".td__img").css({"margin-bottom": -1*($(window).innerWidth()/16),
+  //                               "padding-top": 1*($(window).innerWidth()/16),
+  //                               "cursor": "pointer"});
+  $(this).find(".td__img").css({"margin-bottom": -0.1*($(window).innerWidth()/16),
+                                "padding-top": 0,
+                                "transform": "scale(1, 1.1)",
+=======
+  $(this).find(".td__img").css({"margin-bottom": -1*($(window).innerWidth()/16),
+                                "padding-top": 1*($(window).innerWidth()/16),
+>>>>>>> d41e52728d42ee262b718c4024a65ef85a27799c
+=======
+  $(this).find(".td__img").css({"margin-bottom": -1*($(window).innerWidth()/16),
+                                "padding-top": 1*($(window).innerWidth()/16),
+>>>>>>> d41e52728d42ee262b718c4024a65ef85a27799c
+                                "cursor": "pointer"});
+});
+
+$(".td__border").mouseout(function() {
+<<<<<<< HEAD
+<<<<<<< HEAD
+  $(this).find(".td__img").css({"margin-bottom": -2.1*($(window).innerWidth()/16),
+                                "padding-top": 2.1*($(window).innerWidth()/16),
+                                // "transform": "scale(0.1, 0.1)",
+=======
+  $(this).find(".td__img").css({"margin-bottom": -2*($(window).innerWidth()/16),
+                                "padding-top": 2*($(window).innerWidth()/16),
+>>>>>>> d41e52728d42ee262b718c4024a65ef85a27799c
+=======
+  $(this).find(".td__img").css({"margin-bottom": -2*($(window).innerWidth()/16),
+                                "padding-top": 2*($(window).innerWidth()/16),
+>>>>>>> d41e52728d42ee262b718c4024a65ef85a27799c
+                                "cursor": "default"});
 });
