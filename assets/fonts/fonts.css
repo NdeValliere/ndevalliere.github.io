@@ -39,3 +39,10 @@
   font-weight: 900;
   font-style: italic;
 }
+
+@font-face {
+  font-family: "Tranz Neue";
+  src: url('https://rawgit.com/NdeValliere/ndevalliere.github.io/master/assets/fonts/Tranz_Neue.otf');
+  font-weight: 400;
+  font-style: regular;
+}

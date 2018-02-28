@@ -41,7 +41,7 @@ img {
 
 .grid__row {
 	display: flex;
-	max-width: 1440px;
+	max-width: 1320px;
 	padding: 4.15%;
 }
 
@@ -156,5 +156,5 @@ img,
 
 hr {
   width: 100%;
-	max-width: 1440px;
+	max-width: 1320px;
 }
