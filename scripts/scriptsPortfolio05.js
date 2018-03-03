@@ -42,6 +42,7 @@ $(document).ready(function() {
           setTimeout(function(){
             switchScrollUp = true;
             counter--;
+            $("#scroll__square").toggleClass("black0");
           }, 500);
 
           $(".process__bar").css({"width": ($(window).innerWidth() / 6) * (counter) });
@@ -56,6 +57,7 @@ $(document).ready(function() {
                                                     "z-index": -1
                                                     // "border": "10px solid red"
                                                     });
+
       }
 
       if (e.originalEvent.wheelDelta < -50 && switchScrollDown && (counter<6)) {
@@ -63,6 +65,7 @@ $(document).ready(function() {
         setTimeout(function(){
           switchScrollDown = true;
           counter++;
+          $("#scroll__square").toggleClass("black0");
         }, 500);
 
         $(".process__bar").css({"width": ($(window).innerWidth() / 6) * (counter+1) });
@@ -95,8 +98,8 @@ function getRandomInt(min, max) {
 //-
 $(".link__out").mouseover(function() {
   $(this).removeClass("backgroundHover");
-  $(this).toggleClass("hover"+ getRandomInt(1,3));
-  console.log($(this).toggleClass("hover"+ getRandomInt(1,3)));
+  // $(this).toggleClass("hover"+ getRandomInt(1,3));
+  // console.log($(this).toggleClass("hover"+ getRandomInt(1,3)));
   $(this).addClass("hover");
 });
 
