@@ -4,7 +4,7 @@
 }
 
 body {
-	background-image: url("../assets/png/ndevalliere-2.png");
+	background-image: url("../assets/png/ndevalliere-3.png");
 	background-repeat: no-repeat;
 	font-family: "Helvetica Neue", "Helvetica", sans-serif;
 	transition: 1s;
@@ -28,7 +28,7 @@ body {
 }
 
 .credit__gif {
-	height: 10px;
+	height: 110px;
 	margin-top: 10px;
 }
 
