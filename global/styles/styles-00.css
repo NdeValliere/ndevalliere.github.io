@@ -1,0 +1,96 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+	font-family: "Adobe Garamond Pro", serif;
+}
+
+p {
+	font-size: 15px;
+}
+
+hr {
+	border-width: 0.5px;
+	border-color: #000000;
+  width: 100%;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.divider__project {
+	margin-top: 7.5px !important;
+	width: 120%;
+}
+
+.container__preview {
+	position: fixed;
+	text-align: center;
+	width: 100%;
+	animation: float 1s ease-in-out infinite alternate;
+}
+@keyframes float {
+	0%  { margin-top: -70px;}
+	100% { margin-top: -75px; }
+}
+
+.container__preview--img {
+	margin: auto;
+	z-index: -1;
+	/* max-width: 900px; */
+	max-height: 700px;
+	width: auto;
+}
+
+.grid__row {
+	display: flex;
+}
+
+/*type*/
+.col__body {
+	font-weight: 100;
+}
+
+.col__body--bold {
+	font-weight: 900;
+}
+
+.col__body--right {
+	text-align: right;
+}
+
+.line__title {
+	font-style: italic;
+	font-weight: 900;
+}
+
+.line__title--light {
+	font-weight: 400;
+}
+
+.line__title--right {
+	text-align: right;
+}
+
+
+/*links*/
+a,
+a:hover {
+	color: #000;
+	text-decoration: none;
+}
+
+/*mobile styles*/
+@media only screen and (max-width: 700px)  {
+	p {
+		font-size: 10px;
+	}
+
+	.grid__col {
+		white-space: nowrap;
+	}
+}
