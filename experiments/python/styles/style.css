@@ -1,0 +1,43 @@
+body {
+  background: #2E3192;
+  margin: auto;
+  padding: 0;
+  /*overflow: hidden;*/
+}
+
+.container {
+  position: absolute;
+}
+
+#container__background--img {
+  width: 190%;
+  left: -20%;
+}
+
+#container__still {
+  background-image: url('https://artslondon-my.sharepoint.com/personal/n_devallire1_arts_ac_uk/_layouts/15/guestaccess.aspx?docid=1117db6055f6440e6a1463cc690c34b8b&authkey=AQlHVRVfPAYpNmLXLOtRGpk&e=14ff768a88444d0c87a2207322027a0d');
+  background-repeat: no-repeat;
+  height: 1000px;
+  width: 1000px;
+}
+
+#container__water {
+  background-image: url('https://artslondon-my.sharepoint.com/personal/n_devallire1_arts_ac_uk/_layouts/15/guestaccess.aspx?docid=1f0a708bbcf634a38a680569925c829d0&authkey=AVLCUpQVs_Meg53fvrfIW-U&e=678e112230674c2e97612d9090846a93');
+  background-repeat: no-repeat;
+  height: 1000px;
+  width: 1000px;
+}
+
+#container__runs {
+  background-image: url('https://artslondon-my.sharepoint.com/personal/n_devallire1_arts_ac_uk/_layouts/15/guestaccess.aspx?docid=14f0209020e244260898936fc64baa43d&authkey=ATCTTLrz0Q5JoirLgpMeY9Y&e=1a181c6e3a634492b4142dac1963ff4b');
+  background-repeat: no-repeat;
+  height: 1000px;
+  width: 1000px;
+}
+
+#container__deep {
+  background-image: url('https://artslondon-my.sharepoint.com/personal/n_devallire1_arts_ac_uk/_layouts/15/guestaccess.aspx?docid=1e4699d6c49d3468e95280d8aaa439312&authkey=AT9THMSmF5lWjr-1IlbKL_k&e=f6b6411b51874b72907ac579455f4455');
+  background-repeat: no-repeat;
+  height: 1000px;
+  width: 1000px;
+}
