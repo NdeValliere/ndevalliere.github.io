@@ -1,0 +1,59 @@
+/*Type*/
+p,
+a {
+	font-size: 15px;
+}
+
+a,
+a:hover {
+	text-decoration: underline;
+}
+
+a:hover {
+	opacity: 0.5;
+}
+
+.row__header {
+  font-size: 25px;
+}
+
+.row__header--italic {
+  font-style: italic;
+  font-weight: 100;
+}
+
+.row__title {
+	font-size: 20px;
+}
+
+.col__title,
+.col__subtitle  {
+	font-size: 15px;
+}
+
+.col__subtitle {
+	font-style: italic;
+	font-weight: 100;
+}
+
+.col__body {
+	font-weight: 100;
+}
+
+.line__title {
+	font-weight: 100;
+	font-style: normal;
+}
+
+.line__separator {
+	display: inline-block;
+}
+
+.line__title--right {
+	/* font-style: italic; */
+	text-align: right;
+}
+
+.right {
+	float: right;
+}
