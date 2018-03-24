@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html class="container__grab">
+	<head>
+		<meta charset=utf-8>
+		<title>Nathalie de Vallière</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	</head>
+	<body>
+
+	<script src="build/three-0.js"></script>
+	<script src="build/Projector.js"></script>
+	<script src="build/CanvasRenderer.js"></script>
+
+	<script src="build/three.js"></script>
+	<script src="build/detector.js"></script>
+	<script src="build/stats.min.js"></script>
+	<script src="build/OrbitControls.js"></script>
+	<script src="build/THREEx.KeyboardState.js"></script>
+	<script src="build/THREEx.FullScreen.js"></script>
+	<script src="build/THREEx.WindowResize.js"></script>
+
+	<section id="ThreeJS" style="position: absolute; left:0px; top:0px"></section>
+	<script>
+		// MAIN
+
+		// standard global variables
+		var container, scene, camera, renderer, controls, stats;
+		var keyboard = new THREEx.KeyboardState();
+
+		// custom global variables
+		var projector, mouse = { x: 0, y: 0 }, INTERSECTED;
+		var sprite1;
+		var canvas1, context1, texture1;
+
+		init();
+		animate();
+
+		// FUNCTIONS
+		function init()
+		{
+			// SCENE
+			scene = new THREE.Scene();
+			// CAMERA
+			var SCREEN_WIDTH = window.innerWidth,
+					SCREEN_HEIGHT = window.innerHeight;
+			var VIEW_ANGLE = 45,
+					ASPECT = SCREEN_WIDTH / SCREEN_HEIGHT,
+					NEAR = 0.1,
+					FAR = 20000;
+			camera = new THREE.PerspectiveCamera( VIEW_ANGLE, ASPECT, NEAR, FAR);
+			scene.add(camera);
+			camera.position.set(0,150,400);
+			camera.lookAt(scene.position);
+
+			// RENDERER
+			if ( Detector.webgl )
+				renderer = new THREE.WebGLRenderer( {antialias:true} );
+			else
+				renderer = new THREE.CanvasRenderer();
+
+			renderer.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
+
+			container = document.getElementById( "ThreeJS" );
+			container.appendChild( renderer.domElement );
+
+			// EVENTS
+			THREEx.WindowResize(renderer, camera);
+			THREEx.FullScreen.bindKey({ charCode : "f".charCodeAt(0) });
+
+			// CONTROLS
+			controls = new THREE.OrbitControls( camera, renderer.domElement );
+
+			// LIGHT
+			var light = new THREE.PointLight(0xffffff);
+			light.position.set(0,250,0);
+			scene.add(light);
+
+			// SKYBOX/FOG
+			// var skyBoxGeometry = new THREE.CubeGeometry( 10000, 10000, 10000 ); //dimensions
+			// var skyBoxMaterial = new THREE.MeshBasicMaterial( { color: 0x000000, side: THREE.BackSide } );
+
+			var skyTexture = new THREE.ImageUtils.loadTexture( 'assets/grid-01.png' );
+			skyTexture.wrapS = skyTexture.wrapT = THREE.RepeatWrapping;
+			skyTexture.repeat.set( 8, 3 );
+			var skyMaterial = new THREE.MeshBasicMaterial( { side:THREE.DoubleSide, map: skyTexture, transparency:true, opacity:0.9, depthWrite: false } );
+			var skyGeometry = new THREE.SphereGeometry(1000, 1000, 1000);
+			var skyBox = new THREE.Mesh(skyGeometry, skyMaterial);
+			// var skyBox = new THREE.Mesh( skyBoxGeometry, skyBoxMaterial );
+			scene.add(skyBox);
+
+			////////////
+			// CUSTOM //
+			////////////
+
+			// var cubeGeometry = new THREE.CubeGeometry( 100, 100, 100 );
+			// var cubeMaterial = new THREE.MeshNormalMaterial();
+			// cube = new THREE.Mesh( cubeGeometry, cubeMaterial );
+			// cube.position.set(0,50.1,0);
+			// cube.name = "Cube";
+			// scene.add(cube);
+
+
+			//Screens
+			// var particles, particle;
+			//
+			// var particleCount = 17,
+			// particles = new THREE.Geometry();
+			//
+			// for (var i = 0; i < particleCount; i++) {
+			// 	var pMap = new THREE.TextureLoader().load( "assets/"+ i +".png" );
+			// 	var pMaterial = new THREE.SpriteMaterial( { map: pMap, color: 0x000000, opacity: 0.8 } );
+			//
+			// 	particle = new THREE.Sprite( pMaterial );
+			//
+			// 		var pX = Math.random() * 2 - 1,
+			// 				pY = Math.random() * 2 - 1,
+			// 				pZ = Math.random() * 2 - 1;
+			//
+			// 	particle.position.x = pX;
+			// 	particle.position.y = pY;
+			// 	particle.position.z = pZ;
+			// 	particle.position.normalize();
+			// 	particle.position.multiplyScalar( Math.random() * 10 + 450 );
+			// 	particle.scale.multiplyScalar( 200 );
+			//
+			// 	scene.add(particle);
+			// }
+
+			//coordinate lines
+			var line1Material = new THREE.LineBasicMaterial({color: 0x000000, opacity: 0.25});
+			var line1Geometry = new THREE.Geometry();
+			line1Geometry.vertices.push(new THREE.Vector3(0, -1000, 0));
+			line1Geometry.vertices.push(new THREE.Vector3(0, 1000, 0));
+			var line1 = new THREE.Line(line1Geometry, line1Material);
+			scene.add(line1);
+
+
+			var line2Material = new THREE.LineBasicMaterial({color: 0x000000, opacity: 0.25});
+			var line2Geometry = new THREE.Geometry();
+			line2Geometry.vertices.push(new THREE.Vector3(-1000, 0, 0));
+			line2Geometry.vertices.push(new THREE.Vector3(1000, 0, 0));
+			var line2 = new THREE.Line(line2Geometry, line2Material);
+			scene.add(line2);
+
+			var line3Material = new THREE.LineBasicMaterial({color: 0x000000, opacity: 0.25});
+			var line3Geometry = new THREE.Geometry();
+			line3Geometry.vertices.push(new THREE.Vector3(0, 0, -1000));
+			line3Geometry.vertices.push(new THREE.Vector3(0, 0, 1000));
+			var line3 = new THREE.Line(line3Geometry, line3Material);
+			scene.add(line3);
+
+			//START
+			//1
+			var win1Texture = new THREE.ImageUtils.loadTexture( 'assets/1.png' );
+			win1Texture.wrapS = win1Texture.wrapT = THREE.RepeatWrapping;
+			win1Texture.repeat.set( 1, 1 );
+			var win1Material = new THREE.MeshBasicMaterial( { map: win1Texture, side: THREE.DoubleSide } );
+			var win1Geometry = new THREE.PlaneGeometry(100, 100, 10, 10);
+			var win1 = new THREE.Mesh(win1Geometry, win1Material);
+			win1.position.y = 0;
+			win1.position.x = 0;
+			win1.rotation.x = Math.PI / 100;
+			win1.name = "Window 1";
+			scene.add(win1);
+
+
+			var spritey = makeTextSprite( "3:09:00 PM",
+				// { fontsize: 25, fontface: "Tranz Neue" }
+			);
+			spritey.position.set(-12.5,75, 0);
+			scene.add( spritey );
+
+			//2
+			var win2Texture = new THREE.ImageUtils.loadTexture( 'assets/2.png' );
+			win2Texture.wrapS = win2Texture.wrapT = THREE.RepeatWrapping;
+			win2Texture.repeat.set( 1, 1 );
+			var win2Material = new THREE.MeshBasicMaterial( { map: win2Texture, side: THREE.DoubleSide } );
+			var win2Geometry = new THREE.PlaneGeometry(100, 100, 10, 10);
+			var win2 = new THREE.Mesh(win2Geometry, win2Material);
+			win2.position.y = 0;
+			win2.position.x = 50;
+			win2.position.z = 50;
+			win2.rotation.x = Math.PI / 100;
+			win2.name = "Window 2";
+			scene.add(win2);
+
+
+			var spritey = makeTextSprite( "3:11:00 PM");
+			spritey.position.set(-12.5,75, 50);
+			scene.add( spritey );
+
+			//3
+			var win3Texture = new THREE.ImageUtils.loadTexture( 'assets/3.png' );
+			win3Texture.wrapS = win3Texture.wrapT = THREE.RepeatWrapping;
+			win3Texture.repeat.set( 1, 1 );
+			var win3Material = new THREE.MeshBasicMaterial( { map: win3Texture, side: THREE.DoubleSide } );
+			var win3Geometry = new THREE.PlaneGeometry(100, 100, 10, 10);
+			var win3 = new THREE.Mesh(win3Geometry, win3Material);
+			win3.position.y = 0;
+			win3.position.x = 150;
+			win3.position.z = 50;
+			win3.rotation.x = Math.PI / 100;
+			win3.name = "Window 3";
+			scene.add(win3);
+
+			//4
+			var win4Texture = new THREE.ImageUtils.loadTexture( 'assets/4.png' );
+			win4Texture.wrapS = win4Texture.wrapT = THREE.RepeatWrapping;
+			win4Texture.repeat.set( 1, 1 );
+			var win4Material = new THREE.MeshBasicMaterial( { map: win4Texture, side: THREE.DoubleSide } );
+			var win4Geometry = new THREE.PlaneGeometry(100, 100, 10, 10);
+			var win4 = new THREE.Mesh(win4Geometry, win4Material);
+			win4.position.y = 0;
+			win4.position.x = 200;
+			win4.position.z = 50;
+			win4.rotation.x = Math.PI / 100;
+			win4.name = "Window 4";
+			scene.add(win3);
+
+			//5
+			var win5Texture = new THREE.ImageUtils.loadTexture( 'assets/5.png' );
+			win5Texture.wrapS = win5Texture.wrapT = THREE.RepeatWrapping;
+			win5Texture.repeat.set( 1, 1 );
+			var win5Material = new THREE.MeshBasicMaterial( { map: win5Texture, side: THREE.DoubleSide } );
+			var win5Geometry = new THREE.PlaneGeometry(100, 100, 10, 10);
+			var win5 = new THREE.Mesh(win5Geometry, win5Material);
+			win5.position.y = 0;
+			win5.position.x = 250;
+			win5.position.z = 50;
+			win5.rotation.x = Math.PI / 100;
+			win5.name = "Window 5";
+			scene.add(win5);
+
+			//6
+			var win6Texture = new THREE.ImageUtils.loadTexture( 'assets/6.png' );
+			win6Texture.wrapS = win6Texture.wrapT = THREE.RepeatWrapping;
+			win6Texture.repeat.set( 1, 1 );
+			var win6Material = new THREE.MeshBasicMaterial( { map: win6Texture, side: THREE.DoubleSide } );
+			var win6Geometry = new THREE.PlaneGeometry(100, 100, 10, 10);
+			var win6 = new THREE.Mesh(win6Geometry, win6Material);
+			win6.position.y = 0;
+			win6.position.x = 200;
+			win6.position.z = 100;
+			win6.rotation.x = Math.PI / 100;
+			win6.name = "Window 6";
+			scene.add(win6);
+
+			var spritey = makeTextSprite( "3:16:00 PM");
+			spritey.position.set(-12.5,75, 100);
+			scene.add( spritey );
+
+			//7
+			var win7Texture = new THREE.ImageUtils.loadTexture( 'assets/7.png' );
+			win7Texture.wrapS = win7Texture.wrapT = THREE.RepeatWrapping;
+			win7Texture.repeat.set( 1, 1 );
+			var win7Material = new THREE.MeshBasicMaterial( { map: win7Texture, side: THREE.DoubleSide } );
+			var win7Geometry = new THREE.PlaneGeometry(100, 100, 10, 10);
+			var win7 = new THREE.Mesh(win7Geometry, win7Material);
+			win7.position.y = 0;
+			win7.position.x = 250;
+			win7.position.z = 100;
+			win7.rotation.x = Math.PI / 100;
+			win7.name = "Window 7";
+			scene.add(win7);
+
+			//8
+			var win8Texture = new THREE.ImageUtils.loadTexture( 'assets/8.png' );
+			win8Texture.wrapS = win8Texture.wrapT = THREE.RepeatWrapping;
+			win8Texture.repeat.set( 1, 1 );
+			var win8Material = new THREE.MeshBasicMaterial( { map: win8Texture, side: THREE.DoubleSide } );
+			var win8Geometry = new THREE.PlaneGeometry(100, 100, 10, 10);
+			var win8 = new THREE.Mesh(win8Geometry, win8Material);
+			win8.position.y = 0;
+			win8.position.x = 200;
+			win8.position.z = 150;
+			win8.rotation.x = Math.PI / 100;
+			win8.name = "Window 8";
+			scene.add(win8);
+
+			var spritey = makeTextSprite( "3:24:00 PM");
+			spritey.position.set(-12.5,75, 150);
+			scene.add( spritey );
+
+			//9
+			var win9Texture = new THREE.ImageUtils.loadTexture( 'assets/9.png' );
+			win9Texture.wrapS = win9Texture.wrapT = THREE.RepeatWrapping;
+			win9Texture.repeat.set( 1, 1 );
+			var win9Material = new THREE.MeshBasicMaterial( { map: win9Texture, side: THREE.DoubleSide } );
+			var win9Geometry = new THREE.PlaneGeometry(100, 100, 10, 10);
+			var win9 = new THREE.Mesh(win9Geometry, win9Material);
+			win9.position.y = 0;
+			win9.position.x = 200;
+			win9.position.z = 200;
+			win9.rotation.x = Math.PI / 100;
+			win9.name = "Window 9";
+			scene.add(win9);
+
+			var spritey = makeTextSprite( "3:25:00 PM");
+			spritey.position.set(-12.5,75, 200);
+			scene.add( spritey );
+
+			//10
+			var win10Texture = new THREE.ImageUtils.loadTexture( 'assets/10.png' );
+			win10Texture.wrapS = win10Texture.wrapT = THREE.RepeatWrapping;
+			win10Texture.repeat.set( 1, 1 );
+			var win10Material = new THREE.MeshBasicMaterial( { map: win10Texture, side: THREE.DoubleSide } );
+			var win10Geometry = new THREE.PlaneGeometry(100, 100, 10, 10);
+			var win10 = new THREE.Mesh(win10Geometry, win10Material);
+			win10.position.y = 0;
+			win10.position.x = 250;
+			win10.position.z = 200;
+			win10.rotation.x = Math.PI / 100;
+			win10.name = "Window 10";
+			scene.add(win10);
+
+			//11
+			var win11Texture = new THREE.ImageUtils.loadTexture( 'assets/11.png' );
+			win11Texture.wrapS = win11Texture.wrapT = THREE.RepeatWrapping;
+			win11Texture.repeat.set( 1, 1 );
+			var win11Material = new THREE.MeshBasicMaterial( { map: win11Texture, side: THREE.DoubleSide } );
+			var win11Geometry = new THREE.PlaneGeometry(100, 100, 10, 10);
+			var win11 = new THREE.Mesh(win11Geometry, win11Material);
+			win11.position.y = 0;
+			win11.position.x = 300;
+			win11.position.z = 200;
+			win11.rotation.x = Math.PI / 100;
+			win11.name = "Window 11";
+			scene.add(win11);
+
+		}
+
+		function makeTextSprite( message, parameters )
+		{
+			if ( parameters === undefined ) parameters = {};
+
+			var fontface = parameters.hasOwnProperty("fontface") ?
+				parameters["fontface"] : "Tranz Neue";
+
+			var fontsize = parameters.hasOwnProperty("fontsize") ?
+				parameters["fontsize"] : 25;
+
+			var borderThickness = parameters.hasOwnProperty("borderThickness") ?
+				parameters["borderThickness"] : 0;
+
+			var borderColor = parameters.hasOwnProperty("borderColor") ?
+				parameters["borderColor"] : {r:255, g:255, b:255, a:0};
+
+			var backgroundColor = parameters.hasOwnProperty("backgroundColor") ?
+				parameters["backgroundColor"] : { r:255, g:255, b:255, a:0 };
+
+			var spriteAlignment = THREE.SpriteAlignment.topLeft;
+
+			var canvas = document.createElement('canvas');
+			var context = canvas.getContext('2d');
+			context.font = "Bold " + fontsize + "px " + fontface;
+
+			// get size data (height depends only on font size)
+			var metrics = context.measureText( message );
+			var textWidth = metrics.width;
+
+			// background color
+			context.fillStyle   = "rgba(" + backgroundColor.r + "," + backgroundColor.g + ","
+										  + backgroundColor.b + "," + backgroundColor.a + ")";
+			// border color
+			context.strokeStyle = "rgba(" + borderColor.r + "," + borderColor.g + ","
+										  + borderColor.b + "," + borderColor.a + ")";
+
+			context.lineWidth = borderThickness;
+			roundRect(context, borderThickness/2, borderThickness/2, textWidth + borderThickness, fontsize * 1.4 + borderThickness, 6);
+			// 1.4 is extra height factor for text below baseline: g,j,p,q.
+
+			// text color
+			context.fillStyle = "rgba(0, 0, 0, 1.0)";
+
+			context.fillText( message, borderThickness, fontsize + borderThickness);
+
+			// canvas contents will be used for a texture
+			var texture = new THREE.Texture(canvas)
+			texture.needsUpdate = true;
+
+			var spriteMaterial = new THREE.SpriteMaterial(
+				{ map: texture, useScreenCoordinates: false, alignment: spriteAlignment } );
+			var sprite = new THREE.Sprite( spriteMaterial );
+			sprite.scale.set(100,50,1.0);
+			return sprite;
+		}
+
+		// function for drawing rounded rectangles
+		function roundRect(ctx, x, y, w, h, r)
+		{
+		    ctx.beginPath();
+		    ctx.moveTo(x+r, y);
+		    ctx.lineTo(x+w-r, y);
+		    ctx.quadraticCurveTo(x+w, y, x+w, y+r);
+		    ctx.lineTo(x+w, y+h-r);
+		    ctx.quadraticCurveTo(x+w, y+h, x+w-r, y+h);
+		    ctx.lineTo(x+r, y+h);
+		    ctx.quadraticCurveTo(x, y+h, x, y+h-r);
+		    ctx.lineTo(x, y+r);
+		    ctx.quadraticCurveTo(x, y, x+r, y);
+		    ctx.closePath();
+		    ctx.fill();
+				ctx.stroke();
+		}
+
+		function animate()
+		{
+		  requestAnimationFrame( animate );
+			render();
+			update();
+		}
+
+		function update()
+		{
+			controls.update();
+		}
+
+		function render()
+		{
+			renderer.render( scene, camera );
+		}
+
+	</script>
+
+	</body>
+</html>

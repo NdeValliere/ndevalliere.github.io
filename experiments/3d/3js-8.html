@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html class="container__grab">
+	<head>
+		<meta charset=utf-8>
+		<title>Nathalie de Vallière</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	</head>
+	<body>
+
+	<script src="build/three-0.js"></script>
+	<script src="build/Projector.js"></script>
+	<script src="build/CanvasRenderer.js"></script>
+
+	<script src="build/three.js"></script>
+	<script src="build/detector.js"></script>
+	<script src="build/stats.min.js"></script>
+	<script src="build/OrbitControls.js"></script>
+	<script src="build/THREEx.KeyboardState.js"></script>
+	<script src="build/THREEx.FullScreen.js"></script>
+	<script src="build/THREEx.WindowResize.js"></script>
+	<script src="build/Math.js"></script>
+	<script src="build/PropertyBinding.js"></script>
+	<script src="build/AnimationObjectGroup.js"></script>
+
+	<section id="ThreeJS" style="position: absolute; left:0px; top:0px"></section>
+	<script>
+		// MAIN
+		// var THREE = require('three');
+
+		// standard global variables
+		var container, scene, camera, renderer, controls, stats;
+		var keyboard = new THREEx.KeyboardState();
+
+		// custom global variables
+		var projector, mouse = { x: 0, y: 0 }, INTERSECTED;
+		var sprite1;
+		var canvas1, context1, texture1,
+		startPoint,
+		endPoint,
+		win,
+		windows;
+
+		var winCount = 3;
+
+
+		init();
+		animate();
+
+		// FUNCTIONS
+		function init()
+		{
+			// SCENE
+			scene = new THREE.Scene();
+			// CAMERA
+			var SCREEN_WIDTH = window.innerWidth,
+					SCREEN_HEIGHT = window.innerHeight;
+			var VIEW_ANGLE = 45,
+					ASPECT = SCREEN_WIDTH / SCREEN_HEIGHT,
+					NEAR = 0.1,
+					FAR = 20000;
+			camera = new THREE.PerspectiveCamera( VIEW_ANGLE, ASPECT, NEAR, FAR);
+			scene.add(camera);
+			camera.position.set(0,150,400);
+			camera.lookAt(scene.position);
+
+			// RENDERER
+			if ( Detector.webgl )
+				renderer = new THREE.WebGLRenderer( {antialias:true} );
+			else
+				renderer = new THREE.CanvasRenderer();
+
+			renderer.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
+
+			container = document.getElementById( "ThreeJS" );
+			container.appendChild( renderer.domElement );
+
+			// EVENTS
+			THREEx.WindowResize(renderer, camera);
+			THREEx.FullScreen.bindKey({ charCode : "f".charCodeAt(0) });
+
+			// CONTROLS
+			controls = new THREE.OrbitControls( camera, renderer.domElement );
+
+			// LIGHT
+			var light = new THREE.PointLight(0xffffff);
+			light.position.set(0,250,0);
+			scene.add(light);
+
+			// grid sky sphere
+			var skyTexture = new THREE.ImageUtils.loadTexture( 'assets/grid-01.png' );
+			skyTexture.wrapS = skyTexture.wrapT = THREE.RepeatWrapping;
+			skyTexture.repeat.set( 8, 3 );
+			var skyMaterial = new THREE.MeshBasicMaterial( { side:THREE.DoubleSide, map: skyTexture, transparency:true, opacity:0.9, depthWrite: false } );
+			var skyGeometry = new THREE.SphereGeometry(1000, 1000, 1000);
+			var skyBox = new THREE.Mesh(skyGeometry, skyMaterial);
+			scene.add(skyBox);
+
+			//coordinate lines
+			var line1Material = new THREE.LineBasicMaterial({color: 0x000000, opacity: 0.25});
+			var line1Geometry = new THREE.Geometry();
+			line1Geometry.vertices.push(new THREE.Vector3(0, -1000, 0));
+			line1Geometry.vertices.push(new THREE.Vector3(0, 1000, 0));
+			var line1 = new THREE.Line(line1Geometry, line1Material);
+			scene.add(line1);
+
+
+			var line2Material = new THREE.LineBasicMaterial({color: 0x000000, opacity: 0.25});
+			var line2Geometry = new THREE.Geometry();
+			line2Geometry.vertices.push(new THREE.Vector3(-1000, 0, 0));
+			line2Geometry.vertices.push(new THREE.Vector3(1000, 0, 0));
+			var line2 = new THREE.Line(line2Geometry, line2Material);
+			scene.add(line2);
+
+			var line3Material = new THREE.LineBasicMaterial({color: 0x000000, opacity: 0.25});
+			var line3Geometry = new THREE.Geometry();
+			line3Geometry.vertices.push(new THREE.Vector3(0, 0, -1000));
+			line3Geometry.vertices.push(new THREE.Vector3(0, 0, 1000));
+			var line3 = new THREE.Line(line3Geometry, line3Material);
+			scene.add(line3);
+
+
+			startPoint = new THREE.Mesh( new THREE.CubeGeometry(0, 0, 0), new THREE.MeshBasicMaterial({ transparency:true, opacity:0, depthWrite: false }));
+			// endPoint = new THREE.Mesh( new THREE.CubeGeometry(25, 25, 25), new THREE.MeshLambertMaterial({ color: 0x0000CC }));
+			// endPoint.position.set( 0, 0, 500 );
+
+	    scene.add( startPoint );
+			// scene.add( endPoint );
+
+
+			//Screens
+			for (var i = 0; i < winCount; i++) {
+				var winTexture = new THREE.ImageUtils.loadTexture( "assets/" + i + ".png" );
+
+				winTexture.wrapS = winTexture.wrapT = THREE.RepeatWrapping;
+				winTexture.repeat.set( 1, 1 );
+				var winMaterial = new THREE.MeshBasicMaterial( { map: winTexture, side: THREE.DoubleSide } );
+				var winGeometry = new THREE.PlaneGeometry(100, 100, 10, 10);
+				win = new THREE.Mesh(winGeometry, winMaterial);
+
+				var pX = i*50,
+						pZ = i*25;
+
+				win.position.y = 0;
+				win.rotation.x = Math.PI / 100;
+
+				win.position.x = pX;
+				win.position.z = pZ;
+				win.name = "Window " + i;
+				// scene.add(win);
+
+				windows = new THREE.AnimationObjectGroup();
+				windows.add( win );
+			}
+			scene.add( windows );
+
+		// 	var spritey = makeTextSprite( "3:09:00 PM",
+		// 		// { fontsize: 25, fontface: "Tranz Neue" }
+		// 	);
+		// 	spritey.position.set(-12.5,75, 0);
+		// 	scene.add( spritey );
+
+		// 	var spritey = makeTextSprite( "3:11:00 PM");
+		// 	spritey.position.set(-12.5,75, 50);
+		// 	scene.add( spritey );
+
+		// 	var spritey = makeTextSprite( "3:16:00 PM");
+		// 	spritey.position.set(-12.5,75, 100);
+		// 	scene.add( spritey );
+
+		// 	var spritey = makeTextSprite( "3:24:00 PM");
+		// 	spritey.position.set(-12.5,75, 150);
+		// 	scene.add( spritey );
+
+		// 	var spritey = makeTextSprite( "3:25:00 PM");
+		// 	spritey.position.set(-12.5,75, 200);
+		// 	scene.add( spritey );
+
+		}
+
+		function makeTextSprite( message, parameters ) {
+			if ( parameters === undefined ) parameters = {};
+
+			var fontface = parameters.hasOwnProperty("fontface") ?
+				parameters["fontface"] : "Tranz Neue";
+
+			var fontsize = parameters.hasOwnProperty("fontsize") ?
+				parameters["fontsize"] : 25;
+
+			var borderThickness = parameters.hasOwnProperty("borderThickness") ?
+				parameters["borderThickness"] : 0;
+
+			var borderColor = parameters.hasOwnProperty("borderColor") ?
+				parameters["borderColor"] : {r:255, g:255, b:255, a:0};
+
+			var backgroundColor = parameters.hasOwnProperty("backgroundColor") ?
+				parameters["backgroundColor"] : { r:255, g:255, b:255, a:0 };
+
+			var spriteAlignment = THREE.SpriteAlignment.topLeft;
+
+			var canvas = document.createElement('canvas');
+			var context = canvas.getContext('2d');
+			context.font = "Bold " + fontsize + "px " + fontface;
+
+			// get size data (height depends only on font size)
+			var metrics = context.measureText( message );
+			var textWidth = metrics.width;
+
+			// background color
+			context.fillStyle   = "rgba(" + backgroundColor.r + "," + backgroundColor.g + ","
+										  + backgroundColor.b + "," + backgroundColor.a + ")";
+			// border color
+			context.strokeStyle = "rgba(" + borderColor.r + "," + borderColor.g + ","
+										  + borderColor.b + "," + borderColor.a + ")";
+
+			context.lineWidth = borderThickness;
+			roundRect(context, borderThickness/2, borderThickness/2, textWidth + borderThickness, fontsize * 1.4 + borderThickness, 6);
+			// 1.4 is extra height factor for text below baseline: g,j,p,q.
+
+			// text color
+			context.fillStyle = "rgba(0, 0, 0, 1.0)";
+
+			context.fillText( message, borderThickness, fontsize + borderThickness);
+
+			// canvas contents will be used for a texture
+			var texture = new THREE.Texture(canvas)
+			texture.needsUpdate = true;
+
+			var spriteMaterial = new THREE.SpriteMaterial(
+				{ map: texture, useScreenCoordinates: false, alignment: spriteAlignment } );
+			var sprite = new THREE.Sprite( spriteMaterial );
+			sprite.scale.set(100,50,1.0);
+			return sprite;
+		}
+
+		// function for drawing rounded rectangles
+		function roundRect(ctx, x, y, w, h, r) {
+		    ctx.beginPath();
+		    ctx.moveTo(x+r, y);
+		    ctx.lineTo(x+w-r, y);
+		    ctx.quadraticCurveTo(x+w, y, x+w, y+r);
+		    ctx.lineTo(x+w, y+h-r);
+		    ctx.quadraticCurveTo(x+w, y+h, x+w-r, y+h);
+		    ctx.lineTo(x+r, y+h);
+		    ctx.quadraticCurveTo(x, y+h, x, y+h-r);
+		    ctx.lineTo(x, y+r);
+		    ctx.quadraticCurveTo(x, y, x+r, y);
+		    ctx.closePath();
+		    ctx.fill();
+				ctx.stroke();
+		}
+
+		function animate() {
+			var upVector = new THREE.Vector3( 0, 10, 0 );
+			var axis = startPoint.position.clone().sub(upVector).normalize();
+
+			windows.forEach( function ( clip ) {
+				win.position.applyAxisAngle( axis, .0005 );
+			} );
+
+		  requestAnimationFrame( animate );
+			render();
+			update();
+		}
+
+		function update() {
+			controls.update();
+		}
+
+		function render() {
+			renderer.render( scene, camera );
+		}
+	</script>
+	</body>
+</html>
