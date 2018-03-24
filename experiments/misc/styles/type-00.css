@@ -1,0 +1,59 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.container__grid {
+	overflow-x: hidden;
+	position: relative;
+}
+
+.container__absolute {
+	position: absolute;
+}
+
+.grid__row {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.grid__rect {
+	/*width: 10px;*/
+	/*background: white;
+	border: 0.1px solid black;
+	width: 5px;*/
+	/*-webkit-box-shadow: 6px 6px 13px 1px rgba(0,0,0,0.75);
+	-moz-box-shadow: 6px 6px 13px 1px rgba(0,0,0,0.75);
+	box-shadow: 6px 6px 13px 1px rgba(0,0,0,0.75);*/
+}
+
+.grid__rect--1,
+.grid__rect--2,
+.grid__rect--3,
+.grid__rect--4,
+.grid__rect--5,
+.grid__rect--6,
+.grid__rect--7,
+.grid__rect--8 {
+	width: 1px;
+	transition: 20s;
+}
+
+.grid__rect--1:hover,
+.grid__rect--2:hover,
+.grid__rect--3:hover,
+.grid__rect--4:hover,
+.grid__rect--5:hover,
+.grid__rect--6:hover,
+.grid__rect--7:hover,
+.grid__rect--8:hover {
+	width: 300px;
+}
+
+.grid__sticker {
+	position: absolute;
+	height: 100px;
+	width: 100px;
+}
