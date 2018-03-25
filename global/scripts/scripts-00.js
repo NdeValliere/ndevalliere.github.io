@@ -8,6 +8,7 @@ $(".link__project").mouseover(function() {
   $(this).find(".grid__row").css({"opacity": "1",
                                   "z-index": "2"});
   $(".container__preview").append("<img class='container__preview--img' src='global/assets/png/" + filePath + ".png'>");
+  $(".container__preview--img").css({"margin-top": ($(window).innerHeight() - $(".container__preview--img").innerHeight())/2 + "px" });
 });
 
 $(".link__project").mouseout(function() {
