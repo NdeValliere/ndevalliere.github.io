@@ -11,14 +11,14 @@
         var defaults = {
             prefixes: ['-ms-', '-webkit-', '-o-', '-moz-', ''],
             animation_name: 'wave',
-            transition_speed: '0.4s',
+            transition_speed: '0.25s',
             keyframes: {
                 '0': ['0', '50px'],
                 '20': ['-2px', '49px'],
                 '40': ['-5px', '48.5px'],
                 '60': ['-10px', '48px'],
                 '80': ['-5px', '49px'],
-                '100': ['0', '50px']
+                '100': ['-2px', '50px']
             },
             char_classes: [],
             style_id: 'wavy-text-custom'

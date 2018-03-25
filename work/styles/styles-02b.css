@@ -111,6 +111,7 @@ a {
 
 .link__out--archive {
 	float: right;
+	z-index: 20;
 }
 
 .cursor__img {

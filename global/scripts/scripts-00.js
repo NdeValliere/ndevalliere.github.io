@@ -1,6 +1,6 @@
 //links
 //-
-$("a").mouseover(function() {
+$(".link__project").mouseover(function() {
   var filePath = $(this).attr("id");
   $(".grid__row").css({"opacity": "0.1",
                        "transition": "0.5s",
@@ -10,7 +10,7 @@ $("a").mouseover(function() {
   $(".container__preview").append("<img class='container__preview--img' src='global/assets/png/" + filePath + ".png'>");
 });
 
-$("a").mouseout(function() {
+$(".link__project").mouseout(function() {
   $(".grid__row").css({"opacity": "1"});
   $(".container__preview--img").remove();
 });
@@ -36,4 +36,26 @@ $(document).ready(function() {
         });
       }
     loop();
+});
+
+//about link
+//-
+$(".link__archive").mouseover(function () {
+    $(this).find("#about").append("<span id='about__content'></span>");
+    var tickr=['&nbsp;hello there. this is a small archive of some of my work. click to see the development process.'];
+      $('#about__content').t(
+      tickr.join(x='<ins>2</ins>')+x,
+        {
+        speed:50,
+        repeat:false,
+        caret:'<span style="visibility:hidden">•</span>',
+      }
+    );
+    // $(".grid__row").css({"opacity": "0.3",
+    //                      "transition": "0.5s"});
+    // $(this).find(".grid__row").css({"opacity": "1"});
+});
+$(".link__archive").mouseout(function () {
+  $("#about__content").remove();
+  // $(".grid__row").css({"opacity": "1"});
 });

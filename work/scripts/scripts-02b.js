@@ -136,6 +136,22 @@ $("body").mousemove(function(e) {
 
 //Links
 //-
-$("a").mouseover(function () {
-      $(this).wavyText();
-  });
+$(".link__out").mouseover(function () {
+    $(this).wavyText();
+});
+
+$(".link__out--archive").mouseover(function () {
+    $(this).find("#about").append("<span id='about__content'></span>");
+    var tickr=['&nbsp;hello there'];
+      $('#about__content').t(
+      tickr.join(x='<ins>2</ins>')+x,
+        {
+        speed:50,
+        repeat:false,
+        caret:'<span style="visibility:hidden">•</span>',
+      }
+    );
+});
+$(".link__out--archive").mouseout(function () {
+  $("#about__content").remove();
+});
