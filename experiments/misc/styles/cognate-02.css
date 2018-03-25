@@ -28,6 +28,8 @@ svg {
 
 .container__words path {
 	fill: #636363;
+	-webkit-transition: 20s;
+	-o-transition: 20s;
 	transition: 20s;
 	stroke: white;
 	stroke-width: 0.3;
@@ -42,12 +44,26 @@ svg {
 	stroke: rgba(255,255,255,1);
 	stroke-width: 0.1;
   stroke-dasharray: 1000;
+	-webkit-transition: 10s;
+	-o-transition: 10s;
 	transition: 10s;
-	animation: pathStroke 5000s ease alternate infinite;
+	-webkit-animation: pathStroke 5000s ease alternate infinite;
+	        animation: pathStroke 5000s ease alternate infinite;
 }
 
 .container__hills--cognate {
-	animation: pathStroke 100000s ease-out alternate infinite;
+	-webkit-animation: pathStroke 100000s ease-out alternate infinite;
+	        animation: pathStroke 100000s ease-out alternate infinite;
+}
+
+
+@-webkit-keyframes pathStroke {
+	from {
+		stroke-dashoffset: 1000000;
+	}
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 

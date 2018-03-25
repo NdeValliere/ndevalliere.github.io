@@ -52,6 +52,8 @@ p {
 }
 
 .grid__row {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	padding: 4.15%;
 }
@@ -69,7 +71,9 @@ p {
 
 .grid__col--3,
 .grid__col--3--edge {
-	order: initial;
+	-webkit-box-ordinal-group: initial;
+	    -ms-flex-order: initial;
+	        order: initial;
 	width: 25%;
 	max-width: 330px;
 }
@@ -86,7 +90,9 @@ p {
 
 .grid__col--6,
 .grid__col--6--edge {
-	order: initial;
+	-webkit-box-ordinal-group: initial;
+	    -ms-flex-order: initial;
+	        order: initial;
 	width: 50%;
 	max-width: 660px;
 }
@@ -121,6 +127,8 @@ img,
 .container__video {
 	width: 100%;
 	/* background: black; */
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
 	transition: 0.5s;
 }
 
@@ -142,6 +150,8 @@ img,
 	bottom: 0;
 	left: 0;
 	position: fixed;
+	-webkit-transition: 0.1s;
+	-o-transition: 0.1s;
 	transition: 0.1s;
 	z-index: 10;
 	width: 100%
@@ -291,15 +301,18 @@ a:before {
   background-color: #000;
   visibility: visible;
   -webkit-transform: scaleX(1);
-  transform: scaleX(1);
+  -ms-transform: scaleX(1);
+      transform: scaleX(1);
 	-webkit-transition: all 0.5s ease-in-out 0s;
+	-o-transition: all 0.5s ease-in-out 0s;
 	transition: all 0.5s ease-in-out 0s;
 }
 
 a:hover:before {
   visibility: hidden;
   -webkit-transform: scaleX(0);
-  transform: scaleX(0);
+  -ms-transform: scaleX(0);
+      transform: scaleX(0);
 }
 
 a:hover {
@@ -339,7 +352,9 @@ a.page__link--iframe:hover {
 	max-width: 650px;
 	text-align: center;
 	text-decoration: none;
-	transform: none;
+	-webkit-transform: none;
+	    -ms-transform: none;
+	        transform: none;
 	visibility: hidden;
 }
 
@@ -371,11 +386,15 @@ a.page__link--iframe:hover {
 	}
 
 	.grid__col--6--edge {
-		order: 3;
+		-webkit-box-ordinal-group: 4;
+		    -ms-flex-order: 3;
+		        order: 3;
 	}
 
 	.grid__col--3--edge {
-		order: 2;
+		-webkit-box-ordinal-group: 3;
+		    -ms-flex-order: 2;
+		        order: 2;
 		width: 50%;
 		max-width: 325px;
 	}

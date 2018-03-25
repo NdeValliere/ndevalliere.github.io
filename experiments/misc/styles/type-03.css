@@ -19,8 +19,12 @@ body {
 }
 
 .grid__row {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 	margin: 0 auto;
 	text-align: center;
 }
@@ -32,6 +36,8 @@ body {
 	/*-webkit-box-shadow: 6px 6px 13px 1px rgba(0,0,0,0.75);
 	-moz-box-shadow: 6px 6px 13px 1px rgba(0,0,0,0.75);
 	box-shadow: 6px 6px 13px 1px rgba(0,0,0,0.75);*/
+	-webkit-transition: 1s;
+	-o-transition: 1s;
 	transition: 1s;
 	overflow: hidden;
 }
@@ -39,7 +45,8 @@ body {
 .grid__rect img {
 	padding-top: 50px;
 	margin-left: -150px;
-	animation: marginMove 1.5s ease 0s infinite alternate;
+	-webkit-animation: marginMove 1.5s ease 0s infinite alternate;
+	        animation: marginMove 1.5s ease 0s infinite alternate;
 }
 
 .grid__rect h1 {
@@ -48,7 +55,18 @@ body {
 	top: 0;
 	padding-top: 50px;
 	margin-left: -150px;
-	animation: marginMove 1.5s ease 0s infinite alternate;
+	-webkit-animation: marginMove 1.5s ease 0s infinite alternate;
+	        animation: marginMove 1.5s ease 0s infinite alternate;
+}
+
+
+@-webkit-keyframes marginMove {
+  0%{
+		margin-left: -150px;
+  }
+  100%{
+		margin-left: 15px;
+  }
 }
 
 

@@ -13,6 +13,8 @@ p {
 }
 
 body {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 }
 
@@ -44,6 +46,8 @@ img {
 }
 
 .grid__row {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	padding: 0 4.15%;
 	margin: 4.15% 0;
@@ -72,7 +76,9 @@ img {
 
 .grid__col--3,
 .grid__col--3--edge {
-	order: initial;
+	-webkit-box-ordinal-group: initial;
+	    -ms-flex-order: initial;
+	        order: initial;
 	width: 25%;
 	/*max-width: 600px;*/
 }
@@ -89,7 +95,9 @@ img {
 
 .grid__col--6,
 .grid__col--6--edge {
-	order: initial;
+	-webkit-box-ordinal-group: initial;
+	    -ms-flex-order: initial;
+	        order: initial;
 	width: 50%;
 	/*max-width: 1200px;*/
 }

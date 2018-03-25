@@ -15,9 +15,14 @@
 .grid__row {
 	display: -webkit-flex; /* Safari */
 	-webkit-flex-wrap: wrap; /* Safari 6.1+ */
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 	margin: 0 auto;
 	text-align: center;
 }
@@ -41,6 +46,8 @@
 .grid__rect--7,
 .grid__rect--8 {
 	width: 180px;
+	-webkit-transition: 2s;
+	-o-transition: 2s;
 	transition: 2s;
 	height: 827px;
 }

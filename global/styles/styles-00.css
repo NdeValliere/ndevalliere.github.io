@@ -34,7 +34,12 @@ img {
 	position: fixed;
 	text-align: center;
 	width: 100%;
-	animation: float 1s ease-in-out infinite alternate;
+	-webkit-animation: float 1s ease-in-out infinite alternate;
+	        animation: float 1s ease-in-out infinite alternate;
+}
+@-webkit-keyframes float {
+	0%  { margin-top: -70px;}
+	100% { margin-top: -75px; }
 }
 @keyframes float {
 	0%  { margin-top: -70px;}
@@ -50,6 +55,8 @@ img {
 }
 
 .grid__row {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 }
 

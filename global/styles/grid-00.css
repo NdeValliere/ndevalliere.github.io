@@ -34,6 +34,8 @@ img {
 }
 
 .grid__row {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 }
 

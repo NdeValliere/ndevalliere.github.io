@@ -7,6 +7,8 @@ body {
 	background-image: url("../assets/png/ndevalliere-1.png");
 	background-repeat: no-repeat;
 	font-family: "Times New Roman";
+	-webkit-transition: 1s;
+	-o-transition: 1s;
 	transition: 1s;
 }
 
@@ -15,38 +17,57 @@ body {
 }
 
 .grid__row {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 	margin-top: -150px;
+	-webkit-transition: 1s;
+	-o-transition: 1s;
 	transition: 1s;
 }
 
 .grid__row:nth-child(1) {
-	 transform: scaleX(0.98);
+	 -webkit-transform: scaleX(0.98);
+	     -ms-transform: scaleX(0.98);
+	         transform: scaleX(0.98);
 }
 
 .grid__row:nth-child(2) {
-	 transform: scaleX(1.01);
+	 -webkit-transform: scaleX(1.01);
+	     -ms-transform: scaleX(1.01);
+	         transform: scaleX(1.01);
 }
 
 .grid__row:nth-child(3) {
-	 transform: scaleX(1.03);
+	 -webkit-transform: scaleX(1.03);
+	     -ms-transform: scaleX(1.03);
+	         transform: scaleX(1.03);
 }
 
 .grid__row:nth-child(4) {
-	 transform: scaleX(1.05);
+	 -webkit-transform: scaleX(1.05);
+	     -ms-transform: scaleX(1.05);
+	         transform: scaleX(1.05);
 }
 
 .grid__row:nth-child(5) {
-	 transform: scaleX(1.07);
+	 -webkit-transform: scaleX(1.07);
+	     -ms-transform: scaleX(1.07);
+	         transform: scaleX(1.07);
 }
 
 .grid__rect {
 	background-color: rgba(220,220,220,0.9);
 	border-radius: 2px;
-	box-shadow: 0 0 10px 1px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 0 10px 1px rgba(0,0,0,0.5);
+	        box-shadow: 0 0 10px 1px rgba(0,0,0,0.5);
 	cursor: pointer;
 	position: relative;
+	-webkit-transition: 1s;
+	-o-transition: 1s;
 	transition: 1s;
 }
 
@@ -55,6 +76,8 @@ body {
 	z-index: 1;
 	margin: auto;
 	margin-top: 0;
+	-webkit-transition: 1s;
+	-o-transition: 1s;
 	transition: 1s;
 }
 
@@ -68,7 +91,11 @@ body {
 	position: absolute;
 	text-decoration: none;
 	text-align: center;
-	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	    -ms-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
+	-webkit-transition: 0.25s;
+	-o-transition: 0.25s;
 	transition: 0.25s;
 }
 

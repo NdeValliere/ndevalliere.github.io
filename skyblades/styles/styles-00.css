@@ -13,10 +13,10 @@
 	z-index: 10;
 	height: 900px;
 	width: 1440px;
-	/* background-blend-mode: difference; */
+	background-blend-mode: difference;
 	background-image: url("../assets/tile-00.png");
 	overflow: auto;
-} */
+}*/
 
 h1,
 h2,
@@ -55,6 +55,8 @@ img {
 }
 
 .grid__row {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	padding: 4.15%;
 }
@@ -75,7 +77,9 @@ img {
 }
 
 .grid__col--3 {
-	order: initial;
+	-webkit-box-ordinal-group: initial;
+	    -ms-flex-order: initial;
+	        order: initial;
 	width: 25%;
 	max-width: 330px;
 }
@@ -91,7 +95,9 @@ img {
 }
 
 .grid__col--6 {
-	order: initial;
+	-webkit-box-ordinal-group: initial;
+	    -ms-flex-order: initial;
+	        order: initial;
 	width: 50%;
 	max-width: 660px;
 }

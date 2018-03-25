@@ -6,13 +6,19 @@ body {
 img {
 	image-rendering: auto;
   image-rendering: crisp-edges;
-  image-rendering: pixelated;
+  -ms-interpolation-mode: nearest-neighbor;
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: -o-pixelated;
+      image-rendering: pixelated;
 }
 
 /*Grids and containers*/
 .container__grid {
 	overflow: hidden;
 	opacity: 0;
+	-webkit-transition: 1s;
+	-o-transition: 1s;
 	transition: 1s;
 }
 
@@ -30,10 +36,14 @@ img {
 .process__bar {
 	background: #000;
 	height: 5px;
+	-webkit-transition: 1s;
+	-o-transition: 1s;
 	transition: 1s;
 }
 
 .grid__row {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 }
 
@@ -96,6 +106,8 @@ a {
 	margin-left: -12.5px;
 	margin-top: -37.5px;
 	position: absolute;
+	-webkit-transition: 0.25s;
+	-o-transition: 0.25s;
 	transition: 0.25s;
 	z-index: -1;
 }
