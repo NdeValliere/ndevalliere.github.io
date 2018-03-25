@@ -8,7 +8,10 @@ function resize() {
       IW = window.innerWidth;
 
     $("body").css({"height": IH });
-		$(".container__grid").css({"width": IW });
+    $(".link__out--archive").css({"padding-top": 100/24 + "%",
+                                  "padding-right": 100/24 + "%"});
+		$(".container__grid").css({"width": IW,
+                               "padding-top": 100/60 + "%"});
     $(".container__process").css({"width": IW });
     $(".process__bar").css({"width": IW/6 * 1 });
 
@@ -48,7 +51,7 @@ $(document).ready(function() {
                                                   "z-index": 20
                                                   });
           $(".container__grid--"+ (counter+1)).css({"opacity": 0,
-                                                    "padding-top": 4.15 + "%",
+                                                    "padding-top": 100/60 + "%",
                                                     "margin-top" : $(".container__grid--"+ (counter+2)).css("margin-bottom"),
                                                     "z-index": -1
                                                     });
@@ -130,3 +133,9 @@ $("body").mousemove(function(e) {
 //       location.href = 'workco.html';
 //     });
 // });
+
+//Links
+//-
+$("a").mouseover(function () {
+      $(this).wavyText();
+  });
