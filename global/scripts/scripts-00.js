@@ -48,7 +48,7 @@ $(document).ready(function() {
 //-
 $(".link__archive").mouseover(function () {
     $(this).find("#about").append("<span id='about__content'></span>");
-    var tickr=['&nbsp;hello there. this is a small archive of some of my work. click to see the development process.'];
+    var tickr=['&nbsp;hi. this is a small archive of some of my work. click to view the development process.'];
       $('#about__content').t(
       tickr.join(x='<ins>2</ins>')+x,
         {
