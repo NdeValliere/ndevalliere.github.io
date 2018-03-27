@@ -162,7 +162,7 @@ $('#index').click(function () {
 				height: window.innerHeight*2
     }, 2000,function() {
       //thing to do when you animation is finished e.g.
-      location.href = 'index-01.html';
+      location.href = 'index-00.html';
     });
 });
 

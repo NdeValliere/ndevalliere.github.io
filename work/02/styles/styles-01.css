@@ -39,4 +39,12 @@ a.page__link--iframe:hover {
 		font-weight: 100;
 		/*line-height: 1.25;*/
 	}
+	.page__banner--codepen {
+    margin: 50px auto;
+		width: 100%;
+		max-width: 650px;
+	}
+	.page__link--iframeHolder {
+		visibility: visible;
+	}
 }
