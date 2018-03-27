@@ -1,0 +1,42 @@
+/*Links*/
+.page__link--iframe {
+	visibility: hidden;
+}
+
+a.page__link--iframe,
+a.page__link--iframe:before,
+a.page__link--iframe:hover {
+	background: transparent;
+}
+
+.page__link--iframeHolder {
+	background-color: black;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	position: relative;
+	max-width: 650px;
+	text-align: center;
+	text-decoration: none;
+	-webkit-transform: none;
+	    -ms-transform: none;
+	        transform: none;
+	visibility: hidden;
+}
+
+.page__link--iframeHolder a {
+	color: white;
+}
+
+.container__grid--preview {
+	cursor: pointer;
+}
+
+/*mobile styles*/
+@media only screen and (max-width: 1300px)  {
+	.play__text--body-small,
+	a.page__link--iframe, a.page__link--iframe:before {
+		font-size: 15px;
+		font-weight: 100;
+		/*line-height: 1.25;*/
+	}
+}

@@ -1,0 +1,104 @@
+/*Grids and containers*/
+.grid__col--12,
+img,
+.container__video {
+	width: 100%;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
+	transition: 0.5s;
+}
+
+.container__about,
+.container__work,
+.container__play {
+	margin: auto;
+	position: relative;
+}
+
+/*mobile styles*/
+@media only screen and (max-width: 900px)  {
+	/*Grids and containers*/
+	.grid__row {
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap
+	}
+
+	.grid__row--intro {
+		-ms-flex-wrap: nowrap;
+		flex-wrap: nowrap
+	}
+
+	.grid__col--1,
+	.grid__col--2,
+	.grid__col--3,
+	.grid__col--4,
+	.grid__col--5,
+	.grid__col--6,
+	.grid__col--7,
+	.grid__col--8,
+	.grid__col--9,
+	.grid__col--10,
+	.grid__col--11 {
+		width: 100% !important;
+		max-width: 650px !important;
+	}
+
+	.grid__col--6--edge {
+		-webkit-box-ordinal-group: 4;
+    -ms-flex-order: 3;
+    order: 3;
+	}
+
+	.grid__col--3--edge {
+		-webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+		width: 50%;
+		max-width: 325px;
+	}
+
+	.container__contact {
+		position: relative;
+	}
+
+	/* .page__banner--codepen {
+		padding: 50px 0;
+	} */
+
+	a.page__link--iframe,
+	a.page__link--iframe:before,
+	.page__link--iframeHolder {
+		visibility: visible;
+	}
+
+	.page__banner--codepen:first-child p,
+	.page__banner--codepen:first-child script,
+	.cp_embed_wrapper {
+		display: none;
+	}
+
+	/*Replace images*/
+	.replace__img--hide {
+		display: none;
+	}
+
+	.replace__img--diner {
+		content: url("../../cases/workco/workco-diner--mobile.png");
+	}
+
+	.replace__img--space {
+		content: url("../../cases/workco/workco-space--mobile.png");
+	}
+
+	.replace__img--school {
+		content: url("../../cases/workco/workco-school--mobile.png");
+	}
+}
+
+/*mobile styles*/
+@media only screen and (max-width: 600px)  {
+	/*Grids and containers*/
+	/* .container__about {
+		padding: 60px 0 25px 0;
+	} */
+}
