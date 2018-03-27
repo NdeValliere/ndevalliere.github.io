@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="391px" height="791px" viewBox="0 0 391 791" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="391px" height="668px" viewBox="0 0 391 668" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
-    <title>Group 3</title>
+    <title>outline</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Desktop-HD" transform="translate(-998.000000, -131.000000)" stroke="#000000">
-            <g id="Group-3" transform="translate(999.000000, 131.000000)">
+        <g id="Desktop-HD" transform="translate(-313.000000, -117.000000)" stroke="#000000">
+            <g id="outline" transform="translate(314.000000, 117.000000)">
                 <path d="M152.5,19.5 L236.505952,19.5" id="Line" stroke-linecap="square"></path>
-                <rect id="Rectangle" x="7.5" y="0.5" width="374" height="790"></rect>
-                <path d="M201,776 C216.463973,776 229,763.463973 229,748 C229,732.536027 216.463973,720 201,720 C185.536027,720 173,732.536027 173,748 C173,755.354383 175.835373,762.046529 180.472615,767.042934 C181.327786,767.964338 182.244234,768.828074 183.21548,769.627658 C185.762313,771.724355 188.685935,773.379942 191.869476,774.477549" id="Oval"></path>
+                <rect id="Rectangle" x="7.5" y="0.5" width="374" height="667"></rect>
+                <path d="M201,636 C216.463973,636 229,623.463973 229,608 C229,592.536027 216.463973,580 201,580 C185.536027,580 173,592.536027 173,608 C173,615.354383 175.835373,622.046529 180.472615,627.042934 C181.327786,627.964338 182.244234,628.828074 183.21548,629.627658 C185.762313,631.724355 188.685935,633.379942 191.869476,634.477549" id="Oval"></path>
                 <path d="M389.5,72.5 L389.5,157.787748" id="Line" stroke-linecap="square"></path>
                 <path d="M1.5,72.5 L1.5,108.5" id="Line" stroke-linecap="square"></path>
                 <path d="M0.416666667,122.5 L0.416666667,202.019259" id="Line" stroke-linecap="square"></path>

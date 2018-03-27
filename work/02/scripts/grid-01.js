@@ -13,7 +13,7 @@ function resize() {
   $("hr").css({"width": IW});
   $(".container__grid--absolute").css({"padding-top": gridUnit/2 + "%"});
   $(".page__link--logo").css({"padding-right": gridUnit/2 * 10 + "%"});
-  $(".text--rotate").css({"margin-top": gridUnit/2 * -10 + "%"});
+  $(".text--rotate").css({"margin-top": gridUnit/2 * -12 + "%"});
   $(".container__grid").css({"width": IW,
                              "padding-top": gridUnit/2+ "%"
                            });
