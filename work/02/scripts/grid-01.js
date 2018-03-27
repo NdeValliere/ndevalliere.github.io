@@ -9,9 +9,8 @@ function resize() {
       gridUnit = 100/12;
 
   $(".grid__row").css({"padding": "0 " + gridUnit + "%"});
-  // $(".grid__col").css({"padding": "0 " + gridUnit/8 + "%"});
   $(".grid__row--intro").css({"padding": "0 " + gridUnit/2 + "%"});
-
+  $("hr").css({"width": IW});
   $(".container__grid--absolute").css({"padding-top": gridUnit/2 + "%"});
   $(".page__link--logo").css({"padding-right": gridUnit/2 * 10 + "%"});
   $(".text--rotate").css({"margin-top": gridUnit/2 * -10 + "%"});
@@ -27,4 +26,5 @@ function resize() {
   }
   $(".grid__col--2-i").css({"width": (IW/12)*2 + "px"});
   $(".grid__col--8-i").css({"width": (IW/12)*8 + "px"});
+  $(".container__grid--preview").css({"padding": gridUnit + "% 0"});
 }
