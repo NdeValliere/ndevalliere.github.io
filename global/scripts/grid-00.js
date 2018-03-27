@@ -1,4 +1,4 @@
-//Window resize content - fuck pixel perfection, aint nobody be able to control everything
+//Window resize content
 //-
 $(document).ready(resize);
 $(window).resize(resize);
@@ -18,6 +18,6 @@ function resize() {
                  "margin": gridUnit/12 + "% " + gridUnit/4 + "%"});
 
    for( var i = 0; i < 13; i++) {
-      $(".grid__col--"+ i ).css({"width": (IW/12)*i + "px"});
+      $(".grid__col--"+ i ).css({"width": (IW/12)*i + "%"});
    }
 }

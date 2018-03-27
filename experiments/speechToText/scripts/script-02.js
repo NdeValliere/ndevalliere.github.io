@@ -80,7 +80,7 @@ function readOutLoud(message) {
 }
 
 
-//Window resize content - fuck pixel perfection, aint nobody be able to control everything
+//Window resize content - 
 //-
 $(document).ready(resize);
 $(window).resize(resize);
