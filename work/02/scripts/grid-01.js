@@ -8,8 +8,9 @@ function resize() {
       IW = window.innerWidth,
       gridUnit = 100/12;
 
-  $(".grid__row").css({"padding": gridUnit/8 + "% " + gridUnit + "%"});
-  $(".grid__row--intro").css({"padding": "0 " + gridUnit/2.25 + "%"});
+  $(".grid__row").css({"padding": "0 " + gridUnit + "%"});
+  // $(".grid__col").css({"padding": "0 " + gridUnit/8 + "%"});
+  $(".grid__row--intro").css({"padding": "0 " + gridUnit/2 + "%"});
 
   $(".container__grid--absolute").css({"padding-top": gridUnit/2 + "%"});
   $(".page__link--logo").css({"padding-right": gridUnit/2 * 10 + "%"});
