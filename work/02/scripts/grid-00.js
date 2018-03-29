@@ -1,9 +1,9 @@
 //Window resize content -
 //-
-$(document).ready(resize);
-$(window).resize(resize);
+$(document).ready(loadContent);
+$(window).resize(loadContent);
 
-function resize() {
+function loadContent() {
   var IH = window.innerHeight,
       IW = window.innerWidth,
       gridUnit = 100/12;

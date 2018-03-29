@@ -1,3 +1,8 @@
+html {
+	cursor: auto;
+  cursor: url("../assets/svg/cursor-01.svg"), auto;
+}
+
 body,
 h1,
 h2,
@@ -17,7 +22,7 @@ p {
 hr {
 	height: 1px;
 	background: black;
-	border: none;  
+	border: none;
 	width: 100%;
 }
 

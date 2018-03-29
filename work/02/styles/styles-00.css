@@ -3,6 +3,12 @@
 	padding: 0;
 }
 
+html {
+	cursor: auto;
+  cursor: url("../../../global/assets/svg/cursor-01.svg"), auto;
+}
+
+
 h1,
 h2,
 h3,
@@ -265,5 +271,22 @@ a {
 	.space__body {
 		font-size: 80%;
 		vertical-align: 2.5px;
+	}
+}
+
+@media only screen and (max-width: 900px)  {
+	/*Text styles*/
+	.text__body {
+		font-size: 20px;
+	}
+
+	.text__title {
+		font-size: 35px;
+    margin-bottom: 15px;
+	}
+
+	.text__brow {
+		font-size: 12.5px;
+		margin-bottom: 20px;
 	}
 }
