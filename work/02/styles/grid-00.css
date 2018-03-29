@@ -5,6 +5,7 @@ body {
 .container__grid {
 	overflow: hidden;
 	opacity: 0;
+	background: rgba(255,255,255,0);
 }
 
 .container__grid--1 {
@@ -18,6 +19,7 @@ body {
 
 .container__process {
 	/*border: 1px solid black;*/
+	background: white;
 	bottom: 0;
 	height: 15px;
 	position: absolute;

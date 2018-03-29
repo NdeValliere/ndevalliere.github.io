@@ -14,7 +14,7 @@ function resize() {
     $(".container__grid--absolute").css({"padding-top": gridUnit/2 + "%"});
     $(".grid__row").css({"padding": "0 " + gridUnit/2 + "%"});
     $(".page__link--logo").css({"padding-right": gridUnit/2 * 10 + "%"});
-    $(".text--rotate").css({"margin-top": gridUnit/2 * -10 + "%"});
+    $(".text--rotate").css({"margin-top": gridUnit/2 * -12 + "%"});
     $(".container__process").css({"width": IW });
     $(".process__bar").css({"width": IW/6 * 1 });
     $(".td__img").css({"margin-bottom": -2.1*(IW/16),

@@ -35,16 +35,17 @@
           <a class="page__link page__link--logo" href="https://ndevalliere.github.io/">
             <svg class="header__text header__text--right" width="16px" height="16px" viewBox="0 0 16 16">
               <path d="M0,-1.13686838e-13 C8,6.9388939e-18 8,0 16,-1.13686838e-13 C16,2.64723716 16,7.9805705 16,16 L0,16 C0,8 0,2.66666667 0,-1.13686838e-13 Z"
-                    fill="#FFFFFF"
+                    fill="#000000"
+                    fill-opacity= "0"
                     stroke="#000000"
                     stroke-width="1.5"
                     onmouseover="document.getElementById('square').beginElement();">
-                    <animate  attributeName="fill"
+                    <animate  attributeName="fill-opacity"
                               id="square"
                               begin ="indefinite"
                               dur="1s"
                               repeatCount="1"
-                              values="#FFFFFF; #000000; #FFFFFF">
+                              values="0; 1; 0">
                   </path>
               </path>
             </svg>
@@ -69,9 +70,9 @@
     </section>
 
   </section>
-  <section class="container__grid container__grid--2">
+  <section id="workco" class="container__grid container__grid--2 container__click">
 
-    <section class="grid__row grid__row--hover">
+    <section class="grid__row">
       <section class="grid__col--2"></section>
       <section class="grid__col--8">
         <section class="container__work-background">
@@ -88,9 +89,9 @@
     </section>
 
   </section>
-  <section class="container__grid container__grid--3">
+  <section id="ia" class="container__grid container__grid--3 container__click">
 
-    <section class="grid__row grid__row--hover">
+    <section class="grid__row">
       <section class="grid__col--2"></section>
       <section class="grid__col--8">
         <section class="container__work-background">
@@ -107,9 +108,9 @@
     </section>
 
   </section>
-  <section class="container__grid container__grid--4">
+  <section id="stackmap" class="container__grid container__grid--4 container__click">
 
-    <section class="grid__row grid__row--hover" id="stackmap">
+    <section class="grid__row">
       <section class="grid__col--2"></section>
       <section class="grid__col--8">
         <section class="container__work-background">
@@ -192,7 +193,7 @@
           <h1 class="">&nbsp;</h1>
           <section class="">
             <h1 class="text__brow">Other versions of this site</h1>
-            <h1 style="white-space:nowrap;" class="text__body text__body--heavy"><a id="nat-01" class="link__out" href="#">1.0</a> <span class="space__body"> –––––––––– </span> <a id="nat-02" class="link__out" href="#">2.0</a> <span class="space__body"> –––––––––– </span> <a id="nat-03" class="link__out" href="#">3.0</a></h1>
+            <h1 style="white-space:nowrap;" class="text__body text__body--heavy"><a id="nat-01" class="link__out" href="http://ndevalliere.com/archive">1.0</a> <span class="space__body"> –––––––––– </span> <a id="nat-02" class="link__out" href="http://ndevalliere.com/">2.0</a> <span class="space__body"> –––––––––– </span> <a id="nat-03" class="link__out" href="https://ndevalliere.github.io/work/01/pages/index-00.html">3.0</a></h1>
           </section>
         </section>
       </section>

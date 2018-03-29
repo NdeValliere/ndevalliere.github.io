@@ -37,3 +37,32 @@ $(".td__border").mouseout(function() {
                                 // "transform": "scale(0.1, 0.1)",
                                 "cursor": "default"});
 });
+
+//Linking projects from index
+//-
+$("#workco").click(function () {
+    $(".process__bar").animate({
+				width: window.innerWidth*3
+    }, 2000, function() {
+      //thing to do when you animation is finished e.g.
+      location.href = "workco-01.html";
+    });
+});
+
+$("#ia").click(function () {
+    $(".process__bar").animate({
+				width: window.innerWidth*3
+    }, 2000, function() {
+      //thing to do when you animation is finished e.g.
+      location.href = "ia-01.html";
+    });
+});
+
+$("#stackmap").click(function () {
+    $(".process__bar").animate({
+				width: window.innerWidth*3
+    }, 2000, function() {
+      //thing to do when you animation is finished e.g.
+      location.href = "stackmap-01.html";
+    });
+});

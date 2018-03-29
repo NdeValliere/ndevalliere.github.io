@@ -34,16 +34,17 @@
           <a class="page__link page__link--logo" href="https://ndevalliere.github.io/">
             <svg class="header__text header__text--right" width="16px" height="16px" viewBox="0 0 16 16">
               <path d="M0,-1.13686838e-13 C8,6.9388939e-18 8,0 16,-1.13686838e-13 C16,2.64723716 16,7.9805705 16,16 L0,16 C0,8 0,2.66666667 0,-1.13686838e-13 Z"
-                    fill="#FFFFFF"
+                    fill="#000000"
+                    fill-opacity= "0"
                     stroke="#000000"
                     stroke-width="1.5"
                     onmouseover="document.getElementById('square').beginElement();">
-                    <animate  attributeName="fill"
+                    <animate  attributeName="fill-opacity"
                               id="square"
                               begin ="indefinite"
                               dur="1s"
                               repeatCount="1"
-                              values="#FFFFFF; #000000; #FFFFFF">
+                              values="0; 1; 0">
                   </path>
               </path>
             </svg>
@@ -175,5 +176,7 @@
     crossorigin="anonymous"></script>
 
   <script src="../scripts/grid-01.js"></script>
+  <script src="../scripts/scripts-01.js"></script>
+
 </body>
 </html>
