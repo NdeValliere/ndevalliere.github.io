@@ -52,16 +52,21 @@ $(".link__archive").mouseover(function () {
       $('#about__content').t(
       tickr.join(x='<ins>2</ins>')+x,
         {
-        speed:50,
-        repeat:false,
-        caret:'<span style="visibility:hidden">•</span>',
+        speed: 50,
+        // speed_vary: true,
+        repeat: false,
+        mistype: true,
+        locale: "en",
+        caret: false,
+        pause_on_click: true,
       }
     );
     // $(".grid__row").css({"opacity": "0.3",
     //                      "transition": "0.5s"});
     // $(this).find(".grid__row").css({"opacity": "1"});
 });
-$(".link__archive").mouseout(function () {
-  $("#about__content").remove();
-  // $(".grid__row").css({"opacity": "1"});
-});
+
+// $(".link__archive").mouseout(function () {
+//   $("#about__content").remove();
+// $(".grid__row").css({"opacity": "1"});
+// });
