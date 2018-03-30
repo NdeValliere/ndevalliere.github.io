@@ -106,6 +106,13 @@ img,
 
 .page__link--logo {
 	float: right;
+	font-family: "Adobe Garamond Pro";
+	font-weight: 400;
+}
+
+#about__content {
+	font-style: italic;
+	white-space: nowrap;
 }
 
 /*Text styles*/

@@ -61,10 +61,11 @@ $(".link__archive").mouseover(function () {
         pause_on_click: true,
       }
     );
-    // $(".grid__row").css({"opacity": "0.3",
-    //                      "transition": "0.5s"});
-    // $(this).find(".grid__row").css({"opacity": "1"});
 });
+
+// $(".grid__row").css({"opacity": "0.3",
+//                      "transition": "0.5s"});
+// $(this).find(".grid__row").css({"opacity": "1"});
 
 // $(".link__archive").mouseout(function () {
 //   $("#about__content").remove();

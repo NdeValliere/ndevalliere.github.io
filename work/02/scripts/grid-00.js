@@ -1,6 +1,6 @@
 //Window resize content -
 //-
-$(document).onload(loadContent);
+$(document).ready(loadContent);
 $(window).resize(loadContent);
 
 function loadContent() {

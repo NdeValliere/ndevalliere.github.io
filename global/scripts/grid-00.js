@@ -20,7 +20,7 @@ function loadContent() {
    for( var i = 0; i < 13; i++) {
       $(".grid__col--"+ i ).css({"width": (IW/12)*i + "px"});
    }
-   setTimeout(position, 500);
+   setTimeout(position, 1500);
 }
 
 function position(){

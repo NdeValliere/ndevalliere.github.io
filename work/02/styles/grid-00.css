@@ -55,7 +55,8 @@ body {
 
 /*Spacing adjustments*/
 .td__border {
-	border: 1px solid black;
+	/* border: 1px solid black; */
+	border-radius: 120px;
 	overflow: hidden;
 }
 
@@ -69,18 +70,24 @@ body {
 	font-weight: 100;
 }
 
+.link__out {
+	border: 0.3px solid white;
+}
+
 .link__out:after {
 	background: #fff;
-	border: 0.3px solid black;
-  content: url("../assets/svg/link__square.svg");
+	border: 0.5px solid black;
+	border-radius: 20px;
+  content: url("../assets/svg/link__circle.svg");
 	height: 10px;
 	margin-left: -3.75px;
+	margin-top: 12.5px;
+	overflow: hidden;
 	position: absolute;
 	width: 10px;
 	-webkit-transition: 0.25s;
 	-o-transition: 0.25s;
 	transition: 0.25s;
-	margin-top: 20px;
 }
 
 .link__out.hover-csm-01:after {
@@ -109,13 +116,29 @@ body {
 }
 
 .link__out.hoverBase:after {
-	border-width: 0.5px;
+	border-width: 0.75px;
 	height: 16px;
 	margin-top: 5px;
 	width: 16px;
-	z-index: -1;
+	/* z-index: -1; */
 }
 
 .link__out.backgroundHover:after {
 	background: #fff;
+}
+
+@media only screen and (max-width: 900px) {
+	.link__out:after {
+		border: 0.5px solid black;
+		height: 5px;
+		margin-left: -3.75px;
+		margin-top: 2.5px;
+		width: 5px;
+	}
+	.link__out.hoverBase:after {
+		height: 7.5px;
+		margin-top: 0px;
+		width: 7.5px;
+		/* z-index: -1; */
+	}
 }

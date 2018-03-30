@@ -4,6 +4,25 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+//About link
+//-
+$(".page__link--logo").mouseover(function () {
+    $(this).find("#about").append("<span id='about__content'></span>");
+    var tickr=['&nbsp;hi '];
+      $('#about__content').t(
+      tickr.join(x='<ins>2</ins>')+x,
+        {
+        speed: 50,
+        // speed_vary: true,
+        repeat: false,
+        mistype: true,
+        locale: "en",
+        caret: false,
+        pause_on_click: true,
+      }
+    );
+});
+
 //Link hover animations
 //-
 $(".link__out").mouseover(function() {
@@ -21,6 +40,27 @@ $(".link__out").mouseout(function() {
   $(this).removeClass("hover-" + filePath);
   $(this).addClass("backgroundHover");
 });
+
+// setTimeout(popup, 1500);
+// function popup(){
+// $(".td__img").each(function(i){
+//    var tdImg = $(this);
+//    setTimeout(function(){
+//    tdImg.animate({
+//                     marginBottom: -0.1*($(window).innerWidth()/16),
+//                     paddingTop: 0,
+//                     transform: "scale(1, 1.1)",
+//                     },
+//                    {duration: 100, queue: false})
+//                    // extra animation with delay
+//                    .delay(100).animate({
+//                      marginBottom: -2.1*($(window).innerWidth()/16),
+//                      paddingTop: 2.1*($(window).innerWidth()/16),
+//                     },
+//                     {duration: 100});
+//                   },i*100);
+//                 });
+// }
 
 //Image link hover animations
 //-
