@@ -27,10 +27,10 @@ function position(){
   $(".grid__row").each(function(i){
       var gridRow = $(this);
       setTimeout(function(){
-      gridRow.animate({opacity: "1", margin: 100/12/20 + "% auto"},
-                      {duration: 100, queue: false})
+      gridRow.animate({opacity: "0", margin: 100/12/20 + "% auto"},
+                      {duration: 30, queue: false})
                       // extra animation with delay
-                      // .delay(500).animate({opacity: 0}, {duration: 500});
-      },i*100);
+                      .delay(60).animate({opacity: 1}, {duration: 30});
+      },i*30);
   });
 }
