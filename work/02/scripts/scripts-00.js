@@ -41,27 +41,6 @@ $(".link__out").mouseout(function() {
   $(this).addClass("backgroundHover");
 });
 
-// setTimeout(popup, 1500);
-// function popup(){
-// $(".td__img").each(function(i){
-//    var tdImg = $(this);
-//    setTimeout(function(){
-//    tdImg.animate({
-//                     marginBottom: -0.1*($(window).innerWidth()/16),
-//                     paddingTop: 0,
-//                     transform: "scale(1, 1.1)",
-//                     },
-//                    {duration: 100, queue: false})
-//                    // extra animation with delay
-//                    .delay(100).animate({
-//                      marginBottom: -2.1*($(window).innerWidth()/16),
-//                      paddingTop: 2.1*($(window).innerWidth()/16),
-//                     },
-//                     {duration: 100});
-//                   },i*100);
-//                 });
-// }
-
 //Image link hover animations
 //-
 $(".td__border").mouseover(function() {

@@ -38,8 +38,25 @@ function loadContent() {
 
 }
 
+function popup (i) {
+  $(".td__img--" + i).css({"margin-bottom": -0.1*($(window).innerWidth()/16),
+                           "padding-top": 0,
+                           "transform": "scale(1, 1.1)",
+                           "cursor": "pointer"
+                        });
+  console.log("Random number: " + i);
+  setTimeout(function(){
+    $(".td__img--" + i).css({"margin-bottom": -2.1*($(window).innerWidth()/16),
+                             "padding-top": 2.1*($(window).innerWidth()/16),
+                             "transform": "scale(1, 1)",
+                             "cursor": "default"
+                            });
+    },3500);
+  }
+
 //Scroll-through code for slideshow-ish transitions
 //-
+
 $(document).ready(function() {
   var counter = 1,
       //prevent scrolling+transitions from going too fast
@@ -48,6 +65,7 @@ $(document).ready(function() {
 
   $(document).bind('mousewheel', function(e){
       console.log(counter);
+
     // console.log(e.originalEvent.wheelDelta + " " + switchScroll);
       if (e.originalEvent.wheelDelta > 50 && switchScrollUp && (counter>0)) {
           switchScrollUp = false;
@@ -88,6 +106,17 @@ $(document).ready(function() {
                                                   "padding-top": 0,
                                                   "z-index": 20
                                                 });
+        console.log( "container__grid--" + counter+ ": " + $(".container__grid--" + counter).css("opacity"));
+        if ($(".container__grid--4").css("opacity") > 0) {
+          popup(getRandomInt(1,4));
+        }
       }
   });
 });
+
+
+//Get random number defined between 2 values
+//-
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}

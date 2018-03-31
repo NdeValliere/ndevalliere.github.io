@@ -108,6 +108,7 @@ img,
 	float: right;
 	font-family: "Adobe Garamond Pro";
 	font-weight: 400;
+	white-space: nowrap;
 }
 
 #about__content {
