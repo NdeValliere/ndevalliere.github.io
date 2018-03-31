@@ -108,6 +108,7 @@ $(document).ready(function() {
                                                 });
         console.log( "container__grid--" + counter+ ": " + $(".container__grid--" + counter).css("opacity"));
         if ($(".container__grid--4").css("opacity") > 0) {
+          // || ($(".container__grid--5").css("opacity") > 0)
           popup(getRandomInt(1,4));
         }
       }
