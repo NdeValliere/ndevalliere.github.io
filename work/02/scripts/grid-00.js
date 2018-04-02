@@ -42,14 +42,14 @@ function loadContent() {
 function popup (i) {
   $(".td__img--" + i).css({"margin-bottom": -0.1*($(window).innerWidth()/16),
                            "padding-top": 0,
-                           "transform": "scale(1, 1.1)",
+                           // "transform": "scale(1, 1.1)",
                            "cursor": "pointer"
                         });
   console.log("Random number: " + i);
   setTimeout(function(){
     $(".td__img--" + i).css({"margin-bottom": -2.1*($(window).innerWidth()/16),
                              "padding-top": 2.1*($(window).innerWidth()/16),
-                             "transform": "scale(1, 1)",
+                             // "transform": "scale(1, 1)",
                              "cursor": "default"
                             });
     },3500);
@@ -100,7 +100,7 @@ $(document).ready(function() {
 
         $(".process__bar").css({"width": ($(window).innerWidth() / 6) * (counter+1) });
         $(".container__grid--"+ (counter)).css({"opacity": "0",
-                                                "margin-top" : gridUnit + "%",
+                                                "margin-top" : gridUnit/2 + "%",
                                                 "z-index": -1
                                                 });
         $(".container__grid--"+ (counter+1)).css({"padding-top": 0,

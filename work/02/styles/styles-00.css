@@ -101,7 +101,7 @@ img,
 
 .container__grid--absolute {
 	opacity: 1 !important;
-	z-index: 30;
+	/* z-index: 30; */
 	position: absolute;
 	width: 100%;
 	top: 0;
@@ -130,6 +130,9 @@ img,
 }
 
 .container__process--border {
+	background: -webkit-gradient(linear,left top, left bottom,from(rgba(255,255,255,0)),to(rgba(255,255,255,1)));
+	background: -webkit-linear-gradient(rgba(255,255,255,0),rgba(255,255,255,1));
+	background: -o-linear-gradient(rgba(255,255,255,0),rgba(255,255,255,1));
 	background: linear-gradient(rgba(255,255,255,0),rgba(255,255,255,1));
 	bottom: 0;
 	height: 15px;
@@ -188,7 +191,8 @@ img,
 
 .text--rotate {
 	-webkit-transform: rotate(180deg);
-	transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	    transform: rotate(180deg);
 	height: 75px;
 }
 

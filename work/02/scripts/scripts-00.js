@@ -46,14 +46,14 @@ $(".link__out").mouseout(function() {
 $(".td__border").mouseover(function() {
   $(this).find(".td__img").css({"margin-bottom": -0.1*($(window).innerWidth()/16),
                                 "padding-top": 0,
-                                "transform": "scale(1, 1.1)",
+                                // "transform": "scale(1, 1.1)",
                                 "cursor": "pointer"});
 });
 
 $(".td__border").mouseout(function() {
   $(this).find(".td__img").css({"margin-bottom": -2.1*($(window).innerWidth()/16),
                                 "padding-top": 2.1*($(window).innerWidth()/16),
-                                // "transform": "scale(0.1, 0.1)",
+                                // "transform": "scale(1, 1)",
                                 "cursor": "default"});
 });
 

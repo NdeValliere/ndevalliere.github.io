@@ -32,15 +32,16 @@ body {
 }
 
 /*Spacing adjustments*/
-.td__border {
-	/* border: 1px solid black; */
+/* .td__border {
 	border-radius: 120px;
 	overflow: hidden;
-}
+} */
 
 .td__img {
-	-webkit-transition: all 0.25s ease-out;
-	transition: all 0.25s ease-out;
+	border-radius: 240px;
+	/* -webkit-transition: all 0.25s ease-out;
+	-o-transition: all 0.25s ease-out;
+	transition: all 0.25s ease-out; */
 }
 
 /* Type for homepage */
