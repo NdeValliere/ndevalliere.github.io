@@ -12,29 +12,7 @@ body {
 	padding-top: 0;
 }
 
-.container__header--rotate {
-	position: fixed;
-	height: 0px;
-}
-
-.container__process {
-	/*border: 1px solid black;*/
-	background: white;
-	bottom: 0;
-	height: 15px;
-	position: absolute;
-	z-index: 10;
-}
-
-.process__bar {
-	background: #000;
-	height: 5px;
-	-webkit-transition: 1s;
-	-o-transition: 1s;
-	transition: 1s;
-}
-
-.container__swipe,
+/* .container__swipe,
 .container__swipe--black {
 	background: white;
 	bottom: 0;
@@ -45,7 +23,7 @@ body {
 	transition: 0.1s;
 	z-index: 10;
 	width: 100%
-}
+} */
 
 #ia:hover,
 #workco:hover,

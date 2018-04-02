@@ -31,6 +31,12 @@ a.page__link--iframe:hover {
 	cursor: pointer;
 }
 
+.process__bar {
+	-webkit-transition: 0.25s;
+	-o-transition: 0.25s;
+	transition: 0.25s;
+}
+
 /*mobile styles*/
 @media only screen and (max-width: 1300px)  {
 	.play__text--body-small,
