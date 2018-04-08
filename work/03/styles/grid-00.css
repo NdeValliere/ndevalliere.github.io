@@ -1,0 +1,105 @@
+.container__grid--2,
+.container__grid--3,
+.container__grid--4,
+.container__grid--5,
+.container__grid--6 {
+	opacity: 0.01;
+	/* visibility: hidden; */
+	transition: 0.5s;
+}
+
+#ia:hover,
+#workco:hover,
+#stackmap:hover {
+	cursor: pointer;
+}
+
+.td__img {
+	border-radius: 240px;
+}
+
+.td__img--1,
+.td__img--2,
+.td__img--3,
+.td__img--4 {
+	visibility: hidden;
+}
+
+/* Type for homepage */
+.space__body {
+	font-family: "Didot";
+	font-weight: 100;
+}
+
+.link__out {
+	border: 0.3px solid white;
+}
+
+.link__out:after {
+	background: #fff;
+	border: 0.5px solid black;
+	border-radius: 20px;
+  content: url("../assets/svg/link__circle.svg");
+	height: 10px;
+	margin-left: -3.75px;
+	margin-top: 12.5px;
+	overflow: hidden;
+	position: absolute;
+	width: 10px;
+	-webkit-transition: 0.25s;
+	-o-transition: 0.25s;
+	transition: 0.25s;
+}
+
+.link__out.hover-csm-01:after {
+	background: url("../assets/favicon/csm-01.png");
+}
+.link__out.hover-cv-01:after {
+	background: url("../assets/favicon/cv-01.png");
+}
+.link__out.hover-workco-01:after {
+	background: url("../assets/favicon/workco-01.png");
+}
+.link__out.hover-mail-01:after {
+	background: url("../assets/favicon/mail-01.png");
+}
+.link__out.hover-nat-01:after {
+	background: url("../assets/favicon/nat-01.png");
+}
+.link__out.hover-nat-02:after {
+	background: url("../assets/favicon/nat-02.png");
+}
+.link__out.hover-nat-03:after {
+	background: url("../assets/favicon/nat-03.png");
+}
+.link__out.hover-sketch-01:after {
+	background: black;
+}
+
+.link__out.hoverBase:after {
+	border-width: 0.75px;
+	height: 16px;
+	margin-top: 5px;
+	width: 16px;
+	/* z-index: -1; */
+}
+
+.link__out.backgroundHover:after {
+	background: #fff;
+}
+
+@media only screen and (max-width: 900px) {
+	.link__out:after {
+		border: 0.5px solid black;
+		height: 5px;
+		margin-left: -3.75px;
+		margin-top: 2.5px;
+		width: 5px;
+	}
+	.link__out.hoverBase:after {
+		height: 7.5px;
+		margin-top: 0px;
+		width: 7.5px;
+		/* z-index: -1; */
+	}
+}
