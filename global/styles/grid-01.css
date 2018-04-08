@@ -1,0 +1,22 @@
+@media only screen and (max-width: 1300px)  {
+	/*Grids and containers*/
+	.grid__row {
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap
+	}
+
+	.grid__col--1,
+	.grid__col--2,
+	.grid__col--3,
+	.grid__col--4,
+	.grid__col--5,
+	.grid__col--6,
+	.grid__col--7,
+	.grid__col--8,
+	.grid__col--9,
+	.grid__col--10,
+	.grid__col--11 {
+		width: 100%;
+		/* max-width: 650px; */
+	}
+}
