@@ -20,7 +20,7 @@ body {
 	display: flex;
 }
 
-img {
+.img__hover {
 	max-width: 100%;
 	-webkit-filter: grayscale(100%) brightness(0.1); /* Safari 6.0 - 9.0 */
 	filter: grayscale(100%) brightness(0.1);
@@ -184,7 +184,6 @@ b {
 	filter: grayscale(0%) brightness(1);
 }
 
-
 /*Typography*/
 .row__header {
 	font-size: 35px;
@@ -215,4 +214,16 @@ a:hover,
 a:focus,
 a:visited {
 	color: white;
+}
+
+.img {
+	opacity: 0.3;
+	margin-top: 100px;
+	transition: 2s;
+}
+
+.close {
+	float: right;
+	height: auto;
+	width: auto;
 }

@@ -47,12 +47,10 @@ $("#stackmap").click(function () {
 
 //Scroll-through code for process bar
 //-
-
 function precisionRound(number, precision) {
   var factor = Math.pow(10, precision);
   return Math.round(number * factor) / factor;
 }
-
 
 $(window).on("scroll", function() {
   var scrollTop     = $(window).scrollTop(),

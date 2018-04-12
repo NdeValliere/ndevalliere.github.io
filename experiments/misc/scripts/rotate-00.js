@@ -14,15 +14,25 @@ function rotate3d(sizeY, windowW, windowH) {
  for (var j = 0; j<= windowCircles.length; j++) {
    pages = $(".window--" + j ).find("li");
    for (var i = 0; i <= pages.length; i++) {
+     // $("ul.window--"+ j).css({"z-index": j * (-1)});
      $("ul.window--"+ j +" li:nth-child("+ i +")").css({"transform": "translate(-50%, -50%) rotate(" + (360/(pages.length)) * (i-1) + "deg) translateY(-" + sizeY*(j+1) + "px) rotateX(90deg)"});
+     $("ul.window--"+ j +" li:nth-child("+ i +")").find(".window__border").css({"background-image": "url(../assets/gifs/" + getRandomInt(1,12) + ".gif)",
+                                                                                "background-blend-mode": "multiply"});
      $("ul.window--"+ j).find(".window__border").css({"width": windowW*(j+1) + "px",
-                                                      "height": windowH*(j+1) + "px" });
+                                                      "height": windowH*(j+1) + "px",
+                                                      "background-size": windowW*(j+1)});
    }
  }
 }
 
-$(window).resize(rotate3d(IW/5, IW/10, IH/12));
+$(window).resize(rotate3d(IW/2, IW/10, IH/12));
 
+
+//get random number
+//-
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
 //Next step below: ATTEMPT to create all elements dynamically - no reading of the html elements and applying styles
 // ^ might be too ambitious for vanilla js
