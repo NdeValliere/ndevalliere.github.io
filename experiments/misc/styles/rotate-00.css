@@ -1,0 +1,212 @@
+body, html {
+  height: 100%;
+}
+
+body {
+  font-family: "Tranz Neue",sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+body.lightbox {
+  overflow: hidden;
+}
+
+a,
+a:hover,
+a:visited,
+a:active {
+  color: #000;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+img { max-width: 100%; }
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li { list-style-type: none; }
+
+/* windows NAVIGATION */
+#windows {
+  text-align: center;
+  margin: 20px;
+  margin-bottom: 0;
+  padding: 2em;
+  padding-bottom: 4em;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#windows li {
+  margin: 0 0.75em;
+  display: inline-block;
+}
+
+/* AJAX */
+#pjax-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  overflow: auto;
+  z-index: 3;
+}
+
+.lightbox #pjax-container {
+  pointer-events: all;
+}
+
+#pjax-container-inner {
+  position: relative;
+  margin-top: 75px;
+  margin-bottom: 75px;
+}
+
+#container__window {
+  z-index: 3;
+  position: fixed;
+  top: 20px;
+  left: 0;
+  right: 0;
+  bottom: 60px;
+  display: flex;
+  align-items: top;
+  justify-content: center;
+  pointer-events: none;
+}
+
+ul#windows {
+  margin: 0;
+  list-style: none;
+  font-size: 1.1em;
+  /*font-size: 2vw;*/
+  transform-style: preserve-3d;
+  animation: three-dimensions-circle 120s linear infinite;
+}
+
+ul#windows li {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  pointer-events: visible;
+}
+
+@keyframes three-dimensions-circle {
+  0% {
+    transform: rotateX(-100deg) rotate(0);
+  }
+  100% {
+    transform: rotateX(-100deg) rotate(-360deg);
+  }
+}
+
+ul#windows .label {
+  cursor: pointer;
+}
+
+@-webkit-keyframes pulse_pleasant {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1;
+  }
+}
+
+ul#windows .label:hover,
+ul#windows li.featured a:hover,
+ul#windows a.scroll:hover {
+  color: blue;
+}
+
+ul#windows li.featured a {
+  cursor: e-resize;
+  text-decoration: none;
+  -webkit-animation: pulse_pleasant 3.2s ease-out;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+ul#windows a.scroll {
+  text-decoration: none;
+  cursor: s-resize;
+}
+
+.checkbox:checked + .label {
+  color: black;
+}
+
+a:hover, a:visited, a:active {
+  color: blue;
+}
+ul#windows .label:hover,
+ul#windows li.featured a:hover,
+ul#windows a.scroll:hover,
+#generic-container a.home:hover,
+#generic-container a.back:hover {
+  color: blue;
+}
+
+input[type=checkbox].css-checkbox {
+	position:absolute; z-index:-1000; left:-1000px; overflow: hidden; clip: rect(0 0 0 0); height:1px; width:1px; margin:-1px; padding:0; border:0;
+}
+
+input[type=checkbox].css-checkbox + label.css-label, input[type=checkbox].css-checkbox + label.css-label.clr {
+	height: 7.5px;
+	display: block;
+	line-height: 7.5px;
+	background-repeat:no-repeat;
+	background-position: 0 0;
+	vertical-align:middle;
+	cursor:pointer;
+  text-align: center;
+  margin: 0 auto;
+  width:7.5px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+input[type=checkbox].css-checkbox:checked + label.css-label, input[type=checkbox].css-checkbox + label.css-label.chk {
+	/* background-position: 0 -14px; */
+}
+
+label.css-label {
+  /* background-image:url(http://csscheckbox.com/checkboxes/u/csscheckbox_d56e165560e62c72323d5ae786449ab5.png); */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.window__timestamp {
+  font-size: 12.5px;
+}
+
+.window__border {
+  border: 1px solid black;
+  margin-bottom: 20px;
+	-webkit-animation: float 2s ease-in-out infinite alternate;
+	        animation: float 2s ease-in-out infinite alternate;
+}
+@-webkit-keyframes float {
+	0%  { margin-top: 50;}
+	100% { margin-top: 25px; }
+}
+@keyframes float {
+	0%  { margin-top: 50px;}
+	100% { margin-top: 25px; }
+}

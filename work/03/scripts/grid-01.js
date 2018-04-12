@@ -17,7 +17,10 @@ function resize() {
   $(".text--rotate").css({"margin-top": gridUnit/2 * -12 + "%"});
   $(".container__grid").css({"width": IW,
                              "padding-top": gridUnit/2+ "%"
-                           });
+                            });
+   $(".container__grid--6").css({"margin-top": gridUnit * 1.5+ "%",
+                                 "margin-bottom": gridUnit * 1.5+ "%"
+                                 });
 
 
   for( var i = 0; i < 13; i++) {

@@ -9,14 +9,14 @@ $("#home").click(function () {
 	});
 });
 
-$("#sketches").click(function () {
-	$(".process__bar").animate({
-			width: window.innerWidth*3
-	}, 2000, function() {
-		//thing to do when you animation is finished e.g.
-		location.href = "index-01.html#sketches";
-	});
-});
+// $("#sketches").click(function () {
+// 	$(".process__bar").animate({
+// 			width: window.innerWidth*3
+// 	}, 2000, function() {
+// 		//thing to do when you animation is finished e.g.
+// 		location.href = "index-01.html#sketches";
+// 	});
+// });
 
 $("#workco").click(function () {
     $(".process__bar").animate({
