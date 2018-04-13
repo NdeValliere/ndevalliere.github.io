@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*::selection {
+  color: rgba(255,255,255,0);
+}
+
+body {
+  font-family: "Tranz Neue";
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+    border-radius: 100px;
+    /* max-height: 10px; */
+}
+
+img {
+  position: relative;
+  height: auto;
+  z-index: -1;
+}
+
+p {
+  font-size: 12.5px;
+}
+
+.container__scroll {
+  position: absolute;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.container__scroll--TL {
+  top: 0;
+  left: 0;
+  border-right: 1px solid black;
+}
+
+.container__scroll--TR {
+  top: 0;
+  right: 0;
+}
+
+.container__scroll--BL {
+  bottom: 0;
+  left: 0;
+  border-right: 1px solid black;
+  border-top: 1px solid black;
+}
+
+.container__scroll--BR {
+  bottom: 0;
+  right: 0;
+  border-top: 1px solid black;
+}
+
+.scroll__search,
+.scroll__close {
+  display: inline;
+  position: fixed;
+  z-index: 10;
+}
+
+.scroll__search {
+  padding-top: 25px;
+  padding-left: 25px;
+}
+
+img.scroll__close {
+  width: auto !important;
+  right: 0;
+  height: auto;
+  padding-right: 25px;
+  padding-top: 25px;
+}
