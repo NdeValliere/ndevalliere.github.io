@@ -21,10 +21,6 @@ body {
   display: inline-block;
 }
 
-.img__0 {
-  position: absolute;
-}
-
-.img__zero {
+.img {
   position: absolute;
 }
