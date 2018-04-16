@@ -25,7 +25,7 @@ function rotate3d(sizeY, windowW, windowH) {
  }
 }
 
-$(window).resize(rotate3d(IW/2, IW/10, IH/12));
+$(window).resize(rotate3d(IW/4, IW/30, IH/10));
 
 
 //get random number

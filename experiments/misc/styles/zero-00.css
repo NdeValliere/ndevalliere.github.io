@@ -23,4 +23,6 @@ body {
 
 .img {
   position: absolute;
+  max-width: 100px;
+  height: auto;
 }
