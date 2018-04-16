@@ -33,10 +33,15 @@ function layoutRandom () {
  $(".img__0").css({"left": x4 + "px",
                    "top": y4 + "px"});
 
-$(".img__z").attr("src", "../assets/zero/z-" + getRandomInt(1,6) + ".png");
-$(".img__e").attr("src", "../assets/zero/e-" + getRandomInt(1,4) + ".png");
-$(".img__r").attr("src", "../assets/zero/r-" + getRandomInt(1,5) + ".png");
-$(".img__0").attr("src", "../assets/zero/o-" + getRandomInt(1,5) + ".png");
+ $(".img__z").attr("src", "../assets/zero/z-" + getRandomInt(1,6) + ".png");
+ $(".img__e").attr("src", "../assets/zero/e-" + getRandomInt(1,4) + ".png");
+ $(".img__r").attr("src", "../assets/zero/r-" + getRandomInt(1,5) + ".png");
+ $(".img__0").attr("src", "../assets/zero/o-" + getRandomInt(1,5) + ".png");
+
+ $(".img__z").css({"max-width": getRandomInt(50, 500) + "px"});
+ $(".img__e").css({"max-width": getRandomInt(50, 500) + "px"});
+ $(".img__r").css({"max-width": getRandomInt(50, 500) + "px"});
+ $(".img__0").css({"max-width": getRandomInt(50, 1000) + "px"});
 
 }
 
