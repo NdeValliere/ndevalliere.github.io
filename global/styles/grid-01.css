@@ -5,6 +5,11 @@
 		flex-wrap: wrap
 	}
 
+	/* test!! */
+	p {
+		max-width: 500px;
+	}
+
 	.grid__col--1,
 	.grid__col--2,
 	.grid__col--3,
@@ -16,7 +21,7 @@
 	.grid__col--9,
 	.grid__col--10,
 	.grid__col--11 {
-		width: 100%;
+		width: 100% !important;
 		/* max-width: 650px; */
 	}
 }

@@ -211,3 +211,11 @@ label.css-label {
 	0%  { margin-top: 50px;}
 	100% { margin-top: 25px; }
 }
+
+.lines {
+  border-top: 5px solid black;
+}
+
+/* .lines--1 {
+  transform: rotateY(-10deg)
+} */

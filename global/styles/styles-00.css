@@ -71,6 +71,10 @@ img {
 	font-weight: 100;
 }
 
+.col__body--name {
+	font-weight: 400;
+}
+
 .col__body--bold {
 	font-weight: 900;
 }

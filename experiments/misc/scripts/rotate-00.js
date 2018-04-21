@@ -16,17 +16,19 @@ function rotate3d(sizeY, windowW, windowH) {
    for (var i = 0; i <= pages.length; i++) {
      // $("ul.window--"+ j).css({"z-index": j * (-1)});
      $("ul.window--"+ j +" li:nth-child("+ i +")").css({"transform": "translate(-50%, -50%) rotate(" + (360/(pages.length)) * (i-1) + "deg) translateY(-" + sizeY*(j+1) + "px) rotateX(90deg)"});
-     $("ul.window--"+ j +" li:nth-child("+ i +")").find(".window__border").css({"background-image": "url(../assets/gifs/" + getRandomInt(1,12) + ".gif)",
-                                                                                "background-blend-mode": "multiply"});
      $("ul.window--"+ j).find(".window__border").css({"width": windowW*(j+1) + "px",
                                                       "height": windowH*(j+1) + "px",
                                                       "background-size": windowW*(j+1)});
    }
+   $(".window__border").mouseover(function() {
+     $(this).css({"background-image": "url(../assets/gifs/" + 3 + ".gif)"});
+   })
+   $(".window__border").mouseout(function() {
+     $(this).css({"background-image": "none"});
+   })
  }
 }
-
-$(window).resize(rotate3d(IW/4, IW/30, IH/10));
-
+$(window).resize(rotate3d(IW/2.25, IW/5, IH/5));
 
 //get random number
 //-

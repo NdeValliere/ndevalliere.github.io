@@ -57,3 +57,13 @@ a:hover {
 .right {
 	float: right;
 }
+
+@media only screen and (max-width: 1300px)  {
+	.col__title {
+		margin-top: 10%;
+	}
+
+	.col__subtitle {
+		margin-bottom: 5%;
+	}
+}

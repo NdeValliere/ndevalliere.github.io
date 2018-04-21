@@ -13,9 +13,9 @@ function layoutRandom () {
   var x1 = getRandomInt((0.2*IW), (0.8*IW)),
       y1 = getRandomInt((0.005*IH), (0.9*IH)),
       x2 = getRandomInt((0.2*IW), (0.8*IW)),
-      y2 = getRandomInt((0.005*IH), (0.9*IH));
+      y2 = getRandomInt((0.005*IH), (0.9*IH)),
       x3 = getRandomInt((0.2*IW), (0.8*IW)),
-      y3 = getRandomInt((0.005*IH), (0.9*IH));
+      y3 = getRandomInt((0.005*IH), (0.9*IH)),
       x4 = getRandomInt((0.2*IW), (0.8*IW)),
       y4 = getRandomInt((0.005*IH), (0.9*IH));
 

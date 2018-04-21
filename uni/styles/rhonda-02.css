@@ -27,6 +27,10 @@ body {
 	/* transition: 1s; */
 }
 
+.img__hover:hover {
+	cursor: pointer;
+}
+
 /*Grids and containers*/
 .container__grid,
 .container__video,

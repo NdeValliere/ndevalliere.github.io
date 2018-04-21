@@ -13,9 +13,17 @@ body {
   overflow-x: hidden;
 }
 
+.container__template {
+  position: absolute;
+  opacity: 0;
+  left: 50px;
+  top: 300px;
+}
+
 .border__windows {
   background-size: cover !important;
   border: 1px solid black;
+  border-right: 2px solid black;
   display: inline-block;
   position: absolute;
   transform: perspective(0) rotateY(0deg);
