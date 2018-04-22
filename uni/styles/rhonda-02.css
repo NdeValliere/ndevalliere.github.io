@@ -136,6 +136,7 @@ body {
 	/*max-width: 2200px;*/
 }
 
+.container__grid,
 .grid__col--12,
 img,
 .container__video {
