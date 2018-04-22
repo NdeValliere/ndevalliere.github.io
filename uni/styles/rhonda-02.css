@@ -161,6 +161,7 @@ b {
 .container__grid {
 	margin: 4.15% 0;
 	position: absolute;
+	width: 100%;
 	/*z-index: 11;*/
 }
 
