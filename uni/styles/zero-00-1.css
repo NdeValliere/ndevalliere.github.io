@@ -86,26 +86,26 @@ img {
 }
 
 .container__pageL {
-	background-color: rgba(255,255,255,1);
+	background-color: rgba(255,255,255,0.1);
 	/* border: 10px solid black; */
 	will-change: transform;
 	z-index: 2;
 }
 
 .container__pageLback {
-	background-color: rgba(255,255,255,1);
+	background-color: rgba(255,255,255,0.1);
 	/* border: 10px solid red; */
 	will-change: transform;
 }
 
 .container__pageR {
-	background-color: rgba(255,255,255,1);
+	background-color: rgba(255,255,255,0.1);
 	/* border: 10px solid blue; */
 	will-change: transform;
 }
 
 .container__pageRback {
-	background-color: rgba(255,255,255,1);
+	background-color: rgba(255,255,255,0.1);
 	/* border: 10px solid yellow; */
 	will-change: transform;
 }

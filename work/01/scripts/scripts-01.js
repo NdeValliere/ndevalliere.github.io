@@ -112,14 +112,14 @@ $('#stackmap').click(function () {
     });
 });
 
-$('#workco').click(function () {
-    $('.container__swipe').animate({
-				height: window.innerHeight*2
-    }, 2000,function() {
-      //thing to do when you animation is finished e.g.
-      location.href = 'workco-00.html';
-    });
-});
+// $('#workco').click(function () {
+//     $('.container__swipe').animate({
+// 				height: window.innerHeight*2
+//     }, 2000,function() {
+//       //thing to do when you animation is finished e.g.
+//       location.href = 'workco-00.html';
+//     });
+// });
 
 $('#ia').click(function () {
     $('.container__swipe').animate({
