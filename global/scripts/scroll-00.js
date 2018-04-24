@@ -21,3 +21,9 @@ bounds.bottom = bounds.top + this.outerHeight();
 return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
 
 }
+
+// window.onscroll = function(ev) {
+//     if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
+//         location.href = 'https://ndevalliere.github.io/';
+//     }
+// };
