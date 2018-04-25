@@ -64,3 +64,13 @@ hr {
 .text--paragraph {
 	padding: 1vh 0;
 }
+
+.folder {
+	opacity: 0;
+}
+
+.stroke--img {
+	position: absolute;
+	margin: 0 45vw;
+	margin-top: -10vh;
+}

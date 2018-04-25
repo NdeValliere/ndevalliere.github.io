@@ -1,7 +1,7 @@
 function findReplaceZ() {
   for (var i = 1; i < 30; i++) {
      $(".img__z").replaceWith("<img class='z' src='../assets/zero/z-" + i + ".png'>");
-     console.log("replacing" + i);
+     // console.log("replacing" + i);
   }
 }
 
@@ -12,13 +12,36 @@ function getRandomInt(min, max) {
 function animateZ() {
   var i = setInterval(function(){
     i++;
-    if (i > 30) {
+    if (i > 48) {
       i = 1;
     }
-  }, getRandomInt(100,200))
+  }, getRandomInt(0,500))
 
+  //test
   var timeout = setInterval(function(){
-    $(".z").attr("src", "../assets/zero/z-" + i + ".png");
+    $(".z").eq(i).attr("src", "../assets/zero/z-" + getRandomInt(1,48) + ".png");
+    $(".z").eq(i+getRandomInt(1, (48-1))).attr("src", "../assets/zero/z-" + getRandomInt(1,48) + ".png");
+    $(".z").eq(i+getRandomInt(1, (48-1))).attr("src", "../assets/zero/z-" + getRandomInt(1,48) + ".png");
+    $(".z").eq(i+getRandomInt(1, (48-1))).attr("src", "../assets/zero/z-" + getRandomInt(1,48) + ".png");
+    $(".z").eq(i+getRandomInt(1, (48-1))).attr("src", "../assets/zero/z-" + getRandomInt(1,48) + ".png");
+    $(".z").eq(i+getRandomInt(1, (48-1))).attr("src", "../assets/zero/z-" + getRandomInt(1,48) + ".png");
+    $(".z").eq(i+getRandomInt(1, (48-1))).attr("src", "../assets/zero/z-" + getRandomInt(1,48) + ".png");
+    $(".z").eq(i+getRandomInt(1, (48-1))).attr("src", "../assets/zero/z-" + getRandomInt(1,48) + ".png");
+    $(".z").eq(i+getRandomInt(1, (48-1))).attr("src", "../assets/zero/z-" + getRandomInt(1,48) + ".png");
+    $(".z").eq(i+getRandomInt(1, (48-1))).attr("src", "../assets/zero/z-" + getRandomInt(1,48) + ".png");
+    $(".z").eq(i+getRandomInt(1, (48-1))).attr("src", "../assets/zero/z-" + getRandomInt(1,48) + ".png");
+    $(".z").eq(i+getRandomInt(1, (48-1))).attr("src", "../assets/zero/z-" + getRandomInt(1,48) + ".png");
+    $(".z").eq(i+getRandomInt(1, (48-1))).attr("src", "../assets/zero/z-" + getRandomInt(1,48) + ".png");
+    $(".z").eq(i+getRandomInt(1, (48-1))).attr("src", "../assets/zero/z-" + getRandomInt(1,48) + ".png");
+    $(".z").eq(i+getRandomInt(1, (48-1))).attr("src", "../assets/zero/z-" + getRandomInt(1,48) + ".png");
+    $(".z").eq(i+getRandomInt(1, (48-1))).attr("src", "../assets/zero/z-" + getRandomInt(1,48) + ".png");
+    $(".z").eq(i+getRandomInt(1, (48-1))).attr("src", "../assets/zero/z-" + getRandomInt(1,48) + ".png");
+    $(".z").eq(i+getRandomInt(1, (48-1))).attr("src", "../assets/zero/z-" + getRandomInt(1,48) + ".png");
+    $(".z").eq(i+getRandomInt(1, (48-1))).attr("src", "../assets/zero/z-" + getRandomInt(1,48) + ".png");
+    $(".z").eq(i+getRandomInt(1, (48-1))).attr("src", "../assets/zero/z-" + getRandomInt(1,48) + ".png");
+    $(".z").eq(i+getRandomInt(1, (48-1))).attr("src", "../assets/zero/z-" + getRandomInt(1,48) + ".png");
+    $(".z").eq(i+getRandomInt(1, (48-1))).attr("src", "../assets/zero/z-" + getRandomInt(1,48) + ".png");
+
   }, getRandomInt(0,100))
 }
 
