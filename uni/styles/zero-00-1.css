@@ -5,7 +5,7 @@
 
 body {
 	/* color: white; */
-	height: 1000px;
+	height: 2880px;
 	overflow-x: hidden;
 	font-family: "Arial", sans-serif;
 	font-weight: 900;
@@ -144,12 +144,26 @@ img {
 	will-change: transform;
 }
 
+.container__pageImg {
+	background-image: url("../assets/zero/00-1.png");
+	background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+	height: 100vh;
+	width: 100vw;
+}
+
 .rotate {
-	animation: rotatePages 5s infinite;
+	animation: rotatePages 10s infinite;
 }
 
 .rotateBack {
+	animation: rotatePagesBack 15s infinite;
+}
+
+.rotateFast {
 	animation: rotatePagesBack 5s infinite;
+	transform: scaleX(10);
 }
 
 @keyframes rotatePages {
@@ -171,5 +185,16 @@ img {
 	100% {
 		-webkit-transform: rotateY(3540deg) translate3d(0, 0, 0px);
 		transform: rotateY(3540deg) translate3d(0, 0, 0px);
+	}
+}
+
+@keyframes rotatePagesFast {
+	0% {
+		-webkit-transform: rotateY(-45deg) translate3d(0, 0, 0px);
+		transform: rotateY(-90deg) translate3d(0, 0, 0px);
+	}
+	100% {
+		-webkit-transform: rotateY(3590deg) translate3d(0, 0, 0px);
+		transform: rotateY(3590deg) translate3d(0, 0, 0px);
 	}
 }

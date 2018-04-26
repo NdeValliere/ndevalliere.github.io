@@ -12,6 +12,7 @@ $(window).on("scroll", function() {
       pageR = $(".container__pageR"),
       pageLback = $(".container__pageLback"),
       pageRback = $(".container__pageRback"),
+      pageImg = $(".container__pageImg"),
       i = 180,
       turnWhole = scrollTop/fullTurn;
 
@@ -19,12 +20,14 @@ $(window).on("scroll", function() {
       pageLback.attr("style", "-webkit-transform: rotateY(" + (scrollTop+i) + "deg) translate3d(0, 0, -5px); transform: rotateY(" + (scrollTop+i) + "deg) translate3d(0, 0, -5px);");
       pageR.attr("style", "-webkit-transform: rotateY(" + (scrollTop-(i/2)) + "deg) translate3d(0px, " + scrollTop/50 + "px, 0px); transform: rotateY(" + (scrollTop-(i/2)) + "deg) translate3d(0px, " + scrollTop/50 + "px, 0px);");
       pageRback.attr("style", "-webkit-transform: rotateY(" + (scrollTop-(1.5*i)) + "deg) translate3d(0px, " + scrollTop/50 + "px, 0px); transform: rotateY(" + (scrollTop-(1.5*i)) + "deg) translate3d(0px, " + scrollTop/50 + "px, 0px);");
+      pageImg.attr("style", "-webkit-transform: rotateY(" + (scrollTop/2) + "deg) translate3d(0px, " + scrollTop/50 + "px, 0px); transform: rotateY(" + (scrollTop-(1.5*i)) + "deg) translate3d(0px, " + scrollTop/50 + "px, 0px);");
 
-      if (scrollTop > 100) {
+      if (scrollTop > 2000) {
         pageL.addClass("rotate");
         pageLback.addClass("rotateBack");
         pageR.addClass("rotate");
         pageRback.addClass("rotateBack");
+        pageImg.addClass("rotateFast");
       }
 });
 
