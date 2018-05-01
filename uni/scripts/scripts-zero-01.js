@@ -16,7 +16,7 @@ $(window).on("scroll", function() {
       i = 180,
       turnWhole = scrollTop/fullTurn;
 
-      pageL.attr("style", "-webkit-transform: rotateY(" + scrollTop + "deg) translate3d(0, 0, 5px); transform: rotateY(" + scrollTop + "deg) translate3d(0, 0, 5px);");
+      pageL.attr("style", "-webkit-transform: rotateY(" + scrollTop + "deg) translate3d(0, 0, 5px); transform: rotateY(" + scrollTop + "deg) translate3d(0, 0, 5px); background-color: white;");
       pageLback.attr("style", "-webkit-transform: rotateY(" + (scrollTop+i) + "deg) translate3d(0, 0, -5px); transform: rotateY(" + (scrollTop+i) + "deg) translate3d(0, 0, -5px);");
       pageR.attr("style", "-webkit-transform: rotateY(" + (scrollTop-(i/2)) + "deg) translate3d(0px, " + scrollTop/50 + "px, 0px); transform: rotateY(" + (scrollTop-(i/2)) + "deg) translate3d(0px, " + scrollTop/50 + "px, 0px);");
       pageRback.attr("style", "-webkit-transform: rotateY(" + (scrollTop-(1.5*i)) + "deg) translate3d(0px, " + scrollTop/50 + "px, 0px); transform: rotateY(" + (scrollTop-(1.5*i)) + "deg) translate3d(0px, " + scrollTop/50 + "px, 0px);");
