@@ -1,0 +1,242 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	/* height depends on the way function is structured */
+	height: 43200px;
+	overflow-x: hidden;
+	font-family: "Haas Grot Disp", sans-serif;
+	text-transform: uppercase;
+}
+
+a,
+a:hover,
+a:focus {
+	color: black;
+	text-decoration: none;
+	outline: none;
+}
+
+a:hover {
+	opacity: 0.8;
+}
+
+p {
+	font-size: 2vw;
+	text-align: justify;
+	text-justify: inter-word;
+	transition: 5s;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* turning pages */
+.container {
+	transition: 2s;
+}
+
+.container__turn {
+  transform-style: preserve-3d;
+	perspective: 100vw;
+	perspective-origin: 50vw 50vh;
+
+	height: 100vh;
+	width: 100vw;
+
+	position: fixed;
+	will-change: transform;
+}
+
+.container__page {
+	background-color: rgba(255,255,255,0.1);
+	background-blend-mode: multiply;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+
+	margin: 0 auto;
+	overflow: hidden;
+	position: fixed;
+	transform-style: preserve-3d;
+
+	height: 100vh;
+	width: 100vw;
+
+	/* hint browsers about the kind of changes to be expected on an element */
+	will-change: transform;
+}
+
+.container__pageL {
+	border-bottom: 1px solid black;
+}
+
+.container__pageR {
+	border-bottom: 1px solid black;
+}
+
+.container__pageImg {
+	background-image: url("../assets/zero/00-3.png");
+	background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+	background-size:contain;
+	height: 100vh;
+	width: 100vw;
+	z-index: 0;
+}
+
+.container__pull {
+	height: 50vh;
+	position: fixed;
+	text-align: center;
+	width: 100vw;
+	top: 100vh;
+}
+
+.container__files {
+	display: flex;
+	position: fixed;
+	top: 42vh;
+	width: 100vw;
+}
+
+.container__about {
+	height: 100vh;
+	position: fixed;
+	text-align: left;
+	width: 100vw;
+	top: 100vh;
+}
+
+/* grid styling */
+.grid {
+  display: grid;
+  grid-column-gap: 0px;
+  width: 100vw;
+}
+
+.grid--2 {
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 2vw;
+  padding: 0;
+  padding-top: 5vw;
+  width: 100vw;
+}
+
+.column {}
+
+.text--column {
+	margin-top: 17.5vh;
+}
+
+
+.img--files {
+	margin-left: -50vw;
+	transition: 2s;
+}
+
+.border {
+	background-color: black;
+	position: fixed;
+	opacity: 0;
+	z-index: -1;
+	transition: 1s;
+}
+
+.borderX {
+	height: 1px;
+	width: 100vw;
+	left: 0;
+	top: 50vh;
+}
+
+.borderY {
+	width: 1px;
+	height: 100vh;
+	left: 50vw;
+	top:0;
+}
+
+/* type */
+.caption {
+	position: fixed;
+	top: -0.5vh;
+	z-index: 100;
+}
+
+.caption--zero {
+	left: 0;
+	font-family: "TeX Gyre Heros Cn";
+	font-size: 140px;
+	opacity: 1;
+	top: -6.5vh;
+	z-index: 100;
+}
+
+.caption--time {
+	font-size: 1.8vw;
+	right: 0;
+}
+
+.title {
+	font-size: 150px;
+	left: 50%;
+	position: fixed;
+	text-align: center;
+	transform: translateX(-50%);
+	transition: 1.5s;
+	z-index: 50;
+}
+
+.title--archive {
+	/* margin-top: 100vh; */
+	will-change: margin-top;
+}
+
+.title--about {
+	/* margin-top: 100vh; */
+	will-change: margin-top;
+}
+
+.figcaption {
+	font-size: 20px;
+}
+
+.figcaption--download {
+	text-align: center;
+	margin-bottom: 80vh;
+}
+
+.subcaption {
+	font-family: "TeX Gyre Heros Cn";
+	text-transform: lowercase;
+}
+
+/* misc styling */
+.img {
+	display: block;
+	height: auto;
+	margin: 0 auto;
+	width: auto;
+}
+
+.img--fileDownload {
+	margin-top: 80vh;
+	z-index: 50;
+}
+
+.white {
+	background-color: white;
+}
+
+.fixed {
+	font-size: 65px;
+	margin: 0;
+	padding: 0;
+	top: -1.5vh;
+}
