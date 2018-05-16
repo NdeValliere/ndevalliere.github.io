@@ -82,13 +82,13 @@ a:hover {
   bottom: 0;
   left: 0;
   border-right: 1px solid black;
-  border-top: 1px solid black;
+  /*border-top: 1px solid black;*/
 }
 
 .container__scroll--BR {
   bottom: 0;
   right: 0;
-  border-top: 1px solid black;
+  /*border-top: 1px solid black;*/
 }
 
 .container__black {
@@ -103,9 +103,10 @@ a:hover {
   margin: 0 auto;
 }
 
-/*.container__text {
-  margin: 50px 50px 50px 50px;
-}*/
+.container__text--about {
+  margin: 0 !important;
+  margin-top: -13px !important;
+}
 
 .white,
 .white:hover {
@@ -118,9 +119,22 @@ a:hover {
 }
 
 .text--about {
-  transition: 0.5s;
+  margin-left: -5px !important;
 }
 
 .text--project-title {
   text-transform: uppercase;
+}
+
+/*interactive mouse*/
+.container__mouse {
+  position: absolute;
+  z-index: 100;
+}
+
+.mouse--resize {
+  background: white;
+  border-radius: 1000px;
+  position: relative;
+  transition: 0.25s;
 }

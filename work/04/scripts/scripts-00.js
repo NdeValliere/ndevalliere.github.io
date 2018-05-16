@@ -21,6 +21,12 @@ $(window).on("mousemove resize", function(event) {
       IH = window.innerHeight,
   		IW = window.innerWidth;
 
+  $(".container__mouse").css({"top": mY - ($(".mouse--resize").innerHeight())/2,
+                              "left": mX - ($(".mouse--resize").innerWidth())/2 });
+  $(".mouse--resize").css({"width": "25px",
+                           "height": "25px",
+                           "cursor": "default"});
+
   $(window).click(function() {
     mXold = mX;
     mYold = mY;
@@ -39,8 +45,9 @@ $(window).on("mousemove resize", function(event) {
     $(".container__text").css({"margin": mX/50 + "px"});
 
     //  console.log("mX: " + ((100-mX)/50));
-     $(".container__scroll .text--about").css({"font-size": mX/25 + "px",
-                                               "margin": mX/50 + "px 0"});
+     $(".container__scroll .text--about").css({"font-size": mX/20 + "px",
+                                               "margin": 0
+                                             });
      $(".container__scroll .text--project").css({"font-size": (IW - mX)/35 + "px",
                                                "margin": (IW - mX)/75 + "px 0"});
      $(".container__scroll .text--project-l").css({"font-size": mX/35 + "px",
@@ -56,12 +63,27 @@ $(window).on("mousemove resize", function(event) {
     $(".container__scroll--BR").css({"width": IW - mXold + "px",
                                      "height": IH - mYold  + "px"});
 
-    $(".container__scroll .text--about").css({"font-size": mXold/25 + "px",
-                                              "margin": mXold/50 + "px 0"});
+    $(".container__scroll .text--about").css({"font-size": mXold/20 + "px",
+                                              "margin": 0
+                                            });
     $(".container__scroll .text--project").css({"font-size": (IW - mXold)/35 + "px",
                                               "margin": (IW - mXold)/60 + "px 0"});
     $(".container__scroll .text--project-l").css({"font-size": mXold/35 + "px",
                                               "margin": mXold/60 + "px 0"});
+  }
+
+  if((mXold === 0) && (mX > IW/3) && (mX < 2*IW/3) && (mY > IH/3) && (mY < 2*IH/3)) {
+    $(".mouse--resize").css({"width": "250px",
+                             "height": "250px",
+                             "cursor": "move"});
+  }
+
+  console.log(mYold/3 + " " + 2*mYold/3 + " " + mY);
+
+  if((mXold > 0) && (mX > mXold-IW/4) && (mX < mXold+IW/4) && (mY > mYold-IH/4) && (mY < mYold+IH/4)) {
+    $(".mouse--resize").css({"width": "250px",
+                             "height": "250px",
+                             "cursor": "move"});
   }
 });
 
@@ -75,8 +97,11 @@ $(window).on("load", function() {
 
   $(".container__scroll .text").css({"font-size": IW/50 + "px",
                                      "margin": IW/70 + "px 0"});
+  $(".container__scroll .text--about").css({"margin": 0});
   $(".container__scroll .text--project").css({"font-size": IW/70 + "px"});
   $(".container__text").css({"margin": IW/100 + "px"});
+
+  $(".container__scroll .text--about").css({"font-size": IW/30 + "px"});
 
   setTimeout(function () {
       $("body").css({"opacity": 1});
