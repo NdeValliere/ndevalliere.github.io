@@ -10,10 +10,11 @@ html {
   user-select: none;
 }
 body {
+  color: #0000ff;
   font-family:sans-serif;
   display: flex;
   font-size: 5.1vw;
-  text-transform: uppercase;
+  text-transform: lowercase;
   line-height: 1;
   height: 100vh;
   overflow: hidden;
@@ -23,5 +24,5 @@ body {
 }
 
 .switch {
-  font-family: "DegreeShow.001-Regular";
+  font-family: "DegreeShow-Regular";
 }

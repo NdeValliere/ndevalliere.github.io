@@ -92,20 +92,20 @@ function switchBack() {
   $("body").removeClass("switch");
 }
 
-var i = 0;
-var timer = setInterval(function() {
-  console.log(++i);
-  switchForward();
-
-  if (i%2 === 0) {
-    switchBack();
-  }
-
-  if (i > 200) {
-    clearInterval(timer);
-  }
-  console.log('cycled through one randomisation of this constellation'); //this will still run after clearing
-}, 500);
+// var i = 0;
+// var timer = setInterval(function() {
+//   console.log(++i);
+//   switchForward();
+//
+//   if (i%2 === 0) {
+//     switchBack();
+//   }
+//
+//   if (i > 200) {
+//     clearInterval(timer);
+//   }
+//   console.log('cycled through one randomisation of this constellation'); //this will still run after clearing
+// }, 500);
 
 
 var typed = new Typed('.element', {
