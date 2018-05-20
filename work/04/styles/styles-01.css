@@ -21,6 +21,8 @@ i::selection {
 }
 
 body {
+  /* cursor: move; */
+  cursor: url(../assets/cursorMove-00.png), move;
   font-family: "Arial", sans-serif;
   /*font-family: "Untitled Sans", sans-serif;*/
   height: 100vh;

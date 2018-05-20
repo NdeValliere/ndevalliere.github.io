@@ -67,19 +67,18 @@ $(window).on("mousemove resize", function(event) {
   }
 
   if((mXold === 0) && (mX > IW*0.75) && (mY > IH*0.75)) {
-    $(".mouse--resize").css({"cursor": "move"});
+    // $(".mouse--resize").css({"cursor": "move"});
   }
 
   if((mXold > 0) && (mX > mXold-IW/4) && (mX < mXold+IW/4) && (mY > mYold-IH/4) && (mY < mYold+IH/4)) {
     $(".mouse--resize").css({"width": 0.15*IH,
-                             "height": 0.15*IH
-                             // "cursor": "move"
+                             "height": 0.15*IH,
                            });
+    // $("body").css({"cursor": "move"});
   }
 
   $(".container__mouse").css({"top": mY - ($(".mouse--resize").innerHeight())/2,
                               "left": mX - ($(".mouse--resize").innerWidth())/2 });
-  // $(".mouse--resize").css({"cursor": "default"});
 });
 
 $(window).on("load", function() {
