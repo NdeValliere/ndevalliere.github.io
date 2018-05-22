@@ -5,7 +5,10 @@
 
 /*maybe change? too confusing?*/
 *::selection {
-  color: rgba(0,0,255,1);
+  color: white;
+  background: grey;
+  mix-blend-mode: difference;
+  opacity: 1;
 }
 h1::selection,
 h2::selection,
@@ -17,7 +20,10 @@ p::selection,
 b::selection,
 a::selection,
 i::selection {
-  color: black;
+  color: white;
+  background: grey;
+  mix-blend-mode: difference;
+  opacity: 1;
 }
 
 body {
@@ -37,9 +43,8 @@ body {
     background: transparent;  /* optional: just make scrollbar invisible */
 }
 ::-webkit-scrollbar-thumb {
-    background: #FF0000;
-    border-radius: 100px;
-    /* max-height: 10px; */
+    /*background: #FF0000;
+    border-radius: 100px;*/
 }
 
 img,
@@ -109,6 +114,11 @@ a:hover {
 }
 
 .container__video {
+  margin: 0 auto;
+}
+
+.center {
+  display: inherit;
   margin: 0 auto;
 }
 

@@ -57,6 +57,8 @@ $(window).on("mousemove resize", function(event) {
     $(".container__scroll--BR").css({"width": IW - mXold + "px",
                                      "height": IH - mYold  + "px"});
 
+    $(".container__text--about").css({"width": "auto"});
+
     $(".container__scroll .text--about").css({"font-size": mXold*0.03 + "px",
                                               "margin": mXold*0.0125 + "px 0"
                                             });
@@ -71,8 +73,8 @@ $(window).on("mousemove resize", function(event) {
   }
 
   if((mXold > 0) && (mX > mXold-IW/4) && (mX < mXold+IW/4) && (mY > mYold-IH/4) && (mY < mYold+IH/4)) {
-    $(".mouse--resize").css({"width": 0.15*IH,
-                             "height": 0.15*IH,
+    $(".mouse--resize").css({"width": 0.1*IH,
+                             "height": 0.1*IH,
                            });
     // $("body").css({"cursor": "move"});
   }
@@ -96,9 +98,9 @@ $(window).on("load", function() {
 
   $(".container__scroll--TL").css({"width": IW + "px",
                                    "height": IH + "px"});
-  $(".container__text--about").css({"width": IW*0.75 + "px",
+  $(".container__text--about").css({"width": IW*0.65 + "px",
                                     "margin": IW*0.035 + "px " + IW*0.04 + "px"});
-  $("#about .text").css({"font-size": IW*0.03 + "px",
+  $("#about .text").css({"font-size": IW*0.025 + "px",
                          "margin": IW*0.0125 + "px 0"});
 
   setTimeout(function () {
