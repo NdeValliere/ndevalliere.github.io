@@ -1,0 +1,95 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: url("../assets/livestreamPlaceholder.png");
+  background-size: cover;
+
+  font-family: "Arial", sans-serif;
+  text-transform: uppercase;
+}
+
+.container__top {
+  position: fixed;
+  width: 100vw;
+}
+
+.text--date {
+  color: white;
+  font-size: 25px;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.button__cameraSwitch {
+  background: white;
+  margin: 0 auto;
+}
+
+.text--camera {
+  color: black;
+  font-size: 15px;
+  padding: 12.5px 0;
+  text-align: center;
+}
+
+.container__queue {
+  bottom: 62.5px;
+  left: 0px;
+  position: fixed;
+  width: 100vw;
+}
+
+.flex {
+  background: white;
+  display: flex;
+  margin: 0 20px;
+}
+
+.text--drawing {
+  color: black;
+  font-size: 25px;
+  padding: 22.5px 15px;
+  text-align: left;
+}
+
+.container__progress {
+  background: black;
+  display: inline-block;
+  height: 27.5px;
+  margin: 22.5px auto;
+  width: 60vw;
+}
+
+.text--about {
+  display: initial !important;
+  padding: 22.5px 15px;
+}
+
+.text--file {
+  font-size: 15px;
+}
+
+.text--user {
+  font-size: 10px;
+}
+
+.icon--preview {
+  height: 30px;
+  padding: 22.5px 17.5px;
+  width: 30px;
+}
+
+.center {
+  bottom: 20px;
+  position: fixed;
+  width: 100vw;
+}
+
+.text--queue {
+  color: white;
+  text-align: center;
+  text-decoration: underline;
+}
