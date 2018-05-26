@@ -126,10 +126,10 @@ $(window).on("load", function() {
   }, 1000);
 });
 
-$("a").on("mouseover", function(){
+$("a").mouseover(function(){
   $(this).addClass("transition");
 });
-$("a").on("mouseout", function(){
+$("a").mouseout(function(){
   setTimeout(function () {
     $(this).removeClass("transition");
   }, 250);

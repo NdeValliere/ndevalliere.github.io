@@ -27,8 +27,8 @@ i::selection {
 }
 
 body {
-  cursor: crosshair;
-  /* cursor: url(../assets/cursorMove-00.png), move; */
+  /* cursor: crosshair; */
+  cursor: url(../assets/cursorMove-01.png), move;
   /* font-family: "Founders Grotesk", sans-serif; */
   font-family: "neue-haas-unica-pro-regular", sans-serif;
   font-weight: 400;
