@@ -3,694 +3,91 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>ηathalie ɖe vallière</title>
-  <meta name="author" content="Nathalie de Vallière" contact="nathalie.devalliere@gmail.com">
+  <title>Nathalie de Vallière</title>
+  <meta name="author" content="Nathalie de Vallière">
+
+  <link rel="stylesheet" href="work/04/styles/styles-02a.css">
+  <link rel="stylesheet" href="work/04/styles/styles-02b.css">
+</head>
+<body>
+
+  <section class="container__scroll container__scroll--TL container__white" id="about">
+    <div class="container__text container__text--about">
+      <p class="text text--about">Hi! I'm Nathalie de Vallière, a fresh graduate from Central Saint Martins with a Bachelor in <a href="http://www.arts.ac.uk/csm/courses/undergraduate/ba-hons-graphic-communication-design/">Graphics</a>.</p>
+      <p class="text text--about">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Currently working on the <a href="https://2018csmgraphicdesign.github.io/">website</a> for my year's degree show and I'm looking for people to work with starting September. I have many interests and am a quick study. Please see the <a href="https://www.are.na/nathalie-de-valliere/portfolio-archive">archive</a> of my portfolios for proof.</p>
+      <p class="text text--about">&nbsp;</p>
+      <p class="text text--about"><a href="mailto:nathalie.devalliere@gmail.com">Email</a></p>
+      <p class="text text--about"><a href="work/cases/ndevalliere-resume-08.pdf">Resume</a></p>
+      <!-- <p class="text text--about"><a href="https://www.are.na/nathalie-de-valliere">Are.na</a></p> -->
+      <!-- <p class="text text--about"><a class="white" href="tel:+447400451996">Phone</a></p> -->
+    </div>
+  </section>
+  <section class="container__scroll container__scroll--TR container__white">
+    <div class="container__video container__video--zero">
+      <video class="center" id="zero" poster="work/04/assets/loopZero.png" preload="auto" muted="muted" webkit-playsinline="" loop>
+        <source type="video/mp4" src="work/04/assets/loopZero.mp4">
+      </video>
+      <div class="container__text container__text--project">
+        <p class="text text--project text--project"><a href="http://zr0.co.uk/">Publishing platform</a> for digital and physical magazine</p>
+        <p class="text text--project text--project">Website 1440x900</p>
+      </div>
+    </div>
+  </section>
+  <section class="container__scroll container__scroll--BL container__black">
+    <div class="container__video container__video--posters">
+      <video class="center" id="posters" poster="work/04/assets/loopPoster.png" preload="auto" muted="muted" webkit-playsinline="" loop>
+        <source type="video/mp4" src="work/04/assets/loopPoster.mp4">
+      </video>
+      <div class="container__text container__text--project white">
+        <p class="text text--project text--project text--project-l">Pitch for brief by <a class="white" href="http://www.arts.ac.uk/csm/courses/undergraduate/ba-performance-design-and-practice/">UAL</a> and <a class="white" href="http://www.londonstudiocentre.org/">London Studio Centre</a></p>
+        <p class="text text--project text--project text--project-l">Digital posters 1920x1080</p>
+      </div>
+    </div>
+  </section>
+  <section class="container__scroll container__scroll--BR container__black">
+    <div class="container__video container__video--comic">
+      <video class="center" id="comic" poster="work/04/assets/loopComic.png" preload="auto" muted="muted" webkit-playsinline="" loop>
+        <source type="video/mp4" src="work/04/assets/loopComic.mp4">
+      </video>
+      <div class="container__text container__text--project white">
+        <p class="text text--project text--project">Explorable digital city, user generated content for <a class="white" href="#">drawing machine</a></p>
+        <p class="text text--project text--project">Game design 2560x1600</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="border--load border--load-X"></section>
+  <section class="border--load border--load-Y"></section>
+
+  <script>
+  //trigger for 2nd script
+  var loaded = false;
+
+      document.addEventListener("DOMContentLoaded", function(event) {
+        var borderX = document.getElementsByClassName("border--load-X"),
+            borderY = document.getElementsByClassName("border--load-Y");
+
+            borderX[0].style.width = "100vw";
+            borderY[0].style.height = "100vh";
+
+            setTimeout(function () {
+              borderX[0].style.transition = "5s";
+              borderY[0].style.transition = "5s";
+              borderX[0].style.top = "100vh";
+              borderY[0].style.left = "100vw";
+              loaded = true;
+              setTimeout(function () {
+                console.log("loaded: " + loaded);
+                fadeIn();
+              }, 5000);
+          }, 2500);
+      });
+  </script>
 
   <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
-
-  <link rel="stylesheet" href="https://rawgit.com/NdeValliere/ndevalliere.github.io/master/global/assets/fonts/fonts.css">
-  <link rel="stylesheet" href="global/styles/grid-00.css">
-  <link rel="stylesheet" href="global/styles/styles-00.css">
-</head>
-<body>
-  <section class="container__preview"></section>
-
-  <section class="container__grid">
-    <a class="link__archive" href="https://github.com/NdeValliere/ndevalliere.github.io">
-      <section class="grid__row">
-        <section class="grid__col grid__col--2">
-          <p class="line__title">what ?</p>
-        </section>
-        <section class="grid__col grid__col--2">
-          <p class="line__title">who ?</p>
-        </section>
-        <section class="grid__col grid__col--8">
-          <p class="line__title line__title--right">( <span id="about"></span> ? )</p>
-        </section>
-      </section>
-    </a>
-
-    <section class="grid__row">
-      <hr>
-    </section>
-
-    <section class="grid__row">
-      <section class="grid__col grid__col--2">
-        <p class="col__body">portfolio</p>
-        <p class="col__body">digital product design</p>
-        <p class="col__body">case studies</p>
-        <p class="col__body">internships</p>
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
-      </section>
-      <section class="grid__col grid__col--2">
-        <p class="col__body col__body--name">Nathalie de Vallière</p>
-      </section>
-      <section class="grid__col grid__col--8"></section>
-    </section>
-
-    <section class="grid__row">
-      <section class="grid__col grid__col--2"></section>
-      <section class="grid__col grid__col--2">
-        <p class="line__title line__title--light">version (s)</p>
-      </section>
-      <section class="grid__col grid__col--8">
-        <p class="line__title col__body--right line__title--light">when ?</p>
-      </section>
-    </section>
-
-    <a class="link__project" id="ndevalliere-01" href="http://ndevalliere.com/archive">
-      <section class="grid__row">
-        <section class="grid__col grid__col--2">
-          <hr class="divider__project">
-        </section>
-        <section class="grid__col grid__col--2">
-          <p class="col__body ">0.5</p>
-        </section>
-        <section class="grid__col grid__col--8">
-          <p class="col__body col__body--right"><i>created:</i> 01.09.2016</p>
-        </section>
-      </section>
-    </a>
-    <a class="link__project" id="ndevalliere-02" href="http://ndevalliere.com">
-      <section class="grid__row">
-        <section class="grid__col grid__col--2">
-          <hr class="divider__project">
-        </section>
-        <section class="grid__col grid__col--2">
-          <p class="col__body ">1.0</p>
-        </section>
-        <section class="grid__col grid__col--8">
-          <p class="col__body col__body--right"><i>created:</i> 01.01.2017</p>
-        </section>
-      </section>
-    </a>
-    <a class="link__project" id="ndevalliere-03" href="work/01/pages/index-00.html">
-      <section class="grid__row">
-        <section class="grid__col grid__col--2">
-          <hr class="divider__project">
-        </section>
-        <section class="grid__col grid__col--2">
-          <p class="col__body ">2.0</p>
-        </section>
-        <section class="grid__col grid__col--8">
-          <p class="col__body col__body--right"><i>created:</i> 01.01.2018</p>
-        </section>
-      </section>
-    </a>
-
-    <a class="link__project"  id="showreel-00" href="https://www.dropbox.com/s/lnn20bu3w2h615n/show-00.mov?dl=0">
-      <section class="grid__row">
-        <section class="grid__col grid__col--2">
-          <hr class="divider__project">
-        </section>
-        <section class="grid__col grid__col--2">
-          <p class="col__body ">showreel</p>
-        </section>
-        <section class="grid__col grid__col--8">
-          <p class="col__body col__body--right"><i>created:</i> 01.01.2018</p>
-        </section>
-      </section>
-    </a>
-
-    <a class="link__project"  id="ndevalliere-04" href="work/03/pages/index-01.html">
-      <section class="grid__row">
-        <section class="grid__col grid__col--2">
-          <hr class="divider__project">
-        </section>
-        <section class="grid__col grid__col--2">
-          <p class="col__body ">2.6</p>
-        </section>
-        <section class="grid__col grid__col--8">
-          <p class="col__body col__body--right"><i>last updated:</i> today &nbsp; | &nbsp; <i>created:</i> 01.03.2018</p>
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
-        </section>
-      </section>
-    </a>
-
-    <section class="grid__row">
-      <hr>
-    </section>
-
-    <section class="grid__row">
-      <section class="grid__col grid__col--2">
-        <p class="col__body">university course work</p>
-        <p class="col__body">bachelor degree hons</p>
-        <p class="col__body">graphic / communication design</p>
-        <p class="col__body">briefs</p>
-        <p class="col__body">collaboration</p>
-      </section>
-      <section class="grid__col grid__col--2">
-        <p class="col__body col__body--name">Ashley Gan</p>
-        <p class="col__body col__body--name">Benjamin Chan</p>
-        <p class="col__body col__body--name">Jaap de Maat</p>
-        <p class="col__body col__body--name">Malone Chen</p>
-        <p class="col__body col__body--name">Micheal McShane</p>
-        <p class="col__body col__body--name">Nathalie de Vallière</p>
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
-      </section>
-      <section class="grid__col grid__col--8"></section>
-    </section>
-
-    <section class="grid__row">
-      <section class="grid__col grid__col--2"></section>
-      <section class="grid__col grid__col--2">
-        <p class="line__title line__title--light">project (s)</p>
-      </section>
-      <section class="grid__col grid__col--8">
-        <p class="line__title col__body--right line__title--light">when ?</p>
-      </section>
-    </section>
-
-    <a class="link__project" id="dissertation-01" href="uni/pages/sU9-01.html">
-      <section class="grid__row">
-        <section class="grid__col grid__col--2">
-          <hr class="divider__project">
-        </section>
-        <section class="grid__col grid__col--2">
-          <p class="col__body ">dissertation</p>
-        </section>
-        <section class="grid__col grid__col--8">
-          <p class="col__body col__body--right"><i>created:</i> 01.09.2017</p>
-        </section>
-      </section>
-    </a>
-    <a class="link__project" id="campaign-01" href="uni/pages/sU10-04.html">
-      <section class="grid__row">
-        <section class="grid__col grid__col--2">
-          <hr class="divider__project">
-        </section>
-        <section class="grid__col grid__col--2">
-          <p class="col__body ">digital holiday campaign</p>
-        </section>
-        <section class="grid__col grid__col--8">
-          <p class="col__body col__body--right"><i>created:</i> 01.12.2017</p>
-        </section>
-      </section>
-    </a>
-    <a class="link__project" id="sU10-01" href="uni/pages/sU10-01.html">
-      <section class="grid__row">
-        <section class="grid__col grid__col--2">
-          <hr class="divider__project">
-        </section>
-        <section class="grid__col grid__col--2">
-          <p class="col__body ">conditional design</p>
-        </section>
-        <section class="grid__col grid__col--8">
-          <p class="col__body col__body--right"><i>created:</i> 01.11.2017</p>
-        </section>
-      </section>
-    </a>
-    <a class="link__project" id="posters-01" href="uni/pages/sU10-05.html">
-      <section class="grid__row">
-        <section class="grid__col grid__col--2">
-          <hr class="divider__project">
-        </section>
-        <section class="grid__col grid__col--2">
-          <p class="col__body ">dance digital / physical posters</p>
-        </section>
-        <section class="grid__col grid__col--8">
-          <p class="col__body col__body--right"><i>created:</i> 01.12.2017</p>
-        </section>
-      </section>
-    </a>
-    <a class="link__project" id="sU10-02" href="uni/pages/sU10-02.html">
-      <section class="grid__row">
-        <section class="grid__col grid__col--2">
-          <hr class="divider__project">
-        </section>
-        <section class="grid__col grid__col--2">
-          <p class="col__body ">generative narratives</p>
-        </section>
-        <section class="grid__col grid__col--8">
-          <p class="col__body col__body--right"><i>created:</i> 01.12.2017</p>
-        </section>
-      </section>
-    </a>
-    <a class="link__project" id="rhonda-02" href="uni/pages/rhonda-02.html">
-      <section class="grid__row">
-        <section class="grid__col grid__col--2">
-          <hr class="divider__project">
-        </section>
-        <section class="grid__col grid__col--2">
-          <p class="col__body ">drawing machine rhonda</p>
-        </section>
-        <section class="grid__col grid__col--8">
-          <p class="col__body col__body--right"><i>created:</i> 01.12.2017</p>
-        </section>
-      </section>
-    </a>
-    <a class="link__project" id="sU10-03-02" href="uni/pages/sU10-03-03.html">
-      <section class="grid__row">
-        <section class="grid__col grid__col--2">
-          <hr class="divider__project">
-        </section>
-        <section class="grid__col grid__col--2">
-          <p class="col__body ">digital archive <b>beta</b></p>
-        </section>
-        <section class="grid__col grid__col--8">
-          <p class="col__body col__body--right"><i>created:</i> 01.01.2018</p>
-        </section>
-      </section>
-    </a>
-    <a class="link__project" id="sU10-03-03" href="uni/pages/sU10-03-02.html">
-      <section class="grid__row">
-        <section class="grid__col grid__col--2">
-          <hr class="divider__project">
-        </section>
-        <section class="grid__col grid__col--2">
-          <p class="col__body ">degree show website <b>beta</b></p>
-        </section>
-        <section class="grid__col grid__col--8">
-          <p class="col__body col__body--right"><i>last updated:</i> 1 week ago &nbsp; | &nbsp; <i>created:</i> 01.01.2018</p>
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
-        </section>
-      </section>
-    </a>
-
-    <section class="grid__row">
-      <hr>
-    </section>
-
-    <section class="grid__row">
-      <section class="grid__col grid__col--2">
-        <p class="col__body">typography</p>
-        <p class="col__body">photography</p>
-        <p class="col__body">python</p>
-        <p class="col__body">java</p>
-        <p class="col__body">processing</p>
-        <p class="col__body">drawbot</p>
-        <p class="col__body">html5</p>
-        <p class="col__body">css3</p>
-        <p class="col__body">jquery</p>
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
-      </section>
-      <section class="grid__col grid__col--2">
-        <p class="col__body col__body--name">Just van Rossum</p>
-        <p class="col__body col__body--name">Nathalie de Vallière</p>
-      </section>
-      <section class="grid__col grid__col--8"></section>
-    </section>
-
-    <section class="grid__row">
-      <section class="grid__col grid__col--2"></section>
-      <section class="grid__col grid__col--2">
-        <p class="line__title line__title--light">experiment (s)</p>
-      </section>
-      <section class="grid__col grid__col--8">
-        <p class="line__title col__body--right line__title--light">when ?</p>
-      </section>
-    </section>
-
-    <a class="link__project" id="emoji-00" href="experiments/misc/pages/emoji-00.html">
-      <section class="grid__row">
-        <section class="grid__col grid__col--2">
-          <hr class="divider__project">
-        </section>
-        <section class="grid__col grid__col--2">
-          <p class="col__body ">emoji 0.0</p>
-        </section>
-        <section class="grid__col grid__col--8">
-          <p class="col__body col__body--right"><i>created:</i> 01.07.2017</p>
-        </section>
-      </section>
-    </a>
-    <a class="link__project" id="cognate-01" href="experiments/misc/pages/cognate-01.html">
-      <section class="grid__row">
-        <section class="grid__col grid__col--2">
-          <hr class="divider__project">
-        </section>
-        <section class="grid__col grid__col--2">
-          <p class="col__body ">cognate 0.0</p>
-        </section>
-        <section class="grid__col grid__col--8">
-          <p class="col__body col__body--right"><i>created:</i> 15.07.2017</p>
-        </section>
-      </section>
-    </a>
-    <a class="link__project" id="cognate-02" href="experiments/misc/pages/cognate-02.html">
-      <section class="grid__row">
-        <section class="grid__col grid__col--2">
-          <hr class="divider__project">
-        </section>
-        <section class="grid__col grid__col--2">
-          <p class="col__body ">cognate 0.2</p>
-        </section>
-        <section class="grid__col grid__col--8">
-          <p class="col__body col__body--right"><i>created:</i> 27.07.2017</p>
-        </section>
-      </section>
-    </a>
-    <a class="link__project" id="grid-03" href="experiments/misc/pages/grid-03.html">
-      <section class="grid__row">
-        <section class="grid__col grid__col--2">
-          <hr class="divider__project">
-        </section>
-        <section class="grid__col grid__col--2">
-          <p class="col__body ">grid 0.3</p>
-        </section>
-        <section class="grid__col grid__col--8">
-          <p class="col__body col__body--right"><i>created:</i> 30.07.2017</p>
-        </section>
-      </section>
-    </a>
-    <a class="link__project" id="grid-04" href="experiments/misc/pages/grid-04.html">
-      <section class="grid__row">
-        <section class="grid__col grid__col--2">
-          <hr class="divider__project">
-        </section>
-        <section class="grid__col grid__col--2">
-          <p class="col__body ">grid 0.4</p>
-        </section>
-        <section class="grid__col grid__col--8">
-          <p class="col__body col__body--right"><i>created:</i> 02.08.2017</p>
-        </section>
-      </section>
-    </a>
-    <a class="link__project" id="grid-05" href="experiments/misc/pages/grid-05.html">
-      <section class="grid__row">
-        <section class="grid__col grid__col--2">
-          <hr class="divider__project">
-        </section>
-        <section class="grid__col grid__col--2">
-          <p class="col__body ">grid 0.5</p>
-        </section>
-        <section class="grid__col grid__col--8">
-          <p class="col__body col__body--right"><i>created:</i> 06.08.2017</p>
-        </section>
-      </section>
-    </a>
-    <a class="link__project" id="grid-06" href="experiments/misc/pages/grid-00.html">
-      <section class="grid__row">
-        <section class="grid__col grid__col--2">
-          <hr class="divider__project">
-        </section>
-        <section class="grid__col grid__col--2">
-          <p class="col__body ">grid 2.0</p>
-        </section>
-        <section class="grid__col grid__col--8">
-          <p class="col__body col__body--right"><i>created:</i> 13.04.2018</p>
-        </section>
-      </section>
-    </a>
-    <a class="link__project" id="ny-00" href="experiments/misc/pages/ny-00.html">
-      <section class="grid__row">
-        <section class="grid__col grid__col--2">
-          <hr class="divider__project">
-        </section>
-        <section class="grid__col grid__col--2">
-          <p class="col__body ">n y 0.0</p>
-        </section>
-        <section class="grid__col grid__col--8">
-          <p class="col__body col__body--right"><i>created:</i> 01.11.2017</p>
-        </section>
-      </section>
-    </a>
-    <a class="link__project" id="ny-01a" href="experiments/misc/pages/ny-01a.html">
-      <section class="grid__row">
-        <section class="grid__col grid__col--2">
-          <hr class="divider__project">
-        </section>
-        <section class="grid__col grid__col--2">
-          <p class="col__body ">n y 1.0</p>
-        </section>
-        <section class="grid__col grid__col--8">
-          <p class="col__body col__body--right"><i>created:</i> 20.11.2017</p>
-        </section>
-      </section>
-    </a>
-    <a class="link__project" id="ny-02" href="experiments/misc/pages/ny-02.html">
-      <section class="grid__row">
-        <section class="grid__col grid__col--2">
-          <hr class="divider__project">
-        </section>
-        <section class="grid__col grid__col--2">
-          <p class="col__body ">n y 2.0</p>
-        </section>
-        <section class="grid__col grid__col--8">
-          <p class="col__body col__body--right"><i>created:</i> 30.11.2017</p>
-        </section>
-      </section>
-    </a>
-    <a class="link__project" id="type-00" href="experiments/misc/pages/type-00.html">
-      <section class="grid__row">
-        <section class="grid__col grid__col--2">
-          <hr class="divider__project">
-        </section>
-        <section class="grid__col grid__col--2">
-          <p class="col__body ">type 0.0</p>
-        </section>
-        <section class="grid__col grid__col--8">
-          <p class="col__body col__body--right"><i>created:</i> 01.01.2018</p>
-        </section>
-      </section>
-    </a>
-    <a class="link__project" id="type-01" href="experiments/misc/pages/type-01.html">
-      <section class="grid__row">
-        <section class="grid__col grid__col--2">
-          <hr class="divider__project">
-        </section>
-        <section class="grid__col grid__col--2">
-          <p class="col__body ">type 1.0</p>
-        </section>
-        <section class="grid__col grid__col--8">
-          <p class="col__body col__body--right"><i>created:</i> 05.01.2018</p>
-        </section>
-      </section>
-    </a>
-    <!-- <a class="link__project" id="type-02" href="experiments/misc/pages/type-02.html">
-      <section class="grid__row">
-        <section class="grid__col grid__col--2">
-          <hr class="divider__project">
-        </section>
-        <section class="grid__col grid__col--2">
-          <p class="col__body ">2.0</p>
-        </section>
-        <section class="grid__col grid__col--8">
-          <p class="col__body col__body--right"><i>created:</i> 07.01.2018</p>
-        </section>
-      </section>
-    </a> -->
-    <a class="link__project" id="type-03" href="experiments/misc/pages/type-03.html">
-      <section class="grid__row">
-        <section class="grid__col grid__col--2">
-          <hr class="divider__project">
-        </section>
-        <section class="grid__col grid__col--2">
-          <p class="col__body ">type 3.0</p>
-        </section>
-        <section class="grid__col grid__col--8">
-          <p class="col__body col__body--right"><i>created:</i> 10.01.2018</p>
-        </section>
-      </section>
-    </a>
-    <a class="link__project" id="type-04" href="experiments/misc/pages/type-04.html">
-      <section class="grid__row">
-        <section class="grid__col grid__col--2">
-          <hr class="divider__project">
-        </section>
-        <section class="grid__col grid__col--2">
-          <p class="col__body ">type 4.0</p>
-        </section>
-        <section class="grid__col grid__col--8">
-          <p class="col__body col__body--right"><i>created:</i> 15.01.2018</p>
-        </section>
-      </section>
-    </a>
-    <a class="link__project" id="type-05" href="experiments/misc/pages/type-05.html">
-      <section class="grid__row">
-        <section class="grid__col grid__col--2">
-          <hr class="divider__project">
-        </section>
-        <section class="grid__col grid__col--2">
-          <p class="col__body ">type 5.0</p>
-        </section>
-        <section class="grid__col grid__col--8">
-          <p class="col__body col__body--right"><i>created:</i> 20.01.2018</p>
-        </section>
-      </section>
-    </a>
-    <!-- <a class="link__project" id="type-06" href="experiments/misc/pages/type-06.html">
-      <section class="grid__row">
-        <section class="grid__col grid__col--2">
-          <hr class="divider__project">
-        </section>
-        <section class="grid__col grid__col--2">
-          <p class="col__body ">2.5</p>
-        </section>
-        <section class="grid__col grid__col--8">
-          <p class="col__body col__body--right"><i>created:</i> 01.03.2018</p>
-        </section>
-      </section>
-    </a> -->
-    <a class="link__project" id="type-07" href="experiments/misc/pages/type-07.html">
-      <section class="grid__row">
-        <section class="grid__col grid__col--2">
-          <hr class="divider__project">
-        </section>
-        <section class="grid__col grid__col--2">
-          <p class="col__body ">type 7.0</p>
-        </section>
-        <section class="grid__col grid__col--8">
-          <p class="col__body col__body--right"><i>last updated:</i> 4 weeks ago &nbsp; | &nbsp; <i>created:</i> 01.03.2018</p>
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
-        </section>
-      </section>
-    </a>
-
-    <section class="grid__row">
-      <hr>
-    </section>
-
-    <section class="grid__row">
-      <section class="grid__col grid__col--2">
-        <p class="col__body">illustration</p>
-        <p class="col__body">digital comic</p>
-        <p class="col__body">experimental</p>
-        <p class="col__body">motion</p>
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
-      </section>
-      <section class="grid__col grid__col--2">
-        <p class="col__body col__body--name">Nathalie de Vallière</p>
-      </section>
-      <section class="grid__col grid__col--8"></section>
-    </section>
-
-    <section class="grid__row">
-      <section class="grid__col grid__col--2"></section>
-      <section class="grid__col grid__col--2">
-        <p class="line__title line__title--light">page (s)</p>
-      </section>
-      <section class="grid__col grid__col--8">
-        <p class="line__title col__body--right line__title--light">when ?</p>
-      </section>
-    </section>
-
-    <a class="link__project" id="skyblades-00" href="skyblades/pages/skyblades-00.html">
-      <section class="grid__row">
-        <section class="grid__col grid__col--2">
-          <hr class="divider__project">
-        </section>
-        <section class="grid__col grid__col--2">
-          <p class="col__body ">0.0</p>
-        </section>
-        <section class="grid__col grid__col--8">
-          <p class="col__body col__body--right"><i>created:</i> 01.12.2017</p>
-        </section>
-      </section>
-    </a>
-    <a class="link__project" id="skyblades-01" href="skyblades/pages/skyblades-01.html">
-      <section class="grid__row">
-        <section class="grid__col grid__col--2">
-          <hr class="divider__project">
-        </section>
-        <section class="grid__col grid__col--2">
-          <p class="col__body ">1.0</p>
-        </section>
-        <section class="grid__col grid__col--8">
-          <p class="col__body col__body--right"><i>last updated:</i> 3 months ago &nbsp; | &nbsp; <i>created:</i> 01.12.2018</p>
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
-        </section>
-      </section>
-    </a>
-
-    <section class="grid__row">
-      <hr>
-    </section>
-
-    <section class="grid__row">
-      <section class="grid__col grid__col--2">
-        <p class="col__body">web design</p>
-        <p class="col__body">web development</p>
-      </section>
-      <section class="grid__col grid__col--2">
-        <p class="col__body col__body--name">Alva Skog</p>
-        <p class="col__body col__body--name">Elisa Carassai</p>
-        <p class="col__body col__body--name">Ines Mena Silva</p>
-        <p class="col__body col__body--name">Leonardo Pellegrino</p>
-        <p class="col__body col__body--name">Nathalie de Vallière</p>
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
-      </section>
-      <section class="grid__col grid__col--8"></section>
-    </section>
-
-    <section class="grid__row">
-      <section class="grid__col grid__col--2"></section>
-      <section class="grid__col grid__col--2">
-        <p class="line__title line__title--light">site (s)</p>
-      </section>
-      <section class="grid__col grid__col--8">
-        <p class="line__title col__body--right line__title--light">when ?</p>
-      </section>
-    </section>
-
-    <a class="link__project" id="skog-00" href="http://alvaskog.com/">
-      <section class="grid__row">
-        <section class="grid__col grid__col--2">
-          <hr class="divider__project">
-        </section>
-        <section class="grid__col grid__col--2">
-          <p class="col__body ">2.0</p>
-        </section>
-        <section class="grid__col grid__col--8">
-          <p class="col__body col__body--right"><i>created:</i> 20.11.2017</p>
-        </section>
-      </section>
-    </a>
-    <a class="link__project" id="carassai-00" href="https://elisacarassai.github.io/">
-      <section class="grid__row">
-        <section class="grid__col grid__col--2">
-          <hr class="divider__project">
-        </section>
-        <section class="grid__col grid__col--2">
-          <p class="col__body ">0.0</p>
-        </section>
-        <section class="grid__col grid__col--8">
-          <p class="col__body col__body--right"><i>created:</i> 10.02.2018</p>
-        </section>
-      </section>
-    </a>
-    <a class="link__project" id="silva-00" href="https://inesmenasilva.github.io/">
-      <section class="grid__row">
-        <section class="grid__col grid__col--2">
-          <hr class="divider__project">
-        </section>
-        <section class="grid__col grid__col--2">
-          <p class="col__body ">0.0</p>
-        </section>
-        <section class="grid__col grid__col--8">
-          <p class="col__body col__body--right"><i>created:</i> 15.03.2018</p>
-        </section>
-      </section>
-    </a>
-    <a class="link__project" id="prima-00" href="https://pablodiprima.github.io/">
-      <section class="grid__row">
-        <section class="grid__col grid__col--2">
-          <hr class="divider__project">
-        </section>
-        <section class="grid__col grid__col--2">
-          <p class="col__body ">0.0</p>
-        </section>
-        <section class="grid__col grid__col--8">
-          <p class="col__body col__body--right"><i>last updated:</i> 1 day ago &nbsp; | &nbsp; <i>created:</i> 30.03.2018</p>
-        </section>
-      </section>
-    </a>
-
-  </section>
-  <script type="text/javascript" src="global/scripts/grid-00.js"></script>
-  <script src="https://rawgit.com/mntn-dev/t.js/master/t.min.js"></script>
-  <script type="text/javascript" src="global/scripts/scripts-00.js"></script>
+  <script type="text/javascript" src="work/04/scripts/scripts-02.js"></script>
 </body>
 </html>
