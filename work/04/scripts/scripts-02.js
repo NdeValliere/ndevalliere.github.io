@@ -16,21 +16,24 @@ document.body.onmousedown = function() {
 document.body.onmouseup = function() {
   mouseDown = false;
 }
-$(document).on("touchstart", function () {
-  mouseDown = true;
-});
-$(document).on("touchend", function () {
-  mouseDown = false;
-});
 
-$(window).on("mousemove resize touchstart", function(event) {
+//Disable touch stuff on mobile
+// $(document).on("touchstart", function () {
+//   mouseDown = true;
+// });
+// $(document).on("touchend", function () {
+//   mouseDown = false;
+// });
+
+//removed touchstart from ""
+$(window).on("mousemove resize", function(event) {
 	var mX = event.pageX,
 			mY = event.pageY,
       IH = window.innerHeight,
   		IW = window.innerWidth,
       items = $("a");
 
-  $(window).on("click touchstart", function () {
+  $(window).on("click", function () {
     mXold = mX;
     mYold = mY;
   });
@@ -204,6 +207,7 @@ $(document).ready(function() {
                                        "margin": IW*0.025 + "px"});
      $("#about .text").css({"font-size": IW*0.05 + "px",
                             "margin": IW*0.002 + "px 0"});
+     $(".container__scroll--TL").css({"width": IW + 10});
    }
 });
 
