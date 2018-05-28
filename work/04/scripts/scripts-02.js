@@ -192,10 +192,16 @@ $(document).ready(function() {
                                     "margin": IW*0.025 + "px"});
   $("#about .text").css({"font-size": IW*0.025 + "px",
                          "margin": IW*0.002 + "px 0"});
+
+   if (IW < 500) {
+     $(".container__text--about").css({"width": IW*0.95 + "px",
+                                       "margin": IW*0.025 + "px"});
+     $("#about .text").css({"font-size": IW*0.075 + "px",
+                            "margin": IW*0.002 + "px 0"});
+   }
 });
 
 function fadeIn () {
-  console.log("loaded 2: " + loaded);
   if (loaded) {
     $(".container__scroll").css({"opacity": 1});
   }
