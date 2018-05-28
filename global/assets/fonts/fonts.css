@@ -42,14 +42,14 @@
 
 @font-face {
   font-family: "Neue Haas Unica Pro";
-  src: url('https://rawgit.com/NdeValliere/ndevalliere.github.io/master/global/assets/fonts/fonts/NeueHaasUnicaPro-Regular.ttf');
+  src: url('https://rawgit.com/NdeValliere/ndevalliere.github.io/master/global/assets/fonts/NeueHaasUnicaPro-Regular.ttf');
   font-weight: 400;
   font-style: regular;
 }
 
 @font-face {
   font-family: "Neue Haas Unica Pro";
-  src: url('https://rawgit.com/NdeValliere/ndevalliere.github.io/master/global/assets/fonts/fonts/NeueHaasUnicaPro-Italic.otf');
+  src: url('https://rawgit.com/NdeValliere/ndevalliere.github.io/master/global/assets/fonts/NeueHaasUnicaPro-Italic.otf');
   font-weight: 400;
   font-style: italic;
 }
