@@ -6,6 +6,7 @@ function getRandomInt(min, max) {
 //global vars
 var mouseDown = false,
     clickCount = 0,
+    transitionEnd = false,
     mXold = 0,
     mYold = 0;
 
@@ -28,7 +29,10 @@ $(window).on("mousemove resize", function(event) {
     mYold = mY;
   });
 
+
   if(mouseDown){
+    $(".container__scroll").css({"transition": "0s"});
+
      $(".container__scroll--TL").css({"width": mX - 1 + "px",
                                        "height": mY + "px"});
      $(".container__scroll--TR").css({"width": IW - mX + "px",
@@ -190,19 +194,12 @@ $(document).ready(function() {
                          "margin": IW*0.002 + "px 0"});
 });
 
-$(window).on("load", function() {
-  setTimeout(function () {
-    console.log("test: " + loaded);
-     if (loaded) {
-       $(".container__scroll").css({"opacity": 1});
-
-      setTimeout(function () {
-        $(".container__scroll").css({"transition": "0s"});
-      }, 500);
-     }
-  }, 5000);
-})
-
+function fadeIn () {
+  console.log("loaded 2: " + loaded);
+  if (loaded) {
+    $(".container__scroll").css({"opacity": 1});
+  }
+}
 
 
 $("a").mouseover(function(){

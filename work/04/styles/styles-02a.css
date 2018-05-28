@@ -5,9 +5,6 @@
 
 /*maybe change? too confusing?*/
  *::selection {
-  /* color: white;
-  background: grey;
-  mix-blend-mode: difference; */
   opacity: 0;
 }
 h1::selection,
@@ -20,20 +17,15 @@ p::selection,
 b::selection,
 a::selection,
 i::selection {
-  /* color: white;
-  background: grey;
-  mix-blend-mode: difference; */
   opacity: 0;
 }
 
 body {
   /* cursor: crosshair; */
   cursor: url(../assets/cursorMove-01.png), move;
-  /* font-family: "Founders Grotesk", sans-serif; */
   font-family: "neue-haas-unica-pro-regular", sans-serif;
   font-weight: 400;
   height: 100vh;
-  /* opacity: 0; */
   overflow: hidden;
   text-rendering: geometricPrecision;
   transition: 0.25s;
@@ -148,9 +140,7 @@ a:hover {
 }
 
 .text--about {
-  color: white;
   line-height: 1.5;
-  mix-blend-mode: difference;
 }
 
 .text--project {

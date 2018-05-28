@@ -13,12 +13,12 @@
 
   <section class="container__scroll container__scroll--TL container__white" id="about">
     <div class="container__text container__text--about">
-      <p class="text text--about">Hi! I'm Nathalie de Vallière, a fresh graduate from Central Saint Martins with a Bachelor in <a class="white" href="http://www.arts.ac.uk/csm/courses/undergraduate/ba-hons-graphic-communication-design/">Graphics</a>.</p>
-      <p class="text text--about">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Currently working on the <a class="white" href="https://2018csmgraphicdesign.github.io/">website</a> for my year's degree show and I'm looking for people to work with starting September. I have many interests and am a quick study. Please see my <a class="white" href="https://ndevalliere.github.io/">sketchbook</a> and the <a class="white" href="http://ndevalliere.com/archive">archive</a> of my portfolios for proof.</p>
+      <p class="text text--about">Hi! I'm Nathalie de Vallière, a fresh graduate from Central Saint Martins with a Bachelor in <a href="http://www.arts.ac.uk/csm/courses/undergraduate/ba-hons-graphic-communication-design/">Graphics</a>.</p>
+      <p class="text text--about">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Currently working on the <a href="https://2018csmgraphicdesign.github.io/">website</a> for my year's degree show and I'm looking for people to work with starting September. I have many interests and am a quick study. Please see my <a href="https://ndevalliere.github.io/">sketchbook</a> and the <a href="http://ndevalliere.com/archive">archive</a> of my portfolios for proof.</p>
       <p class="text text--about">&nbsp;</p>
-      <p class="text text--about"><a class="white" href="../../cases/ndevalliere-resume-08.pdf">Resume</a></p>
-      <p class="text text--about"><a class="white" href="mailto:nathalie.devalliere@gmail.com">Email</a></p>
-      <p class="text text--about"><a class="white" href="https://www.are.na/nathalie-de-valliere">Are.na</a></p>
+      <p class="text text--about"><a href="../../cases/ndevalliere-resume-08.pdf">Resume</a></p>
+      <p class="text text--about"><a href="mailto:nathalie.devalliere@gmail.com">Email</a></p>
+      <p class="text text--about"><a href="https://www.are.na/nathalie-de-valliere">Are.na</a></p>
       <!-- <p class="text text--about"><a class="white" href="tel:+447400451996">Phone</a></p> -->
     </div>
   </section>
@@ -62,37 +62,26 @@
   <script>
   //trigger for 2nd script
   var loaded = false;
-    //fires before jquery is loaded!
-    document.addEventListener("DOMContentLoaded", function(event) {
-      var borderX = document.getElementsByClassName("border--load-X"),
-          borderY = document.getElementsByClassName("border--load-Y");
-          // containerScroll = document.getElementsByClassName("container__scroll"),
-          // containerScrollTL = document.getElementsByClassName("container__scroll--TL"),
-          // containerAbout = document.getElementsByClassName("container__text--about"),
-          // IH = window.innerHeight,
-          // IW = window.innerWidth;
 
-          // containerScroll[0].style.width = "0";
-          // containerScroll[0].style.height = "0";
-          // containerScroll[0].style.transition = "0.5s";
-          // containerScrollTL[0].style.width = IW;
-          // containerScrollTL[0].style.height = IH;
-          // containerAbout[0].style.width = 0.65*IW;
-          // containerAbout[0].style.margin = 0.25*IW + "px";
-          // $("#about .text").css({"font-size": IW*0.025 + "px",
-          //                        "margin": IW*0.002 + "px 0"});
+      document.addEventListener("DOMContentLoaded", function(event) {
+        var borderX = document.getElementsByClassName("border--load-X"),
+            borderY = document.getElementsByClassName("border--load-Y");
 
-          borderX[0].style.width = "100vw";
-          borderY[0].style.height = "100vh";
+            borderX[0].style.width = "100vw";
+            borderY[0].style.height = "100vh";
 
-          setTimeout(function () {
-              $(".border--load-X").css({"top": "100vh"});
-              $(".border--load-Y").css({"left": "100vw"});
-              $(".border--load").css({"transition": "5s"});
+            setTimeout(function () {
+              borderX[0].style.transition = "5s";
+              borderY[0].style.transition = "5s";
+              borderX[0].style.top = "100vh";
+              borderY[0].style.left = "100vw";
               loaded = true;
-              console.log(loaded);
+              setTimeout(function () {
+                console.log("loaded: " + loaded);
+                fadeIn();
+              }, 5000);
           }, 2500);
-    });
+      });
   </script>
 
   <script
