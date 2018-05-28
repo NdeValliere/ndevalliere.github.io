@@ -9,6 +9,7 @@ body {
 
   font-family: "Arial", sans-serif;
   text-transform: uppercase;
+  text-rendering: geometricPrecision;
 }
 
 .container__top {
