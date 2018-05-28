@@ -203,11 +203,11 @@ $(document).ready(function() {
                          "margin": IW*0.002 + "px 0"});
 
    if (IW < 500) {
-     $(".container__text--about").css({"width": IW*0.95 + "px",
-                                       "margin": IW*0.025 + "px"});
-     $("#about .text").css({"font-size": IW*0.05 + "px",
-                            "margin": IW*0.002 + "px 0"});
-     $(".container__scroll--TL").css({"width": IW + 10});
+     $(".container__text--about").css({"width": IW * 0.9 + "px",
+                                       "margin": IW*0.05 + "px",
+                                       "margin-right": IW * 0.1});
+     $("#about .text").css({"font-size": IW*0.055 + "px",
+                            "margin": IW*0.005 + "px 0"});
    }
 });
 
