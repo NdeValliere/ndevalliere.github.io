@@ -16,15 +16,21 @@ document.body.onmousedown = function() {
 document.body.onmouseup = function() {
   mouseDown = false;
 }
+$(document).on("touchstart", function () {
+  mouseDown = true;
+}
+$(document).on("touchend", function () {
+  mouseDown = false;
+}
 
-$(window).on("mousemove resize", function(event) {
+$(window).on("mousemove resize touchstart", function(event) {
 	var mX = event.pageX,
 			mY = event.pageY,
       IH = window.innerHeight,
   		IW = window.innerWidth,
       items = $("a");
 
-  $(window).click(function() {
+  $(window).on("click touchstart", function () {
     mXold = mX;
     mYold = mY;
   });
