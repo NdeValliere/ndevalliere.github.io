@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Nathalie de Vallière</title>
+  <meta name="author" content="Nathalie de Vallière">
+
+  <link rel="stylesheet" href="../styles/styles-02a.css">
+  <link rel="stylesheet" href="../styles/styles-02b.css">
+</head>
+<body>
+
+  <section class="container__scroll container__scroll--TL container__white" id="about">
+    <div class="container__text container__text--about">
+      <p class="text text--about">Hi! I'm Nathalie de Vallière, a fresh graduate from Central Saint Martins with a Bachelor in <a class="white" href="http://www.arts.ac.uk/csm/courses/undergraduate/ba-hons-graphic-communication-design/">Graphics</a>.</p>
+      <p class="text text--about">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Currently working on the <a class="white" href="https://2018csmgraphicdesign.github.io/">website</a> for my year's degree show and I'm looking for people to work with starting September. I have many interests and am a quick study. Please see my <a class="white" href="https://ndevalliere.github.io/">sketchbook</a> and the <a class="white" href="http://ndevalliere.com/archive">archive</a> of my portfolios for proof.</p>
+      <p class="text text--about">&nbsp;</p>
+      <p class="text text--about"><a class="white" href="../../cases/ndevalliere-resume-08.pdf">Resume</a></p>
+      <p class="text text--about"><a class="white" href="mailto:nathalie.devalliere@gmail.com">Email</a></p>
+      <p class="text text--about"><a class="white" href="https://www.are.na/nathalie-de-valliere">Are.na</a></p>
+      <!-- <p class="text text--about"><a class="white" href="tel:+447400451996">Phone</a></p> -->
+    </div>
+  </section>
+  <section class="container__scroll container__scroll--TR container__white">
+    <div class="container__video container__video--zero">
+      <video class="center" id="zero" poster="../assets/loopZero.png" preload="auto" muted="muted" webkit-playsinline="" loop>
+        <source type="video/mp4" src="../assets/loopZero.mp4">
+      </video>
+      <div class="container__text container__text--project">
+        <p class="text text--project text--project"><a href="http://zr0.co.uk/">Publishing platform</a> for digital and physical magazine</p>
+        <p class="text text--project text--project">Website 1440x900</p>
+      </div>
+    </div>
+  </section>
+  <section class="container__scroll container__scroll--BL container__black">
+    <div class="container__video container__video--posters">
+      <video class="center" id="posters" poster="../assets/loopPoster.png" preload="auto" muted="muted" webkit-playsinline="" loop>
+        <source type="video/mp4" src="../assets/loopPoster.mp4">
+      </video>
+      <div class="container__text container__text--project white">
+        <p class="text text--project text--project text--project-l">Pitch for brief by <a class="white" href="http://www.arts.ac.uk/csm/courses/undergraduate/ba-performance-design-and-practice/">UAL</a> and <a class="white" href="http://www.londonstudiocentre.org/">London Studio Centre</a></p>
+        <p class="text text--project text--project text--project-l">Digital posters 1920x1080</p>
+      </div>
+    </div>
+  </section>
+  <section class="container__scroll container__scroll--BR container__black">
+    <div class="container__video container__video--comic">
+      <video class="center" id="comic" poster="../assets/loopComic.png" preload="auto" muted="muted" webkit-playsinline="" loop>
+        <source type="video/mp4" src="../assets/loopComic.mp4">
+      </video>
+      <div class="container__text container__text--project white">
+        <p class="text text--project text--project">Explorable digital city, user generated content for <a class="white" href="#">drawing machine</a></p>
+        <p class="text text--project text--project">Game design 2560x1600</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="border--load border--load-X"></section>
+  <section class="border--load border--load-Y"></section>
+
+  <script>
+  //trigger for 2nd script
+  var loaded = false;
+    //fires before jquery is loaded!
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var borderX = document.getElementsByClassName("border--load-X"),
+          borderY = document.getElementsByClassName("border--load-Y");
+          // containerScroll = document.getElementsByClassName("container__scroll"),
+          // containerScrollTL = document.getElementsByClassName("container__scroll--TL"),
+          // containerAbout = document.getElementsByClassName("container__text--about"),
+          // IH = window.innerHeight,
+          // IW = window.innerWidth;
+
+          // containerScroll[0].style.width = "0";
+          // containerScroll[0].style.height = "0";
+          // containerScroll[0].style.transition = "0.5s";
+          // containerScrollTL[0].style.width = IW;
+          // containerScrollTL[0].style.height = IH;
+          // containerAbout[0].style.width = 0.65*IW;
+          // containerAbout[0].style.margin = 0.25*IW + "px";
+          // $("#about .text").css({"font-size": IW*0.025 + "px",
+          //                        "margin": IW*0.002 + "px 0"});
+
+          borderX[0].style.width = "100vw";
+          borderY[0].style.height = "100vh";
+
+          setTimeout(function () {
+              $(".border--load-X").css({"top": "100vh"});
+              $(".border--load-Y").css({"left": "100vw"});
+              $(".border--load").css({"transition": "5s"});
+              loaded = true;
+              console.log(loaded);
+          }, 2500);
+    });
+  </script>
+
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="../scripts/scripts-02.js"></script>
+</body>
+</html>

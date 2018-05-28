@@ -4,12 +4,12 @@
 }
 
 /*maybe change? too confusing?*/
-*::selection {
+/* *::selection {
   color: white;
   background: grey;
   mix-blend-mode: difference;
   opacity: 1;
-}
+} */
 h1::selection,
 h2::selection,
 h3::selection,

@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*maybe change? too confusing?*/
+ *::selection {
+  /* color: white;
+  background: grey;
+  mix-blend-mode: difference; */
+  opacity: 0;
+}
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection,
+p::selection,
+b::selection,
+a::selection,
+i::selection {
+  /* color: white;
+  background: grey;
+  mix-blend-mode: difference; */
+  opacity: 0;
+}
+
+body {
+  /* cursor: crosshair; */
+  cursor: url(../assets/cursorMove-01.png), move;
+  /* font-family: "Founders Grotesk", sans-serif; */
+  font-family: "neue-haas-unica-pro-regular", sans-serif;
+  font-weight: 400;
+  height: 100vh;
+  /* opacity: 0; */
+  overflow: hidden;
+  text-rendering: geometricPrecision;
+  transition: 0.25s;
+  width: 100vw;
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+::-webkit-scrollbar-thumb {
+    /*background: #FF0000;
+    border-radius: 100px;*/
+}
+
+img,
+video {
+  position: relative;
+  height: auto;
+  max-width: 100%;
+}
+
+a {
+  color: black;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  transform: skew(0deg);
+}
+
+a:hover {
+  color: black;
+  transform: skew(-20deg);
+}
+
+.container__scroll {
+  position: absolute;
+  overflow: hidden;
+  /* overflow-y: scroll; */
+  transition: 0.25s;
+}
+
+.container__scroll--TL {
+  top: 0;
+  left: 0;
+  border-right: 1px solid black;
+}
+
+.container__scroll--TR {
+  top: 0;
+  right: 0;
+}
+
+.container__scroll--BL {
+  bottom: 0;
+  left: 0;
+  border-right: 1px solid black;
+  /*border-top: 1px solid black;*/
+}
+
+.container__scroll--BR {
+  bottom: 0;
+  right: 0;
+  /*border-top: 1px solid black;*/
+}
+
+.container__black {
+  background: black;
+  mix-blend-mode: difference;
+}
+
+#about {
+  background: white;
+  mix-blend-mode: initial;
+  overflow-y: scroll;
+}
+
+.container__white {
+  background: white;
+  mix-blend-mode: difference;
+}
+
+.container__video {
+  margin: 0 auto;
+}
+
+.center {
+  display: inherit;
+  margin: 0 auto;
+}
+
+.white,
+.white:hover {
+  color: white;
+}
+
+/* type */
+.container__text .text--about:first-child {
+  margin-top: 0;
+}
+
+.container__text--about-overlay {
+  position: absolute;
+}
+
+.container__text--project {
+  bottom: 0px;
+  position: absolute;
+  text-align: right;
+  width: 95%;
+  z-index: 10;
+}
+
+.text--about {
+  color: white;
+  line-height: 1.5;
+  mix-blend-mode: difference;
+}
+
+.text--project {
+  white-space: nowrap;
+}
+
+.transition {
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+/*interactive mouse*/
+.container__mouse {
+  position: absolute;
+  mix-blend-mode: difference;
+}
+
+.mouse--resize {
+  border-radius: 10000px;
+  transition: 0.25s;
+}
