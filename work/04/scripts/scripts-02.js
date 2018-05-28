@@ -196,7 +196,7 @@ $(document).ready(function() {
    if (IW < 500) {
      $(".container__text--about").css({"width": IW*0.95 + "px",
                                        "margin": IW*0.025 + "px"});
-     $("#about .text").css({"font-size": IW*0.075 + "px",
+     $("#about .text").css({"font-size": IW*0.05 + "px",
                             "margin": IW*0.002 + "px 0"});
    }
 });
