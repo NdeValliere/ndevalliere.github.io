@@ -18,10 +18,10 @@ document.body.onmouseup = function() {
 }
 $(document).on("touchstart", function () {
   mouseDown = true;
-}
+});
 $(document).on("touchend", function () {
   mouseDown = false;
-}
+});
 
 $(window).on("mousemove resize touchstart", function(event) {
 	var mX = event.pageX,
