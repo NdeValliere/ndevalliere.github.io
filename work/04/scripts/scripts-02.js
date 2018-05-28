@@ -197,7 +197,7 @@ $(window).on("load", function() {
        $(".container__scroll").css({"opacity": 1});
 
       setTimeout(function () {
-        $(".container__scroll").css({"transition": "0"});
+        $(".container__scroll").css({"transition": "0s"});
       }, 500);
      }
   }, 5000);
