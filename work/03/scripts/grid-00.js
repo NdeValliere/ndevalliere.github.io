@@ -23,6 +23,8 @@ function loadContent() {
     $(".td__img").css({"margin-bottom": -2.1*(IW/16),
                        "padding-top": 2.1*(IW/16)});
     $(".td__border").css({"width": 2*(IW/12) + "px"});
+    // $(".tooltip").css({"width": 8*(IW/12) + "px"});
+    $(".tooltiptext").css({"width": 8*(IW/12) + "px"});
 
    for( var i = 0; i < 13; i++) {
       $(".grid__col--"+ i ).css({"width": (IW/12)*i + "px"});

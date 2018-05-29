@@ -58,11 +58,14 @@ $(window).on("mousemove resize", function(event) {
      $(".container__scroll .text--about").css({"font-size": mX*0.03 + "px",
                                                "margin": mX*0.002 + "px 0"
                                              });
+
      $(".container__scroll .text--project").css({"font-size": (IW - mX)/35 + "px",
                                                  "margin": (IW - mX)*0.002 + "px 0",
                                                  "transform": "skew(-20deg)"});
      $(".container__scroll .text--project-l").css({"font-size": mX/35 + "px",
                                                    "margin": mX*0.002 + "px 0"});
+
+     $(".text--about-small").css({"font-size": mX*0.0225 + "px"});
 
      if (mX < (IW/2)) {
        $(".container__text--about").css({"width": "auto"});
@@ -138,6 +141,9 @@ $(window).on("mousemove resize", function(event) {
 
     $(".container__scroll .text--project-l").css({"font-size": mXold/35 + "px",
                                                   "margin": mXold*0.002 + "px 0"});
+
+    $(".text--about-small").css({"font-size": mXold*0.0225 + "px"});
+
     if (mXold < (IW/2)) {
       $(".container__text--about").css({"width": "auto"});
       // console.log("IW smaller than half");
@@ -201,6 +207,7 @@ $(document).ready(function() {
                                     "margin": IW*0.025 + "px"});
   $("#about .text").css({"font-size": IW*0.025 + "px",
                          "margin": IW*0.002 + "px 0"});
+  $(".text--about-small").css({"font-size": IW*0.0225 + "px"});
 
    if (IW < 500) {
      $(".container__text--about").css({"width": IW * 0.9 + "px",
@@ -208,6 +215,7 @@ $(document).ready(function() {
                                        "margin-right": IW * 0.1});
      $("#about .text").css({"font-size": IW*0.055 + "px",
                             "margin": IW*0.005 + "px 0"});
+     $(".text--about-small").css({"font-size": IW*0.0225 + "px"});
    }
 });
 
