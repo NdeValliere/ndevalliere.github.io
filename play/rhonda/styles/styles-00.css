@@ -3,19 +3,20 @@
   margin: 0;
 }
 
-body {
+.container__background {
   background: url("../assets/livestreamPlaceholder.png");
   background-size: cover;
-
   font-family: "Arial", sans-serif;
+  height: 100vh;
   text-transform: uppercase;
   text-rendering: geometricPrecision;
-}
-
-.container__top {
-  position: fixed;
   width: 100vw;
 }
+
+/* .container__top {
+  position: fixed;
+  width: 100vw;
+} */
 
 .text--date {
   color: white;
@@ -25,13 +26,20 @@ body {
 }
 
 .button__cameraSwitch {
-  background: white;
   margin: 0 auto;
+}
+
+.text--camera:hover {
+  cursor: pointer;
+  opacity: 0.75;
 }
 
 .text--camera {
   color: black;
-  font-size: 15px;
+  background: white;
+  mix-blend-mode: color-dodge;
+  font-size: 20px;
+  font-weight: 900;
   padding: 12.5px 0;
   text-align: center;
 }

@@ -23,7 +23,7 @@ i::selection {
 body {
   cursor: col-resize;
   /* cursor: url(../assets/), move; */
-  font-family: "Neue Haas Unica Pro", sans-serif;
+  font-family: "Steinbeck", sans-serif;
   font-weight: 400;
   height: 100vh;
   overflow: hidden;
@@ -51,14 +51,17 @@ video {
 a {
   color: black;
   display: inline-block;
+  /* font-family: "Steinbeck", sans-serif; */
+  font-style: italic;
   text-decoration: none;
+  -webkit-text-stroke: 1px;
   text-transform: uppercase;
-  transform: skew(0deg);
+  transform: skew(-2.5deg);
 }
 
 a:hover {
   color: black;
-  transform: skew(-20deg);
+  transform: skew(-17.5deg);
 }
 
 .container__scroll {
@@ -138,10 +141,11 @@ a:hover {
   text-align: right;
   width: 95%;
   z-index: 10;
+  filter: none;
 }
 
 .text--about {
-  line-height: 1.5;
+  line-height: 1.1;
 }
 
 /* .text--about-small {
@@ -167,4 +171,25 @@ a:hover {
 .mouse--resize {
   border-radius: 10000px;
   transition: 0.25s;
+}
+.fontChange {
+  font-family: "Didot";
+  vertical-align: 3.5px;
+}
+
+.lines {
+  font-family: "Didot";
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.blur {
+  cursor: default;
+  filter: blur(20px);
+  /* opacity: 0.5; */
+  /* -webkit-transform: translate3d(0, 0, 0); */
+  transform: translate3d(0, 0, 0);
+  transition: 2s;
 }

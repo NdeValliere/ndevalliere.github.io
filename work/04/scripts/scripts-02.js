@@ -55,7 +55,7 @@ $(window).on("mousemove resize", function(event) {
 
      $(".container__text--about").css({"width": mX*0.65 + "px",
                                        "margin": mX*0.025 + "px"});
-     $(".container__scroll .text--about").css({"font-size": mX*0.03 + "px",
+     $(".container__scroll .text--about").css({"font-size": mX*0.0275 + "px",
                                                "margin": mX*0.002 + "px 0"
                                              });
 
@@ -65,7 +65,7 @@ $(window).on("mousemove resize", function(event) {
      $(".container__scroll .text--project-l").css({"font-size": mX/35 + "px",
                                                    "margin": mX*0.002 + "px 0"});
 
-     $(".text--about-small").css({"font-size": mX*0.0225 + "px"});
+     $(".text--about-small").css({"font-size": mX*0.02 + "px"});
 
      if (mX < (IW/2)) {
        $(".container__text--about").css({"width": "auto"});
@@ -133,7 +133,7 @@ $(window).on("mousemove resize", function(event) {
 
     $(".container__text--about").css({"width": mXold*0.65 + "px"});
 
-    $(".container__scroll .text--about").css({"font-size": mXold*0.03 + "px",
+    $(".container__scroll .text--about").css({"font-size": mXold*0.0275 + "px",
                                               "margin": mXold*0.002 + "px 0"
                                             });
     $(".container__scroll .text--project").css({"font-size": (IW - mXold)/35 + "px",
@@ -142,7 +142,7 @@ $(window).on("mousemove resize", function(event) {
     $(".container__scroll .text--project-l").css({"font-size": mXold/35 + "px",
                                                   "margin": mXold*0.002 + "px 0"});
 
-    $(".text--about-small").css({"font-size": mXold*0.0225 + "px"});
+    $(".text--about-small").css({"font-size": mXold*0.02 + "px"});
 
     if (mXold < (IW/2)) {
       $(".container__text--about").css({"width": "auto"});
@@ -204,10 +204,10 @@ $(document).ready(function() {
   $(".container__scroll--TL").css({"width": IW + "px",
                                    "height": IH + "px"});
   $(".container__text--about").css({"width": IW*0.65 + "px",
-                                    "margin": IW*0.025 + "px"});
-  $("#about .text").css({"font-size": IW*0.025 + "px",
+                                    "margin": IW*0.035 + "px"});
+  $("#about .text").css({"font-size": IW*0.0275 + "px",
                          "margin": IW*0.002 + "px 0"});
-  $(".text--about-small").css({"font-size": IW*0.0225 + "px"});
+  $(".text--about-small").css({"font-size": IW*0.02 + "px"});
 
    if (IW < 500) {
      $(".container__text--about").css({"width": IW * 0.9 + "px",
@@ -233,4 +233,17 @@ $("a").mouseout(function(){
   setTimeout(function () {
     $(this).removeClass("transition");
   }, 250);
+});
+
+
+$(".container__scroll").mouseover(function() {
+  $(this).find(".container__text--project").removeClass("hide");
+  $(this).find("video").addClass("blur");
+
+});
+
+$(".container__scroll").mouseout(function() {
+  $(this).find(".container__text--project").addClass("hide");
+  $(this).find("video").removeClass("blur");
+
 });

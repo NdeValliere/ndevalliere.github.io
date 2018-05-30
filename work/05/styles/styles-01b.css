@@ -1,0 +1,25 @@
+.container__scroll {
+  opacity: 0;
+  transition: 1s;
+}
+
+.border--load {
+  background: black;
+  position: absolute;
+  opacity: 1;
+  transition: 2.5s;
+}
+
+.border--load-X {
+  height: 1px;
+  left: 0;
+  top: 50vh;
+  width: 0vw;
+}
+
+.border--load-Y {
+  height: 0vh;
+  left: 50vw;
+  top: 0;
+  width: 1px;
+}

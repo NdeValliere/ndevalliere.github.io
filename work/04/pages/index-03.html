@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Nathalie de Vallière</title>
+  <meta name="author" content="Nathalie de Vallière">
+  <link rel="stylesheet" type="text/css" href="https://rawgit.com/NdeValliere/ndevalliere.github.io/master/global/assets/fonts/fonts.css">
+  <link rel="stylesheet" href="work/04/styles/styles-02a.css">
+  <link rel="stylesheet" href="work/04/styles/styles-02b.css">
+</head>
+<body>
+
+  <section class="container__scroll container__scroll--TL container__white" id="about">
+    <div class="container__text container__text--about">
+      <p class="text text--about">Hi,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I'm Nathalie de Valliere, a fresh graduate from Central Saint Martins with a Bachelor Degree (Hons) in <a target="_blank" href="http://www.arts.ac.uk/csm/courses/undergraduate/ba-hons-graphic-communication-design/">Graphic <span class="fontChange">+</span> Communication Design</a>.</p>
+      <p class="text text--about">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Currently working on the <a target="_blank" href="https://2018csmgraphicdesign.github.io/">website</a> for my year's degree show and I'm looking for people to work with starting September. I have many interests and am a quick study. Recently built a <a target="_blank" href="https://ndevalliere.github.io/play/rhonda/pages/index-00.html">drawing machine</a> for my dissertation.</p>
+      <p class="text text--about">&nbsp;</p>
+      <p class="text text--about"><a href="mailto:nathalie.devalliere@gmail.com">Email</a></p>
+      <p class="text text--about"><a target="_blank" href="work/cases/ndevalliere-resume-08.pdf">Resume</a></p>
+      <p class="text text--about">&nbsp;</p>
+      <p class="text text--about text--about-small">Versions of this site <a target="_blank" href="http://ndevalliere.com/archive">1.0</a> <span class="lines">|</span> <a target="_blank" href="http://ndevalliere.com/">2.0</a> <span class="lines">|</span> <a target="_blank" href="https://ndevalliere.github.io/work/01/pages/index-00.html">3.0</a> <span class="lines">|</span> <a target="_blank" href="https://ndevalliere.github.io/work/03/pages/index-01.html">4.0</a></p>
+      <!-- <p class="text text--about"><a href="https://www.are.na/nathalie-de-valliere">Are.na</a></p> -->
+      <!-- <p class="text text--about"><a class="white" href="tel:+447400451996">Phone</a></p> -->
+    </div>
+  </section>
+  <section class="container__scroll container__scroll--TR container__white">
+    <div class="container__video container__video--zero">
+      <video class="center" id="zero" poster="work/04/assets/loopZero.png" preload="auto" muted="muted" webkit-playsinline="" loop>
+        <source type="video/mp4" src="work/04/assets/loopZero.mp4">
+      </video>
+      <div class="container__text container__text--project hide">
+        <p class="text text--project text--project"><a target="_blank" href="http://zr0.co.uk/">Publishing platform</a> for digital and physical magazine</p>
+        <p class="text text--project text--project">Website 1440x900</p>
+      </div>
+    </div>
+  </section>
+  <section class="container__scroll container__scroll--BL container__black">
+    <div class="container__video container__video--posters">
+      <video class="center" id="posters" poster="work/04/assets/loopPoster.png" preload="auto" muted="muted" webkit-playsinline="" loop>
+        <source type="video/mp4" src="work/04/assets/loopPoster.mp4">
+      </video>
+      <div class="container__text container__text--project white hide">
+        <p class="text text--project text--project text--project-l">Pitch for brief by <a target="_blank" class="white" href="http://www.arts.ac.uk/csm/courses/undergraduate/ba-performance-design-and-practice/">UAL</a> and <a target="_blank" class="white" href="http://www.londonstudiocentre.org/">London Studio Centre</a></p>
+        <p class="text text--project text--project text--project-l">Digital posters 1920x1080</p>
+      </div>
+    </div>
+  </section>
+  <section class="container__scroll container__scroll--BR container__black">
+    <div class="container__video container__video--comic">
+      <video class="center blur" id="comic" poster="work/04/assets/loopComic.png" preload="auto" muted="muted" webkit-playsinline="" loop>
+        <source type="video/mp4" src="work/04/assets/loopComic.mp4">
+      </video>
+      <div class="container__text container__text--project white hide">
+        <p class="text text--project text--project">Explorable digital city, user generated content for <a target="_blank" class="white" href="https://ndevalliere.github.io/play/rhonda/pages/index-00.html">drawing machine</a></p>
+        <p class="text text--project text--project">Game design 2560x1600</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="border--load border--load-X"></section>
+  <section class="border--load border--load-Y"></section>
+
+  <script>
+  //trigger for 2nd script
+  var loaded = false;
+
+      document.addEventListener("DOMContentLoaded", function(event) {
+        var borderX = document.getElementsByClassName("border--load-X"),
+            borderY = document.getElementsByClassName("border--load-Y");
+
+            borderX[0].style.width = "100vw";
+            borderY[0].style.height = "100vh";
+
+            setTimeout(function () {
+              borderX[0].style.transition = "5s";
+              borderY[0].style.transition = "5s";
+              borderX[0].style.top = "100vh";
+              borderY[0].style.left = "100vw";
+              loaded = true;
+              setTimeout(function () {
+                console.log("loaded: " + loaded);
+                borderX[0].style.opacity = "0";
+                borderY[0].style.opacity = "0";
+                fadeIn();
+              }, 5000);
+          }, 2500);
+      });
+  </script>
+
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="work/04/scripts/scripts-02.js"></script>
+</body>
+</html>
