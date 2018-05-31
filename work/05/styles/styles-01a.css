@@ -21,7 +21,8 @@ i::selection {
 }
 
 body {
-  cursor: col-resize;
+  /* cursor: col-resize; */
+  cursor: url(../assets/cursorMove-01.png), move;
   font-family: "Arial", sans-serif;
   font-weight: 400;
   height: 100vh;
