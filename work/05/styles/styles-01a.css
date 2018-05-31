@@ -83,6 +83,12 @@ a:hover {
   border-right: 1px solid black;
 }
 
+@media only screen and (max-width: 500px) {
+  .container__scroll--TL {
+    border-right: none;
+  }
+}
+
 .container__scroll--TR {
   top: 0;
   right: 0;
