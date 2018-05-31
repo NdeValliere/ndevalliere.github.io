@@ -61,6 +61,7 @@ a {
 a:hover {
   background: rgba(255,255,255,0);
   color: black;
+  cursor: url(../assets/cursorPointer-00.png), pointer;
 }
 
 .container__scroll {
@@ -146,7 +147,7 @@ a:hover {
 
 .transition {
   transition: 0.75s;
-  cursor: pointer;
+  cursor: url(../assets/cursorPointer-00.png), pointer;
 }
 
 .hide {
