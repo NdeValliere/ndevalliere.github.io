@@ -20,6 +20,10 @@ i::selection {
   opacity: 0;
 }
 
+html {
+  cursor: url(../assets/cursorDefault-00.png), default;
+}
+
 body {
   /* cursor: col-resize; */
   cursor: url(../assets/cursorMove-01.png), move;
@@ -65,6 +69,7 @@ a:hover {
 }
 
 .container__scroll {
+  cursor: url(../assets/cursorMove-01.png), move;
   position: absolute;
   overflow: hidden;
   opacity: 0;
@@ -159,7 +164,7 @@ a:hover {
 }
 
 .blur {
-  cursor: default;
+  cursor: url(../assets/cursorDefault-00.png), default;
   filter: blur(5px);
   /* opacity: 0.5; */
   /* -webkit-transform: translate3d(0, 0, 0); */

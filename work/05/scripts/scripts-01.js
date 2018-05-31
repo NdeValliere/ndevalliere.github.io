@@ -157,12 +157,10 @@ $(document).ready(function() {
                        });
 
    if (IW < 500) {
-     $(".container__text--about").css({"width": IW * 0.9 + "px",
-                                       "margin": IW*0.05 + "px",
-                                       "margin-right": IW * 0.1});
-     $("#about .text").css({"font-size": IW*0.055 + "px",
-                            "margin": IW*0.005 + "px 0"});
-     $(".text--about-small").css({"font-size": IW*0.0225 + "px"});
+     $(".container__text--about").css({"width": IW + "px"});
+     $("#about .text").css({"font-size": IW*0.06 + "px",
+                            "letter-spacing": -0.75 + "px",
+                            "line-height": 1.2});
    }
 });
 
