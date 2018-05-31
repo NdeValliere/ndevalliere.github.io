@@ -158,7 +158,7 @@ $(document).ready(function() {
 
    if (IW < 500) {
      $(".container__text--about").css({"width": IW + "px"});
-     $("#about .text").css({"font-size": IW*0.06 + "px",
+     $("#about .text").css({"font-size": IW*0.059 + "px",
                             "letter-spacing": -0.75 + "px",
                             "line-height": 1.2});
    }
