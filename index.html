@@ -6,8 +6,8 @@
   <title>Nathalie de Vallière</title>
   <meta name="author" content="Nathalie de Vallière">
   <link rel="stylesheet" type="text/css" href="https://rawgit.com/NdeValliere/ndevalliere.github.io/master/global/assets/fonts/fonts.css">
-  <link rel="stylesheet" href="work/05/styles/styles-01a.css">
-  <link rel="stylesheet" href="work/05/styles/styles-01b.css">
+  <link rel="stylesheet" href="work/05/styles/styles-00.css">
+  <link rel="stylesheet" href="work/05/styles/styles-01.css">
 </head>
 <body>
 
@@ -59,34 +59,25 @@
   <section class="border--load border--load-Y"></section>
 
   <script>
-  //trigger for 2nd script
-  var loaded = false;
-      document.addEventListener("DOMContentLoaded", function(event) {
-        var borderX = document.getElementsByClassName("border--load-X"),
-            borderY = document.getElementsByClassName("border--load-Y");
+    //trigger for 2nd script
+    var loaded = false,
+        widthLoaded = false,
+        heightLoaded = false;
 
-            borderX[0].style.width = "100vw";
-            borderY[0].style.height = "100vh";
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var borderX = document.getElementsByClassName("border--load-X");
+
+          borderX[0].style.width = "100vw";
+
+          setTimeout(function () {
+            borderX[0].style.top = "100vh";
+            loaded = true;
 
             setTimeout(function () {
-              borderX[0].style.transition = "5s";
-              borderY[0].style.transition = "5s";
-              borderX[0].style.top = "100vh";
-              // borderX[0].style.left = "100vw";
-              borderY[0].style.left = "100vw";
-              // borderY[0].style.top = "100vh";
-
-              loaded = true;
-              setTimeout(function () {
-                console.log("loaded: " + loaded);
-                // borderX[0].style.opacity = "0";
-                borderX[0].style.width = "0";
-                borderX[0].style.height = "0";
-                // borderY[0].style.opacity = "0";
-                borderY[0].style.width = "0";
-                borderY[0].style.height = "0";
-                fadeIn();
-              }, 5000);
+              console.log("loaded: " + loaded);
+              borderX[0].style.width = "0";
+              fadeIn();
+            }, 2500);
           }, 2500);
       });
   </script>

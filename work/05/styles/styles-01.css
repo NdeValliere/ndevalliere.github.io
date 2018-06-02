@@ -181,3 +181,14 @@ a:hover {
 .blurSmall {
   filter: blur(2px);
 }
+
+/*click and colour*/
+.clickColour {
+  background: blue;
+  border-radius: 5vw;
+  height: 5vw;
+  mix-blend-mode: lighten;
+  position: absolute;
+  width: 5vw;
+  z-index: 10;
+}

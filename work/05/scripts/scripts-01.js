@@ -8,7 +8,10 @@ var mouseDown = false,
     clickCount = 0,
     transitionEnd = false,
     mXold = 0,
-    mYold = 0;
+    mYold = 0,
+        i = 0,
+     flag = false,
+     flagEvent = false;
 
 document.body.onmousedown = function() {
   mouseDown = true;
@@ -25,6 +28,50 @@ document.body.onmouseup = function() {
 //   mouseDown = false;
 // });
 
+//adding dots
+function add() {
+  if(!flag) {
+    console.log(i++);
+    flag = true;
+  }
+}
+function addColour(x, y) {
+  add();
+  if(flag) {
+    flag = false;
+    $("body").append("<div class='clickColour clickColour--" + i + "'></div>");
+    $(".clickColour--" + i).css({"top": y,
+                                 "left": x });
+    if (i%2 == 0) {
+      $(".clickColour--" + i).css({"background": "blue"});
+    }
+    if (i%3 == 0) {
+      $(".clickColour--" + i).css({"background": "yellow"});
+    }
+    if (i%5 == 0) {
+      $(".clickColour--" + i).css({"background": "green"});
+    }
+    if (i%7 == 0) {
+      $(".clickColour--" + i).css({"background": "red"});
+    }
+  }
+}
+
+$(window).on("click", function(event) {
+  var mXnew = event.pageX,
+      mYnew = event.pageY;
+
+      mXold = mXnew;
+      mYold = mYnew;
+
+  console.log("1: " + mXold + " | " + mYold);
+
+  if ((mXold != 0) && (mYold != 0)) {
+    addColour(mXold, mYold);
+    console.log("2: " + mXold + " | " + mYold);
+  }
+});
+
 //removed touchstart from ""
 $(window).on("mousemove resize", function(event) {
 	var mX = event.pageX,
@@ -32,12 +79,6 @@ $(window).on("mousemove resize", function(event) {
       IH = window.innerHeight,
   		IW = window.innerWidth,
       items = $("a");
-
-  $(window).on("click", function () {
-    mXold = mX;
-    mYold = mY;
-  });
-
 
   if(mouseDown){
     $(".container__scroll").css({"transition": "0s"});
@@ -166,7 +207,8 @@ $(document).ready(function() {
 
 function fadeIn () {
   if (loaded) {
-    $(".container__scroll").css({"opacity": 1});
+    $(".container__scroll").css({"opacity": 1,
+                                 "margin-top": 0});
   }
 }
 
