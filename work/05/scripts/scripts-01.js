@@ -40,8 +40,8 @@ function addColour(x, y) {
   if(flag) {
     flag = false;
     $("body").append("<div class='clickColour clickColour--" + i + "'></div>");
-    $(".clickColour--" + i).css({"top": y,
-                                 "left": x });
+    $(".clickColour--" + i).css({"top": y - $(window).innerWidth()*0.025,
+                                 "left": x - $(window).innerWidth()*0.025 });
     if (i%2 == 0) {
       $(".clickColour--" + i).css({"background": "blue"});
     }
