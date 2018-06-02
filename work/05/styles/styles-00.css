@@ -12,15 +12,8 @@
 }
 
 .border--load-X {
-  height: 100vw;
+  height: 100vh;
   left: 0;
   top: 0;
   width: 0vw;
-}
-
-.border--load-Y {
-  height: 0vh;
-  left: 50vw;
-  top: 0;
-  width: 100vw;
 }
