@@ -5,8 +5,9 @@
 
 .container__scroll {
   margin-top: -0.3vw;
+  filter: blur(25px);
   opacity: 0;
-  transition: 1s;
+  transition: 3s;
 }
 
 .border--load {

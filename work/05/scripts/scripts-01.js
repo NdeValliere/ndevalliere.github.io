@@ -208,7 +208,8 @@ $(document).ready(function() {
 function fadeIn () {
   if (loaded) {
     $(".container__scroll").css({"opacity": 1,
-                                 "margin-top": 0});
+                                 "margin-top": 0,
+                                 "filter": "blur(0px)"});
   }
 }
 

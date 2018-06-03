@@ -67,7 +67,7 @@ a:hover {
   cursor: url(../assets/cursorMove-01.png), move;
   position: absolute;
   overflow: hidden;
-  opacity: 0;
+  /* opacity: 1; */
   /* overflow-y: scroll; */
   transition: 0.25s;
 }
