@@ -1,0 +1,103 @@
+body {
+  font-family: "Arial", sans-serif;
+  font-size: 6vh;
+  text-rendering: geometricPrecision;
+}
+
+/* links */
+a {
+  background: none !important;
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+span {
+  background: white;
+  border-radius: 3.5vh;
+  border: 0.25vh solid black;
+  display: inline-block;
+  height: 2.5vh;
+  margin: 0 0.75vh 0 0;
+  overflow: hidden;
+  position: relative;
+  vertical-align: 2vh;
+  width: 2.5vh;
+}
+
+.inside {
+  border: none;
+  height: 1.85vh;
+  left: 0;
+  margin: 0;
+  position: absolute;
+  top:0;
+  vertical-align: 1.85vh;
+  width: 1.85vh;
+}
+
+/* spacing+layout */
+p:nth-child(1) {
+  margin: 7.5vh 0 0 0;
+}
+p:nth-child(2) {
+  margin: -2vh 0 5vh 7.5vh;
+}
+p:nth-child(3) {
+  margin: 0 0 0 19vh;
+}
+p:nth-child(4) {
+  margin: 0 0 0 19vh;
+}
+p:nth-child(5) {
+  margin: 0 0 0 70vh;
+}
+p:nth-child(6) {
+  margin: 7.5vh 0 0 7.5vh;
+}
+p:nth-child(7) {
+  margin: 0 0 0 7.5vh;
+}
+p:nth-child(8) {
+  margin: -1vh 0 0 42.5vh;
+}
+p:nth-child(9) {
+  margin: 7.5vh 0 0 42.5vh;
+}
+p:nth-child(10) {
+  margin: 0 0 0 42.5vh;
+}
+p:nth-child(11) {
+  margin: 7.5vh 0 0 42.5vh;
+}
+p:nth-child(12) {
+  margin: -1vh 0 0 117.5vh;
+}
+p:nth-child(13) {
+  margin: 7vh 0 0 7.5vh;
+}
+p:nth-child(14) {
+  margin: 0 0 0 7.5vh;
+}
+p:nth-child(15) {
+  margin: 7.5vh 0 0 7.5vh;
+}
+p:nth-child(16) {
+  margin: 7.5vh 0 10vh 92.5vw;
+}
+
+.black {
+  background: black;
+  color: black;
+}
+.color--1 {
+  background: blue;
+  color: blue;
+}
+.color--2 {
+  background: red;
+  color: red;
+}
+.color--3 {
+  background: yellow;
+  color: yellow;
+}

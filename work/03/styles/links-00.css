@@ -79,6 +79,7 @@
 }
 
 .tooltip .tooltiptext {
+		font-family: sans-serif;
     visibility: hidden;
     background-color: black;
     color: #fff;

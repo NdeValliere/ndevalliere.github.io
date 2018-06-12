@@ -545,6 +545,7 @@ a.page__link--iframe:hover {
 }
 
 .tooltip .tooltiptext {
+		font-family: sans-serif;
     visibility: hidden;
 		width: 50%;
     max-width: 660px;
