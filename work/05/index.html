@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Nathalie de Vallière</title>
+  <meta name="author" content="Nathalie de Vallière">
+  <link rel="stylesheet" type="text/css" href="https://rawgit.com/NdeValliere/ndevalliere.github.io/master/global/assets/fonts/fonts.css">
+  <link rel="stylesheet" href="styles/styles-00.css">
+  <link rel="stylesheet" href="styles/styles-01.css">
+</head>
+<body>
+
+  <section class="container__scroll container__scroll--TL container__white" id="about">
+    <div class="container__text container__text--about">
+      <p class="text text--about"><a href="#">H<span class="lowercase">i</span></a><span class="hoverblur">,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I'm Nathalie de Vallière, a fresh graduate from Central Saint Martins with a Bachelor Degree in</span> <a target="_blank" href="http://www.arts.ac.uk/csm/courses/undergraduate/ba-hons-graphic-communication-design/">Graphic Design</a><span class="hoverblur">.</span></p>
+      <p class="text text--about">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hoverblur">Currently working on the</span> <a target="_blank" href="http://2018.csmgraphicdesign.com/">website</a> <span class="hoverblur">for my year's degree show and I'm looking for people to work with starting September. I have many interests and am a quick study. Recently built a</span> <a target="_blank" href="https://vimeo.com/246483691">drawing machine</a> <span class="hoverblur">for my dissertation.</span></p>
+      <p class="text text--about">&nbsp;</p>
+      <p class="text text--about"><a href="mailto:nathalie.devalliere@gmail.com">Email</a></p>
+      <p class="text text--about"><a target="_blank" href="work/cases/ndevalliere-resume-08.pdf">Resume</a></p>
+      <p class="text text--about">&nbsp;</p>
+      <p class="text text--about"><span class="hoverblur">Versions of this site</span> <a target="_blank" href="http://ndevalliere.com/archive">1.0</a> <span class="hoverblur">|</span> <a target="_blank" href="http://ndevalliere.com/">2.0</a> <span class="hoverblur">|</span> <a target="_blank" href="https://ndevalliere.github.io/work/01/pages/index-00.html">3.0</a> <span class="hoverblur">|</span> <a target="_blank" href="https://ndevalliere.github.io/work/03/pages/index-01.html">4.0</a></p>
+      <!-- <p class="text text--about"><a href="https://www.are.na/nathalie-de-valliere">Are.na</a></p> -->
+      <!-- <p class="text text--about"><a class="white" href="tel:+447400451996">Phone</a></p> -->
+    </div>
+  </section>
+  <section class="container__scroll container__scroll--TR container__white">
+    <div class="container__video container__video--zero">
+      <video class="center" id="zero" poster="../04/assets/loopZero.png" preload="auto" muted="muted" webkit-playsinline="" loop>
+        <source type="video/mp4" src="../04/assets/loopZero.mp4">
+      </video>
+      <div class="container__text container__text--project hide">
+        <p class="text text--project text--project"><a target="_blank" href="http://zr0.co.uk/">Publishing platform</a></p>
+      </div>
+    </div>
+  </section>
+  <section class="container__scroll container__scroll--BL container__black">
+    <div class="container__video container__video--posters">
+      <video class="center" id="posters" poster="../04/assets/loopPoster.png" preload="auto" muted="muted" webkit-playsinline="" loop>
+        <source type="video/mp4" src="../04/assets/loopPoster.mp4">
+      </video>
+      <div class="container__text container__text--project white hide">
+        <p class="text text--project text--project text--project-l"><a target="_blank" class="white" href="../04/assets/loopPoster.mp4">Digital Posters</a></p>
+      </div>
+    </div>
+  </section>
+  <section class="container__scroll container__scroll--BR container__black">
+    <div class="container__video container__video--comic">
+      <video class="center blur" id="comic" poster="../04/assets/loopComic.png" preload="auto" muted="muted" webkit-playsinline="" loop>
+        <source type="video/mp4" src="../04/assets/loopComic.mp4">
+      </video>
+      <div class="container__text container__text--project white hide">
+        <p class="text text--project text--project"><a target="_blank" class="white" href="../04/assets/loopComic.mp4">Game design</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="border--load border--load-X"></section>
+  <section class="border--load border--load-Y"></section>
+
+  <script>
+    //trigger for 2nd script
+    var loaded = false,
+        widthLoaded = false,
+        heightLoaded = false;
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var borderX = document.getElementsByClassName("border--load-X");
+
+          borderX[0].style.width = "100vw";
+
+          setTimeout(function () {
+            borderX[0].style.top = "100vh";
+            loaded = true;
+
+            setTimeout(function () {
+              console.log("loaded: " + loaded);
+              borderX[0].style.width = "0";
+              fadeIn();
+            }, 2500);
+          }, 2500);
+      });
+  </script>
+
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="scripts/scripts-01.js"></script>
+</body>
+</html>
