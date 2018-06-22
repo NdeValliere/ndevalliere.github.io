@@ -61,6 +61,7 @@ a:hover {
 
 .blur {
   filter: blur(50px);
+  opacity: 1;
 }
 
 .transition {
