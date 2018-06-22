@@ -1,0 +1,68 @@
+body {
+  background: #fcfcfc;
+  font-family: "Arial", sans-serif;
+  text-rendering: geometricPrecision;
+}
+
+/* spacing+layout */
+.container--about {}
+
+.section {
+  margin: 5vh 0;
+}
+
+/* row */
+.row {
+  display: flex;
+}
+
+.left {
+  flex: 47.5%;
+}
+
+.right {
+  flex: 52.5%;
+}
+
+.spacer--inline {
+  display: inline-block;
+  width: 10vw;
+}
+
+/* type */
+p {
+  font-size: 3.125vw;
+  text-align: justify;
+  line-height: 1.25;
+  transition: 0.25s;
+}
+
+.r {
+  text-align: right;
+}
+
+/* links */
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+}
+
+.background {
+  display: inline-block;
+  /* filter: blur(3.5px); */
+  height: 2vw;
+  position: absolute;
+  z-index: -1;
+}
+
+.blur {
+  filter: blur(50px);
+}
+
+.transition {
+  transition: 1s;
+}

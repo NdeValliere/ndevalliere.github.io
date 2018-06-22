@@ -44,22 +44,19 @@ a span {
 p {
   line-height: 1.25;
   transition: 0.25s;
+  /* width: 67.5vw; */
 }
 
 .section {
-  margin: 5vh 0;
+  margin: 2.5vw 0;
 }
-
-/* .section p {
-  transition: 10s;
-} */
 
 .right {
   text-align: right;
 }
 
 .blur {
-  opacity: 0.9;
+  opacity: 0.75;
   /* color: rgb(100,100,100); */
   text-rendering: initial;
 }
