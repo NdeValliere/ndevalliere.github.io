@@ -1,4 +1,8 @@
+// var colour = ['#d6ffeb', '#ffe8d6', '#d7e9ff', '#ffe2e2'],
 var colour = ['#d6ffeb', '#ffe8d6', '#d7e9ff', '#ffe2e2'],
+
+// var colour = ['rgb(100,100,100)', 'rgb(150,150,150)', 'rgb(200,200,200)', 'rgb(50,50,50)'],
+
          a = $('a');
 
 $(window).on('load', function() {
