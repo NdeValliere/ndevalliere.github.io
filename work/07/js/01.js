@@ -22,9 +22,11 @@ $(window).on('load', function() {
 
 a.mouseover(function(){
   $(this).find('.background').addClass('blur transition');
+  $(this).css({'color': $(this).find('.background').css('background-color')});
 });
 a.mouseout(function(){
   $(this).find('.background').removeClass('blur');
+  $(this).css({'color': 'black'});
   setTimeout(function () {
     $(this).find('.background').removeClass('transition');
   }, 1000);

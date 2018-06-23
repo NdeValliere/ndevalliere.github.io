@@ -50,10 +50,6 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  color: #b9b9b9;
-}
-
 .background {
   display: inline-block;
   opacity: 1;
