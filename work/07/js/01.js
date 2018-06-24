@@ -41,6 +41,17 @@ $(window).on('mousemove', function(event) {
       h = $(window).height();
 });
 
+// $('.row').mousemove(function(e){
+//   console.log(mouseX);
+//
+//     var that = $(this);
+//     var mouseX = e.pageX - that.offset().left - 100;
+//     var containerW = that.width();
+//     var scrollW = that[0].scrollWidth - containerW;
+//     var newW = (mouseX/(containerW-200))*scrollW;
+//     that.scrollLeft(newW);
+// });
+
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }

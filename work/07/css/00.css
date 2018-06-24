@@ -4,6 +4,12 @@ body {
   text-rendering: geometricPrecision;
 }
 
+video,
+img {
+  width: 90vw;
+  height: auto;
+}
+
 /* spacing+layout */
 .container--about {
   width: 90vw;
@@ -14,9 +20,21 @@ body {
   margin: 5vh 0 10vh 0;
 }
 
+.fullGrid {
+  overflow-x: scroll;
+  position: fixed;
+  top: 2.5vw;
+}
+
+.center {
+  margin: auto;
+  position: relative;
+}
+
 /* row */
 .row {
   display: flex;
+  width: 100vw;
 }
 
 .left {
@@ -25,6 +43,17 @@ body {
 
 .right {
   flex: 52.5%;
+}
+
+.col {
+  /* width: 100vw;
+  height: auto; */
+  margin-left: 2.5vw;
+}
+
+.col:last-child {
+  margin: 0;
+  padding: 0 2.5vw;
 }
 
 .spacer--inline {
