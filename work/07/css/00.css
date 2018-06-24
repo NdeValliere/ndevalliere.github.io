@@ -34,7 +34,7 @@ img {
 /* row */
 .row {
   display: flex;
-  width: 100vw;
+  /* width: 100vw; */
 }
 
 .left {
@@ -48,13 +48,13 @@ img {
 .col {
   /* width: 100vw;
   height: auto; */
-  margin-left: 2.5vw;
+  /* margin-left: 2.5vw; */
 }
 
-.col:last-child {
+/* .col:last-child {
   margin: 0;
   padding: 0 2.5vw;
-}
+} */
 
 .spacer--inline {
   display: inline-block;
