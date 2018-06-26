@@ -1,0 +1,37 @@
+/* grid */
+video,
+img {
+  height: 40vh;
+  width: auto;
+  margin: 0.25vw;
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    /* background: #FF0000; */
+}
+
+.fullGrid {
+  height: auto;
+  overflow: scroll;
+  width: auto;
+}
+
+.row--scroll {
+  display: inline-block;
+  /* offset */
+  height: 102vh;
+  overflow: scroll;
+  width: 100vw;
+}
+
+.col {
+  width: 200vw;
+  overflow: scroll;
+  /* offset */
+  margin-bottom: -2vh;
+}
