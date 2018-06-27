@@ -1,11 +1,4 @@
 /* grid */
-video,
-img {
-  height: 40vh;
-  width: auto;
-  margin: 0.25vw;
-}
-
 ::-webkit-scrollbar {
     width: 0px;  /* remove scrollbar space */
     background: transparent;  /* optional: just make scrollbar invisible */
@@ -31,7 +24,49 @@ img {
 
 .col {
   width: 200vw;
+  height: auto;
   overflow: scroll;
   /* offset */
   margin-bottom: -2vh;
+}
+
+/* zero img grid */
+video,
+img {
+  max-height: 100vh;
+  width: auto;
+  margin: 0.25vw;
+}
+
+.col--1 img:first-child {
+  transform: rotate(-90deg);
+  height: 41.25vh;
+}
+.col--1 img:nth-child(2) {
+  height: 18vh;
+}
+.col--1 img:nth-child(3) {
+  height: 35vh;
+}
+.col--1 img:nth-child(4) {
+  height: 14vh;
+}
+.col--1 img:nth-child(5) {
+  height: 42.5vh;
+}
+.col--2 img:nth-child(1) {
+  height: 52.5vh;
+}
+.col--2 img:nth-child(2) {
+  height: 17.5vh;
+}
+.col--2 img:nth-child(3) {
+  height: 35vh;
+}
+.col--3 img:nth-child(1) {
+  height: 30vh;
+}
+.col--3 img:nth-child(2) {
+  transform: rotate(-90deg);
+  height: 30vh;
 }
