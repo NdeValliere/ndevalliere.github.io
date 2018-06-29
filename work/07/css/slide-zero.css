@@ -20,10 +20,11 @@
   height: 102vh;
   overflow: scroll;
   width: 100vw;
+  padding: 0 25vh;
 }
 
 .col {
-  width: 200vw;
+  width: 125vw;
   height: auto;
   overflow: scroll;
   /* offset */
@@ -39,7 +40,6 @@ img {
 }
 
 .col--1 img:first-child {
-  transform: rotate(-90deg);
   height: 41.25vh;
 }
 .col--1 img:nth-child(2) {
@@ -56,6 +56,7 @@ img {
 }
 .col--2 img:nth-child(1) {
   height: 52.5vh;
+  margin-left: 10vw;
 }
 .col--2 img:nth-child(2) {
   height: 17.5vh;
@@ -64,9 +65,8 @@ img {
   height: 35vh;
 }
 .col--3 img:nth-child(1) {
-  height: 30vh;
+  height: 60vh;
 }
 .col--3 img:nth-child(2) {
-  transform: rotate(-90deg);
   height: 30vh;
 }

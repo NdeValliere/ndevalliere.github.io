@@ -14,10 +14,11 @@ $('.row').mousemove(function(e){
     // that.scrollLeft(newW);
     // that.scrollTop(newH);
     // console.log(that + ' ' + newW);
-    
-    that.animate({scrollLeft: newW,
+
+    that.animate({
+                  scrollLeft: newW,
                   scrollTop: newH
-    }, 50);
+    }, 1);
 });
 
 function getRandomInt(min, max) {

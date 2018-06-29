@@ -9,23 +9,23 @@ $("#home").click(function () {
 	});
 });
 
-// $("#sketches").click(function () {
-// 	$(".process__bar").animate({
-// 			width: window.innerWidth*3
-// 	}, 2000, function() {
-// 		//thing to do when you animation is finished e.g.
-// 		location.href = "index-01.html#sketches";
-// 	});
-// });
+$("#sketches").click(function () {
+	$(".process__bar").animate({
+			width: window.innerWidth*3
+	}, 2000, function() {
+		//thing to do when you animation is finished e.g.
+		location.href = "https://www.are.na/nathalie-de-valliere/sketchbook-1527505504";
+	});
+});
 
-// $("#workco").click(function () {
-//     $(".process__bar").animate({
-// 				width: window.innerWidth*3
-//     }, 2000, function() {
-//       //thing to do when you animation is finished e.g.
-//       location.href = "workco-01.html";
-//     });
-// });
+$("#workco").click(function () {
+    $(".process__bar").animate({
+				width: window.innerWidth*3
+    }, 2000, function() {
+      //thing to do when you animation is finished e.g.
+      location.href = "workco-01.html";
+    });
+});
 
 $("#ia").click(function () {
     $(".process__bar").animate({
