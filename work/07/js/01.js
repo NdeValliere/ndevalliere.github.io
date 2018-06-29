@@ -1,6 +1,13 @@
 // var colour = ['#d6ffeb', '#ffe8d6', '#d7e9ff', '#ffe2e2'],
 var colour = ['#ececec', '#b9b9b9', '#c6c6c4', '#d7d7d6'],
-         a = $('a');
+         a = $('a'),
+         Date [] dates = {
+            getDateFromString("01/09/2016"),
+            getDateFromString("01/01/2017"),
+            getDateFromString("01/09/2017"),
+            getDateFromString("01/01/2018"),
+            getDateFromString("01/04/2018")
+         };
 
 $(window).on('load', function() {
   var count = 0;
