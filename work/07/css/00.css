@@ -10,8 +10,9 @@ body {
 
 /* spacing+layout */
 .container--about {
-  width: 87.5vw;
   margin: 12.5vh auto;
+  /* position: fixed; */
+  width: 87.5vw;
 }
 
 .section {

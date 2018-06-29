@@ -19,6 +19,8 @@ $('.row').mousemove(function(e){
                   scrollLeft: newW,
                   scrollTop: newH
     }, 1);
+
+
 });
 
 function getRandomInt(min, max) {
