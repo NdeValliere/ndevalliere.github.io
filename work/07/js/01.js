@@ -1,13 +1,12 @@
 // var colour = ['#d6ffeb', '#ffe8d6', '#d7e9ff', '#ffe2e2'],
 var colour = ['#ececec', '#b9b9b9', '#c6c6c4', '#d7d7d6'],
-         a = $('a'),
-         Date [] dates = {
-            getDateFromString("01/09/2016"),
-            getDateFromString("01/01/2017"),
-            getDateFromString("01/09/2017"),
-            getDateFromString("01/01/2018"),
-            getDateFromString("01/04/2018")
-         };
+         a = $('a');
+         d1 = new Date (2016,09),
+         d2 = new Date (2017,01),
+         d3 = new Date (2017,09),
+         d4 = new Date (2018,01),
+         d5 = new Date (2018,04),
+         dates = [d1,d2,d3,d4,d5];
 
 $(window).on('load', function() {
   var count = 0;
@@ -18,8 +17,13 @@ $(window).on('load', function() {
           widthA = $(this).innerWidth();
 
       count ++;
+      // if (count > 9) {
+      //   $(this).append('<small id="small--' + count + '">' + dates[count-10].toDateString() + '</small>');
+      // }
 
-      $(this).append('<small id="small--' + count + '">' + count + '</small>');
+      // else {
+        $(this).append('<small id="small--' + count + '">' + count + '</small>');
+      // }
 
       $(this).find('small').css({'color': colour[i] });
       $(this).find('.background').css({'width': widthA,
