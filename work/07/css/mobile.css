@@ -1,0 +1,69 @@
+/* mobile styles from 645px downwards */
+@media only screen and (max-width: 645px)  {
+  * {
+    overflow-x: hidden !important;
+  }
+
+  .section--sub,
+  .spacer--w,
+  p {
+    line-height: 1.75;
+  }
+
+  p {
+    font-size: 3.5vh;
+  }
+
+  #new-line:nth-child(2) {
+    display: none;
+  }
+
+  small {
+    font-size: 2vw;
+    margin-top: -0.5vw;
+  }
+
+  .small--date {
+    margin-left: -8.75vw;
+    margin-top: -0.75vw;
+  }
+
+  .container--about {
+    margin: 12.5vw auto;
+    width: 95vw;
+  }
+
+  .row {
+    flex-wrap: wrap
+  }
+
+  .left,
+  .right {
+    flex: 100%;
+  }
+
+  .left {
+    margin-bottom: 7.75vw;
+  }
+
+  .spacer,
+  .spacer--w {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+  }
+
+  .spacer--inline {
+    visibility: visible;
+    position: relative;
+    width: 47.5vw;
+  }
+
+  .shift {
+    display: none;
+  }
+
+  .section:first-child {
+    margin-top: 0;
+  }
+}

@@ -1,3 +1,5 @@
+var toggleSlide = false;
+
 $('.row').mousemove(function(e){
     var that = $(this);
     var mouseX = e.pageX - that.offset().left - 100;
@@ -26,3 +28,13 @@ $('.row').mousemove(function(e){
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+$('a.slide').click(function( event ) {
+  event.preventDefault();
+  var slideID = $(this).attr('id');
+
+  console.log('clicking');
+
+  $('.' + slideID).removeClass('hidden');
+  // toggleSlide = true;
+});

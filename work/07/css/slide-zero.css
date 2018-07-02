@@ -8,9 +8,15 @@
     /* background: #FF0000; */
 }
 
+.hidden {
+  display: none;
+}
+
 .fullGrid {
   height: auto;
   overflow: scroll;
+  position: absolute;
+  top: 0;
   width: auto;
 }
 
