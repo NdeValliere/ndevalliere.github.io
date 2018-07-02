@@ -1,6 +1,7 @@
 var a = $('a'),
     w = $(window).innerWidth(),
-    isMobile = false;
+    isMobile = false,
+    click = false;
 
 
 $(document).ready(loadingAnimation);
@@ -60,9 +61,21 @@ a.mouseover(function(){
 a.mouseout(function(){
   $(this).find('.background--hover').css({
     'filter': 'blur(' + 100 + 'px)',
-    'opacity': '0.35'
+    'opacity': '0.25'
     // 'height': 0
   });
+});
+
+$(window).on("mousemove", function(event) {
+	var mX = event.pageX,
+			mY = event.pageY;
+
+  if ($('.previewImg').length > 0) {
+      $('.previewImg').css({
+        'top': mY - $('.previewImg').innerHeight()/2,
+        'left': mX - $('.previewImg').innerWidth()/2
+      });
+  }
 });
 
 function loadingAnimation() {
@@ -83,15 +96,48 @@ function position(){
    $('.background--hover').each(function(i){
        var blur = $(this);
        setTimeout(function(){
-       blur.animate({opacity: '0', filter: 'blur(150px)'},
+       blur.animate({opacity: '0', filter: 'blur(100px)'},
                        {duration: 1000, queue: false})
                        // extra animation with delay
-                       .delay(1500).animate({opacity: 0.35}, {duration: 100});
+                       .delay(1500).animate({opacity: 0.25}, {duration: 100});
        },i*100);
  });
 
  $('p').css({'transition': '0'});
 }
+
+a.click(function(event) {
+  // $('.previewImg').resizable();
+  var imgType = $(this).attr('id');
+
+  if (!click) {
+    setTimeout(function () {
+      click = true;
+    }, 1000);
+
+    if (imgType == 'zero') {
+      event.preventDefault();
+      $('body').append('<img class="previewImg" src="' + $(this).attr('href') + '"/>');
+    }
+
+    if (imgType == 'python') {
+      event.preventDefault();
+      $('body').append('<video class="previewImg" preload="auto" muted="muted" webkit-playsinline="" loop autoplay><source type="video/mp4" src="' + $(this).attr('href') + '"></video>');
+    }
+
+    if (imgType == 'unity') {
+      event.preventDefault();
+      $('body').append('<video class="previewImg" preload="auto" muted="muted" webkit-playsinline="" loop autoplay><source type="video/mp4" src="' + $(this).attr('href') + '"></video>');
+    }
+  }
+});
+
+$('html, body').click(function(event) {
+  if (click) {
+    $('.previewImg').remove();
+    click = false;
+  }
+});
 
 //extra stuff just in case
 // function getRandomInt(min, max) {

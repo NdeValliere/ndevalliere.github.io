@@ -38,6 +38,14 @@ body {
   transition: 0.5s;
 }
 
+.previewImg {
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 10;
+  max-height: 70vh;
+}
+
 /* row */
 .row {
   display: flex;
