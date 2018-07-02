@@ -30,16 +30,43 @@ function injectContent() {
 
 function countLinks() {
   var count = 0;
-  $('a').each(function(){
+
+  a.each(function(){
+    var smallW = $(this).innerWidth();
+
     count ++;
+
     if (count < 10) {
       $(this).append('<small id="small--' + count + '">' + count + '</small>');
     }
+
+    $(this).append('<span class="background--hover"></span>');
+    $(this).find('.background--hover').css({
+      'width': smallW,
+      // 'height': 0,
+      'filter': 'blur(' + 100 + 'px)',
+      'margin-left': -smallW
+    });
   });
 }
 
+a.mouseover(function(){
+  $(this).find('.background--hover').css({
+    'filter': 'blur(' + 0 + 'px)',
+    'opacity': '1'
+    // 'height': 3 +'vw'
+  });
+});
+a.mouseout(function(){
+  $(this).find('.background--hover').css({
+    'filter': 'blur(' + 100 + 'px)',
+    'opacity': '0.5'
+    // 'height': 0
+  });
+});
+
 function loadingAnimation() {
-  setTimeout(position, 500);
+  setTimeout(position, 600);
 }
 
 function position(){
@@ -57,11 +84,6 @@ function position(){
 }
 
 //extra stuff just in case
-// a.mouseover(function(){
-// });
-// a.mouseout(function(){
-// });
-
 // function getRandomInt(min, max) {
 //     return Math.floor(Math.random() * (max - min + 1)) + min;
 // }
