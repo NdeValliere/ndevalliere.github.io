@@ -18,6 +18,11 @@
     display: none;
   }
 
+  /* .left:first-child p:first-child {
+    margin-bottom: -10vh;
+    border: 1px solid red;
+  } */
+
   small {
     font-size: 2vw;
     margin-top: -0.5vw;
@@ -29,7 +34,7 @@
   }
 
   .container--about {
-    margin: 12.5vw auto;
+    margin: 25vw auto;
     width: 95vw;
   }
 

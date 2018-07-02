@@ -6,6 +6,8 @@
 body {
   font-family: "NHaasGroteskDSStd-55Rg", sans-serif;
   letter-spacing: 0.103vw;
+  position: relative;
+  width: 100vw;
 }
 
 /* spacing+layout */
