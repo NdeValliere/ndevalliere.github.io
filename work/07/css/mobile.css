@@ -7,7 +7,7 @@
   .section--sub,
   .spacer--w,
   p {
-    line-height: 1.75;
+    line-height: 1.5;
   }
 
   p {
@@ -25,7 +25,7 @@
 
   .small--date {
     margin-left: -8.75vw;
-    margin-top: -0.75vw;
+    margin-top: -0.85vw;
   }
 
   .container--about {
