@@ -60,7 +60,7 @@ a.mouseover(function(){
 a.mouseout(function(){
   $(this).find('.background--hover').css({
     'filter': 'blur(' + 100 + 'px)',
-    'opacity': '0.5'
+    'opacity': '0.35'
     // 'height': 0
   });
 });
@@ -70,14 +70,24 @@ function loadingAnimation() {
 }
 
 function position(){
- $("p").each(function(i){
+ $('p').each(function(i){
      var line = $(this);
      setTimeout(function(){
-     line.animate({opacity: "0", margin: 0.5 + "% auto"},
+     line.animate({opacity: '0', margin: 0.5 + '% auto'},
                      {duration: 60, queue: false})
                      // extra animation with delay
                      .delay(90).animate({opacity: 1}, {duration: 60});
      },i*60);
+  });
+
+   $('.background--hover').each(function(i){
+       var blur = $(this);
+       setTimeout(function(){
+       blur.animate({opacity: '0', filter: 'blur(150px)'},
+                       {duration: 1000, queue: false})
+                       // extra animation with delay
+                       .delay(1500).animate({opacity: 0.35}, {duration: 100});
+       },i*100);
  });
 
  $('p').css({'transition': '0'});

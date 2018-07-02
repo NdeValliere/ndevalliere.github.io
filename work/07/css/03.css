@@ -31,7 +31,7 @@ body {
 
 .background--hover {
   background: #ffea2d;
-  opacity: 0.5;
+  /* opacity: 0.5; */
   height: 3vw;
   position: absolute;
   z-index: -1;
