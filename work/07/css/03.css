@@ -124,3 +124,10 @@ a {
 .transition {
   transition: 1s;
 }
+
+
+/* test */
+
+div#toolbar {
+  display: none !important;
+}

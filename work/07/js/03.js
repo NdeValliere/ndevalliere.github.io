@@ -128,6 +128,10 @@ a.click(function(event) {
       event.preventDefault();
       $('body').append('<video class="previewImg" preload="auto" muted="muted" webkit-playsinline="" loop autoplay><source type="video/mp4" src="' + $(this).attr('href') + '"></video>');
     }
+    if (imgType == 'draw') {
+      event.preventDefault();
+      $('body').append('<video class="previewImg" preload="auto" muted="muted" webkit-playsinline="" loop autoplay><source type="video/mp4" src="' + $(this).attr('href') + '"></video>');
+    }
   }
 });
 
