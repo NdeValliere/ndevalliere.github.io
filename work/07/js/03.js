@@ -44,8 +44,7 @@ function countLinks() {
     $(this).append('<span class="background--hover"></span>');
     $(this).find('.background--hover').css({
       'width': smallW,
-      // 'height': 0,
-      'filter': 'blur(' + 100 + 'px)',
+      'filter': 'blur(50px)',
       'margin-left': -smallW
     });
   });
@@ -53,16 +52,16 @@ function countLinks() {
 
 a.mouseover(function(){
   $(this).find('.background--hover').css({
-    'filter': 'blur(' + 0 + 'px)',
+    'filter': 'blur(10px)',
     'opacity': '1'
-    // 'height': 3 +'vw'
+    // 'height': '3vw'
   });
 });
 a.mouseout(function(){
   $(this).find('.background--hover').css({
-    'filter': 'blur(' + 100 + 'px)',
+    'filter': 'blur(50px)',
     'opacity': '0.25'
-    // 'height': 0
+    // 'height': '1vw'
   });
 });
 

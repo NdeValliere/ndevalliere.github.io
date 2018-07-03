@@ -30,9 +30,10 @@ body {
 }
 
 .background--hover {
-  background: #ffea2d;
-  /* opacity: 0.5; */
-  height: 3vw;
+  background: #ffeea9;
+  /* background: #ffea2d; */
+  margin-top: 1vw;
+  height: 2vw;
   position: absolute;
   z-index: -1;
   transition: 0.5s;
