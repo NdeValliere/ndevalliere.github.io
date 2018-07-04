@@ -106,31 +106,34 @@ function position(){
 }
 
 a.click(function(event) {
-  // $('.previewImg').resizable();
-  var imgType = $(this).attr('id');
 
-  if (!click) {
-    setTimeout(function () {
-      click = true;
-    }, 1000);
+  if (!isMobile) {
+    // $('.previewImg').resizable();
+    var imgType = $(this).attr('id');
 
-    if (imgType == 'zero') {
-      event.preventDefault();
-      $('body').append('<img class="previewImg" src="' + $(this).attr('href') + '"/>');
-    }
+    if (!click) {
+      setTimeout(function () {
+        click = true;
+      }, 1000);
 
-    if (imgType == 'python') {
-      event.preventDefault();
-      $('body').append('<video class="previewImg" preload="auto" muted="muted" webkit-playsinline="" loop autoplay><source type="video/mp4" src="' + $(this).attr('href') + '"></video>');
-    }
+      if (imgType == 'zero') {
+        event.preventDefault();
+        $('body').append('<img class="previewImg" src="' + $(this).attr('href') + '"/>');
+      }
 
-    if (imgType == 'unity') {
-      event.preventDefault();
-      $('body').append('<video class="previewImg" preload="auto" muted="muted" webkit-playsinline="" loop autoplay><source type="video/mp4" src="' + $(this).attr('href') + '"></video>');
-    }
-    if (imgType == 'draw') {
-      event.preventDefault();
-      $('body').append('<video class="previewImg" preload="auto" muted="muted" webkit-playsinline="" loop autoplay><source type="video/mp4" src="' + $(this).attr('href') + '"></video>');
+      if (imgType == 'python') {
+        event.preventDefault();
+        $('body').append('<video class="previewImg" preload="auto" muted="muted" webkit-playsinline="" loop autoplay><source type="video/mp4" src="' + $(this).attr('href') + '"></video>');
+      }
+
+      if (imgType == 'unity') {
+        event.preventDefault();
+        $('body').append('<video class="previewImg" preload="auto" muted="muted" webkit-playsinline="" loop autoplay><source type="video/mp4" src="' + $(this).attr('href') + '"></video>');
+      }
+      if (imgType == 'draw') {
+        event.preventDefault();
+        $('body').append('<video class="previewImg" preload="auto" muted="muted" webkit-playsinline="" loop autoplay><source type="video/mp4" src="' + $(this).attr('href') + '"></video>');
+      }
     }
   }
 });
