@@ -105,13 +105,18 @@ small {
   font-style: italic;
 }
 
+.r--first {
+  text-align: right;
+  margin-top: -5.5vh !important;
+}
+
 .r {
-  margin-bottom: 1.25vw;
+  margin-bottom: 1.5vh !important;
   text-align: right;
 }
 
 .r:nth-child(even) {
-  margin-bottom: 0.5vw;
+  margin-bottom: 0.5vw !important;
 }
 
 /* links */
@@ -123,11 +128,4 @@ a {
 
 .transition {
   transition: 1s;
-}
-
-
-/* test */
-
-div#toolbar {
-  display: none !important;
 }
