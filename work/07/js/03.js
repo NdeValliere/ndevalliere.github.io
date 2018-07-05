@@ -60,7 +60,7 @@ a.mouseover(function(){
 a.mouseout(function(){
   $(this).find('.background--hover').css({
     'filter': 'blur(50px)',
-    'opacity': '0.25'
+    'opacity': '0.5'
     // 'height': '1vw'
   });
 });
@@ -98,7 +98,7 @@ function position(){
        blur.animate({opacity: '0', filter: 'blur(100px)'},
                        {duration: 1000, queue: false})
                        // extra animation with delay
-                       .delay(1500).animate({opacity: 0.25}, {duration: 100});
+                       .delay(1500).animate({opacity: 0.5}, {duration: 100});
        },i*100);
  });
 
