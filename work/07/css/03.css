@@ -3,8 +3,19 @@
   padding: 0;
 }
 
+::-moz-selection {
+  background-color: #fdca4d;
+  color: white;
+}
+::selection {
+  background-color: #fdca4d;
+  color: white;
+}
+
 body {
   font-family: "NHaasGroteskDSStd-55Rg", sans-serif;
+  color: black;
+  mix-blend-mode: difference;
   letter-spacing: 0.103vw;
   position: relative;
   width: 100vw;
