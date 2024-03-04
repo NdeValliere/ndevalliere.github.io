@@ -1,0 +1,373 @@
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link type="text/css" rel="stylesheet" href="main.css">
+	</head>
+	<body>
+		<div id="container"></div>
+
+		<script src="jsm/libs/ammo.wasm.js"></script>
+
+		<script type="importmap">
+			{
+				"imports": {
+					"three": "../build/three.module.js",
+					"three/addons/": "./jsm/"
+				}
+			}
+		</script>
+
+		<script type="module">
+
+			import * as THREE from 'three';
+			import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+			import { STLLoader } from 'three/addons/loaders/STLLoader.js';
+
+			// Graphics variables
+			let container;
+			let camera, controls, scene, renderer;
+			let textureLoader;
+
+			const clock = new THREE.Clock();
+
+
+			// Physics variables
+			const gravityConstant = - 9.8;
+			let physicsWorld;
+			const rigidBodies = [];
+			const margin = 0.05;
+			let transformAux1;
+
+
+			Ammo().then( function ( AmmoLib ) {
+
+				Ammo = AmmoLib;
+
+				init();
+				animate();
+			} );
+
+
+			function init() {
+
+				initGraphics();
+				initPhysics();
+				createObjects();
+			}
+
+			function initGraphics() {
+
+				container = document.getElementById( 'container' );
+
+				camera = new THREE.PerspectiveCamera( 40, window.innerWidth / window.innerHeight, 0.2, 2000 );
+
+				scene = new THREE.Scene();
+				scene.background = new THREE.Color( 0x33278A );
+
+				camera.position.set( 0.1, -55, 0 );
+
+				renderer = new THREE.WebGLRenderer( { antialias: true } );
+				renderer.setPixelRatio( window.devicePixelRatio );
+				renderer.setSize( window.innerWidth, window.innerHeight );
+				renderer.shadowMap.enabled = true;
+				container.appendChild( renderer.domElement );
+
+				controls = new OrbitControls( camera, renderer.domElement );
+				controls.target.set( 0, 0, 0 );
+				controls.update();
+
+				textureLoader = new THREE.TextureLoader();
+
+				const ambientLight = new THREE.AmbientLight( 0xFDF351, 10 );
+				scene.add( ambientLight );
+
+				window.addEventListener( 'resize', onWindowResize );
+			}
+
+
+			function initPhysics() {
+
+			    // Physics configuration
+			    const collisionConfiguration = new Ammo.btSoftBodyRigidBodyCollisionConfiguration();
+			    const dispatcher = new Ammo.btCollisionDispatcher(collisionConfiguration);
+			    const broadphase = new Ammo.btDbvtBroadphase();
+			    const solver = new Ammo.btSequentialImpulseConstraintSolver();
+			    const softBodySolver = new Ammo.btDefaultSoftBodySolver();
+			    
+			    // Set gravity to zero
+			    const gravity = new Ammo.btVector3(0, 0, 0); // Set gravity to (0, 0, 0)
+			    physicsWorld = new Ammo.btSoftRigidDynamicsWorld(dispatcher, broadphase, solver, collisionConfiguration, softBodySolver);
+			    physicsWorld.setGravity(gravity);
+			    physicsWorld.getWorldInfo().set_m_gravity(gravity);
+
+			    transformAux1 = new Ammo.btTransform();
+
+			}
+
+			function createObjects() {
+			    const pos = new THREE.Vector3();
+			    const quat = new THREE.Quaternion();
+			    
+			    // Load custom STL model
+			    const numInstances = 50;
+			    const stlLoader = new STLLoader();
+			    stlLoader.load( './models/stl/o-6.stl', function ( geometry ) {
+			        const material = new THREE.MeshPhongMaterial( { color: 0xFDF351, specular: 0xFDF351, shininess: 0 } );
+
+			        for (let i = 0; i < numInstances; i++) {
+			            const stlModel = new THREE.Mesh( geometry, material );
+
+			            // Calculate position in a circle
+			            const radius = 15;
+			            const angle = (i / numInstances) * Math.PI * 2;
+			            const posX = radius * Math.cos(angle);
+			            const posZ = radius * Math.sin(angle);
+			            stlModel.position.set(posX, 0, posZ+17);
+
+			            // Apply physics to each instance
+			            const stlMass = 10;
+			            const stlShape = new Ammo.btConvexHullShape();
+			            const vertices = geometry.attributes.position.array;
+			            for ( let j = 0; j < vertices.length; j += 3 ) {
+			                const vertex = new Ammo.btVector3( vertices[ j ], vertices[ j + 1 ], vertices[ j + 2 ] );
+			                stlShape.addPoint( vertex );
+			            }
+			            const stlQuaternion = new THREE.Quaternion(); // Adjust rotation as needed
+			            createRigidBody( stlModel, stlShape, stlMass, stlModel.position, stlQuaternion );
+
+			            // Add each instance to the scene
+			            scene.add( stlModel );
+			        }
+			    } );
+
+				stlLoader.load('./models/stl/x-1.stl', function (geometry) {
+				    const material = new THREE.MeshPhongMaterial({ color: 0x4CA77B, specular: 0x4CA77B, shininess: 0 });
+
+				    // Calculate the position for the diagonal
+				    const radius = 53;
+				    const diagonalLength = Math.sqrt(2) * radius; // Length of the diagonal from the center
+
+				    // Create instances along the diagonal
+				    for (let i = 0; i < numInstances/2.4; i++) {
+				        const stlModel = new THREE.Mesh(geometry, material);
+
+				        // Calculate position for each instance along the diagonal
+				        const posX = (i / numInstances) * diagonalLength;
+				        const posZ = (i / numInstances) * diagonalLength;
+
+				        stlModel.position.set(posX-15, 0, posZ-30); // Adjust Z position as needed
+
+				        // Apply physics to each instance
+				        const stlMass = 10;
+				        const stlShape = new Ammo.btConvexHullShape();
+				        const vertices = geometry.attributes.position.array;
+				        for (let j = 0; j < vertices.length; j += 3) {
+				            const vertex = new Ammo.btVector3(vertices[j], vertices[j + 1], vertices[j + 2]);
+				            stlShape.addPoint(vertex);
+				        }
+				        const stlQuaternion = new THREE.Quaternion(); // Adjust rotation as needed
+
+				        createRigidBody(stlModel, stlShape, stlMass, stlModel.position, stlQuaternion);
+
+				        // Add each instance to the scene
+				        scene.add(stlModel);
+				    }
+				});
+
+				stlLoader.load('./models/stl/x-1.stl', function (geometry) {
+				    const material = new THREE.MeshPhongMaterial({ color: 0x4CA77B, specular: 0x4CA77B, shininess: 0 });
+
+				    // Calculate the position for the diagonal
+				    const radius = 53;
+				    const diagonalLength = Math.sqrt(2) * radius; // Length of the diagonal from the center
+
+				    // Create instances along the diagonal
+				    for (let i = 0; i < numInstances / 2.4; i++) {
+				        const stlModel = new THREE.Mesh(geometry, material);
+
+				        // Calculate position for each instance along the diagonal
+				        const posX = (i / numInstances) * diagonalLength;
+				        const posZ = (i / numInstances) * diagonalLength;
+
+				        // Mirror along the x-axis
+				        const mirroredPosX = -posX;
+
+				        stlModel.position.set(mirroredPosX + 15, 0, posZ-30); // Adjust Z position as needed
+
+				        // Apply physics to each instance
+				        const stlMass = 10;
+				        const stlShape = new Ammo.btConvexHullShape();
+				        const vertices = geometry.attributes.position.array;
+				        for (let j = 0; j < vertices.length; j += 3) {
+				            const vertex = new Ammo.btVector3(vertices[j], vertices[j + 1], vertices[j + 2]);
+				            stlShape.addPoint(vertex);
+				        }
+				        const stlQuaternion = new THREE.Quaternion(); // Adjust rotation as needed
+
+				        createRigidBody(stlModel, stlShape, stlMass, stlModel.position, stlQuaternion);
+
+				        // Add each instance to the scene
+				        scene.add(stlModel);
+				    }
+				});
+
+
+			    // Ground
+			    pos.set(0, -95, 0);
+			    quat.set(0, 0, 0, 1);
+			    const ground = createParalellepiped(40, 1, 80, 0, pos, quat, new THREE.MeshPhongMaterial({ color: 0xFFFFFF,transparent: true, opacity: 0 }));
+
+			    // Boundary walls
+			    const wallThickness = 0.5;
+			    const wallHeight = 100;
+			    const wallMaterial = new THREE.MeshPhongMaterial({ color: 0x999999, transparent: true, opacity: 0 });
+			    const walls = [
+			        { position: new THREE.Vector3(0, -45, -40), width: 40, height: wallHeight, depth: wallThickness }, // Front wall
+			        { position: new THREE.Vector3(0, -45, 40), width: 40, height: wallHeight, depth: wallThickness }, // Back wall
+			        { position: new THREE.Vector3(-20, -45, 0), width: wallThickness, height: wallHeight, depth: 80 }, // Left wall
+			        { position: new THREE.Vector3(20, -45, 0), width: wallThickness, height: wallHeight, depth: 80 }, // Right wall
+			        { position: new THREE.Vector3(0, wallHeight / 20, 0), width: 40, height: wallThickness, depth: 80 } // Top boundary
+			    ];
+
+			    walls.forEach(wall => {
+			        const { position, width, height, depth } = wall;
+			        const wallGeometry = new THREE.BoxGeometry(width, height, depth);
+			        const wallMesh = createParalellepiped(width, height, depth, 0, position, quat, wallMaterial);
+			        scene.add(wallMesh);
+			    });
+			}
+
+
+			function createParalellepiped( sx, sy, sz, mass, pos, quat, material ) {
+
+				const threeObject = new THREE.Mesh( new THREE.BoxGeometry( sx, sy, sz, 1, 1, 1 ), material );
+				const shape = new Ammo.btBoxShape( new Ammo.btVector3( sx * 0.5, sy * 0.5, sz * 0.5 ) );
+				shape.setMargin( margin );
+
+				createRigidBody( threeObject, shape, mass, pos, quat );
+
+				return threeObject;
+			}
+
+			function createRigidBody( threeObject, physicsShape, mass, pos, quat ) {
+
+				threeObject.position.copy( pos );
+				threeObject.quaternion.copy( quat );
+
+				const transform = new Ammo.btTransform();
+				transform.setIdentity();
+				transform.setOrigin( new Ammo.btVector3( pos.x, pos.y, pos.z ) );
+				transform.setRotation( new Ammo.btQuaternion( quat.x, quat.y, quat.z, quat.w ) );
+				const motionState = new Ammo.btDefaultMotionState( transform );
+
+				const localInertia = new Ammo.btVector3( 0, 0, 0 );
+				physicsShape.calculateLocalInertia( mass, localInertia );
+
+				const rbInfo = new Ammo.btRigidBodyConstructionInfo( mass, motionState, physicsShape, localInertia );
+				const body = new Ammo.btRigidBody( rbInfo );
+
+				threeObject.userData.physicsBody = body;
+
+				scene.add( threeObject );
+
+				if ( mass > 0 ) {
+
+					rigidBodies.push( threeObject );
+
+					// Disable deactivation
+					body.setActivationState( 4 );
+
+				}
+
+				physicsWorld.addRigidBody( body );
+
+			}
+
+
+			//Interact with bricks
+			window.addEventListener('pointermove', onDocumentMouseDown);
+
+			function onDocumentMouseDown(event) {
+				// console.log("touching");
+			    event.preventDefault();
+
+			    const mouse = new THREE.Vector2();
+			    const raycaster = new THREE.Raycaster();
+
+			    // Calculate mouse position in normalized device coordinates
+			    mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+			    mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+
+			    // Set raycaster properties
+			    raycaster.setFromCamera(mouse, camera);
+
+			    // Calculate objects intersecting the ray
+			    const intersects = raycaster.intersectObjects(scene.children, true);
+
+			    // Apply force to the intersected bricks
+			    if (intersects.length > 0) {
+			        const intersectedObject = intersects[0].object;
+			        applyForceToBrick(intersectedObject);
+			    }
+			}
+
+			function applyForceToBrick(brick) {
+			    const force = new THREE.Vector3(0, 60, 0); // Customize the force as needed
+			    const pointOfImpact = new THREE.Vector3(); // Customize the point of impact as needed
+
+			    const physicsBody = brick.userData.physicsBody;
+			    if (physicsBody) {
+			        const ammoForce = new Ammo.btVector3(force.x, force.y, force.z);
+			        const ammoPoint = new Ammo.btVector3(pointOfImpact.x, pointOfImpact.y, pointOfImpact.z);
+			        physicsBody.applyImpulse(ammoForce, ammoPoint);
+			    }
+			}
+
+			function onWindowResize() {
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+
+				renderer.setSize( window.innerWidth, window.innerHeight );
+			}
+
+			function animate() {
+				requestAnimationFrame( animate );
+				render();
+			}
+
+			function render() {
+				const deltaTime = clock.getDelta();
+				updatePhysics( deltaTime );
+				renderer.render( scene, camera );
+			}
+
+			function updatePhysics( deltaTime ) {
+
+				// Step world
+				physicsWorld.stepSimulation( deltaTime, 10 );
+
+				// Update rigid bodies
+				for ( let i = 0, il = rigidBodies.length; i < il; i ++ ) {
+
+					const objThree = rigidBodies[ i ];
+					const objPhys = objThree.userData.physicsBody;
+					const ms = objPhys.getMotionState();
+					if ( ms ) {
+
+						ms.getWorldTransform( transformAux1 );
+						const p = transformAux1.getOrigin();
+						const q = transformAux1.getRotation();
+						objThree.position.set( p.x(), p.y(), p.z() );
+						objThree.quaternion.set( q.x(), q.y(), q.z(), q.w() );
+
+					}
+
+				}
+
+			}
+
+		</script>
+
+	</body>
+</html>
