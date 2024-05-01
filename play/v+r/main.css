@@ -163,7 +163,8 @@ a img {
 }
 
 body {
-	background: #f1e8ca;
+/*	background: #f1e8ca;*/
+  background-color: rgb(241, 232, 202);
 }
 
 .center {
