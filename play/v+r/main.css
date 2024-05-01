@@ -181,6 +181,9 @@ video {
 	padding-top: 3vh;
 	max-width: 35vw;
 	height: auto;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
 }
 
 #type-video-stack {
