@@ -185,6 +185,7 @@ video {
   -webkit-mask-image: -webkit-radial-gradient(white, black);
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
+  mix-blend-mode: darken;
 }
 
 #type-video-stack {
