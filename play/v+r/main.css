@@ -82,7 +82,7 @@ video {
   border: 0;
   outline: 0;
   font-size: 100%;
-  vertical-align: baseline;
+/*  vertical-align: baseline;*/
   background: transparent;
   margin: 0;
   padding: 0;
@@ -202,4 +202,67 @@ video {
 /*	padding-bottom: 3vh;*/
 	max-width: 11vw;
 	height: auto;
+}
+
+/*type html elements*/
+
+p, h1 {
+  color: #005F37;
+  font-family: Cochin;
+  text-transform: uppercase;
+}
+
+p, small {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.25px;
+  line-height: 150%;
+  vertical-align: middle;
+}
+
+h1 {
+  font-size: 8vw;
+  font-weight: 500;
+  letter-spacing: -2px;
+  line-height: 112%;
+}
+
+
+#connector {
+  font-family: Helvetica;
+  font-weight: 100;
+  font-style: normal;
+  text-transform: none;
+}
+
+#fineprint {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+@media (width <= 1080px) {
+
+  h1 {
+    font-size: 8.5vw;
+  }
+
+  p, small {
+    font-size: 1.5vw;
+  }
+
+  #fineprint {
+    font-size: 11px;
+  }
+}
+
+@media (width <= 834px) {
+  h1 {
+    font-size: 9vw;
+  }
+
+  p, small, #fineprint {
+    font-size: 11px;
+  }
 }
