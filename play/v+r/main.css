@@ -217,7 +217,7 @@ p, small {
   font-style: normal;
   font-weight: 700;
   letter-spacing: 0.25px;
-  line-height: 180%;
+  line-height: 170%;
   vertical-align: middle;
 }
 
@@ -281,6 +281,10 @@ h1 {
 }
 
 @media (width <= 430px) {
+
+  .center {
+    height: 95vh;
+  }
 
   video {
     max-width: 70vw;
