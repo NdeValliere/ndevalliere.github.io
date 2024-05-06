@@ -180,7 +180,7 @@ body {
 
 video {
 	padding-top: 3vh;
-	max-width: 35vw;
+	max-width: 50vw;
 	height: auto;
   -webkit-mask-image: -webkit-radial-gradient(white, black);
   -webkit-backface-visibility: hidden;
@@ -242,6 +242,13 @@ h1 {
   letter-spacing: 0.5px;
 }
 
+@media (width <= 1368px) {
+
+  video {
+    max-width: 45vw;
+  }
+}
+
 @media (width <= 1080px) {
 
   h1 {
@@ -258,11 +265,20 @@ h1 {
 }
 
 @media (width <= 834px) {
+
   h1 {
     font-size: 9vw;
   }
 
   p, small, #fineprint {
-    font-size: 11px;
+    font-size: 10px;
   }
 }
+
+@media (width <= 430px) {
+
+  video {
+    max-width: 70vw;
+  }
+}
+
