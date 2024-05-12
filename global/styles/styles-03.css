@@ -4,6 +4,9 @@ body {
 	font-optical-sizing: auto;
 	font-weight: 400;
 	font-style: normal;
+	margin: 0;
+	height: 100%;
+	overflow: hidden;
 }
 
 
@@ -11,8 +14,14 @@ body {
 	margin-top: 60px;
 	margin-left: 30px;
 	margin-right: 30px;
-	font-size: 18px;
+	font-size: 21px;
 	line-height: 150%;
+}
+
+.sketch {
+	position: absolute;
+	bottom: -2px;
+	right: 0;
 }
 
 a {
@@ -24,12 +33,12 @@ a {
 	text-decoration: none;
 	color: black;
 	letter-spacing: 0px;
-	transition: font-weight 1s, letter-spacing 1s;
-	letter-spacing: 0.1px;
+	transition: font-weight 1.5s, letter-spacing 1.5s;
+	letter-spacing: 0.05px;
 }
 
 a:hover,
 a:focus {
-	font-weight: 600;
-	letter-spacing: -0.3px;
+	font-weight: 700;
+	letter-spacing: -0.6px;
 }
