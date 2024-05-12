@@ -1,0 +1,474 @@
+# buildVariable: Build a variable font from a source file
+rule buildVariable
+  command = $
+      /Users/ndevalliere/Documents/GitHub/ndevalliere.github.io/global/assets/fonts/venv/bin/python3.11 $
+      -m gftools.builder.jobrunner fontmake --output-path $out -o variable $
+      $fontmake_type $in $args $stamp
+  description = buildVariable
+
+# fix: Run gftools-fix
+rule fix
+  command = $
+      /Users/ndevalliere/Documents/GitHub/ndevalliere.github.io/global/assets/fonts/venv/bin/python3.11 $
+      -m gftools.builder.jobrunner gftools-fix-font -o $out $args $in $stamp
+  description = fix
+
+# compress: Compress to webfont
+rule compress
+  command = $
+      /Users/ndevalliere/Documents/GitHub/ndevalliere.github.io/global/assets/fonts/venv/bin/python3.11 $
+      -m gftools.builder.jobrunner fonttools ttLib.woff2 compress -o $out $
+      $in $stamp
+  description = compress
+
+# buildStat: Build a STAT table from one or more source files
+rule buildSTAT-operation
+  command = gftools-gen-stat --out $tempdir $args -- $in && mv $finalfile $
+      $out $stamp
+rule buildSTAT-postprocess
+  command = gftools-gen-stat --inplace $args -- $in $stamp
+
+# instantiateUfo: Create instance UFOs from a Glyphs or designspace file
+rule instantiateUfo
+  command = $
+      /Users/ndevalliere/Documents/GitHub/ndevalliere.github.io/global/assets/fonts/venv/bin/python3.11 $
+      -m gftools.builder.jobrunner fontmake -i "$instance_name" -o ufo $
+      $fontmake_type $in $args $stamp
+  description = instantiateUfo
+
+# buildTTF: Build a TTF from a source file
+rule buildTTF
+  command = $
+      /Users/ndevalliere/Documents/GitHub/ndevalliere.github.io/global/assets/fonts/venv/bin/python3.11 $
+      -m gftools.builder.jobrunner fontmake --output-path $out -o ttf $
+      $fontmake_type $in $args $stamp
+  description = buildTTF
+
+# autohint: Run gftools-autohint
+rule autohint
+  command = $
+      /Users/ndevalliere/Documents/GitHub/ndevalliere.github.io/global/assets/fonts/venv/bin/python3.11 $
+      -m gftools.builder.jobrunner gftools-autohint $args -o $out $in $stamp
+  description = autohint
+
+# buildOTF: Build a OTF from a source file
+rule buildOTF
+  command = $
+      /Users/ndevalliere/Documents/GitHub/ndevalliere.github.io/global/assets/fonts/venv/bin/python3.11 $
+      -m gftools.builder.jobrunner fontmake --output-path $out -o otf $
+      $fontmake_type $in $args $stamp
+  description = buildOTF
+
+# copy: Copy a file
+rule copy
+  command = $
+      /Users/ndevalliere/Documents/GitHub/ndevalliere.github.io/global/assets/fonts/venv/bin/python3.11 $
+      -m gftools.builder.jobrunner cp $in $out $stamp
+  description = copy
+
+# Generating /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmpdcrm77vr
+build /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmpdcrm77vr: $
+    buildVariable LibreCaslonCondensed.glyphs
+  operation = buildVariable
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -g
+  fontmake_args =  --verbose WARNING 
+# Generating instance_ufos/LibreCaslonCondensed-Regular.ufo.json
+build instance_ufos/LibreCaslonCondensed-Regular.ufo.json: instantiateUfo $
+    LibreCaslonCondensed.glyphs
+  operation = instantiateUfo
+  instance_name = Libre Caslon Condensed Regular
+  fontmake_type = -g
+  fontmake_args =  --verbose WARNING 
+  args =  --ufo-structure=json --instance-dir instance_ufos
+# Generating instance_ufos/LibreCaslonCondensed-Medium.ufo.json
+build instance_ufos/LibreCaslonCondensed-Medium.ufo.json: instantiateUfo $
+    LibreCaslonCondensed.glyphs
+  operation = instantiateUfo
+  instance_name = Libre Caslon Condensed Medium
+  fontmake_type = -g
+  fontmake_args =  --verbose WARNING 
+  args =  --ufo-structure=json --instance-dir instance_ufos
+# Generating instance_ufos/LibreCaslonCondensed-SemiBold.ufo.json
+build instance_ufos/LibreCaslonCondensed-SemiBold.ufo.json: instantiateUfo $
+    LibreCaslonCondensed.glyphs
+  operation = instantiateUfo
+  instance_name = Libre Caslon Condensed SemiBold
+  fontmake_type = -g
+  fontmake_args =  --verbose WARNING 
+  args =  --ufo-structure=json --instance-dir instance_ufos
+# Generating instance_ufos/LibreCaslonCondensed-Bold.ufo.json
+build instance_ufos/LibreCaslonCondensed-Bold.ufo.json: instantiateUfo $
+    LibreCaslonCondensed.glyphs
+  operation = instantiateUfo
+  instance_name = Libre Caslon Condensed Bold
+  fontmake_type = -g
+  fontmake_args =  --verbose WARNING 
+  args =  --ufo-structure=json --instance-dir instance_ufos
+# Generating /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmpe8xa43su
+build /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmpe8xa43su: $
+    buildVariable LibreCaslonCondensed-Italic.glyphs
+  operation = buildVariable
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -g
+  fontmake_args =  --verbose WARNING 
+# Generating instance_ufos/LibreCaslonCondensed-Italic.ufo.json
+build instance_ufos/LibreCaslonCondensed-Italic.ufo.json: instantiateUfo $
+    LibreCaslonCondensed-Italic.glyphs
+  operation = instantiateUfo
+  instance_name = Libre Caslon Condensed Italic
+  fontmake_type = -g
+  fontmake_args =  --verbose WARNING 
+  args =  --ufo-structure=json --instance-dir instance_ufos
+# Generating instance_ufos/LibreCaslonCondensed-MediumItalic.ufo.json
+build instance_ufos/LibreCaslonCondensed-MediumItalic.ufo.json: $
+    instantiateUfo LibreCaslonCondensed-Italic.glyphs
+  operation = instantiateUfo
+  instance_name = Libre Caslon Condensed Medium Italic
+  fontmake_type = -g
+  fontmake_args =  --verbose WARNING 
+  args =  --ufo-structure=json --instance-dir instance_ufos
+# Generating instance_ufos/LibreCaslonCondensed-SemiBoldItalic.ufo.json
+build instance_ufos/LibreCaslonCondensed-SemiBoldItalic.ufo.json: $
+    instantiateUfo LibreCaslonCondensed-Italic.glyphs
+  operation = instantiateUfo
+  instance_name = Libre Caslon Condensed SemiBold Italic
+  fontmake_type = -g
+  fontmake_args =  --verbose WARNING 
+  args =  --ufo-structure=json --instance-dir instance_ufos
+# Generating instance_ufos/LibreCaslonCondensed-BoldItalic.ufo.json
+build instance_ufos/LibreCaslonCondensed-BoldItalic.ufo.json: $
+    instantiateUfo LibreCaslonCondensed-Italic.glyphs
+  operation = instantiateUfo
+  instance_name = Libre Caslon Condensed Bold Italic
+  fontmake_type = -g
+  fontmake_args =  --verbose WARNING 
+  args =  --ufo-structure=json --instance-dir instance_ufos
+# Generating ../fonts/webfonts/LibreCaslonCondensed[wght].woff2
+build ../fonts/webfonts/LibreCaslonCondensed[wght].woff2: compress $
+    ../fonts/variable/LibreCaslonCondensed[wght].ttf
+  operation = compress
+# Postprocessing  with BuildSTAT
+build $
+    /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmpm8rhzlqi.buildStatstamp: $
+    buildSTAT-postprocess $
+    ../fonts/variable/LibreCaslonCondensed-Italic[wght].ttf $
+    ../fonts/variable/LibreCaslonCondensed[wght].ttf
+  stamp =  && touch $
+      /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmpm8rhzlqi.buildStatstamp
+  postprocess = buildStat
+# Generating ../fonts/webfonts/LibreCaslonCondensed-Italic[wght].woff2
+build ../fonts/webfonts/LibreCaslonCondensed-Italic[wght].woff2: compress $
+    ../fonts/variable/LibreCaslonCondensed-Italic[wght].ttf
+  operation = compress
+# Generating ../fonts/webfonts/LibreCaslonCondensed-Regular.woff2
+build ../fonts/webfonts/LibreCaslonCondensed-Regular.woff2: compress $
+    ../fonts/ttf/LibreCaslonCondensed-Regular.ttf
+  operation = compress
+# Generating ../fonts/webfonts/LibreCaslonCondensed-Medium.woff2
+build ../fonts/webfonts/LibreCaslonCondensed-Medium.woff2: compress $
+    ../fonts/ttf/LibreCaslonCondensed-Medium.ttf
+  operation = compress
+# Generating ../fonts/webfonts/LibreCaslonCondensed-SemiBold.woff2
+build ../fonts/webfonts/LibreCaslonCondensed-SemiBold.woff2: compress $
+    ../fonts/ttf/LibreCaslonCondensed-SemiBold.ttf
+  operation = compress
+# Generating ../fonts/webfonts/LibreCaslonCondensed-Bold.woff2
+build ../fonts/webfonts/LibreCaslonCondensed-Bold.woff2: compress $
+    ../fonts/ttf/LibreCaslonCondensed-Bold.ttf
+  operation = compress
+# Generating ../fonts/webfonts/LibreCaslonCondensed-Italic.woff2
+build ../fonts/webfonts/LibreCaslonCondensed-Italic.woff2: compress $
+    ../fonts/ttf/LibreCaslonCondensed-Italic.ttf
+  operation = compress
+# Generating ../fonts/webfonts/LibreCaslonCondensed-MediumItalic.woff2
+build ../fonts/webfonts/LibreCaslonCondensed-MediumItalic.woff2: compress $
+    ../fonts/ttf/LibreCaslonCondensed-MediumItalic.ttf
+  operation = compress
+# Generating ../fonts/webfonts/LibreCaslonCondensed-SemiBoldItalic.woff2
+build ../fonts/webfonts/LibreCaslonCondensed-SemiBoldItalic.woff2: compress $
+    ../fonts/ttf/LibreCaslonCondensed-SemiBoldItalic.ttf
+  operation = compress
+# Generating ../fonts/webfonts/LibreCaslonCondensed-BoldItalic.woff2
+build ../fonts/webfonts/LibreCaslonCondensed-BoldItalic.woff2: compress $
+    ../fonts/ttf/LibreCaslonCondensed-BoldItalic.ttf
+  operation = compress
+# Generating ../fonts/variable/LibreCaslonCondensed[wght].ttf
+build ../fonts/variable/LibreCaslonCondensed[wght].ttf: fix $
+    /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmpdcrm77vr
+  operation = fix
+  args = 
+# Generating ../fonts/variable/LibreCaslonCondensed-Italic[wght].ttf
+build ../fonts/variable/LibreCaslonCondensed-Italic[wght].ttf: fix $
+    /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmpe8xa43su
+  operation = fix
+  args = 
+# Generating /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmpro9r_yhr
+build /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmpro9r_yhr: $
+    buildTTF instance_ufos/LibreCaslonCondensed-Regular.ufo.json
+  operation = buildTTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmp8p97knrn
+build /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmp8p97knrn: $
+    buildOTF instance_ufos/LibreCaslonCondensed-Regular.ufo.json
+  operation = buildOTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmpday_aww_
+build /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmpday_aww_: $
+    autohint /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmpro9r_yhr
+  operation = autohint
+  args = --fail-ok 
+# Generating ../fonts/ttf/LibreCaslonCondensed-Regular.ttf
+build ../fonts/ttf/LibreCaslonCondensed-Regular.ttf: fix $
+    /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmpday_aww_
+  operation = fix
+  args = 
+# Generating ../fonts/otf/LibreCaslonCondensed-Regular.otf
+build ../fonts/otf/LibreCaslonCondensed-Regular.otf: fix $
+    /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmp8p97knrn
+  operation = fix
+  args = 
+# Generating /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmp37v4hwky
+build /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmp37v4hwky: $
+    buildTTF instance_ufos/LibreCaslonCondensed-Medium.ufo.json
+  operation = buildTTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmphaggxuzn
+build /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmphaggxuzn: $
+    buildOTF instance_ufos/LibreCaslonCondensed-Medium.ufo.json
+  operation = buildOTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmpol2725a7
+build /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmpol2725a7: $
+    autohint /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmp37v4hwky
+  operation = autohint
+  args = --fail-ok 
+# Generating ../fonts/ttf/LibreCaslonCondensed-Medium.ttf
+build ../fonts/ttf/LibreCaslonCondensed-Medium.ttf: fix $
+    /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmpol2725a7
+  operation = fix
+  args = 
+# Generating ../fonts/otf/LibreCaslonCondensed-Medium.otf
+build ../fonts/otf/LibreCaslonCondensed-Medium.otf: fix $
+    /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmphaggxuzn
+  operation = fix
+  args = 
+# Generating /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmpmrgh16ng
+build /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmpmrgh16ng: $
+    buildTTF instance_ufos/LibreCaslonCondensed-SemiBold.ufo.json
+  operation = buildTTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmphv6g_cpc
+build /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmphv6g_cpc: $
+    buildOTF instance_ufos/LibreCaslonCondensed-SemiBold.ufo.json
+  operation = buildOTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmp5e7x5dhn
+build /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmp5e7x5dhn: $
+    autohint /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmpmrgh16ng
+  operation = autohint
+  args = --fail-ok 
+# Generating ../fonts/ttf/LibreCaslonCondensed-SemiBold.ttf
+build ../fonts/ttf/LibreCaslonCondensed-SemiBold.ttf: fix $
+    /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmp5e7x5dhn
+  operation = fix
+  args = 
+# Generating ../fonts/otf/LibreCaslonCondensed-SemiBold.otf
+build ../fonts/otf/LibreCaslonCondensed-SemiBold.otf: fix $
+    /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmphv6g_cpc
+  operation = fix
+  args = 
+# Generating /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmpahamp0v9
+build /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmpahamp0v9: $
+    buildTTF instance_ufos/LibreCaslonCondensed-Bold.ufo.json
+  operation = buildTTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmpet_ire6i
+build /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmpet_ire6i: $
+    buildOTF instance_ufos/LibreCaslonCondensed-Bold.ufo.json
+  operation = buildOTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmpgcr4irv5
+build /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmpgcr4irv5: $
+    autohint /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmpahamp0v9
+  operation = autohint
+  args = --fail-ok 
+# Generating ../fonts/ttf/LibreCaslonCondensed-Bold.ttf
+build ../fonts/ttf/LibreCaslonCondensed-Bold.ttf: fix $
+    /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmpgcr4irv5
+  operation = fix
+  args = 
+# Generating ../fonts/otf/LibreCaslonCondensed-Bold.otf
+build ../fonts/otf/LibreCaslonCondensed-Bold.otf: fix $
+    /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmpet_ire6i
+  operation = fix
+  args = 
+# Generating /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmp9ckdmelg
+build /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmp9ckdmelg: $
+    buildTTF instance_ufos/LibreCaslonCondensed-Italic.ufo.json
+  operation = buildTTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmpts0v0ctr
+build /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmpts0v0ctr: $
+    buildOTF instance_ufos/LibreCaslonCondensed-Italic.ufo.json
+  operation = buildOTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmpyy5zgdug
+build /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmpyy5zgdug: $
+    autohint /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmp9ckdmelg
+  operation = autohint
+  args = --fail-ok 
+# Generating ../fonts/ttf/LibreCaslonCondensed-Italic.ttf
+build ../fonts/ttf/LibreCaslonCondensed-Italic.ttf: fix $
+    /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmpyy5zgdug
+  operation = fix
+  args = 
+# Generating ../fonts/otf/LibreCaslonCondensed-Italic.otf
+build ../fonts/otf/LibreCaslonCondensed-Italic.otf: fix $
+    /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmpts0v0ctr
+  operation = fix
+  args = 
+# Generating /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmp4zb57kog
+build /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmp4zb57kog: $
+    buildTTF instance_ufos/LibreCaslonCondensed-MediumItalic.ufo.json
+  operation = buildTTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmpvjcl1x8l
+build /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmpvjcl1x8l: $
+    buildOTF instance_ufos/LibreCaslonCondensed-MediumItalic.ufo.json
+  operation = buildOTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmph34_eje_
+build /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmph34_eje_: $
+    autohint /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmp4zb57kog
+  operation = autohint
+  args = --fail-ok 
+# Generating ../fonts/ttf/LibreCaslonCondensed-MediumItalic.ttf
+build ../fonts/ttf/LibreCaslonCondensed-MediumItalic.ttf: fix $
+    /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmph34_eje_
+  operation = fix
+  args = 
+# Generating ../fonts/otf/LibreCaslonCondensed-MediumItalic.otf
+build ../fonts/otf/LibreCaslonCondensed-MediumItalic.otf: fix $
+    /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmpvjcl1x8l
+  operation = fix
+  args = 
+# Generating /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmpd_nojnwx
+build /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmpd_nojnwx: $
+    buildTTF instance_ufos/LibreCaslonCondensed-SemiBoldItalic.ufo.json
+  operation = buildTTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmpuhy71qt8
+build /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmpuhy71qt8: $
+    buildOTF instance_ufos/LibreCaslonCondensed-SemiBoldItalic.ufo.json
+  operation = buildOTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmp4_z7rxzg
+build /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmp4_z7rxzg: $
+    autohint /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmpd_nojnwx
+  operation = autohint
+  args = --fail-ok 
+# Generating ../fonts/ttf/LibreCaslonCondensed-SemiBoldItalic.ttf
+build ../fonts/ttf/LibreCaslonCondensed-SemiBoldItalic.ttf: fix $
+    /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmp4_z7rxzg
+  operation = fix
+  args = 
+# Generating ../fonts/otf/LibreCaslonCondensed-SemiBoldItalic.otf
+build ../fonts/otf/LibreCaslonCondensed-SemiBoldItalic.otf: fix $
+    /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmpuhy71qt8
+  operation = fix
+  args = 
+# Generating /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmp8bjr3h0o
+build /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmp8bjr3h0o: $
+    buildTTF instance_ufos/LibreCaslonCondensed-BoldItalic.ufo.json
+  operation = buildTTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmpney_q1ki
+build /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmpney_q1ki: $
+    buildOTF instance_ufos/LibreCaslonCondensed-BoldItalic.ufo.json
+  operation = buildOTF
+  args = --filter ...  --filter FlattenComponentsFilter --filter $
+      DecomposeTransformedComponentsFilter
+  fontmake_type = -u
+  fontmake_args =  --verbose WARNING 
+# Generating /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmplvfavrhv
+build /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmplvfavrhv: $
+    autohint /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmp8bjr3h0o
+  operation = autohint
+  args = --fail-ok 
+# Generating ../fonts/ttf/LibreCaslonCondensed-BoldItalic.ttf
+build ../fonts/ttf/LibreCaslonCondensed-BoldItalic.ttf: fix $
+    /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmplvfavrhv
+  operation = fix
+  args = 
+# Generating ../fonts/otf/LibreCaslonCondensed-BoldItalic.otf
+build ../fonts/otf/LibreCaslonCondensed-BoldItalic.otf: fix $
+    /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmpney_q1ki
+  operation = fix
+  args = 
+default ../fonts/webfonts/LibreCaslonCondensed[wght].woff2 $
+    /var/folders/_8/077tnrw53x32q4qj_lg93zm40000gn/T/tmpm8rhzlqi.buildStatstamp $
+    ../fonts/webfonts/LibreCaslonCondensed-Italic[wght].woff2 $
+    ../fonts/webfonts/LibreCaslonCondensed-Regular.woff2 $
+    ../fonts/webfonts/LibreCaslonCondensed-Medium.woff2 $
+    ../fonts/webfonts/LibreCaslonCondensed-SemiBold.woff2 $
+    ../fonts/webfonts/LibreCaslonCondensed-Bold.woff2 $
+    ../fonts/webfonts/LibreCaslonCondensed-Italic.woff2 $
+    ../fonts/webfonts/LibreCaslonCondensed-MediumItalic.woff2 $
+    ../fonts/webfonts/LibreCaslonCondensed-SemiBoldItalic.woff2 $
+    ../fonts/webfonts/LibreCaslonCondensed-BoldItalic.woff2 $
+    ../fonts/otf/LibreCaslonCondensed-Regular.otf $
+    ../fonts/otf/LibreCaslonCondensed-Medium.otf $
+    ../fonts/otf/LibreCaslonCondensed-SemiBold.otf $
+    ../fonts/otf/LibreCaslonCondensed-Bold.otf $
+    ../fonts/otf/LibreCaslonCondensed-Italic.otf $
+    ../fonts/otf/LibreCaslonCondensed-MediumItalic.otf $
+    ../fonts/otf/LibreCaslonCondensed-SemiBoldItalic.otf $
+    ../fonts/otf/LibreCaslonCondensed-BoldItalic.otf

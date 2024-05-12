@@ -1,76 +1,92 @@
 @font-face {
   font-family: "Adobe Garamond Pro";
-  src: url('https://rawgit.com/NdeValliere/ndevalliere.github.io/master/global/assets/fonts/AdobeGaramondPro-Regular.otf');
+  src: url('AdobeGaramondPro-Regular.otf');
   font-weight: 100;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Adobe Garamond Pro";
-  src: url('https://rawgit.com/NdeValliere/ndevalliere.github.io/master/global/assets/fonts/AdobeGaramondPro-Semibold.otf');
+  src: url('AdobeGaramondPro-Semibold.otf');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Adobe Garamond Pro";
-  src: url('https://rawgit.com/NdeValliere/ndevalliere.github.io/master/global/assets/fonts/AdobeGaramondPro-Bold.otf');
+  src: url('AdobeGaramondPro-Bold.otf');
   font-weight: 900;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Adobe Garamond Pro";
-  src: url('https://rawgit.com/NdeValliere/ndevalliere.github.io/master/global/assets/fonts/AdobeGaramondPro-Italic.otf');
+  src: url('AdobeGaramondPro-Italic.otf');
   font-weight: 100;
   font-style: italic;
 }
 
 @font-face {
   font-family: "Adobe Garamond Pro";
-  src: url('https://rawgit.com/NdeValliere/ndevalliere.github.io/master/global/assets/fonts/AdobeGaramondPro-SemiboldItalic.otf');
+  src: url('AdobeGaramondPro-SemiboldItalic.otf');
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
   font-family: "Adobe Garamond Pro";
-  src: url('https://rawgit.com/NdeValliere/ndevalliere.github.io/master/global/assets/fonts/AdobeGaramondPro-BoldItalic.otf');
+  src: url('AdobeGaramondPro-BoldItalic.otf');
   font-weight: 900;
   font-style: italic;
 }
 
 @font-face {
   font-family: "Neue Haas Unica Pro";
-  src: url('https://rawgit.com/NdeValliere/ndevalliere.github.io/master/global/assets/fonts/NeueHaasUnicaPro-Regular.ttf');
+  src: url('NeueHaasUnicaPro-Regular.ttf');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Neue Haas Unica Pro";
-  src: url('https://rawgit.com/NdeValliere/ndevalliere.github.io/master/global/assets/fonts/NeueHaasUnicaPro-Italic.otf');
+  src: url('NeueHaasUnicaPro-Italic.otf');
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
   font-family: "Steinbeck";
-  src: url('https://rawgit.com/NdeValliere/ndevalliere.github.io/master/global/assets/fonts/Steinbeck-Regular.otf');
+  src: url('Steinbeck-Regular.otf');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Steinbeck";
-  src: url('https://rawgit.com/NdeValliere/ndevalliere.github.io/master/global/assets/fonts/Steinbeck-Italic.otf');
+  src: url('Steinbeck-Italic.otf');
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
   font-family: "NHaasGroteskDSStd-55Rg";
-  src: url('https://rawgit.com/NdeValliere/ndevalliere.github.io/master/global/assets/fonts/NHaasGroteskDSStd-55Rg.otf');
+  src: url('NHaasGroteskDSStd-55Rg.otf');
   font-weight: 400;
   font-style: normal;
+}
+
+@font-face {
+  font-family: "Libre Caslon Condensed";
+  src: url("LibreCaslonCondensed[wght].woff2") format("woff2 supports variations"),
+     url("LibreCaslonCondensed[wght].woff2") format("woff2-variations");
+  font-weight: 400 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Libre Caslon Condensed";
+  src: url("LibreCaslonCondensed-Italic[wght].woff2") format("woff2 supports variations"),
+       url("LibreCaslonCondensed-Italic[wght].woff2") format("woff2-variations");
+  font-weight: 400 700;
+  font-style: italic;
 }
