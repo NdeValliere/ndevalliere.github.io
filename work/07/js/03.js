@@ -26,7 +26,7 @@ function injectContent() {
       count = 0;
 
     inject1.append(' that at <a href="https://ia.net/" target="_blank">Information Architects<small id="small--5">5</small></a> in Zürich.');
-    inject2.append(' <a href="https://vimeo.com/246483691" target="_blank">drawing machines<small id="small--8">8</small></a>, <a href="http://2018.csmgraphicdesign.com/dev/files/z-01.jpg" target="_blank">sculptures<small id="small--9">9</small></a> and redesign my portfolio <span class="spacer spacer--inline"></span></p> <p class="r--first">over <a href="https://nathalie-devalliere-60cn.squarespace.com/archive" target="_blank">1 /<small class="small--date" id="small--11">Sep 2016</small></a>&nbsp;');
+    inject2.append(' <a href="https://vimeo.com/246483691" target="_blank">drawing machines<small id="small--8">8</small></a>, <a href="https://2018.csmgraphicdesign.com/dev/files/z-01.jpg" target="_blank">sculptures<small id="small--9">9</small></a> and redesign my portfolio <span class="spacer spacer--inline"></span></p> <p class="r--first">over <a href="https://nathalie-devalliere-60cn.squarespace.com/archive" target="_blank">1 /<small class="small--date" id="small--11">Sep 2016</small></a>&nbsp;');
 }
 
 function countLinks() {
