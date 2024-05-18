@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+	<div class="container">
+		<div class="a ripples" style="background-image:url(https://i.imgur.com/z8ptzeS.jpg)">
+			<h1>TEST</h1>
+		</div>
+		<!-- instead of "assets/01.jpg" inside of backgroun-image:url() -->
+	</div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.ripples.js"></script>
+	<script>
+		$(document).ready(function() {
+
+			setTimeout(function(){ $('.a').css({'background-image' : ''}); }, 100);
+
+			//try changing the numerical values below!
+			try {
+				$('.a').ripples({
+					resolution: 1000,
+					dropRadius: 10000,
+					perturbance: 0.01
+				});
+			} catch (e) {
+				$('.error').show().text(e);
+			}
+		});
+	</script>
+
+</body>
+
+</html>
+
+<!-- 
+
+NUMERICAL EXAMPLE VALUES FOR EFFECTS
+
+
+Mercury
+resolution: 1550,
+dropRadius: 6,
+perturbance: 0.5
+	
+Water
+resolution: 550,
+dropRadius: 2,
+perturbance: 0.05 
+
+-->

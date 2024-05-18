@@ -22,6 +22,10 @@ body {
 	position: absolute;
 	bottom: -2px;
 	right: 0;
+	background-image: url("../assets/sketch.png");
+	background-size: cover;
+	width: 148px; 
+	height: 52px;
 }
 
 a {
