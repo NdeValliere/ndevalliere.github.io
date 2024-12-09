@@ -181,7 +181,7 @@ a img {
 }
 
 .blur {
-  filter: blur(2px);
+  filter: blur(1.2px);
   z-index: -1;
 }
 
