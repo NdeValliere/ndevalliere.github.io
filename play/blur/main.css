@@ -167,23 +167,28 @@ a img {
 	height: 100vh;
 	text-align: center;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	justify-content: space-around;
 	align-content: center;
 	align-items: center;
 }
 
 .left,
-.right {
+.right img,
+.middle {
   width: 1024px;
   height: 1024px;
 }
 
 .blur {
-  filter: blur(0.9px);
+  filter: blur(2px);
+  z-index: -1;
 }
 
  .texture {
-/*  position: absolute;*/
+  position: absolute;
   mix-blend-mode: color-burn;
+  left: 1024px;
+  width: 1024px;
+  height: 1024px;
  }

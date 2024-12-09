@@ -6,7 +6,10 @@
 	</head>
 	<body class ="center">
 		<div class="left">
-			<img class="blur" src="assets/primary-1.png"/>
+			<img src="assets/primary-17.png"/>
+		</div>
+		<div class="middle">
+			<img class ="blur" src="assets/primary-17.png"/>
 			<!-- svg: first layer -->
 			<svg class="texture" viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'>
 			  <filter id='noiseFilter'>
@@ -18,9 +21,19 @@
 			  </filter>
 			  <rect width='100%' height='100%' filter='url(#noiseFilter)'/>
 			</svg>
+			<svg class="texture" viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'>
+			  <filter id='noiseFilter'>
+			    <feTurbulence 
+			      type='fractalNoise' 
+			      baseFrequency='3' 
+			      numOctaves='1' 
+			      stitchTiles='stitch'/>
+			  </filter>
+			  <rect width='100%' height='100%' filter='url(#noiseFilter)'/>
+			</svg>
 		</div>
 		<div class="right">
-			<img src="assets/primary-1.png"/>
+			<img src="assets/primary-17.jpg"/>
 		</div>
 	</body>
 </html>
