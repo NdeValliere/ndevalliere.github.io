@@ -44,7 +44,6 @@ body {
 	margin-right: 30px;
 	width: 425px;
 	border-radius: 6px;
-	transition: 1s;
 	filter: drop-shadow(1px 1px 3px #ededed);
 }
 
