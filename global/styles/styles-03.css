@@ -27,12 +27,6 @@ body {
 	        animation: 3s ease-out 0s 1 fadeIn;
 }
 
-@media (max-width: 500px) {
-  .intro {
-    font-size: 18px;
-  }
-}
-
 .sketch {
 	position: absolute;
 	bottom: -2px;
@@ -49,6 +43,15 @@ body {
 	margin-right: 30px;
 	max-width: 425px;
 	border-radius: 6px;
+}
+
+@media (max-width: 500px) {
+  .intro {
+    font-size: 17px;
+  }
+  .case-study video {
+    width: 100vw ;
+  }
 }
 
 a {
