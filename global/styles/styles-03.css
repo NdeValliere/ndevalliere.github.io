@@ -54,6 +54,7 @@ body {
 @media (max-width: 500px) {
   .intro {
     font-size: 17px;
+    font-weight: 500;
   }
   .case-study video {
     width: calc(100vw - 60px);
