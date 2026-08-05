@@ -1,49 +1,89 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Grain: baked vs synthesized vs programmatic</title>
 		<link type="text/css" rel="stylesheet" href="main.css">
 	</head>
 	<body>
 		<header class="masthead">
-			<h1>Three ways to put grain on a blurred image</h1>
-			<p>Same 1024&times;1024 source, same blur (&sigma;1.2), same AVIF quality (crf&nbsp;18).
-			   Shown at 1:1 &mdash; grain only reads correctly at 100% zoom, so scroll rather than pinch.</p>
+			<h1>Three ways to put grain on a blurred image, plus your two files</h1>
+			<p>Panels 3&ndash;5 are all built from panel 1 &mdash; the clean PNG &mdash; the same way:
+			   blurred at &sigma;1.2, then re-encoded to AVIF at crf&nbsp;18. The only variable
+			   between them is <em>how the grain arrives</em>. Panel 1 is your clean plate; panel 2
+			   is your Photoshop version of it, for comparison.</p>
+			<p>Shown at 1:1, because grain only reads correctly at 100% &mdash; so the row below
+			   <b>scrolls sideways</b> rather than scaling to fit.</p>
 		</header>
 
 		<div class="rail">
 
-			<!-- 1. grain baked into the pixels: what an image editor exports -->
+			<!-- 1. the clean source that panels 3-5 are built from -->
 			<figure class="panel">
 				<div class="stage">
-					<img src="assets/primary-17-baked.avif" alt="grain baked into the encoded pixels">
+					<img src="assets/primary-17.png" alt="the clean source PNG, no grain">
+					<span class="badge">1 &middot; Source PNG, no grain &middot; 1,007 KB</span>
 				</div>
 				<figcaption>
-					<span class="tag">Baked in</span>
-					<b>41.4 KB</b>
-					<small>Grain lives in the pixels. The encoder spends most of its
-					bitrate on noise it cannot predict &mdash; and still smooths some of it away.</small>
+					<span class="tag">Source PNG, no grain</span>
+					<b>1,007 KB</b>
+					<small>The clean plate that panels 3&ndash;5 are built from &mdash; 0.28 grain,
+					and genuinely 1024&times;1024, so this panel is true 1:1. Still 55&times; the
+					blurred AVIF of the same content: PNG is lossless, and smooth photographic
+					gradients are its worst case.</small>
 				</figcaption>
 			</figure>
 
-			<!-- 2. AV1 film grain synthesis: grain as a parametric model, re-applied by the decoder -->
+			<!-- 2. the untouched original -->
+			<figure class="panel">
+				<div class="stage">
+					<img src="assets/primary-17.jpg" alt="blur added in Photoshop, saved as JPEG">
+					<span class="badge">2 &middot; Photoshop blur, JPEG &middot; 2,067 KB</span>
+				</div>
+				<figcaption>
+					<span class="tag">Photoshop blur, saved as JPEG</span>
+					<b>2,067 KB</b>
+					<small>Blur added via Photoshop layer and file saved as a JPEG. Also the
+					grainiest panel here at 3.54 &mdash; and 4266&times;4266 in a 1024px slot, so
+					the browser is downscaling it on top of everything else. <b>116&times; panel 4
+					for 1.4&times; the grain.</b></small>
+				</figcaption>
+			</figure>
+
+			<!-- 3. grain baked into the pixels before encoding -->
+			<figure class="panel">
+				<div class="stage">
+					<img src="assets/primary-17-baked.avif" alt="grain baked into the encoded pixels">
+					<span class="badge">3 &middot; Baked in &middot; 41.4 KB</span>
+				</div>
+				<figcaption>
+					<span class="tag">Baked into the pixels</span>
+					<b>41.4 KB</b>
+					<small>Grain added before encoding. The worst of both: it costs 2.3&times;
+					panel&nbsp;4, and the encoder still destroys nearly all of it &mdash; only
+					<b>0.50</b> grain survives, against 2.48 for the same bytes spent properly.</small>
+				</figcaption>
+			</figure>
+
+			<!-- 4. AV1 film grain synthesis: grain as a parametric model, re-applied by the decoder -->
 			<figure class="panel">
 				<div class="stage">
 					<img src="assets/primary-17-synth.avif" alt="grain re-synthesized by the AV1 decoder">
+					<span class="badge">4 &middot; Film grain synthesis &middot; 17.8 KB</span>
 				</div>
 				<figcaption>
 					<span class="tag">AVIF film grain synthesis</span>
 					<b>17.8 KB</b>
-					<small>Encoded clean, with grain stored as a few hundred bytes of
-					parameters. The decoder re-applies it. More grain than baked, at 43% of the size.</small>
+					<small>Encoded clean, with the grain stored as a few hundred bytes of parameters
+					that the decoder re-applies. <b>5&times; the grain of panel 3 at 43% of the
+					size.</b> The format-level answer to this problem.</small>
 				</figcaption>
 			</figure>
 
-			<!-- 3. clean base + grain generated in the browser -->
+			<!-- 5. clean base + grain generated live in the browser -->
 			<figure class="panel">
 				<div class="stage">
-					<img src="assets/primary-17-clean.avif" alt="clean blurred base">
+					<img src="assets/primary-17-clean.avif" alt="blurred base with a live grain overlay">
 					<!-- coarse layer -->
 					<svg class="texture" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
 						<filter id="grain-coarse">
@@ -60,26 +100,53 @@
 						</filter>
 						<rect width="100%" height="100%" filter="url(#grain-fine)"/>
 					</svg>
+					<span class="badge">5 &middot; feTurbulence overlay &middot; 18.5 KB</span>
 				</div>
 				<figcaption>
 					<span class="tag">Programmatic overlay</span>
 					<b>18.5 KB</b>
-					<small>Clean base, grain drawn by <code>feTurbulence</code> at zero bytes.
-					Tunable live, resolution-independent, and one layer can grain the whole page.</small>
+					<small>A clean 0.14-grain base, with texture drawn live by
+					<code>feTurbulence</code> for zero extra bytes. Tunable without re-exporting,
+					resolution-independent, and one layer can grain a whole page.</small>
 				</figcaption>
 			</figure>
 
 		</div>
 
 		<footer class="notes">
-			<p><b>For reference:</b> the original <code>primary-17.jpg</code> was 2,000&nbsp;KB
-			   at 4266&times;4266 for a 1024px slot, and <code>texture-01.png</code> was
-			   1,400&nbsp;KB at 2000&times;2000.</p>
-			<p><b>Caveat on panel 3:</b> <code>feTurbulence</code> at these sub-pixel base
-			   frequencies is rendered at slightly different scales by different browsers, so the
-			   grain is not guaranteed identical across Safari, Chrome and Firefox. If you need it
-			   pinned down, rasterise the noise once to a small tiling PNG &mdash; a 128&times;128
-			   tile is about 15&nbsp;KB, since random noise barely compresses.</p>
+			<table class="tally">
+				<thead>
+					<tr><th></th><th>Size</th><th>Grain</th></tr>
+				</thead>
+				<tbody>
+					<tr><td>1 &middot; Source PNG, no grain</td><td>1,007 KB</td><td>0.28</td></tr>
+					<tr><td>2 &middot; Photoshop blur, JPEG</td><td>2,067 KB</td><td>3.54</td></tr>
+					<tr><td>3 &middot; Baked into the pixels</td><td>41.4 KB</td><td>0.50</td></tr>
+					<tr class="win"><td>4 &middot; Film grain synthesis</td><td>17.8 KB</td><td>2.48</td></tr>
+					<tr><td>5 &middot; Base + <code>feTurbulence</code></td><td>18.5 KB</td><td>0.14 + live overlay</td></tr>
+				</tbody>
+			</table>
+			<p class="method"><small>Grain measured as the standard deviation of each image minus
+			its own &sigma;1.5 blur, averaged over the twelve flattest 48&times;48 patches in the
+			source (structure std 0.25&ndash;0.44), at the size each panel is actually displayed.
+			Measuring whole-image instead lets the object's edges dominate and makes every number
+			meaningless &mdash; the clean PNG scores 3.40 that way.</small></p>
+			<p><b>The headline:</b> grain is high-frequency and random, so it defeats every
+			   prediction a codec wants to make. That is why baking it in is a losing trade: panel 3
+			   spends 2.3&times; the bytes of panel 4 and still ends up with a fifth of the grain,
+			   because the encoder burns its bitrate on noise and then smooths it away regardless.
+			   If the grain has to live inside the image, let the format model it (4). If it can sit
+			   on top, draw it (5) &mdash; the blur itself is nearly free, so the grain is the entire
+			   file size.</p>
+			<p><b>Caveat on panel 5:</b> <code>feTurbulence</code> at these sub-pixel base
+			   frequencies is rendered at slightly different scales by Safari, Chrome and Firefox, so
+			   its grain is not identical between them &mdash; though it does regenerate at device
+			   resolution, so it stays crisp on any display. To pin it down, rasterise the noise once
+			   to a tiling PNG: 128&times;128 is 14.4&nbsp;KB at 8-bit but only 6.1&nbsp;KB at 4-bit
+			   for the same standard deviation (26.3 vs 25.8) &mdash; random noise is
+			   near-incompressible, so bit depth, not dimensions, is where the savings are. Expect to
+			   dial it to roughly 30% opacity under <code>color-burn</code>: an opaque tile blends far
+			   harder than <code>feTurbulence</code>, whose output carries a random alpha channel.</p>
 		</footer>
 	</body>
 </html>
