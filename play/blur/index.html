@@ -2,41 +2,85 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<title>Grain: baked vs synthesized vs programmatic</title>
 		<link type="text/css" rel="stylesheet" href="main.css">
 	</head>
-	<body class ="center">
-		<div class="left">
-			<img src="assets/primary-17.png"/>
+	<body>
+		<header class="masthead">
+			<h1>Three ways to put grain on a blurred image</h1>
+			<p>Same 1024&times;1024 source, same blur (&sigma;1.2), same AVIF quality (crf&nbsp;18).
+			   Shown at 1:1 &mdash; grain only reads correctly at 100% zoom, so scroll rather than pinch.</p>
+		</header>
+
+		<div class="rail">
+
+			<!-- 1. grain baked into the pixels: what an image editor exports -->
+			<figure class="panel">
+				<div class="stage">
+					<img src="assets/primary-17-baked.avif" alt="grain baked into the encoded pixels">
+				</div>
+				<figcaption>
+					<span class="tag">Baked in</span>
+					<b>41.4 KB</b>
+					<small>Grain lives in the pixels. The encoder spends most of its
+					bitrate on noise it cannot predict &mdash; and still smooths some of it away.</small>
+				</figcaption>
+			</figure>
+
+			<!-- 2. AV1 film grain synthesis: grain as a parametric model, re-applied by the decoder -->
+			<figure class="panel">
+				<div class="stage">
+					<img src="assets/primary-17-synth.avif" alt="grain re-synthesized by the AV1 decoder">
+				</div>
+				<figcaption>
+					<span class="tag">AVIF film grain synthesis</span>
+					<b>17.8 KB</b>
+					<small>Encoded clean, with grain stored as a few hundred bytes of
+					parameters. The decoder re-applies it. More grain than baked, at 43% of the size.</small>
+				</figcaption>
+			</figure>
+
+			<!-- 3. clean base + grain generated in the browser -->
+			<figure class="panel">
+				<div class="stage">
+					<img src="assets/primary-17-clean.avif" alt="clean blurred base">
+					<!-- coarse layer -->
+					<svg class="texture" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+						<filter id="grain-coarse">
+							<feTurbulence type="fractalNoise" baseFrequency="10"
+								numOctaves="3" stitchTiles="stitch"/>
+						</filter>
+						<rect width="100%" height="100%" filter="url(#grain-coarse)"/>
+					</svg>
+					<!-- fine layer -->
+					<svg class="texture" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+						<filter id="grain-fine">
+							<feTurbulence type="fractalNoise" baseFrequency="19.5"
+								numOctaves="3" stitchTiles="stitch"/>
+						</filter>
+						<rect width="100%" height="100%" filter="url(#grain-fine)"/>
+					</svg>
+				</div>
+				<figcaption>
+					<span class="tag">Programmatic overlay</span>
+					<b>18.5 KB</b>
+					<small>Clean base, grain drawn by <code>feTurbulence</code> at zero bytes.
+					Tunable live, resolution-independent, and one layer can grain the whole page.</small>
+				</figcaption>
+			</figure>
+
 		</div>
-		<div class="middle">
-			<img class ="blur" src="assets/primary-17.png"/>
-			<!-- svg: first layer -->
-			<svg class="texture" viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'>
-			  <filter id='noiseFilter'>
-			    <feTurbulence 
-			      type='fractalNoise' 
-			      baseFrequency='10' 
-			      numOctaves='6' 
-			      result="turbulence"
-			      stitchTiles='stitch'/>
-			  </filter>
-			  <rect width='100%' height='100%' filter='url(#noiseFilter)'/>
-			</svg>
-			<svg class="texture" viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'>
-			  <filter id='noiseFilter'>
-			    <feTurbulence 
-			      type='fractalNoise' 
-			      baseFrequency='19.5' 
-			      numOctaves='10' 
-			      result="turbulence"
-			      stitchTiles='stitch'/>
-			  </filter>
-			  <rect width='100%' height='100%' filter='url(#noiseFilter)'/>
-			</svg>
-		</div>
-		<div class="right">
-			<img src="assets/primary-17.jpg"/>
-		</div>
+
+		<footer class="notes">
+			<p><b>For reference:</b> the original <code>primary-17.jpg</code> was 2,000&nbsp;KB
+			   at 4266&times;4266 for a 1024px slot, and <code>texture-01.png</code> was
+			   1,400&nbsp;KB at 2000&times;2000.</p>
+			<p><b>Caveat on panel 3:</b> <code>feTurbulence</code> at these sub-pixel base
+			   frequencies is rendered at slightly different scales by different browsers, so the
+			   grain is not guaranteed identical across Safari, Chrome and Firefox. If you need it
+			   pinned down, rasterise the noise once to a small tiling PNG &mdash; a 128&times;128
+			   tile is about 15&nbsp;KB, since random noise barely compresses.</p>
+		</footer>
 	</body>
 </html>
 

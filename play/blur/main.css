@@ -162,33 +162,104 @@ a img {
   vertical-align: middle;
 }
 
-.center {
-	width: 100vw;
-	height: 100vh;
-	text-align: center;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	align-content: center;
-	align-items: center;
+body {
+  font: 400 15px/1.5 ui-sans-serif, -apple-system, system-ui, sans-serif;
+  color: #1a1a1a;
+  background: #f4f3f1;
+  padding: 40px 0 64px;
 }
 
-.left,
-.right img,
-.middle {
+.masthead,
+.notes {
+  max-width: 68ch;
+  padding: 0 40px;
+}
+
+.masthead h1 {
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-bottom: 10px;
+}
+
+.masthead p {
+  color: #6b6660;
+}
+
+/* 1:1 row -- scroll horizontally rather than scale the panels down,
+   because resampling a grain comparison invalidates it */
+.rail {
+  display: flex;
+  gap: 32px;
+  overflow-x: auto;
+  padding: 32px 40px 8px;
+  margin-top: 24px;
+}
+
+.panel {
+  flex: 0 0 auto;
+  width: 1024px;
+}
+
+/* the blur is baked into the AVIFs now, so no CSS filter here */
+.stage {
+  position: relative;
+  width: 1024px;
+  height: 1024px;
+  isolation: isolate;
+}
+
+.stage img {
+  display: block;
   width: 1024px;
   height: 1024px;
 }
 
-.blur {
-  filter: blur(1.2px);
-  z-index: -1;
-}
-
- .texture {
+.texture {
   position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   mix-blend-mode: color-burn;
-  left: 1024px;
-  width: 1024px;
-  height: 1024px;
- }
+  pointer-events: none;
+}
+
+figcaption {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  align-items: baseline;
+  gap: 0 12px;
+  padding-top: 14px;
+}
+
+.tag {
+  font-weight: 600;
+}
+
+figcaption b {
+  font-variant-numeric: tabular-nums;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: #e4e2de;
+}
+
+figcaption small {
+  grid-column: 1 / -1;
+  padding-top: 6px;
+  max-width: 62ch;
+  color: #6b6660;
+}
+
+.notes {
+  margin-top: 40px;
+  color: #6b6660;
+}
+
+.notes p + p {
+  margin-top: 12px;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.92em;
+}
